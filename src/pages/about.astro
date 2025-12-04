@@ -1,0 +1,286 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About" description="Learn about Mighty Movers - San Diego's trusted moving company with years of experience in residential and commercial moving.">
+  <section class="page-hero">
+    <div class="container">
+      <h1>About Mighty Movers</h1>
+      <p>San Diego's trusted moving partner since day one</p>
+    </div>
+  </section>
+
+  <section class="about-content">
+    <div class="container">
+      <div class="about-intro">
+        <h2>Our Story</h2>
+        <p>Mighty Movers was founded with a simple mission: to make moving stress-free for San Diego residents and businesses. What started as a small local operation has grown into one of San Diego's most trusted moving companies, but we've never lost sight of our commitment to personalized service and care.</p>
+        <p>We understand that moving is more than just transporting boxes from point A to point B. It's about carefully handling your memories, your investments, and your future. That's why every member of our team is trained to treat your belongings with the utmost respect and care.</p>
+      </div>
+
+      <div class="values-section">
+        <h2>Our Values</h2>
+        <div class="values-grid">
+          <div class="value-card">
+            <h3>Integrity</h3>
+            <p>We operate with honesty and transparency in every interaction. No hidden fees, no surprises.</p>
+          </div>
+          <div class="value-card">
+            <h3>Excellence</h3>
+            <p>We strive for perfection in every move, ensuring your belongings arrive safely and on time.</p>
+          </div>
+          <div class="value-card">
+            <h3>Customer First</h3>
+            <p>Your satisfaction is our priority. We go above and beyond to exceed your expectations.</p>
+          </div>
+          <div class="value-card">
+            <h3>Reliability</h3>
+            <p>You can count on us to show up on time, every time, and deliver on our promises.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="why-choose-section">
+        <h2>Why Choose Mighty Movers?</h2>
+        <div class="reasons-list">
+          <div class="reason-item">
+            <h3>Experienced Team</h3>
+            <p>Our movers are professionally trained and background-checked. They have years of experience handling all types of moves.</p>
+          </div>
+          <div class="reason-item">
+            <h3>Fully Licensed & Insured</h3>
+            <p>We carry comprehensive insurance coverage to protect your belongings throughout the entire moving process.</p>
+          </div>
+          <div class="reason-item">
+            <h3>Modern Equipment</h3>
+            <p>We use state-of-the-art moving equipment and well-maintained trucks to ensure safe transport.</p>
+          </div>
+          <div class="reason-item">
+            <h3>Competitive Pricing</h3>
+            <p>Quality service doesn't have to break the bank. We offer fair, competitive rates with no hidden costs.</p>
+          </div>
+          <div class="reason-item">
+            <h3>Local Knowledge</h3>
+            <p>As San Diego locals, we know the area inside and out, making moves more efficient and smooth.</p>
+          </div>
+          <div class="reason-item">
+            <h3>Customer Support</h3>
+            <p>From your first call to the final box, our team is here to answer questions and provide support.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="commitment-section">
+        <h2>Our Commitment to You</h2>
+        <p>At Mighty Movers, we're not just moving your belongings – we're helping you start the next chapter of your life. Whether you're moving into your first apartment, relocating your family to a new home, or expanding your business to a larger space, we're honored to be part of your journey.</p>
+        <p>We promise to treat every move with the same care and attention we'd give our own. Your satisfaction isn't just our goal – it's our guarantee.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Experience the Mighty Movers Difference?</h2>
+      <p>Let us show you why San Diego trusts us with their most important moves</p>
+      <a href="/contact" class="btn btn-primary">Get Your Free Quote</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, #1a5490 0%, #2874c7 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .page-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .page-hero p {
+    font-size: 1.3rem;
+    opacity: 0.95;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .about-content {
+    padding: 4rem 0;
+  }
+
+  .about-intro {
+    margin-bottom: 4rem;
+  }
+
+  .about-intro h2 {
+    color: #1a5490;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-intro p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #555;
+  }
+
+  .values-section {
+    margin-bottom: 4rem;
+    padding: 3rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+  }
+
+  .values-section h2 {
+    color: #1a5490;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .value-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+
+  .value-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .value-card h3 {
+    color: #1a5490;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .value-card p {
+    line-height: 1.6;
+    color: #555;
+  }
+
+  .why-choose-section {
+    margin-bottom: 4rem;
+  }
+
+  .why-choose-section h2 {
+    color: #1a5490;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .reasons-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .reason-item {
+    padding: 1.5rem;
+    border-left: 4px solid #1a5490;
+    background: #f8f9fa;
+  }
+
+  .reason-item h3 {
+    color: #1a5490;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .reason-item p {
+    line-height: 1.6;
+    color: #555;
+  }
+
+  .commitment-section {
+    padding: 3rem;
+    background: linear-gradient(135deg, rgba(26, 84, 144, 0.1), rgba(40, 116, 199, 0.1));
+    border-radius: 10px;
+    border-left: 4px solid #1a5490;
+  }
+
+  .commitment-section h2 {
+    color: #1a5490;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .commitment-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #555;
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, #2874c7 0%, #1a5490 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-top: 4rem;
+  }
+
+  .cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+  }
+
+  .btn {
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: inline-block;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  .btn-primary {
+    background: #ff6b35;
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    .page-hero h1 {
+      font-size: 2rem;
+    }
+
+    .page-hero p {
+      font-size: 1.1rem;
+    }
+
+    .about-intro h2, .values-section h2, .why-choose-section h2, .cta-section h2 {
+      font-size: 2rem;
+    }
+
+    .values-grid, .reasons-list {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

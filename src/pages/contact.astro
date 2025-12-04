@@ -1,0 +1,360 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact" description="Get in touch with Mighty Movers for a free moving quote. Call us at (619) 555-MOVE or fill out our contact form.">
+  <section class="page-hero">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Get your free quote today</p>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Get In Touch</h2>
+          <p>Ready to make your move? Contact us today for a free, no-obligation quote. Our friendly team is here to answer your questions and help plan your perfect move.</p>
+
+          <div class="contact-methods">
+            <div class="contact-method">
+              <h3>📞 Phone</h3>
+              <p><a href="tel:6195556683">(619) 555-MOVE</a></p>
+              <p class="subtitle">Mon-Sat: 7am - 7pm</p>
+            </div>
+
+            <div class="contact-method">
+              <h3>✉️ Email</h3>
+              <p><a href="mailto:info@mightymovers.com">info@mightymovers.com</a></p>
+              <p class="subtitle">We respond within 24 hours</p>
+            </div>
+
+            <div class="contact-method">
+              <h3>📍 Office</h3>
+              <p>123 Moving Way<br/>San Diego, CA 92101</p>
+              <p class="subtitle">By appointment only</p>
+            </div>
+          </div>
+
+          <div class="business-hours">
+            <h3>Business Hours</h3>
+            <ul>
+              <li><strong>Monday - Friday:</strong> 7:00 AM - 7:00 PM</li>
+              <li><strong>Saturday:</strong> 8:00 AM - 5:00 PM</li>
+              <li><strong>Sunday:</strong> Closed</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="contact-form-container">
+          <h2>Request a Free Quote</h2>
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="moveFrom">Moving From *</label>
+                <input type="text" id="moveFrom" name="moveFrom" placeholder="City or ZIP" required />
+              </div>
+
+              <div class="form-group">
+                <label for="moveTo">Moving To *</label>
+                <input type="text" id="moveTo" name="moveTo" placeholder="City or ZIP" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="moveDate">Preferred Move Date</label>
+              <input type="date" id="moveDate" name="moveDate" />
+            </div>
+
+            <div class="form-group">
+              <label for="moveType">Type of Move</label>
+              <select id="moveType" name="moveType">
+                <option value="">Select a service</option>
+                <option value="residential">Residential</option>
+                <option value="commercial">Commercial</option>
+                <option value="packing">Packing Services</option>
+                <option value="storage">Storage</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Additional Details</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us about your move..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Get Free Quote</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="emergency-contact">
+    <div class="container">
+      <h2>Need Immediate Assistance?</h2>
+      <p>For urgent moving needs or last-minute changes, call us directly at <a href="tel:6195556683">(619) 555-MOVE</a></p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, #1a5490 0%, #2874c7 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .page-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .page-hero p {
+    font-size: 1.3rem;
+    opacity: 0.95;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .contact-section {
+    padding: 4rem 0;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .contact-info h2 {
+    color: #1a5490;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-info > p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #555;
+  }
+
+  .contact-methods {
+    margin-bottom: 2rem;
+  }
+
+  .contact-method {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #1a5490;
+  }
+
+  .contact-method h3 {
+    color: #1a5490;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-method p {
+    margin-bottom: 0.25rem;
+  }
+
+  .contact-method a {
+    color: #1a5490;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .contact-method a:hover {
+    text-decoration: underline;
+  }
+
+  .contact-method .subtitle {
+    font-size: 0.9rem;
+    color: #777;
+  }
+
+  .business-hours {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+  }
+
+  .business-hours h3 {
+    color: #1a5490;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .business-hours ul {
+    list-style: none;
+  }
+
+  .business-hours ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .business-hours ul li:last-child {
+    border-bottom: none;
+  }
+
+  .contact-form-container {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+  }
+
+  .contact-form-container h2 {
+    color: #1a5490;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #1a5490;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+  }
+
+  .btn {
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  .btn-primary {
+    background: #ff6b35;
+    color: white;
+  }
+
+  .emergency-contact {
+    background: linear-gradient(135deg, #2874c7 0%, #1a5490 100%);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .emergency-contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .emergency-contact p {
+    font-size: 1.2rem;
+  }
+
+  .emergency-contact a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 968px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+
+    .page-hero h1 {
+      font-size: 2rem;
+    }
+
+    .page-hero p {
+      font-size: 1.1rem;
+    }
+
+    .contact-info h2, .contact-form-container h2 {
+      font-size: 2rem;
+    }
+  }
+</style>
+
+<script>
+  const form = document.getElementById('contactForm');
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Thank you for your inquiry! We will contact you shortly.');
+    form.reset();
+  });
+</script>

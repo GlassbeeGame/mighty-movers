@@ -1,0 +1,270 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Locations" description="Mighty Movers serves all of San Diego County including downtown, coastal areas, and surrounding communities.">
+  <section class="page-hero">
+    <div class="container">
+      <h1>Service Areas</h1>
+      <p>Proudly serving San Diego County and surrounding areas</p>
+    </div>
+  </section>
+
+  <section class="locations-intro">
+    <div class="container">
+      <h2>Where We Serve</h2>
+      <p>Mighty Movers provides professional moving services throughout San Diego County. No matter where you're located or where you're moving to, we've got you covered.</p>
+    </div>
+  </section>
+
+  <section class="locations-grid-section">
+    <div class="container">
+      <h2>San Diego Communities</h2>
+      <div class="locations-grid">
+        <div class="location-card">
+          <h3>Downtown San Diego</h3>
+          <p>Gaslamp Quarter, Little Italy, Marina District, East Village, Columbia</p>
+        </div>
+
+        <div class="location-card">
+          <h3>North County</h3>
+          <p>Carlsbad, Oceanside, Vista, Encinitas, San Marcos, Escondido</p>
+        </div>
+
+        <div class="location-card">
+          <h3>Coastal Areas</h3>
+          <p>La Jolla, Pacific Beach, Ocean Beach, Mission Beach, Coronado</p>
+        </div>
+
+        <div class="location-card">
+          <h3>East County</h3>
+          <p>El Cajon, La Mesa, Santee, Lakeside, Alpine, Ramona</p>
+        </div>
+
+        <div class="location-card">
+          <h3>South Bay</h3>
+          <p>Chula Vista, National City, Imperial Beach, Bonita, San Ysidro</p>
+        </div>
+
+        <div class="location-card">
+          <h3>Central San Diego</h3>
+          <p>Mission Valley, Hillcrest, North Park, Normal Heights, Kearny Mesa</p>
+        </div>
+
+        <div class="location-card">
+          <h3>Inland Areas</h3>
+          <p>Poway, Rancho Bernardo, Scripps Ranch, Mira Mesa, Rancho Peñasquitos</p>
+        </div>
+
+        <div class="location-card">
+          <h3>Communities</h3>
+          <p>Del Mar, Solana Beach, Point Loma, Clairemont, Tierrasanta</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="coverage-section">
+    <div class="container">
+      <h2>Long-Distance Moves</h2>
+      <p>While we're based in San Diego, we also provide long-distance moving services to anywhere in California and beyond. Whether you're moving to Los Angeles, San Francisco, or across the country, Mighty Movers can help.</p>
+      <div class="coverage-features">
+        <div class="coverage-item">
+          <h3>California Moves</h3>
+          <p>Statewide moving services</p>
+        </div>
+        <div class="coverage-item">
+          <h3>Interstate Moves</h3>
+          <p>Cross-country relocations</p>
+        </div>
+        <div class="coverage-item">
+          <h3>Military Moves</h3>
+          <p>Special rates for military families</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Serving Your Neighborhood</h2>
+      <p>Don't see your area listed? Contact us! We likely serve your location.</p>
+      <a href="/contact" class="btn btn-primary">Get a Free Quote</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, #1a5490 0%, #2874c7 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .page-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .page-hero p {
+    font-size: 1.3rem;
+    opacity: 0.95;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .locations-intro {
+    padding: 4rem 0 2rem;
+    text-align: center;
+  }
+
+  .locations-intro h2 {
+    color: #1a5490;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .locations-intro p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  .locations-grid-section {
+    padding: 3rem 0;
+  }
+
+  .locations-grid-section h2 {
+    color: #1a5490;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .location-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 4px solid #1a5490;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .location-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+
+  .location-card h3 {
+    color: #1a5490;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .location-card p {
+    line-height: 1.6;
+    color: #555;
+  }
+
+  .coverage-section {
+    padding: 4rem 0;
+    background: #f8f9fa;
+  }
+
+  .coverage-section h2 {
+    color: #1a5490;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .coverage-section > .container > p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  .coverage-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .coverage-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+
+  .coverage-item h3 {
+    color: #1a5490;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, #2874c7 0%, #1a5490 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+  }
+
+  .btn {
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: inline-block;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  .btn-primary {
+    background: #ff6b35;
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    .page-hero h1 {
+      font-size: 2rem;
+    }
+
+    .page-hero p {
+      font-size: 1.1rem;
+    }
+
+    .locations-intro h2, .coverage-section h2, .cta-section h2 {
+      font-size: 2rem;
+    }
+  }
+</style>

@@ -1,0 +1,253 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Home" description="Mighty Movers - Professional moving services in San Diego. Reliable, affordable, and stress-free moving solutions.">
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Your Trusted San Diego Movers</h1>
+      <p class="hero-subtitle">Professional, reliable, and stress-free moving services</p>
+      <div class="hero-buttons">
+        <a href="/contact" class="btn btn-primary">Get a Free Quote</a>
+        <a href="/services" class="btn btn-secondary">Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <h2>Why Choose Mighty Movers?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🚚</div>
+          <h3>Professional Team</h3>
+          <p>Experienced movers who handle your belongings with care</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💰</div>
+          <h3>Affordable Rates</h3>
+          <p>Competitive pricing with no hidden fees</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Fast & Efficient</h3>
+          <p>Quick turnaround without compromising quality</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h3>Fully Insured</h3>
+          <p>Your belongings are protected throughout the move</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-preview">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Residential Moving</h3>
+          <p>Complete home moving solutions for apartments, houses, and condos</p>
+        </div>
+        <div class="service-card">
+          <h3>Commercial Moving</h3>
+          <p>Office relocations with minimal downtime</p>
+        </div>
+        <div class="service-card">
+          <h3>Packing Services</h3>
+          <p>Professional packing to ensure safe transport</p>
+        </div>
+        <div class="service-card">
+          <h3>Storage Solutions</h3>
+          <p>Secure storage facilities for short or long-term needs</p>
+        </div>
+      </div>
+      <div class="cta-center">
+        <a href="/services" class="btn btn-primary">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Move?</h2>
+      <p>Get your free quote today and experience stress-free moving with Mighty Movers</p>
+      <a href="/contact" class="btn btn-primary">Contact Us Now</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    background: linear-gradient(135deg, #1a5490 0%, #2874c7 100%);
+    color: white;
+    padding: 6rem 2rem;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: inline-block;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  .btn-primary {
+    background: #ff6b35;
+    color: white;
+  }
+
+  .btn-secondary {
+    background: white;
+    color: #1a5490;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .features {
+    padding: 4rem 0;
+    background: #f8f9fa;
+  }
+
+  .features h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #1a5490;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature-card h3 {
+    color: #1a5490;
+    margin-bottom: 0.5rem;
+  }
+
+  .services-preview {
+    padding: 4rem 0;
+  }
+
+  .services-preview h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #1a5490;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .service-card {
+    padding: 2rem;
+    border: 2px solid #1a5490;
+    border-radius: 10px;
+    transition: all 0.3s;
+  }
+
+  .service-card:hover {
+    background: #1a5490;
+    color: white;
+  }
+
+  .service-card h3 {
+    color: inherit;
+    margin-bottom: 1rem;
+  }
+
+  .cta-center {
+    text-align: center;
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, #2874c7 0%, #1a5490 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+    }
+
+    .features h2, .services-preview h2, .cta-section h2 {
+      font-size: 2rem;
+    }
+  }
+</style>
