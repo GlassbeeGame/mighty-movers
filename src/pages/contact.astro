@@ -4,9 +4,11 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Contact" description="Get in touch with Mighty Movers for a free moving quote. Call us at (619) 555-MOVE or fill out our contact form.">
   <section class="page-hero">
-    <div class="container">
-      <h1>Contact Us</h1>
-      <p>Get your free quote today</p>
+    <div class="hero-background"></div>
+    <div class="hero-content">
+      <div class="hero-badge">Contact Us</div>
+      <h1>Let's Get <span class="highlight">Moving</span></h1>
+      <p>Get your free quote today and experience the Mighty Movers difference</p>
     </div>
   </section>
 
@@ -106,40 +108,90 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <section class="emergency-contact">
-    <div class="container">
+  <section class="cta-section">
+    <div class="cta-content">
       <h2>Need Immediate Assistance?</h2>
-      <p>For urgent moving needs or last-minute changes, call us directly at <a href="tel:6195556683">(619) 555-MOVE</a></p>
+      <p>For urgent moving needs or last-minute changes, call us directly at (619) 555-MOVE</p>
+      <div class="cta-buttons">
+        <a href="tel:6195556683" class="btn btn-primary btn-large">Call Now</a>
+      </div>
     </div>
   </section>
 </Layout>
 
 <style>
   .page-hero {
-    background: linear-gradient(135deg, #1a5490 0%, #2874c7 100%);
-    color: white;
-    padding: 4rem 2rem;
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    overflow: hidden;
+    padding: 2rem;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(circle at 30% 50%, rgba(246, 245, 16, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 70% 70%, rgba(246, 245, 16, 0.08) 0%, transparent 50%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
     text-align: center;
+    padding: 4rem 2rem;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: var(--yellow);
+    color: var(--black);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
   }
 
   .page-hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 900;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    letter-spacing: -2px;
+    line-height: 1.1;
+  }
+
+  .page-hero h1 .highlight {
+    color: var(--yellow);
   }
 
   .page-hero p {
-    font-size: 1.3rem;
-    opacity: 0.95;
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: var(--gray-300);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
   }
 
   .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 3rem;
   }
 
   .contact-section {
-    padding: 4rem 0;
+    padding: 8rem 0;
   }
 
   .contact-grid {
@@ -149,65 +201,79 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .contact-info h2 {
-    color: #1a5490;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
   }
 
   .contact-info > p {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     line-height: 1.8;
-    margin-bottom: 2rem;
-    color: #555;
+    margin-bottom: 3rem;
+    color: var(--gray-600);
   }
 
   .contact-methods {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
 
   .contact-method {
     margin-bottom: 2rem;
-    padding: 1.5rem;
-    background: #f8f9fa;
-    border-radius: 8px;
-    border-left: 4px solid #1a5490;
+    padding: 2rem;
+    background: var(--black);
+    color: var(--white);
+    border-radius: 12px;
+    border: 2px solid var(--black);
+    transition: all 0.3s ease;
+  }
+
+  .contact-method:hover {
+    border-color: var(--yellow);
+    transform: translateX(5px);
   }
 
   .contact-method h3 {
-    color: #1a5490;
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    color: var(--white);
   }
 
   .contact-method p {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--gray-300);
   }
 
   .contact-method a {
-    color: #1a5490;
+    color: var(--yellow);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
+    transition: color 0.3s ease;
   }
 
   .contact-method a:hover {
-    text-decoration: underline;
+    color: var(--white);
   }
 
   .contact-method .subtitle {
     font-size: 0.9rem;
-    color: #777;
+    color: var(--gray-400);
   }
 
   .business-hours {
-    padding: 1.5rem;
-    background: #f8f9fa;
-    border-radius: 8px;
+    padding: 2rem;
+    background: var(--gray-50);
+    border-radius: 12px;
+    border: 2px solid var(--gray-200);
   }
 
   .business-hours h3 {
-    color: #1a5490;
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: var(--black);
   }
 
   .business-hours ul {
@@ -215,24 +281,32 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .business-hours ul li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #ddd;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--gray-300);
+    color: var(--gray-700);
   }
 
   .business-hours ul li:last-child {
     border-bottom: none;
   }
 
+  .business-hours ul li strong {
+    color: var(--black);
+  }
+
   .contact-form-container {
-    background: #f8f9fa;
-    padding: 2rem;
-    border-radius: 10px;
+    background: var(--gray-50);
+    padding: 3rem;
+    border-radius: 12px;
+    border: 2px solid var(--gray-200);
   }
 
   .contact-form-container h2 {
-    color: #1a5490;
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+    color: var(--black);
+    margin-bottom: 2rem;
+    letter-spacing: -1px;
   }
 
   .contact-form {
@@ -244,7 +318,7 @@ import Layout from '../layouts/Layout.astro';
   .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   .form-group {
@@ -254,26 +328,29 @@ import Layout from '../layouts/Layout.astro';
 
   .form-group label {
     margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: #333;
+    font-weight: 700;
+    color: var(--black);
+    font-size: 0.95rem;
   }
 
   .form-group input,
   .form-group select,
   .form-group textarea {
-    padding: 0.75rem;
-    border: 2px solid #ddd;
-    border-radius: 5px;
+    padding: 1rem;
+    border: 2px solid var(--gray-300);
+    border-radius: 8px;
     font-size: 1rem;
     font-family: inherit;
-    transition: border-color 0.3s;
+    transition: all 0.3s ease;
+    background: var(--white);
   }
 
   .form-group input:focus,
   .form-group select:focus,
   .form-group textarea:focus {
     outline: none;
-    border-color: #1a5490;
+    border-color: var(--yellow);
+    box-shadow: 0 0 0 3px rgba(246, 245, 16, 0.1);
   }
 
   .form-group textarea {
@@ -281,48 +358,84 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .btn {
-    padding: 1rem 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1.25rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 700;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: inline-block;
-    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
     cursor: pointer;
-    font-size: 1.1rem;
-  }
-
-  .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    font-family: inherit;
   }
 
   .btn-primary {
-    background: #ff6b35;
-    color: white;
+    background: var(--yellow);
+    color: var(--black);
+    border-color: var(--yellow);
   }
 
-  .emergency-contact {
-    background: linear-gradient(135deg, #2874c7 0%, #1a5490 100%);
-    color: white;
-    padding: 3rem 2rem;
+  .btn-primary:hover {
+    background: var(--black);
+    color: var(--yellow);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-large {
+    padding: 1.5rem 3rem;
+    font-size: 1.1rem;
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    padding: 6rem 2rem;
     text-align: center;
-    margin-top: 2rem;
+    position: relative;
+    overflow: hidden;
   }
 
-  .emergency-contact h2 {
-    font-size: 2rem;
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(circle at 50% 50%, rgba(246, 245, 16, 0.1) 0%, transparent 60%);
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .cta-section h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 900;
+    color: var(--white);
     margin-bottom: 1rem;
+    letter-spacing: -1px;
   }
 
-  .emergency-contact p {
+  .cta-section p {
     font-size: 1.2rem;
+    color: var(--gray-300);
+    margin-bottom: 2.5rem;
   }
 
-  .emergency-contact a {
-    color: #fff;
-    font-weight: bold;
-    text-decoration: underline;
+  .cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   @media (max-width: 968px) {
@@ -335,22 +448,37 @@ import Layout from '../layouts/Layout.astro';
       grid-template-columns: 1fr;
     }
 
-    .page-hero h1 {
-      font-size: 2rem;
+    .contact-form-container {
+      padding: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .page-hero {
+      min-height: auto;
+      padding: 4rem 1rem;
     }
 
-    .page-hero p {
-      font-size: 1.1rem;
+    .hero-content {
+      padding: 3rem 1rem;
     }
 
-    .contact-info h2, .contact-form-container h2 {
-      font-size: 2rem;
+    .container {
+      padding: 0 1.5rem;
+    }
+
+    .contact-section {
+      padding: 4rem 0;
+    }
+
+    .cta-section {
+      padding: 4rem 1rem;
     }
   }
 </style>
 
 <script>
-  const form = document.getElementById('contactForm');
+  const form = document.getElementById('contactForm') as HTMLFormElement | null;
 
   form?.addEventListener('submit', (e) => {
     e.preventDefault();

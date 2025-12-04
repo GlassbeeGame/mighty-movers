@@ -4,59 +4,71 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Locations" description="Mighty Movers serves all of San Diego County including downtown, coastal areas, and surrounding communities.">
   <section class="page-hero">
-    <div class="container">
-      <h1>Service Areas</h1>
-      <p>Proudly serving San Diego County and surrounding areas</p>
+    <div class="hero-background"></div>
+    <div class="hero-content">
+      <div class="hero-badge">Service Areas</div>
+      <h1>We Serve <span class="highlight">San Diego</span></h1>
+      <p>Proudly serving San Diego County and surrounding areas with professional moving services</p>
     </div>
   </section>
 
   <section class="locations-intro">
     <div class="container">
-      <h2>Where We Serve</h2>
-      <p>Mighty Movers provides professional moving services throughout San Diego County. No matter where you're located or where you're moving to, we've got you covered.</p>
+      <div class="section-header">
+        <h2>Where We Serve</h2>
+        <p>Mighty Movers provides professional moving services throughout San Diego County. No matter where you're located or where you're moving to, we've got you covered.</p>
+      </div>
     </div>
   </section>
 
   <section class="locations-grid-section">
     <div class="container">
-      <h2>San Diego Communities</h2>
+      <h2 class="section-title">San Diego Communities</h2>
       <div class="locations-grid">
         <div class="location-card">
+          <div class="location-icon">01</div>
           <h3>Downtown San Diego</h3>
           <p>Gaslamp Quarter, Little Italy, Marina District, East Village, Columbia</p>
         </div>
 
         <div class="location-card">
+          <div class="location-icon">02</div>
           <h3>North County</h3>
           <p>Carlsbad, Oceanside, Vista, Encinitas, San Marcos, Escondido</p>
         </div>
 
         <div class="location-card">
+          <div class="location-icon">03</div>
           <h3>Coastal Areas</h3>
           <p>La Jolla, Pacific Beach, Ocean Beach, Mission Beach, Coronado</p>
         </div>
 
         <div class="location-card">
+          <div class="location-icon">04</div>
           <h3>East County</h3>
           <p>El Cajon, La Mesa, Santee, Lakeside, Alpine, Ramona</p>
         </div>
 
         <div class="location-card">
+          <div class="location-icon">05</div>
           <h3>South Bay</h3>
           <p>Chula Vista, National City, Imperial Beach, Bonita, San Ysidro</p>
         </div>
 
         <div class="location-card">
+          <div class="location-icon">06</div>
           <h3>Central San Diego</h3>
           <p>Mission Valley, Hillcrest, North Park, Normal Heights, Kearny Mesa</p>
         </div>
 
         <div class="location-card">
+          <div class="location-icon">07</div>
           <h3>Inland Areas</h3>
           <p>Poway, Rancho Bernardo, Scripps Ranch, Mira Mesa, Rancho Peñasquitos</p>
         </div>
 
         <div class="location-card">
+          <div class="location-icon">08</div>
           <h3>Communities</h3>
           <p>Del Mar, Solana Beach, Point Loma, Clairemont, Tierrasanta</p>
         </div>
@@ -66,18 +78,23 @@ import Layout from '../layouts/Layout.astro';
 
   <section class="coverage-section">
     <div class="container">
-      <h2>Long-Distance Moves</h2>
-      <p>While we're based in San Diego, we also provide long-distance moving services to anywhere in California and beyond. Whether you're moving to Los Angeles, San Francisco, or across the country, Mighty Movers can help.</p>
+      <div class="section-header">
+        <h2>Long-Distance Moves</h2>
+        <p>While we're based in San Diego, we also provide long-distance moving services to anywhere in California and beyond. Whether you're moving to Los Angeles, San Francisco, or across the country, Mighty Movers can help.</p>
+      </div>
       <div class="coverage-features">
         <div class="coverage-item">
+          <div class="coverage-number">01</div>
           <h3>California Moves</h3>
           <p>Statewide moving services</p>
         </div>
         <div class="coverage-item">
+          <div class="coverage-number">02</div>
           <h3>Interstate Moves</h3>
           <p>Cross-country relocations</p>
         </div>
         <div class="coverage-item">
+          <div class="coverage-number">03</div>
           <h3>Military Moves</h3>
           <p>Special rates for military families</p>
         </div>
@@ -86,185 +103,352 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <section class="cta-section">
-    <div class="container">
+    <div class="cta-content">
       <h2>Serving Your Neighborhood</h2>
       <p>Don't see your area listed? Contact us! We likely serve your location.</p>
-      <a href="/contact" class="btn btn-primary">Get a Free Quote</a>
+      <div class="cta-buttons">
+        <a href="/contact" class="btn btn-primary btn-large">Get Free Quote</a>
+        <a href="tel:6195556683" class="btn btn-secondary btn-large">Call (619) 555-MOVE</a>
+      </div>
     </div>
   </section>
 </Layout>
 
 <style>
   .page-hero {
-    background: linear-gradient(135deg, #1a5490 0%, #2874c7 100%);
-    color: white;
-    padding: 4rem 2rem;
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    overflow: hidden;
+    padding: 2rem;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(circle at 30% 50%, rgba(246, 245, 16, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 70% 70%, rgba(246, 245, 16, 0.08) 0%, transparent 50%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
     text-align: center;
+    padding: 4rem 2rem;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: var(--yellow);
+    color: var(--black);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
   }
 
   .page-hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 900;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    letter-spacing: -2px;
+    line-height: 1.1;
+  }
+
+  .page-hero h1 .highlight {
+    color: var(--yellow);
   }
 
   .page-hero p {
-    font-size: 1.3rem;
-    opacity: 0.95;
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: var(--gray-300);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
   }
 
   .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 3rem;
   }
 
-  .locations-intro {
-    padding: 4rem 0 2rem;
+  .section-header {
     text-align: center;
+    margin-bottom: 4rem;
   }
 
-  .locations-intro h2 {
-    color: #1a5490;
-    font-size: 2.5rem;
+  .section-header h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    color: var(--black);
     margin-bottom: 1rem;
+    letter-spacing: -1px;
   }
 
-  .locations-intro p {
-    font-size: 1.1rem;
+  .section-header p {
+    font-size: 1.2rem;
+    color: var(--gray-600);
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.8;
   }
 
-  .locations-grid-section {
-    padding: 3rem 0;
+  .locations-intro {
+    padding: 8rem 0 4rem;
   }
 
-  .locations-grid-section h2 {
-    color: #1a5490;
-    font-size: 2rem;
-    margin-bottom: 2rem;
+  .locations-grid-section {
+    padding: 4rem 0;
+    background: var(--gray-50);
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+    color: var(--black);
+    margin-bottom: 3rem;
     text-align: center;
+    letter-spacing: -1px;
   }
 
   .locations-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
   }
 
   .location-card {
-    background: #f8f9fa;
-    padding: 2rem;
-    border-radius: 10px;
-    border-left: 4px solid #1a5490;
-    transition: transform 0.3s, box-shadow 0.3s;
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    border: 2px solid var(--gray-200);
+    transition: all 0.3s ease;
+    position: relative;
   }
 
   .location-card:hover {
+    border-color: var(--yellow);
     transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .location-icon {
+    position: absolute;
+    top: -1rem;
+    right: 2rem;
+    background: var(--yellow);
+    color: var(--black);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1.1rem;
   }
 
   .location-card h3 {
-    color: #1a5490;
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--black);
   }
 
   .location-card p {
-    line-height: 1.6;
-    color: #555;
+    line-height: 1.8;
+    color: var(--gray-600);
   }
 
   .coverage-section {
-    padding: 4rem 0;
-    background: #f8f9fa;
-  }
-
-  .coverage-section h2 {
-    color: #1a5490;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-
-  .coverage-section > .container > p {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 3rem;
-    font-size: 1.1rem;
-    line-height: 1.8;
+    padding: 8rem 0;
   }
 
   .coverage-features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
   }
 
   .coverage-item {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
+    background: var(--black);
+    color: var(--white);
+    padding: 3rem 2rem;
+    border-radius: 12px;
     text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 2px solid var(--black);
+    position: relative;
+  }
+
+  .coverage-item:hover {
+    border-color: var(--yellow);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(246, 245, 16, 0.2);
+  }
+
+  .coverage-number {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: var(--yellow);
+    color: var(--black);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1rem;
   }
 
   .coverage-item h3 {
-    color: #1a5490;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    color: var(--white);
+  }
+
+  .coverage-item p {
+    font-size: 1.05rem;
+    color: var(--gray-400);
+    line-height: 1.6;
   }
 
   .cta-section {
-    background: linear-gradient(135deg, #2874c7 0%, #1a5490 100%);
-    color: white;
-    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    padding: 8rem 2rem;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(circle at 50% 50%, rgba(246, 245, 16, 0.1) 0%, transparent 60%);
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
   }
 
   .cta-section h2 {
-    font-size: 2.5rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    color: var(--white);
     margin-bottom: 1rem;
+    letter-spacing: -1px;
   }
 
   .cta-section p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    opacity: 0.95;
+    font-size: 1.3rem;
+    color: var(--gray-300);
+    margin-bottom: 3rem;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .btn {
-    padding: 1rem 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.25rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 700;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: inline-block;
-  }
-
-  .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
   }
 
   .btn-primary {
-    background: #ff6b35;
-    color: white;
+    background: var(--yellow);
+    color: var(--black);
+    border-color: var(--yellow);
+  }
+
+  .btn-primary:hover {
+    background: transparent;
+    color: var(--yellow);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(246, 245, 16, 0.3);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--white);
+    border-color: var(--white);
+  }
+
+  .btn-secondary:hover {
+    background: var(--white);
+    color: var(--black);
+    transform: translateY(-3px);
+  }
+
+  .btn-large {
+    padding: 1.5rem 3rem;
+    font-size: 1.1rem;
   }
 
   @media (max-width: 768px) {
-    .page-hero h1 {
-      font-size: 2rem;
+    .page-hero {
+      min-height: auto;
+      padding: 4rem 1rem;
     }
 
-    .page-hero p {
-      font-size: 1.1rem;
+    .hero-content {
+      padding: 3rem 1rem;
     }
 
-    .locations-intro h2, .coverage-section h2, .cta-section h2 {
-      font-size: 2rem;
+    .container {
+      padding: 0 1.5rem;
+    }
+
+    .locations-intro,
+    .coverage-section {
+      padding: 4rem 0;
+    }
+
+    .locations-grid-section {
+      padding: 3rem 0;
+    }
+
+    .locations-grid,
+    .coverage-features {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-section {
+      padding: 4rem 1rem;
     }
   }
 </style>
