@@ -6,6 +6,7 @@ import Layout from '../layouts/Layout.astro';
   <section class="hero">
     <div class="hero-background"></div>
     <div class="hero-content">
+      <img src="/images/mightyimages/logoyellow.jpg" alt="Mighty Movers Logo" class="hero-logo" />
       <div class="hero-badge">San Diego's Premier Movers</div>
       <h1>Moving Made <span class="highlight">Simple</span></h1>
       <p class="hero-subtitle">Professional moving services you can trust. Licensed, insured, and ready to handle your move with care.</p>
@@ -175,6 +176,25 @@ import Layout from '../layouts/Layout.astro';
     max-width: 1400px;
     text-align: center;
     padding: 4rem 2rem;
+  }
+
+  .hero-logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 2rem;
+    filter: drop-shadow(0 4px 12px rgba(246, 245, 16, 0.3));
+    animation: fadeInScale 0.8s ease-out;
+  }
+
+  @keyframes fadeInScale {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 
   .hero-badge {
