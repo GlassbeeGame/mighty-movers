@@ -110,6 +110,22 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
       </div>
+
+      <a href="/services/local-moving" class="service-large service-link">
+        <div class="service-number">07</div>
+        <div class="service-content">
+          <h2>Local Moving</h2>
+          <p class="service-intro">Professional local moving services tailored to your needs. Fast, efficient, and reliable moving solutions within San Diego.</p>
+          <div class="service-features">
+            <div class="feature-item">✓ Same-day service available</div>
+            <div class="feature-item">✓ Transparent pricing</div>
+            <div class="feature-item">✓ Experienced local movers</div>
+            <div class="feature-item">✓ Full-service moving options</div>
+            <div class="feature-item">✓ Licensed and insured</div>
+            <div class="feature-item">✓ Professional packing available</div>
+          </div>
+        </div>
+      </a>
     </div>
   </section>
 
@@ -232,6 +248,17 @@ import Layout from '../layouts/Layout.astro';
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
     clip-path: polygon(0 0, calc(100% - 25px) 0, 100% 25px, 100% 100%, 0 100%);
+  }
+
+  .service-link {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .service-link .service-content h2,
+  .service-link .service-intro,
+  .service-link .feature-item {
+    color: inherit;
   }
 
   .service-large::before {
