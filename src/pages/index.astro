@@ -5,7 +5,16 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Home" description="Mighty Movers - Professional moving services in San Diego. Reliable, affordable, and stress-free moving solutions.">
   <section class="hero">
     <div class="hero-background"></div>
+    <div class="hero-decorative-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
     <div class="hero-content">
+      <div class="hero-badge-wrapper">
+        <div class="badge-line"></div>
+        <span class="hero-badge">San Diego's Premier Movers</span>
+      </div>
       <svg xmlns="http://www.w3.org/2000/svg"
            viewBox="0 0 500 500"
            class="hero-logo-svg">
@@ -27,139 +36,230 @@ import Layout from '../layouts/Layout.astro';
       <h1>Moving Made <span class="highlight">Simple</span></h1>
       <p class="hero-subtitle">Professional moving services you can trust. Licensed, insured, and ready to handle your move with care.</p>
       <div class="hero-buttons">
-        <a href="/contact" class="btn btn-primary">Get Free Quote</a>
+        <a href="/contact" class="btn btn-primary">
+          <span>Get Free Quote</span>
+          <span class="btn-arrow">→</span>
+        </a>
         <a href="tel:6195556683" class="btn btn-secondary">
           <span class="phone-icon">📞</span>
-          (619) 555-MOVE
+          <span>(619) 555-MOVE</span>
         </a>
       </div>
       <div class="hero-trust">
         <div class="trust-item">
-          <strong>500+</strong>
-          <span>Successful Moves</span>
+          <div class="trust-number">500+</div>
+          <span class="trust-label">Successful Moves</span>
         </div>
+        <div class="trust-divider"></div>
         <div class="trust-item">
-          <strong>5.0</strong>
-          <span>Star Rating</span>
+          <div class="trust-number">5.0</div>
+          <span class="trust-label">Star Rating</span>
         </div>
+        <div class="trust-divider"></div>
         <div class="trust-item">
-          <strong>10+</strong>
-          <span>Years Experience</span>
+          <div class="trust-number">10+</div>
+          <span class="trust-label">Years Experience</span>
         </div>
       </div>
     </div>
   </section>
 
   <section class="features">
+    <div class="features-background-pattern"></div>
     <div class="container">
-      <div class="section-header">
-        <h2>Why San Diego Trusts Us</h2>
-        <p>Premium moving services that exceed expectations</p>
+      <div class="section-header-artistic">
+        <div class="section-label">
+          <span class="label-line"></span>
+          <span class="label-text">Why Choose Us</span>
+        </div>
+        <h2>Why San Diego<br/><span class="heading-accent">Trusts Us</span></h2>
+        <p class="section-subtitle">Premium moving services that exceed expectations</p>
       </div>
       <div class="features-grid">
-        <div class="feature-card">
+        <div class="feature-card feature-card-1">
+          <div class="feature-corner-accent"></div>
           <div class="feature-number">01</div>
           <h3>Licensed & Insured</h3>
           <p>Full coverage for your peace of mind. Every move is protected by comprehensive insurance.</p>
+          <div class="feature-diagonal-line"></div>
         </div>
-        <div class="feature-card">
+        <div class="feature-card feature-card-2">
+          <div class="feature-corner-accent"></div>
           <div class="feature-number">02</div>
           <h3>Professional Team</h3>
           <p>Background-checked, trained movers who treat your belongings like their own.</p>
+          <div class="feature-diagonal-line"></div>
         </div>
-        <div class="feature-card">
+        <div class="feature-card feature-card-3">
+          <div class="feature-corner-accent"></div>
           <div class="feature-number">03</div>
           <h3>Transparent Pricing</h3>
           <p>No hidden fees, no surprises. Get a detailed quote upfront and stick to it.</p>
+          <div class="feature-diagonal-line"></div>
         </div>
-        <div class="feature-card">
+        <div class="feature-card feature-card-4">
+          <div class="feature-corner-accent"></div>
           <div class="feature-number">04</div>
           <h3>On-Time Guarantee</h3>
           <p>We show up when we say we will. Your time is valuable, and we respect that.</p>
+          <div class="feature-diagonal-line"></div>
         </div>
       </div>
     </div>
   </section>
 
   <section class="services-preview">
+    <div class="services-decorative">
+      <div class="decorative-circle decorative-circle-1"></div>
+      <div class="decorative-circle decorative-circle-2"></div>
+    </div>
     <div class="container">
-      <div class="section-header">
-        <h2>Complete Moving Solutions</h2>
-        <p>From residential to commercial, we handle it all</p>
+      <div class="section-header-artistic">
+        <div class="section-label">
+          <span class="label-line"></span>
+          <span class="label-text">Our Services</span>
+        </div>
+        <h2>Complete Moving<br/><span class="heading-accent">Solutions</span></h2>
+        <p class="section-subtitle">From residential to commercial, we handle it all</p>
       </div>
       <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">🏠</div>
+        <div class="service-card service-card-1">
+          <div class="service-icon-wrapper">
+            <div class="service-icon">🏠</div>
+            <div class="service-icon-bg"></div>
+          </div>
           <h3>Residential Moving</h3>
           <p>Apartments, condos, and houses. We make your home transition seamless.</p>
-          <a href="/services" class="service-link">Learn More →</a>
+          <a href="/services" class="service-link">
+            <span>Learn More</span>
+            <span class="service-arrow">→</span>
+          </a>
+          <div class="service-card-pattern"></div>
         </div>
-        <div class="service-card">
-          <div class="service-icon">🏢</div>
+        <div class="service-card service-card-2">
+          <div class="service-icon-wrapper">
+            <div class="service-icon">🏢</div>
+            <div class="service-icon-bg"></div>
+          </div>
           <h3>Commercial Moving</h3>
           <p>Office relocations with minimal downtime. Get back to business faster.</p>
-          <a href="/services" class="service-link">Learn More →</a>
+          <a href="/services" class="service-link">
+            <span>Learn More</span>
+            <span class="service-arrow">→</span>
+          </a>
+          <div class="service-card-pattern"></div>
         </div>
-        <div class="service-card">
-          <div class="service-icon">📦</div>
+        <div class="service-card service-card-3">
+          <div class="service-icon-wrapper">
+            <div class="service-icon">📦</div>
+            <div class="service-icon-bg"></div>
+          </div>
           <h3>Packing Services</h3>
           <p>Professional packing with premium materials. Everything arrives intact.</p>
-          <a href="/services" class="service-link">Learn More →</a>
+          <a href="/services" class="service-link">
+            <span>Learn More</span>
+            <span class="service-arrow">→</span>
+          </a>
+          <div class="service-card-pattern"></div>
         </div>
-        <div class="service-card">
-          <div class="service-icon">🔒</div>
+        <div class="service-card service-card-4">
+          <div class="service-icon-wrapper">
+            <div class="service-icon">🔒</div>
+            <div class="service-icon-bg"></div>
+          </div>
           <h3>Storage Solutions</h3>
           <p>Secure, climate-controlled storage when you need extra time or space.</p>
-          <a href="/services" class="service-link">Learn More →</a>
+          <a href="/services" class="service-link">
+            <span>Learn More</span>
+            <span class="service-arrow">→</span>
+          </a>
+          <div class="service-card-pattern"></div>
         </div>
       </div>
     </div>
   </section>
 
   <section class="process">
+    <div class="process-background-shapes">
+      <div class="process-shape process-shape-1"></div>
+      <div class="process-shape process-shape-2"></div>
+    </div>
     <div class="container">
-      <div class="section-header">
-        <h2>Simple, Streamlined Process</h2>
-        <p>Get moving in three easy steps</p>
+      <div class="section-header-artistic centered">
+        <div class="section-label centered">
+          <span class="label-line"></span>
+          <span class="label-text">How It Works</span>
+        </div>
+        <h2>Simple, Streamlined<br/><span class="heading-accent">Process</span></h2>
+        <p class="section-subtitle">Get moving in three easy steps</p>
       </div>
       <div class="process-grid">
         <div class="process-step">
-          <div class="step-number">1</div>
-          <h3>Get Your Quote</h3>
-          <p>Contact us for a free, no-obligation quote. We'll assess your needs and provide transparent pricing.</p>
+          <div class="step-number-wrapper">
+            <div class="step-number">1</div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step-content">
+            <h3>Get Your Quote</h3>
+            <p>Contact us for a free, no-obligation quote. We'll assess your needs and provide transparent pricing.</p>
+          </div>
+          <div class="step-accent-line"></div>
         </div>
-        <div class="process-arrow">→</div>
         <div class="process-step">
-          <div class="step-number">2</div>
-          <h3>Schedule Your Move</h3>
-          <p>Choose your preferred date and time. We'll work around your schedule for maximum convenience.</p>
+          <div class="step-number-wrapper">
+            <div class="step-number">2</div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step-content">
+            <h3>Schedule Your Move</h3>
+            <p>Choose your preferred date and time. We'll work around your schedule for maximum convenience.</p>
+          </div>
+          <div class="step-accent-line"></div>
         </div>
-        <div class="process-arrow">→</div>
         <div class="process-step">
-          <div class="step-number">3</div>
-          <h3>Relax & We Move</h3>
-          <p>Our professional team handles everything while you focus on settling into your new space.</p>
+          <div class="step-number-wrapper">
+            <div class="step-number">3</div>
+          </div>
+          <div class="step-content">
+            <h3>Relax & We Move</h3>
+            <p>Our professional team handles everything while you focus on settling into your new space.</p>
+          </div>
+          <div class="step-accent-line"></div>
         </div>
       </div>
     </div>
   </section>
 
   <section class="cta-section">
+    <div class="cta-decorative-grid"></div>
+    <div class="cta-shapes">
+      <div class="cta-shape cta-shape-1"></div>
+      <div class="cta-shape cta-shape-2"></div>
+      <div class="cta-shape cta-shape-3"></div>
+    </div>
     <div class="cta-content">
-      <h2>Ready to Make Your Move?</h2>
+      <div class="cta-badge">Let's Get Started</div>
+      <h2>Ready to Make<br/>Your <span class="cta-highlight">Move?</span></h2>
       <p>Get your free quote today and experience the Mighty Movers difference</p>
       <div class="cta-buttons">
-        <a href="/contact" class="btn btn-primary btn-large">Get Free Quote</a>
-        <a href="tel:6195556683" class="btn btn-secondary btn-large">Call (619) 555-MOVE</a>
+        <a href="/contact" class="btn btn-primary btn-large">
+          <span>Get Free Quote</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <a href="tel:6195556683" class="btn btn-secondary btn-large">
+          <span class="phone-icon">📞</span>
+          <span>Call (619) 555-MOVE</span>
+        </a>
       </div>
     </div>
   </section>
 </Layout>
 
 <style>
+  /* === HERO SECTION === */
   .hero {
     position: relative;
-    min-height: 90vh;
+    min-height: 95vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -183,52 +283,120 @@ import Layout from '../layouts/Layout.astro';
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.65) 100%);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.75) 100%);
+  }
+
+  .hero-decorative-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .shape {
+    position: absolute;
+    border: 2px solid var(--yellow);
+    opacity: 0.15;
+  }
+
+  .shape-1 {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    top: -100px;
+    right: -100px;
+    animation: float 20s ease-in-out infinite;
+  }
+
+  .shape-2 {
+    width: 200px;
+    height: 200px;
+    bottom: 10%;
+    left: 5%;
+    transform: rotate(45deg);
+    animation: float 15s ease-in-out infinite reverse;
+  }
+
+  .shape-3 {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    top: 20%;
+    left: 10%;
+    animation: float 18s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-30px) rotate(10deg); }
   }
 
   .hero-content {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     max-width: 1400px;
     text-align: center;
     padding: 4rem 2rem;
   }
 
+  .hero-badge-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .badge-line {
+    width: 60px;
+    height: 2px;
+    background: var(--yellow);
+  }
+
+  .hero-badge {
+    display: inline-block;
+    color: var(--yellow);
+    padding: 0.5rem 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: 2px solid var(--yellow);
+    border-radius: 0;
+    clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+    animation: fadeIn 0.8s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
   .hero-logo-svg {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto 2rem;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 2.5rem;
     display: block;
-    filter: drop-shadow(0 4px 12px rgba(246, 245, 16, 0.3));
-    animation: fadeInScale 0.8s ease-out;
+    filter: drop-shadow(0 8px 20px rgba(246, 245, 16, 0.4));
+    animation: fadeInScale 1s ease-out;
   }
 
   @keyframes fadeInScale {
     from {
       opacity: 0;
-      transform: scale(0.9);
+      transform: scale(0.85) rotate(-5deg);
     }
     to {
       opacity: 1;
-      transform: scale(1);
+      transform: scale(1) rotate(0deg);
     }
   }
 
-  .hero-badge {
-    display: inline-block;
-    background: var(--yellow);
-    color: var(--black);
-    padding: 0.5rem 1.5rem;
-    border-radius: 50px;
-    font-size: 0.9rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 2rem;
-  }
-
   .hero h1 {
-    font-size: clamp(3rem, 8vw, 6rem);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 900;
     color: var(--white);
     margin-bottom: 1.5rem;
@@ -254,45 +422,78 @@ import Layout from '../layouts/Layout.astro';
     gap: 1.5rem;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
   }
 
   .btn {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    justify-content: space-between;
+    gap: 1rem;
     padding: 1.25rem 2.5rem;
     font-size: 1rem;
     font-weight: 700;
     text-decoration: none;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
+    border-radius: 0;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
+  }
+
+  .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: left 0.5s;
+  }
+
+  .btn:hover::before {
+    left: 100%;
+  }
+
+  .btn-arrow {
+    font-size: 1.3rem;
+    transition: transform 0.3s ease;
+  }
+
+  .btn:hover .btn-arrow,
+  .btn:hover .service-arrow {
+    transform: translateX(5px);
   }
 
   .btn-primary {
     background: var(--yellow);
     color: var(--black);
     border-color: var(--yellow);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
   }
 
   .btn-primary:hover {
-    background: transparent;
+    background: var(--black);
     color: var(--yellow);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(246, 245, 16, 0.3);
+    border-color: var(--yellow);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 rgba(246, 245, 16, 0.3);
   }
 
   .btn-secondary {
     background: transparent;
     color: var(--white);
     border-color: var(--white);
+    box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.1);
   }
 
   .btn-secondary:hover {
     background: var(--white);
     color: var(--black);
-    transform: translateY(-3px);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 rgba(255, 255, 255, 0.3);
   }
 
   .btn-large {
@@ -306,9 +507,15 @@ import Layout from '../layouts/Layout.astro';
 
   .hero-trust {
     display: flex;
-    gap: 4rem;
+    align-items: center;
+    gap: 2rem;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(246, 245, 16, 0.2);
+    clip-path: polygon(20px 0, 100% 0, calc(100% - 20px) 100%, 0 100%);
+    backdrop-filter: blur(10px);
   }
 
   .trust-item {
@@ -318,18 +525,26 @@ import Layout from '../layouts/Layout.astro';
     gap: 0.5rem;
   }
 
-  .trust-item strong {
-    font-size: 2.5rem;
+  .trust-number {
+    font-size: 2.8rem;
     font-weight: 900;
     color: var(--yellow);
     line-height: 1;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
   }
 
-  .trust-item span {
-    font-size: 0.9rem;
-    color: var(--gray-400);
+  .trust-label {
+    font-size: 0.8rem;
+    color: var(--gray-300);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+
+  .trust-divider {
+    width: 2px;
+    height: 50px;
+    background: linear-gradient(to bottom, transparent, var(--yellow), transparent);
   }
 
   .container {
@@ -338,110 +553,304 @@ import Layout from '../layouts/Layout.astro';
     padding: 0 3rem;
   }
 
-  .section-header {
-    text-align: center;
-    margin-bottom: 4rem;
+  /* === SHARED SECTION HEADER STYLES === */
+  .section-header-artistic {
+    text-align: left;
+    margin-bottom: 5rem;
+    max-width: 800px;
   }
 
-  .section-header h2 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
+  .section-header-artistic.centered {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-label.centered {
+    justify-content: center;
+  }
+
+  .label-line {
+    width: 40px;
+    height: 3px;
+    background: var(--yellow);
+  }
+
+  .label-text {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--yellow);
+  }
+
+  .section-header-artistic h2 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
     font-weight: 900;
     color: var(--black);
-    margin-bottom: 1rem;
-    letter-spacing: -1px;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    letter-spacing: -2px;
   }
 
-  .section-header p {
+  .heading-accent {
+    color: var(--yellow);
+    position: relative;
+    display: inline-block;
+  }
+
+  .heading-accent::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: var(--yellow);
+    opacity: 0.2;
+    transform: skewX(-15deg);
+  }
+
+  .section-subtitle {
     font-size: 1.2rem;
     color: var(--gray-600);
+    line-height: 1.7;
   }
 
+  /* === FEATURES SECTION === */
   .features {
-    padding: 8rem 0;
-    background: var(--gray-50);
+    padding: 10rem 0;
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .features-background-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+      linear-gradient(45deg, transparent 45%, rgba(246, 245, 16, 0.02) 45%, rgba(246, 245, 16, 0.02) 55%, transparent 55%),
+      linear-gradient(-45deg, transparent 45%, rgba(0, 0, 0, 0.02) 45%, rgba(0, 0, 0, 0.02) 55%, transparent 55%);
+    background-size: 60px 60px;
+    opacity: 0.5;
   }
 
   .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    position: relative;
+    z-index: 1;
   }
 
   .feature-card {
     background: var(--white);
     padding: 3rem 2rem;
-    border-radius: 12px;
-    border: 2px solid var(--gray-200);
-    transition: all 0.3s ease;
+    border: 3px solid var(--black);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+  }
+
+  .feature-corner-accent {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: var(--yellow);
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+  }
+
+  .feature-diagonal-line {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    height: 3px;
+    background: var(--yellow);
+    transform: skewX(-45deg);
+    transform-origin: left;
+    transition: transform 0.4s ease;
   }
 
   .feature-card:hover {
-    border-color: var(--yellow);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translate(-4px, -4px);
+    box-shadow: 8px 8px 0 var(--yellow);
+  }
+
+  .feature-card:hover .feature-diagonal-line {
+    transform: skewX(-45deg) scaleX(1.1);
   }
 
   .feature-number {
-    position: absolute;
-    top: -1rem;
-    left: 2rem;
-    background: var(--yellow);
-    color: var(--black);
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 5rem;
     font-weight: 900;
-    font-size: 1.2rem;
+    color: var(--yellow);
+    line-height: 1;
+    opacity: 0.15;
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    z-index: 0;
   }
 
   .feature-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 800;
     margin-bottom: 1rem;
     color: var(--black);
+    position: relative;
+    z-index: 1;
   }
 
   .feature-card p {
     color: var(--gray-600);
-    line-height: 1.8;
+    line-height: 1.9;
+    position: relative;
+    z-index: 1;
   }
 
+  /* === SERVICES SECTION === */
   .services-preview {
-    padding: 8rem 0;
+    padding: 10rem 0;
+    background: var(--black);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .services-decorative {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+  }
+
+  .decorative-circle {
+    position: absolute;
+    border: 2px solid var(--yellow);
+    border-radius: 50%;
+    opacity: 0.1;
+  }
+
+  .decorative-circle-1 {
+    width: 500px;
+    height: 500px;
+    top: -200px;
+    left: -100px;
+  }
+
+  .decorative-circle-2 {
+    width: 350px;
+    height: 350px;
+    bottom: -100px;
+    right: -50px;
+  }
+
+  .services-preview .section-header-artistic h2 {
+    color: var(--white);
+  }
+
+  .services-preview .section-subtitle {
+    color: var(--gray-400);
   }
 
   .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 2.5rem;
+    position: relative;
+    z-index: 1;
   }
 
   .service-card {
-    background: var(--black);
+    background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
     color: var(--white);
-    padding: 3rem 2rem;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    border: 2px solid var(--black);
+    padding: 3rem 2.5rem;
+    border: 3px solid var(--gray-800);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card-pattern {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background-image:
+      repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(246, 245, 16, 0.03) 10px, rgba(246, 245, 16, 0.03) 20px);
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: var(--yellow);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.4s ease;
   }
 
   .service-card:hover {
     border-color: var(--yellow);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 40px rgba(246, 245, 16, 0.2);
+    transform: translateX(8px);
+    box-shadow: -8px 8px 0 var(--yellow);
+  }
+
+  .service-card:hover::before {
+    transform: scaleY(1);
+  }
+
+  .service-icon-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
   }
 
   .service-icon {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
+    font-size: 3.5rem;
+    position: relative;
+    z-index: 1;
+    display: block;
+  }
+
+  .service-icon-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: var(--yellow);
+    opacity: 0.15;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+  }
+
+  .service-card:hover .service-icon-bg {
+    transform: translate(-50%, -50%) scale(1.2) rotate(90deg);
+    opacity: 0.25;
   }
 
   .service-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 800;
     margin-bottom: 1rem;
     color: var(--white);
@@ -449,112 +858,262 @@ import Layout from '../layouts/Layout.astro';
 
   .service-card p {
     color: var(--gray-400);
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
+    line-height: 1.9;
+    margin-bottom: 2rem;
   }
 
   .service-link {
     color: var(--yellow);
     font-weight: 700;
     text-decoration: none;
-    transition: gap 0.3s ease;
     display: inline-flex;
     align-items: center;
+    gap: 0.5rem;
+    transition: gap 0.3s ease;
+    padding: 0.75rem 0;
+    border-bottom: 2px solid transparent;
   }
 
   .service-link:hover {
-    gap: 0.5rem;
+    gap: 1rem;
+    border-bottom-color: var(--yellow);
   }
 
+  .service-arrow {
+    transition: transform 0.3s ease;
+    font-size: 1.2rem;
+  }
+
+  /* === PROCESS SECTION === */
   .process {
-    padding: 8rem 0;
+    padding: 10rem 0;
     background: var(--gray-50);
-  }
-
-  .process-grid {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr auto 1fr;
-    gap: 2rem;
-    align-items: start;
-  }
-
-  .process-step {
-    text-align: center;
-    padding: 2rem;
-  }
-
-  .step-number {
-    width: 4rem;
-    height: 4rem;
-    background: var(--yellow);
-    color: var(--black);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.8rem;
-    font-weight: 900;
-    margin: 0 auto 1.5rem;
-  }
-
-  .process-step h3 {
-    font-size: 1.5rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-    color: var(--black);
-  }
-
-  .process-step p {
-    color: var(--gray-600);
-    line-height: 1.8;
-  }
-
-  .process-arrow {
-    font-size: 3rem;
-    color: var(--gray-300);
-    align-self: center;
-    padding-top: 4rem;
-  }
-
-  .cta-section {
-    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-    padding: 8rem 2rem;
-    text-align: center;
     position: relative;
     overflow: hidden;
   }
 
-  .cta-section::before {
-    content: '';
+  .process-background-shapes {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background:
-      radial-gradient(circle at 30% 50%, rgba(246, 245, 16, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 70% 50%, rgba(246, 245, 16, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .process-shape {
+    position: absolute;
+    background: var(--yellow);
+    opacity: 0.03;
+  }
+
+  .process-shape-1 {
+    width: 300px;
+    height: 300px;
+    top: -50px;
+    left: -50px;
+    transform: rotate(45deg);
+  }
+
+  .process-shape-2 {
+    width: 200px;
+    height: 200px;
+    bottom: -50px;
+    right: -50px;
+    border-radius: 50%;
+  }
+
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .process-step {
+    position: relative;
+    padding: 3rem 2rem;
+    background: var(--white);
+    border: 3px solid var(--black);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .process-step:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 0 var(--yellow);
+  }
+
+  .step-accent-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--yellow);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+
+  .process-step:hover .step-accent-line {
+    transform: scaleX(1);
+  }
+
+  .step-number-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+  }
+
+  .step-number {
+    width: 4.5rem;
+    height: 4.5rem;
+    background: var(--black);
+    color: var(--yellow);
+    border: 3px solid var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 900;
+    flex-shrink: 0;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+  }
+
+  .step-connector {
+    flex: 1;
+    height: 3px;
+    background: linear-gradient(to right, var(--yellow), transparent);
+  }
+
+  .step-content h3 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--black);
+  }
+
+  .step-content p {
+    color: var(--gray-600);
+    line-height: 1.9;
+  }
+
+  /* === CTA SECTION === */
+  .cta-section {
+    background: var(--black);
+    padding: 10rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-decorative-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+      linear-gradient(0deg, transparent 49%, rgba(246, 245, 16, 0.05) 49%, rgba(246, 245, 16, 0.05) 51%, transparent 51%),
+      linear-gradient(90deg, transparent 49%, rgba(246, 245, 16, 0.05) 49%, rgba(246, 245, 16, 0.05) 51%, transparent 51%);
+    background-size: 100px 100px;
+    opacity: 0.3;
+  }
+
+  .cta-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+  }
+
+  .cta-shape {
+    position: absolute;
+    border: 3px solid var(--yellow);
+    opacity: 0.1;
+  }
+
+  .cta-shape-1 {
+    width: 250px;
+    height: 250px;
+    top: 10%;
+    left: 5%;
+    transform: rotate(15deg);
+  }
+
+  .cta-shape-2 {
+    width: 180px;
+    height: 180px;
+    bottom: 15%;
+    right: 8%;
+    border-radius: 50%;
+  }
+
+  .cta-shape-3 {
+    width: 120px;
+    height: 120px;
+    top: 60%;
+    left: 15%;
+    transform: rotate(-25deg);
   }
 
   .cta-content {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     max-width: 900px;
     margin: 0 auto;
   }
 
+  .cta-badge {
+    display: inline-block;
+    color: var(--yellow);
+    padding: 0.5rem 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: 2px solid var(--yellow);
+    margin-bottom: 2rem;
+    clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+  }
+
   .cta-section h2 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(2.8rem, 6vw, 5rem);
     font-weight: 900;
     color: var(--white);
-    margin-bottom: 1rem;
-    letter-spacing: -1px;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    letter-spacing: -2px;
+  }
+
+  .cta-highlight {
+    color: var(--yellow);
+    position: relative;
+    display: inline-block;
+  }
+
+  .cta-highlight::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -5px;
+    right: -5px;
+    height: 15px;
+    background: var(--yellow);
+    opacity: 0.2;
+    transform: skewX(-10deg);
+    z-index: -1;
   }
 
   .cta-section p {
     font-size: 1.3rem;
     color: var(--gray-300);
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
+    line-height: 1.7;
   }
 
   .cta-buttons {
@@ -564,13 +1123,23 @@ import Layout from '../layouts/Layout.astro';
     flex-wrap: wrap;
   }
 
+  /* === RESPONSIVE === */
   @media (max-width: 1024px) {
     .process-grid {
       grid-template-columns: 1fr;
+      gap: 2rem;
     }
 
-    .process-arrow {
+    .step-connector {
       display: none;
+    }
+
+    .section-header-artistic {
+      text-align: center;
+    }
+
+    .section-label {
+      justify-content: center;
     }
   }
 
@@ -580,8 +1149,31 @@ import Layout from '../layouts/Layout.astro';
       padding: 4rem 1rem;
     }
 
+    .hero-logo-svg {
+      width: 150px;
+      height: 150px;
+    }
+
     .hero-trust {
-      gap: 2rem;
+      gap: 1.5rem;
+      padding: 1.5rem;
+    }
+
+    .trust-divider {
+      height: 40px;
+    }
+
+    .trust-number {
+      font-size: 2.2rem;
+    }
+
+    .hero-badge-wrapper {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .badge-line {
+      width: 40px;
     }
 
     .container {
@@ -592,12 +1184,60 @@ import Layout from '../layouts/Layout.astro';
     .services-preview,
     .process,
     .cta-section {
-      padding: 4rem 0;
+      padding: 5rem 0;
     }
 
     .services-grid,
     .features-grid {
       grid-template-columns: 1fr;
+    }
+
+    .feature-card,
+    .service-card,
+    .process-step {
+      transform: none !important;
+    }
+
+    .feature-card:hover,
+    .service-card:hover,
+    .process-step:hover {
+      transform: translateY(-4px) !important;
+    }
+
+    .btn {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .section-header-artistic h2 {
+      font-size: clamp(2rem, 8vw, 3.5rem);
+    }
+
+    .shape-1,
+    .shape-2,
+    .shape-3 {
+      opacity: 0.08;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-buttons {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .btn {
+      max-width: 100%;
+    }
+
+    .feature-number {
+      font-size: 4rem;
+    }
+
+    .cta-shape-1,
+    .cta-shape-2,
+    .cta-shape-3 {
+      display: none;
     }
   }
 </style>
