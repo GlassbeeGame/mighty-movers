@@ -1,0 +1,834 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Design Showcase" description="Showcasing the artistic design system of Mighty Movers website with brutalist and modern UI elements.">
+  <section class="showcase-hero">
+    <div class="hero-background"></div>
+    <div class="hero-content">
+      <span class="hero-badge">Design System</span>
+      <h1>Artistic Design <span class="highlight">Showcase</span></h1>
+      <p class="hero-subtitle">A bold, modern design system featuring clip-path polygons, box-shadow offsets, and dynamic animations</p>
+    </div>
+  </section>
+
+  <section class="design-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Design Principles</h2>
+        <p>Our design system is built on brutalist aesthetics with modern usability</p>
+      </div>
+      <div class="principles-grid">
+        <div class="principle-card">
+          <div class="principle-number">01</div>
+          <h3>Angled Corners</h3>
+          <p>Clip-path polygons create unique geometric shapes that stand out from traditional rounded corners</p>
+          <div class="demo-box demo-clip"></div>
+        </div>
+        <div class="principle-card">
+          <div class="principle-number">02</div>
+          <h3>Box Shadow Offsets</h3>
+          <p>Brutalist-inspired shadow offsets that create depth and visual hierarchy</p>
+          <div class="demo-box demo-shadow"></div>
+        </div>
+        <div class="principle-card">
+          <div class="principle-number">03</div>
+          <h3>Yellow Accents</h3>
+          <p>Strategic use of yellow (#F6F510) for highlights, backgrounds, and interactive elements</p>
+          <div class="demo-box demo-yellow"></div>
+        </div>
+        <div class="principle-card">
+          <div class="principle-number">04</div>
+          <h3>Smooth Animations</h3>
+          <p>Cubic-bezier easing (0.165, 0.84, 0.44, 1) for fluid, professional transitions</p>
+          <div class="demo-box demo-animate"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="components-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Component Library</h2>
+        <p>Reusable components with consistent styling</p>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Buttons</h3>
+        <div class="button-row">
+          <button class="btn btn-primary">Primary Button</button>
+          <button class="btn btn-secondary">Secondary Button</button>
+          <button class="btn btn-outline">Outline Button</button>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Cards</h3>
+        <div class="cards-row">
+          <div class="card card-white">
+            <div class="card-accent"></div>
+            <div class="card-number">01</div>
+            <h4>White Card</h4>
+            <p>Card with angled corner and yellow accent</p>
+          </div>
+          <div class="card card-black">
+            <div class="card-stripe"></div>
+            <h4>Black Card</h4>
+            <p>Dark card with sliding yellow stripe</p>
+          </div>
+          <div class="card card-border">
+            <h4>Border Card</h4>
+            <p>Card with dynamic border highlight</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Badges & Labels</h3>
+        <div class="badge-row">
+          <span class="badge badge-clip">Clipped Badge</span>
+          <span class="badge badge-solid">Solid Badge</span>
+          <span class="badge badge-outline">Outline Badge</span>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Form Elements</h3>
+        <div class="form-demo">
+          <div class="form-group">
+            <label>Input with Shadow Focus</label>
+            <input type="text" placeholder="Type something..." />
+          </div>
+          <div class="form-group">
+            <label>Textarea</label>
+            <textarea rows="3" placeholder="Your message..."></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="patterns-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Visual Patterns</h2>
+        <p>Background patterns and decorative elements</p>
+      </div>
+      <div class="patterns-grid">
+        <div class="pattern-demo">
+          <h4>Diagonal Stripes</h4>
+          <div class="pattern-box pattern-diagonal"></div>
+        </div>
+        <div class="pattern-demo">
+          <h4>Grid Pattern</h4>
+          <div class="pattern-box pattern-grid"></div>
+        </div>
+        <div class="pattern-demo">
+          <h4>Repeating Lines</h4>
+          <div class="pattern-box pattern-lines"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="colors-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Color Palette</h2>
+        <p>Simple, bold color scheme with high contrast</p>
+      </div>
+      <div class="colors-grid">
+        <div class="color-swatch">
+          <div class="swatch-box swatch-black"></div>
+          <div class="swatch-info">
+            <h4>Black</h4>
+            <code>#000000</code>
+            <p>Primary text, borders, backgrounds</p>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch-box swatch-yellow"></div>
+          <div class="swatch-info">
+            <h4>Yellow</h4>
+            <code>#F6F510</code>
+            <p>Accents, CTAs, highlights</p>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch-box swatch-white"></div>
+          <div class="swatch-info">
+            <h4>White</h4>
+            <code>#FFFFFF</code>
+            <p>Backgrounds, cards, text on dark</p>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch-box swatch-gray"></div>
+          <div class="swatch-info">
+            <h4>Gray Scale</h4>
+            <code>#404040 - #E5E5E5</code>
+            <p>Secondary text, subtle borders</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Ready to See It Live?</h2>
+      <p>Explore the full website to experience the complete design system</p>
+      <div class="cta-buttons">
+        <a href="/" class="btn btn-primary btn-large">Back to Homepage</a>
+        <a href="/contact" class="btn btn-secondary btn-large">Get a Quote</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* === HERO === */
+  .showcase-hero {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 4rem 2rem;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.85) 100%),
+      repeating-linear-gradient(45deg, transparent, transparent 50px, rgba(246, 245, 16, 0.03) 50px, rgba(246, 245, 16, 0.03) 100px);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    color: var(--yellow);
+    padding: 0.5rem 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: 2px solid var(--yellow);
+    margin-bottom: 2rem;
+    clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+  }
+
+  .showcase-hero h1 {
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 900;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    letter-spacing: -2px;
+    line-height: 1.1;
+  }
+
+  .highlight {
+    color: var(--yellow);
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--gray-300);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* === SHARED === */
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-header h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    color: var(--black);
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+  }
+
+  .section-header p {
+    font-size: 1.2rem;
+    color: var(--gray-600);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .design-section,
+  .components-section,
+  .patterns-section,
+  .colors-section {
+    padding: 8rem 0;
+  }
+
+  .components-section {
+    background: var(--gray-50);
+  }
+
+  /* === PRINCIPLES === */
+  .principles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+  }
+
+  .principle-card {
+    background: var(--white);
+    padding: 3rem 2rem;
+    border: 3px solid var(--black);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+  }
+
+  .principle-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: var(--yellow);
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+  }
+
+  .principle-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 8px 8px 0 var(--yellow);
+  }
+
+  .principle-number {
+    position: absolute;
+    top: 1.5rem;
+    right: 3rem;
+    background: var(--black);
+    color: var(--yellow);
+    border: 2px solid var(--yellow);
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1.1rem;
+    clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%);
+    z-index: 1;
+  }
+
+  .principle-card h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--black);
+  }
+
+  .principle-card p {
+    color: var(--gray-600);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  .demo-box {
+    width: 100%;
+    height: 120px;
+    margin-top: 1.5rem;
+  }
+
+  .demo-clip {
+    background: var(--black);
+    clip-path: polygon(15px 0, 100% 0, calc(100% - 15px) 100%, 0 100%);
+  }
+
+  .demo-shadow {
+    background: var(--white);
+    border: 3px solid var(--black);
+    box-shadow: 8px 8px 0 var(--yellow);
+  }
+
+  .demo-yellow {
+    background: var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--black);
+  }
+
+  .demo-yellow::after {
+    content: '#F6F510';
+  }
+
+  .demo-animate {
+    background: var(--black);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+  }
+
+  .demo-animate:hover {
+    transform: translateX(20px);
+    background: var(--yellow);
+  }
+
+  /* === COMPONENTS === */
+  .component-showcase {
+    margin-bottom: 5rem;
+  }
+
+  .component-showcase h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: var(--black);
+  }
+
+  .button-row {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 3px solid transparent;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .btn-primary {
+    background: var(--yellow);
+    color: var(--black);
+    border-color: var(--yellow);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+    clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
+  }
+
+  .btn-primary:hover {
+    background: var(--black);
+    color: var(--yellow);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 rgba(246, 245, 16, 0.3);
+  }
+
+  .btn-secondary {
+    background: var(--black);
+    color: var(--white);
+    border-color: var(--black);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+    clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
+  }
+
+  .btn-secondary:hover {
+    background: var(--white);
+    color: var(--black);
+    border-color: var(--black);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--black);
+    border-color: var(--black);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+    clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
+  }
+
+  .btn-outline:hover {
+    background: var(--yellow);
+    border-color: var(--yellow);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 rgba(246, 245, 16, 0.3);
+  }
+
+  .btn-large {
+    padding: 1.5rem 3rem;
+    font-size: 1.1rem;
+  }
+
+  .cards-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .card {
+    padding: 2.5rem 2rem;
+    border: 3px solid var(--black);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+  }
+
+  .card h4 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+  }
+
+  .card p {
+    line-height: 1.7;
+  }
+
+  .card-white {
+    background: var(--white);
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+  }
+
+  .card-white .card-accent {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: var(--yellow);
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+  }
+
+  .card-white .card-number {
+    position: absolute;
+    top: 1.5rem;
+    right: 3rem;
+    background: var(--black);
+    color: var(--yellow);
+    border: 2px solid var(--yellow);
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    clip-path: polygon(0 0, calc(100% - 5px) 0, 100% 5px, 100% 100%, 0 100%);
+  }
+
+  .card-white:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 8px 8px 0 var(--yellow);
+  }
+
+  .card-black {
+    background: var(--black);
+    color: var(--white);
+    border-color: var(--gray-800);
+    overflow: hidden;
+  }
+
+  .card-black .card-stripe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: var(--yellow);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.4s ease;
+  }
+
+  .card-black:hover .card-stripe {
+    transform: scaleY(1);
+  }
+
+  .card-black:hover {
+    border-color: var(--yellow);
+    transform: translateX(8px);
+    box-shadow: -8px 8px 0 var(--yellow);
+  }
+
+  .card-black h4 {
+    color: var(--white);
+  }
+
+  .card-black p {
+    color: var(--gray-400);
+  }
+
+  .card-border {
+    background: var(--white);
+  }
+
+  .card-border:hover {
+    border-color: var(--yellow);
+    box-shadow: 0 8px 30px rgba(246, 245, 16, 0.2);
+  }
+
+  .badge-row {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  .badge-clip {
+    background: var(--black);
+    color: var(--yellow);
+    clip-path: polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%);
+  }
+
+  .badge-solid {
+    background: var(--yellow);
+    color: var(--black);
+  }
+
+  .badge-outline {
+    background: transparent;
+    color: var(--yellow);
+    border: 2px solid var(--yellow);
+    clip-path: polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%);
+  }
+
+  .form-demo {
+    max-width: 500px;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: var(--black);
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--black);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: var(--white);
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--yellow);
+    box-shadow: 4px 4px 0 rgba(246, 245, 16, 0.2);
+    transform: translate(-2px, -2px);
+  }
+
+  /* === PATTERNS === */
+  .patterns-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+  }
+
+  .pattern-demo h4 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: var(--black);
+  }
+
+  .pattern-box {
+    width: 100%;
+    height: 200px;
+    border: 3px solid var(--black);
+  }
+
+  .pattern-diagonal {
+    background-image:
+      linear-gradient(45deg, transparent 45%, rgba(246, 245, 16, 0.1) 45%, rgba(246, 245, 16, 0.1) 55%, transparent 55%),
+      linear-gradient(-45deg, transparent 45%, rgba(0, 0, 0, 0.05) 45%, rgba(0, 0, 0, 0.05) 55%, transparent 55%);
+    background-size: 60px 60px;
+  }
+
+  .pattern-grid {
+    background-image:
+      linear-gradient(0deg, transparent 49%, rgba(246, 245, 16, 0.1) 49%, rgba(246, 245, 16, 0.1) 51%, transparent 51%),
+      linear-gradient(90deg, transparent 49%, rgba(246, 245, 16, 0.1) 49%, rgba(246, 245, 16, 0.1) 51%, transparent 51%);
+    background-size: 80px 80px;
+  }
+
+  .pattern-lines {
+    background-image:
+      repeating-linear-gradient(45deg, transparent, transparent 15px, rgba(246, 245, 16, 0.1) 15px, rgba(246, 245, 16, 0.1) 30px);
+  }
+
+  /* === COLORS === */
+  .colors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+  }
+
+  .color-swatch {
+    background: var(--white);
+    padding: 2rem;
+    border: 3px solid var(--black);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .color-swatch:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .swatch-box {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 1.5rem;
+    border: 2px solid var(--gray-300);
+  }
+
+  .swatch-black {
+    background: var(--black);
+  }
+
+  .swatch-yellow {
+    background: var(--yellow);
+  }
+
+  .swatch-white {
+    background: var(--white);
+  }
+
+  .swatch-gray {
+    background: linear-gradient(90deg, var(--gray-700), var(--gray-200));
+  }
+
+  .swatch-info h4 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: var(--black);
+  }
+
+  .swatch-info code {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--yellow);
+    background: var(--black);
+    padding: 0.5rem 1rem;
+    margin: 0.75rem 0;
+    font-family: 'Courier New', monospace;
+  }
+
+  .swatch-info p {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* === CTA === */
+  .cta-section {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    padding: 8rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(circle at 50% 50%, rgba(246, 245, 16, 0.1) 0%, transparent 60%);
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .cta-section h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    color: var(--white);
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+  }
+
+  .cta-section p {
+    font-size: 1.3rem;
+    color: var(--gray-300);
+    margin-bottom: 3rem;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* === RESPONSIVE === */
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 1.5rem;
+    }
+
+    .design-section,
+    .components-section,
+    .patterns-section,
+    .colors-section {
+      padding: 5rem 0;
+    }
+
+    .showcase-hero {
+      min-height: auto;
+      padding: 4rem 1rem;
+    }
+
+    .button-row,
+    .badge-row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .btn {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+</style>
