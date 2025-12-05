@@ -161,15 +161,16 @@ import Layout from '../layouts/Layout.astro';
 
   .hero-badge {
     display: inline-block;
-    background: var(--yellow);
-    color: var(--black);
+    color: var(--yellow);
     padding: 0.5rem 1.5rem;
-    border-radius: 50px;
+    border-radius: 0;
     font-size: 0.85rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+    border: 2px solid var(--yellow);
     margin-bottom: 2rem;
+    clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
   }
 
   .page-hero h1 {
@@ -233,14 +234,34 @@ import Layout from '../layouts/Layout.astro';
     padding: 2rem;
     background: var(--black);
     color: var(--white);
-    border-radius: 12px;
-    border: 2px solid var(--black);
-    transition: all 0.3s ease;
+    border-radius: 0;
+    border: 3px solid var(--gray-800);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact-method::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: var(--yellow);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.4s ease;
   }
 
   .contact-method:hover {
     border-color: var(--yellow);
-    transform: translateX(5px);
+    transform: translateX(8px);
+    box-shadow: -8px 8px 0 var(--yellow);
+  }
+
+  .contact-method:hover::before {
+    transform: scaleY(1);
   }
 
   .contact-method h3 {
@@ -304,10 +325,23 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .contact-form-container {
-    background: var(--gray-50);
+    background: var(--white);
     padding: 3rem;
-    border-radius: 12px;
-    border: 2px solid var(--gray-200);
+    border-radius: 0;
+    border: 3px solid var(--black);
+    position: relative;
+    clip-path: polygon(0 0, calc(100% - 25px) 0, 100% 25px, 100% 100%, 0 100%);
+  }
+
+  .contact-form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    background: var(--yellow);
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
   }
 
   .contact-form-container h2 {
@@ -346,8 +380,8 @@ import Layout from '../layouts/Layout.astro';
   .form-group select,
   .form-group textarea {
     padding: 1rem;
-    border: 2px solid var(--gray-300);
-    border-radius: 8px;
+    border: 2px solid var(--black);
+    border-radius: 0;
     font-size: 1rem;
     font-family: inherit;
     transition: all 0.3s ease;
@@ -359,7 +393,8 @@ import Layout from '../layouts/Layout.astro';
   .form-group textarea:focus {
     outline: none;
     border-color: var(--yellow);
-    box-shadow: 0 0 0 3px rgba(246, 245, 16, 0.1);
+    box-shadow: 4px 4px 0 rgba(246, 245, 16, 0.2);
+    transform: translate(-2px, -2px);
   }
 
   .form-group textarea {
@@ -386,13 +421,16 @@ import Layout from '../layouts/Layout.astro';
     background: var(--yellow);
     color: var(--black);
     border-color: var(--yellow);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+    clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
   }
 
   .btn-primary:hover {
     background: var(--black);
     color: var(--yellow);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-color: var(--yellow);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 rgba(246, 245, 16, 0.3);
   }
 
   .btn-large {

@@ -166,15 +166,16 @@ import Layout from '../layouts/Layout.astro';
 
   .hero-badge {
     display: inline-block;
-    background: var(--yellow);
-    color: var(--black);
+    color: var(--yellow);
     padding: 0.5rem 1.5rem;
-    border-radius: 50px;
+    border-radius: 0;
     font-size: 0.85rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+    border: 2px solid var(--yellow);
     margin-bottom: 2rem;
+    clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
   }
 
   .page-hero h1 {
@@ -200,6 +201,23 @@ import Layout from '../layouts/Layout.astro';
 
   .services-grid-section {
     padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .services-grid-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+      linear-gradient(45deg, transparent 45%, rgba(246, 245, 16, 0.02) 45%, rgba(246, 245, 16, 0.02) 55%, transparent 55%),
+      linear-gradient(-45deg, transparent 45%, rgba(0, 0, 0, 0.02) 45%, rgba(0, 0, 0, 0.02) 55%, transparent 55%);
+    background-size: 60px 60px;
+    opacity: 0.5;
+    pointer-events: none;
   }
 
   .service-large {
@@ -208,29 +226,45 @@ import Layout from '../layouts/Layout.astro';
     gap: 3rem;
     margin-bottom: 4rem;
     padding: 3rem;
-    background: var(--gray-50);
-    border-radius: 12px;
-    border: 2px solid var(--gray-200);
-    transition: all 0.3s ease;
+    background: var(--white);
+    border-radius: 0;
+    border: 3px solid var(--black);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    clip-path: polygon(0 0, calc(100% - 25px) 0, 100% 25px, 100% 100%, 0 100%);
+  }
+
+  .service-large::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    background: var(--yellow);
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
   }
 
   .service-large:hover {
     border-color: var(--yellow);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transform: translate(-4px, -4px);
+    box-shadow: 8px 8px 0 var(--yellow);
   }
 
   .service-number {
     width: 5rem;
     height: 5rem;
-    background: var(--yellow);
-    color: var(--black);
-    border-radius: 12px;
+    background: var(--black);
+    color: var(--yellow);
+    border: 3px solid var(--yellow);
+    border-radius: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2rem;
     font-weight: 900;
     flex-shrink: 0;
+    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
   }
 
   .service-content h2 {
@@ -326,25 +360,31 @@ import Layout from '../layouts/Layout.astro';
     background: var(--yellow);
     color: var(--black);
     border-color: var(--yellow);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+    clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
   }
 
   .btn-primary:hover {
-    background: transparent;
+    background: var(--black);
     color: var(--yellow);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(246, 245, 16, 0.3);
+    border-color: var(--yellow);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 rgba(246, 245, 16, 0.3);
   }
 
   .btn-secondary {
     background: transparent;
     color: var(--white);
     border-color: var(--white);
+    box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.1);
+    clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
   }
 
   .btn-secondary:hover {
     background: var(--white);
     color: var(--black);
-    transform: translateY(-3px);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 rgba(255, 255, 255, 0.3);
   }
 
   .btn-large {

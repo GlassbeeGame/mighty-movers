@@ -206,21 +206,23 @@ const { title, description = "Professional moving services in San Diego" } = Ast
   }
 
   .cta-button {
-    background: var(--black);
-    color: var(--white);
+    background: var(--yellow);
+    color: var(--black);
     padding: 0.75rem 1.75rem;
-    border-radius: 6px;
+    border-radius: 0;
     font-weight: 700;
-    transition: all 0.3s ease;
-    border: 2px solid var(--white);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 2px solid var(--yellow);
+    box-shadow: 3px 3px 0 rgba(246, 245, 16, 0.3);
+    clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
   }
 
   .cta-button:hover {
-    background: var(--yellow);
-    color: var(--black);
+    background: var(--black);
+    color: var(--yellow);
     border-color: var(--yellow);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(246, 245, 16, 0.3);
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0 rgba(246, 245, 16, 0.4);
   }
 
   main {
