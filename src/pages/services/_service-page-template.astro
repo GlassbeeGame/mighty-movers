@@ -85,6 +85,41 @@ import Layout from '../../layouts/Layout.astro';
             <p>[Placeholder paragraph text for the third content card with additional details.]</p>
           </div>
 
+          <!-- Locations We Serve - Internal linking section -->
+          <div class="locations-links-section">
+            <h2>[Locations We Serve]</h2>
+            <div class="locations-links-list">
+              <a href="/locations/la-jolla" class="location-link-item">
+                <div class="location-link-content">
+                  <h4>La Jolla</h4>
+                  <p>[Service Name] in La Jolla, La Jolla Shores, and surrounding areas</p>
+                </div>
+                <span class="location-link-arrow">→</span>
+              </a>
+              <a href="/locations" class="location-link-item">
+                <div class="location-link-content">
+                  <h4>[Location 2]</h4>
+                  <p>[Service Name] in [Location description]</p>
+                </div>
+                <span class="location-link-arrow">→</span>
+              </a>
+              <a href="/locations" class="location-link-item">
+                <div class="location-link-content">
+                  <h4>[Location 3]</h4>
+                  <p>[Service Name] in [Location description]</p>
+                </div>
+                <span class="location-link-arrow">→</span>
+              </a>
+              <a href="/locations" class="location-link-item">
+                <div class="location-link-content">
+                  <h4>[Location 4]</h4>
+                  <p>[Service Name] in [Location description]</p>
+                </div>
+                <span class="location-link-arrow">→</span>
+              </a>
+            </div>
+          </div>
+
           <div class="faq-section">
             <h2>[Frequently Asked Questions]</h2>
             <div class="faq-list">
@@ -455,6 +490,90 @@ import Layout from '../../layouts/Layout.astro';
     min-height: 1.5rem;
   }
 
+  /* Locations Links - Clean list style for internal linking */
+  .locations-links-section {
+    margin-bottom: 5rem;
+    background: var(--gray-50);
+    padding: 3rem 2.5rem;
+    border-left: 5px solid var(--yellow);
+  }
+
+  .locations-links-section h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 900;
+    color: var(--black);
+    margin-bottom: 3rem;
+    letter-spacing: -1px;
+    min-height: 3.5rem;
+  }
+
+  .locations-links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .location-link-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    border-bottom: 2px solid var(--gray-200);
+    text-decoration: none;
+    color: var(--black);
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .location-link-item:last-child {
+    border-bottom: none;
+  }
+
+  .location-link-item:hover {
+    padding-left: 1.5rem;
+    border-bottom-color: var(--yellow);
+  }
+
+  .location-link-item:hover::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 60%;
+    background: var(--yellow);
+  }
+
+  .location-link-content h4 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--black);
+    margin-bottom: 0.5rem;
+    min-height: 1.4rem;
+  }
+
+  .location-link-content p {
+    font-size: 1rem;
+    color: var(--gray-600);
+    line-height: 1.6;
+    min-height: 1rem;
+  }
+
+  .location-link-arrow {
+    font-size: 2rem;
+    color: var(--black);
+    font-weight: 300;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 2rem;
+  }
+
+  .location-link-item:hover .location-link-arrow {
+    color: var(--yellow);
+    transform: translateX(10px);
+  }
+
   .faq-section {
     margin-top: 6rem;
     padding-top: 4rem;
@@ -804,6 +923,26 @@ import Layout from '../../layouts/Layout.astro';
 
     .section-header {
       margin-bottom: 2rem;
+    }
+
+    .locations-links-section {
+      padding: 2rem 1.5rem;
+    }
+
+    .location-link-item {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1.5rem 0;
+    }
+
+    .location-link-content h4 {
+      font-size: 1.3rem;
+    }
+
+    .location-link-arrow {
+      align-self: flex-end;
+      margin-left: 0;
+      margin-top: 1rem;
     }
 
     .faq-section {

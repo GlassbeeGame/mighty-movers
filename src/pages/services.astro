@@ -253,12 +253,19 @@ import Layout from '../layouts/Layout.astro';
   .service-link {
     text-decoration: none;
     cursor: pointer;
+    color: var(--black);
   }
 
-  .service-link .service-content h2,
-  .service-link .service-intro,
+  .service-link .service-content h2 {
+    color: var(--black);
+  }
+
+  .service-link .service-intro {
+    color: var(--gray-600);
+  }
+
   .service-link .feature-item {
-    color: inherit;
+    color: var(--gray-600);
   }
 
   .service-large::before {
