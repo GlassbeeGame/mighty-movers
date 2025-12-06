@@ -38,11 +38,11 @@ import Layout from '../layouts/Layout.astro';
           <p>Carlsbad, Oceanside, Vista, Encinitas, San Marcos, Escondido</p>
         </div>
 
-        <div class="location-card">
+        <a href="/locations/la-jolla" class="location-card location-link">
           <div class="location-icon">03</div>
-          <h3>Coastal Areas</h3>
-          <p>La Jolla, Pacific Beach, Ocean Beach, Mission Beach, Coronado</p>
-        </div>
+          <h3>La Jolla</h3>
+          <p>La Jolla Shores, La Jolla Village, Bird Rock, and surrounding coastal neighborhoods</p>
+        </a>
 
         <div class="location-card">
           <div class="location-icon">04</div>
@@ -248,6 +248,17 @@ import Layout from '../layouts/Layout.astro';
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
     clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+  }
+
+  .location-link {
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+  }
+
+  .location-link h3,
+  .location-link p {
+    color: inherit;
   }
 
   .location-card::before {

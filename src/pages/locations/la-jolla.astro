@@ -1,0 +1,859 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="La Jolla Moving Services" description="Professional moving services in La Jolla, San Diego. Local movers serving La Jolla Shores, La Jolla Village, and surrounding coastal areas.">
+  <section class="location-hero">
+    <div class="hero-background"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content-wrapper">
+      <div class="location-badge">La Jolla</div>
+      <h1></h1>
+      <p></p>
+    </div>
+  </section>
+
+  <section class="location-content-section">
+    <div class="container">
+      <div class="content-layout">
+        <div class="main-column">
+          <div class="intro-section">
+            <h2></h2>
+            <p></p>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-box">
+              <div class="stat-icon"></div>
+              <h3></h3>
+              <p></p>
+            </div>
+            <div class="stat-box">
+              <div class="stat-icon"></div>
+              <h3></h3>
+              <p></p>
+            </div>
+            <div class="stat-box">
+              <div class="stat-icon"></div>
+              <h3></h3>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="neighborhoods-section">
+            <h2></h2>
+            <div class="neighborhood-list">
+              <div class="neighborhood-item">
+                <h4></h4>
+                <p></p>
+              </div>
+              <div class="neighborhood-item">
+                <h4></h4>
+                <p></p>
+              </div>
+              <div class="neighborhood-item">
+                <h4></h4>
+                <p></p>
+              </div>
+              <div class="neighborhood-item">
+                <h4></h4>
+                <p></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="services-highlight">
+            <h2></h2>
+            <div class="services-columns">
+              <div class="service-column">
+                <h4></h4>
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+              <div class="service-column">
+                <h4></h4>
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-section">
+            <h2></h2>
+            <div class="faq-list">
+              <div class="faq-item">
+                <button class="faq-question">
+                  <h4></h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p></p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">
+                  <h4></h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p></p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">
+                  <h4></h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p></p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">
+                  <h4></h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p></p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">
+                  <h4></h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="sidebar-column">
+          <div class="cta-box">
+            <h3></h3>
+            <p></p>
+            <a href="/contact" class="btn btn-primary"></a>
+          </div>
+
+          <div class="cta-box cta-dark">
+            <h3></h3>
+            <p></p>
+            <a href="tel:6195556683" class="btn btn-secondary"></a>
+          </div>
+
+          <div class="info-box">
+            <h4></h4>
+            <div class="info-row">
+              <span class="info-label"></span>
+              <span class="info-value"></span>
+            </div>
+            <div class="info-row">
+              <span class="info-label"></span>
+              <span class="info-value"></span>
+            </div>
+            <div class="info-row">
+              <span class="info-label"></span>
+              <span class="info-value"></span>
+            </div>
+          </div>
+
+          <div class="info-box">
+            <h4></h4>
+            <p></p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2></h2>
+      <p></p>
+      <div class="cta-buttons">
+        <a href="/contact" class="btn btn-primary btn-large"></a>
+        <a href="tel:6195556683" class="btn btn-secondary btn-large"></a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+      const icon = item.querySelector('.faq-icon');
+
+      question?.addEventListener('click', () => {
+        const isOpen = item.classList.contains('active');
+
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('active');
+            const otherAnswer = otherItem.querySelector('.faq-answer') as HTMLElement;
+            const otherIcon = otherItem.querySelector('.faq-icon');
+            if (otherAnswer) otherAnswer.style.maxHeight = '0';
+            if (otherIcon) otherIcon.textContent = '+';
+          }
+        });
+
+        if (isOpen) {
+          item.classList.remove('active');
+          if (answer) (answer as HTMLElement).style.maxHeight = '0';
+          if (icon) icon.textContent = '+';
+        } else {
+          item.classList.add('active');
+          if (answer) (answer as HTMLElement).style.maxHeight = answer.scrollHeight + 'px';
+          if (icon) icon.textContent = '−';
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  /* Hero Section - Distinct from service pages with left-aligned layout */
+  .location-hero {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 6rem 0;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://images.unsplash.com/photo-1581368087049-e82c8f0e2a6f?w=1920&q=80') center/cover no-repeat;
+    z-index: 0;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 60%, transparent 100%);
+    z-index: 1;
+  }
+
+  .hero-content-wrapper {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    max-width: 700px;
+  }
+
+  .location-badge {
+    display: inline-block;
+    background: var(--yellow);
+    color: var(--black);
+    padding: 0.75rem 2rem;
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+  }
+
+  .location-hero h1 {
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    font-weight: 900;
+    color: var(--white);
+    margin-bottom: 2rem;
+    letter-spacing: -3px;
+    line-height: 0.95;
+    min-height: 6rem;
+  }
+
+  .location-hero p {
+    font-size: 1.4rem;
+    color: var(--gray-200);
+    line-height: 1.7;
+    max-width: 600px;
+    min-height: 2rem;
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+
+  .location-content-section {
+    padding: 6rem 0;
+    background: var(--white);
+  }
+
+  .content-layout {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 5rem;
+  }
+
+  .main-column {
+    min-width: 0;
+  }
+
+  /* Intro Section */
+  .intro-section {
+    margin-bottom: 5rem;
+  }
+
+  .intro-section h2 {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 900;
+    color: var(--black);
+    margin-bottom: 2rem;
+    letter-spacing: -2px;
+    min-height: 3.5rem;
+  }
+
+  .intro-section p {
+    font-size: 1.2rem;
+    color: var(--gray-600);
+    line-height: 1.9;
+    min-height: 2rem;
+  }
+
+  /* Stats Grid - Different from service feature cards */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 5rem;
+  }
+
+  .stat-box {
+    background: var(--gray-50);
+    padding: 2.5rem 2rem;
+    border-left: 6px solid var(--yellow);
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .stat-box:hover {
+    background: var(--white);
+    border-left-color: var(--black);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .stat-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    background: var(--black);
+    margin-bottom: 1.5rem;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+  }
+
+  .stat-box h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--black);
+    margin-bottom: 0.75rem;
+    min-height: 1.5rem;
+  }
+
+  .stat-box p {
+    font-size: 0.95rem;
+    color: var(--gray-500);
+    line-height: 1.6;
+    min-height: 1rem;
+  }
+
+  /* Neighborhoods Section - Unique to location pages */
+  .neighborhoods-section {
+    margin-bottom: 5rem;
+    padding: 4rem;
+    background: var(--black);
+    color: var(--white);
+    clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 0 calc(100% - 30px), 30px 100%);
+    position: relative;
+  }
+
+  .neighborhoods-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: var(--yellow);
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+  }
+
+  .neighborhoods-section h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 900;
+    color: var(--yellow);
+    margin-bottom: 3rem;
+    letter-spacing: -1px;
+    min-height: 2.8rem;
+  }
+
+  .neighborhood-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .neighborhood-item {
+    border-left: 3px solid var(--yellow);
+    padding-left: 1.5rem;
+  }
+
+  .neighborhood-item h4 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    min-height: 1.3rem;
+  }
+
+  .neighborhood-item p {
+    font-size: 1rem;
+    color: var(--gray-400);
+    line-height: 1.6;
+    min-height: 1rem;
+  }
+
+  /* Services Highlight - Column layout instead of grid */
+  .services-highlight {
+    margin-bottom: 5rem;
+  }
+
+  .services-highlight h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 900;
+    color: var(--black);
+    margin-bottom: 2.5rem;
+    letter-spacing: -1px;
+    min-height: 2.8rem;
+  }
+
+  .services-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+
+  .service-column {
+    background: var(--gray-50);
+    padding: 2.5rem;
+    border-top: 4px solid var(--yellow);
+  }
+
+  .service-column h4 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+    min-height: 1.4rem;
+  }
+
+  .service-column ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .service-column li {
+    font-size: 1rem;
+    color: var(--gray-600);
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--gray-200);
+    min-height: 1rem;
+  }
+
+  .service-column li:last-child {
+    border-bottom: none;
+  }
+
+  /* FAQ Section */
+  .faq-section {
+    margin-top: 5rem;
+  }
+
+  .faq-section h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 900;
+    color: var(--black);
+    margin-bottom: 2.5rem;
+    letter-spacing: -1px;
+    min-height: 2.8rem;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .faq-item {
+    background: var(--white);
+    border: 2px solid var(--gray-200);
+    border-left: 5px solid var(--black);
+    transition: all 0.3s ease;
+  }
+
+  .faq-item:hover,
+  .faq-item.active {
+    border-left-color: var(--yellow);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .faq-question {
+    width: 100%;
+    padding: 1.75rem 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    transition: all 0.3s ease;
+  }
+
+  .faq-question:hover {
+    background: var(--gray-50);
+  }
+
+  .faq-question h4 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--black);
+    margin: 0;
+    min-height: 1.2rem;
+  }
+
+  .faq-icon {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--yellow);
+    line-height: 1;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 1rem;
+    width: 2rem;
+    text-align: center;
+  }
+
+  .faq-item.active .faq-icon {
+    transform: rotate(45deg);
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .faq-answer p {
+    font-size: 1.05rem;
+    color: var(--gray-600);
+    line-height: 1.8;
+    padding: 0 2rem 2rem;
+    min-height: 1.5rem;
+  }
+
+  /* Sidebar - Different styling from service pages */
+  .sidebar-column {
+    position: sticky;
+    top: 6rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .cta-box {
+    background: var(--yellow);
+    color: var(--black);
+    padding: 2.5rem 2rem;
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  .cta-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: var(--black);
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+  }
+
+  .cta-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 40px rgba(246, 245, 16, 0.3);
+  }
+
+  .cta-dark {
+    background: var(--black);
+    color: var(--white);
+  }
+
+  .cta-dark::after {
+    background: var(--yellow);
+  }
+
+  .cta-box h3 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    min-height: 1.5rem;
+  }
+
+  .cta-box p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    min-height: 1.5rem;
+  }
+
+  .info-box {
+    background: var(--white);
+    padding: 2rem;
+    border: 2px solid var(--gray-200);
+    border-top: 4px solid var(--yellow);
+    transition: all 0.3s ease;
+  }
+
+  .info-box:hover {
+    border-color: var(--black);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .info-box h4 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+    min-height: 1.2rem;
+  }
+
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  .info-row:last-child {
+    border-bottom: none;
+  }
+
+  .info-label {
+    font-weight: 600;
+    color: var(--gray-700);
+    font-size: 0.9rem;
+    min-height: 1rem;
+  }
+
+  .info-value {
+    font-weight: 700;
+    color: var(--black);
+    font-size: 0.9rem;
+    min-height: 1rem;
+  }
+
+  .info-box p {
+    color: var(--gray-600);
+    line-height: 1.7;
+    font-size: 0.95rem;
+    min-height: 1.5rem;
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    min-height: 3rem;
+  }
+
+  .btn-primary {
+    background: var(--black);
+    color: var(--yellow);
+    border-color: var(--black);
+  }
+
+  .btn-primary:hover {
+    background: transparent;
+    color: var(--black);
+    border-color: var(--black);
+  }
+
+  .cta-dark .btn-primary {
+    background: var(--yellow);
+    color: var(--black);
+  }
+
+  .cta-dark .btn-primary:hover {
+    background: transparent;
+    color: var(--yellow);
+    border-color: var(--yellow);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--white);
+    border-color: var(--white);
+  }
+
+  .btn-secondary:hover {
+    background: var(--white);
+    color: var(--black);
+  }
+
+  .btn-large {
+    padding: 1.5rem 3rem;
+    font-size: 1.1rem;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    padding: 6rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 4rem;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(246, 245, 16, 0.1) 0%, transparent 60%);
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .cta-section h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    color: var(--white);
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+    min-height: 2.5rem;
+  }
+
+  .cta-section p {
+    font-size: 1.3rem;
+    color: var(--gray-300);
+    margin-bottom: 3rem;
+    min-height: 1.5rem;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-section .btn-primary {
+    background: var(--yellow);
+    color: var(--black);
+    clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
+  }
+
+  .cta-section .btn-primary:hover {
+    background: transparent;
+    color: var(--yellow);
+    border-color: var(--yellow);
+  }
+
+  .cta-section .btn-secondary {
+    clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .content-layout {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .sidebar-column {
+      position: relative;
+      top: 0;
+    }
+
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .neighborhood-list {
+      grid-template-columns: 1fr;
+    }
+
+    .services-columns {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 1.5rem;
+    }
+
+    .hero-content-wrapper {
+      padding: 0 1.5rem;
+    }
+
+    .location-content-section {
+      padding: 3rem 0;
+    }
+
+    .intro-section,
+    .stats-grid,
+    .neighborhoods-section,
+    .services-highlight {
+      margin-bottom: 3rem;
+    }
+
+    .neighborhoods-section {
+      padding: 2.5rem 1.5rem;
+    }
+  }
+</style>
