@@ -23,31 +23,20 @@ import Layout from '../../layouts/Layout.astro';
             <p>[Placeholder section description text that introduces the content below]</p>
           </div>
 
-          <!-- Neighborhoods We Serve - Unique to location pages -->
-          <div class="neighborhoods-section">
-            <h2>[Neighborhoods We Serve]</h2>
-            <div class="neighborhood-grid">
-              <div class="neighborhood-card">
-                <div class="neighborhood-number">01</div>
-                <h3>[Neighborhood 1]</h3>
-                <p>[Placeholder description]</p>
-              </div>
-              <div class="neighborhood-card">
-                <div class="neighborhood-number">02</div>
-                <h3>[Neighborhood 2]</h3>
-                <p>[Placeholder description]</p>
-              </div>
-              <div class="neighborhood-card">
-                <div class="neighborhood-number">03</div>
-                <h3>[Neighborhood 3]</h3>
-                <p>[Placeholder description]</p>
-              </div>
-              <div class="neighborhood-card">
-                <div class="neighborhood-number">04</div>
-                <h3>[Neighborhood 4]</h3>
-                <p>[Placeholder description]</p>
-              </div>
-            </div>
+          <!-- Content Cards - SEO content sections -->
+          <div class="content-card">
+            <h3>[Placeholder Content Card Title]</h3>
+            <p>[Placeholder paragraph text for this content card. This is where you would add detailed information about La Jolla, the neighborhood, moving services, and other SEO-focused content. Add 100-150 words here about the area and services.]</p>
+          </div>
+
+          <div class="content-card">
+            <h3>[Placeholder Second Card Title]</h3>
+            <p>[Placeholder paragraph text for the second content card. Add more details about La Jolla moving services, local expertise, and neighborhood information here. Another 100-150 words of SEO content.]</p>
+          </div>
+
+          <div class="content-card">
+            <h3>[Placeholder Third Card Title]</h3>
+            <p>[Placeholder paragraph text for the third content card with additional details about the community, local moving challenges, and why Mighty Movers is the best choice for La Jolla residents. 100-150 words.]</p>
           </div>
 
           <!-- Why Choose Us in La Jolla - Location specific -->
@@ -112,6 +101,33 @@ import Layout from '../../layouts/Layout.astro';
               <div class="service-item">
                 <h4>[Service 6]</h4>
                 <p>[Description]</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Other Neighborhoods - Moved lower on page -->
+          <div class="neighborhoods-section">
+            <h2>[Other Neighborhoods]</h2>
+            <div class="neighborhood-grid">
+              <div class="neighborhood-card">
+                <div class="neighborhood-number">01</div>
+                <h3>[Neighborhood 1]</h3>
+                <p>[Placeholder description]</p>
+              </div>
+              <div class="neighborhood-card">
+                <div class="neighborhood-number">02</div>
+                <h3>[Neighborhood 2]</h3>
+                <p>[Placeholder description]</p>
+              </div>
+              <div class="neighborhood-card">
+                <div class="neighborhood-number">03</div>
+                <h3>[Neighborhood 3]</h3>
+                <p>[Placeholder description]</p>
+              </div>
+              <div class="neighborhood-card">
+                <div class="neighborhood-number">04</div>
+                <h3>[Neighborhood 4]</h3>
+                <p>[Placeholder description]</p>
               </div>
             </div>
           </div>
@@ -386,6 +402,50 @@ import Layout from '../../layouts/Layout.astro';
     color: var(--gray-600);
     line-height: 1.8;
     min-height: 2rem;
+  }
+
+  /* Content Cards - SEO content sections */
+  .content-card {
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: 0;
+    border: 3px solid var(--black);
+    margin-bottom: 2.5rem;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+  }
+
+  .content-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: var(--yellow);
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+  }
+
+  .content-card:hover {
+    border-color: var(--yellow);
+    transform: translate(-4px, -4px);
+    box-shadow: 8px 8px 0 rgba(246, 245, 16, 0.9), 0 0 30px rgba(246, 245, 16, 0.4);
+  }
+
+  .content-card h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--black);
+    margin-bottom: 1.25rem;
+    min-height: 1.8rem;
+  }
+
+  .content-card p {
+    font-size: 1.05rem;
+    color: var(--gray-600);
+    line-height: 1.8;
+    min-height: 1.5rem;
   }
 
   /* Neighborhoods Grid - Location-specific design */
