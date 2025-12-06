@@ -17,66 +17,106 @@ import Layout from '../../layouts/Layout.astro';
     <div class="container">
       <div class="content-layout">
         <div class="main-column">
+          <!-- Intro Section -->
           <div class="intro-section">
             <h2>[Placeholder Section Heading]</h2>
             <p>[Placeholder section description text that introduces the content below]</p>
           </div>
 
-          <div class="location-card">
-            <h3>[Placeholder Content Card Title]</h3>
-            <p>[Placeholder paragraph text for this content card. This is where you would add detailed information about this topic.]</p>
-          </div>
-
-          <div class="location-card">
-            <h3>[Placeholder Second Card Title]</h3>
-            <p>[Placeholder paragraph text for the second content card. Add more details and information here.]</p>
-          </div>
-
-          <div class="features-grid">
-            <div class="feature-box">
-              <div class="feature-icon"></div>
-              <h4>[Feature 1 Title]</h4>
-              <p>[Placeholder description for feature one]</p>
-            </div>
-            <div class="feature-box">
-              <div class="feature-icon"></div>
-              <h4>[Feature 2 Title]</h4>
-              <p>[Placeholder description for feature two]</p>
-            </div>
-            <div class="feature-box">
-              <div class="feature-icon"></div>
-              <h4>[Feature 3 Title]</h4>
-              <p>[Placeholder description for feature three]</p>
-            </div>
-            <div class="feature-box">
-              <div class="feature-icon"></div>
-              <h4>[Feature 4 Title]</h4>
-              <p>[Placeholder description for feature four]</p>
-            </div>
-          </div>
-
+          <!-- Neighborhoods We Serve - Unique to location pages -->
           <div class="neighborhoods-section">
-            <h2>[Placeholder Neighborhoods Heading]</h2>
+            <h2>[Neighborhoods We Serve]</h2>
             <div class="neighborhood-grid">
-              <div class="neighborhood-item">
-                <h4>[Neighborhood 1]</h4>
+              <div class="neighborhood-card">
+                <div class="neighborhood-number">01</div>
+                <h3>[Neighborhood 1]</h3>
                 <p>[Placeholder description]</p>
               </div>
-              <div class="neighborhood-item">
-                <h4>[Neighborhood 2]</h4>
+              <div class="neighborhood-card">
+                <div class="neighborhood-number">02</div>
+                <h3>[Neighborhood 2]</h3>
                 <p>[Placeholder description]</p>
               </div>
-              <div class="neighborhood-item">
-                <h4>[Neighborhood 3]</h4>
+              <div class="neighborhood-card">
+                <div class="neighborhood-number">03</div>
+                <h3>[Neighborhood 3]</h3>
                 <p>[Placeholder description]</p>
               </div>
-              <div class="neighborhood-item">
-                <h4>[Neighborhood 4]</h4>
+              <div class="neighborhood-card">
+                <div class="neighborhood-number">04</div>
+                <h3>[Neighborhood 4]</h3>
                 <p>[Placeholder description]</p>
               </div>
             </div>
           </div>
 
+          <!-- Why Choose Us in La Jolla - Location specific -->
+          <div class="why-section">
+            <h2>[Why Choose Us in La Jolla]</h2>
+            <div class="benefits-list">
+              <div class="benefit-item">
+                <div class="benefit-icon"></div>
+                <div class="benefit-content">
+                  <h4>[Benefit Title]</h4>
+                  <p>[Placeholder benefit description]</p>
+                </div>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon"></div>
+                <div class="benefit-content">
+                  <h4>[Benefit Title]</h4>
+                  <p>[Placeholder benefit description]</p>
+                </div>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon"></div>
+                <div class="benefit-content">
+                  <h4>[Benefit Title]</h4>
+                  <p>[Placeholder benefit description]</p>
+                </div>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon"></div>
+                <div class="benefit-content">
+                  <h4>[Benefit Title]</h4>
+                  <p>[Placeholder benefit description]</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Highlights - Different from full service pages -->
+          <div class="services-overview">
+            <h2>[Our Services in La Jolla]</h2>
+            <div class="services-grid">
+              <div class="service-item">
+                <h4>[Service 1]</h4>
+                <p>[Description]</p>
+              </div>
+              <div class="service-item">
+                <h4>[Service 2]</h4>
+                <p>[Description]</p>
+              </div>
+              <div class="service-item">
+                <h4>[Service 3]</h4>
+                <p>[Description]</p>
+              </div>
+              <div class="service-item">
+                <h4>[Service 4]</h4>
+                <p>[Description]</p>
+              </div>
+              <div class="service-item">
+                <h4>[Service 5]</h4>
+                <p>[Description]</p>
+              </div>
+              <div class="service-item">
+                <h4>[Service 6]</h4>
+                <p>[Description]</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Section - Matching service pages -->
           <div class="faq-section">
             <h2>[Frequently Asked Questions]</h2>
             <div class="faq-list">
@@ -129,20 +169,21 @@ import Layout from '../../layouts/Layout.astro';
           </div>
         </div>
 
+        <!-- Sidebar - Same CTA buttons as service pages -->
         <aside class="sidebar-column">
-          <div class="cta-box">
+          <div class="cta-card">
             <h3>[CTA Card Title]</h3>
             <p>[Placeholder call-to-action description text]</p>
             <a href="/contact" class="btn btn-primary">[Button Text]</a>
           </div>
 
-          <div class="cta-box cta-dark">
+          <div class="cta-card cta-dark">
             <h3>[Second CTA Title]</h3>
             <p>[Placeholder text for second call-to-action]</p>
             <a href="tel:6195556683" class="btn btn-secondary">[Call Button]</a>
           </div>
 
-          <div class="info-box">
+          <div class="info-card">
             <h4>[Info Card Heading]</h4>
             <ul>
               <li>[Placeholder list item 1]</li>
@@ -152,7 +193,7 @@ import Layout from '../../layouts/Layout.astro';
             </ul>
           </div>
 
-          <div class="info-box">
+          <div class="info-card">
             <h4>[Additional Info]</h4>
             <p>[Placeholder text for additional information card]</p>
           </div>
@@ -161,6 +202,7 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- CTA Section - Matching service pages exactly -->
   <section class="cta-section">
     <div class="cta-content">
       <h2>[Placeholder CTA Heading]</h2>
@@ -210,7 +252,7 @@ import Layout from '../../layouts/Layout.astro';
 </script>
 
 <style>
-  /* Hero Section - Left-aligned like service pages but with location distinction */
+  /* Hero - Left-aligned, location-focused */
   .location-hero {
     min-height: 55vh;
     display: flex;
@@ -317,16 +359,24 @@ import Layout from '../../layouts/Layout.astro';
     min-width: 0;
   }
 
-  /* Intro Section */
-  .intro-section {
-    margin-bottom: 4rem;
+  /* Shared heading styles with service pages */
+  .intro-section,
+  .neighborhoods-section,
+  .why-section,
+  .services-overview,
+  .faq-section {
+    margin-bottom: 5rem;
   }
 
-  .intro-section h2 {
+  .intro-section h2,
+  .neighborhoods-section h2,
+  .why-section h2,
+  .services-overview h2,
+  .faq-section h2 {
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 900;
     color: var(--black);
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
     letter-spacing: -1px;
     min-height: 3.5rem;
   }
@@ -338,193 +388,147 @@ import Layout from '../../layouts/Layout.astro';
     min-height: 2rem;
   }
 
-  /* Location Cards - Similar to service content cards */
-  .location-card {
-    background: var(--white);
-    padding: 3rem;
-    margin-bottom: 3rem;
-    border: 3px solid var(--black);
-    border-radius: 0;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    position: relative;
-    clip-path: polygon(0 0, calc(100% - 25px) 0, 100% 25px, 100% 100%, 0 100%);
-  }
-
-  .location-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 25px;
-    height: 25px;
-    background: var(--yellow);
-    clip-path: polygon(100% 0, 100% 100%, 0 0);
-  }
-
-  .location-card:hover {
-    border-color: var(--yellow);
-    transform: translate(-4px, -4px);
-    box-shadow: 8px 8px 0 rgba(246, 245, 16, 0.9), 0 0 30px rgba(246, 245, 16, 0.4);
-  }
-
-  .location-card h3 {
-    font-size: 2rem;
-    font-weight: 900;
-    color: var(--black);
-    margin-bottom: 1.5rem;
-    letter-spacing: -1px;
-    min-height: 2rem;
-  }
-
-  .location-card p {
-    font-size: 1.1rem;
-    color: var(--gray-600);
-    line-height: 1.8;
-    min-height: 1.5rem;
-  }
-
-  /* Features Grid - Similar style to service pages */
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    margin-bottom: 4rem;
-  }
-
-  .feature-box {
-    background: var(--black);
-    color: var(--white);
-    padding: 2.5rem 2rem;
-    border-radius: 0;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    border: 3px solid var(--gray-800);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .feature-box::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 5px;
-    height: 100%;
-    background: var(--yellow);
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.4s ease;
-  }
-
-  .feature-box:hover {
-    border-color: var(--yellow);
-    transform: translateX(8px);
-    box-shadow: -8px 8px 0 rgba(246, 245, 16, 0.9), 0 0 30px rgba(246, 245, 16, 0.3);
-  }
-
-  .feature-box:hover::before {
-    transform: scaleY(1);
-  }
-
-  .feature-icon {
-    width: 4rem;
-    height: 4rem;
-    background: var(--yellow);
-    border-radius: 0;
-    margin-bottom: 1.5rem;
-    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
-  }
-
-  .feature-box h4 {
-    font-size: 1.3rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-    color: var(--white);
-    min-height: 1.3rem;
-  }
-
-  .feature-box p {
-    color: var(--gray-400);
-    line-height: 1.8;
-    font-size: 1rem;
-    min-height: 1.5rem;
-  }
-
-  /* Neighborhoods Section - Distinct for location pages but polished */
-  .neighborhoods-section {
-    margin-bottom: 4rem;
-    padding: 4rem 3rem;
-    background: var(--black);
-    color: var(--white);
-    clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 0 100%);
-    position: relative;
-  }
-
-  .neighborhoods-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 30px;
-    height: 30px;
-    background: var(--yellow);
-    clip-path: polygon(100% 0, 100% 100%, 0 0);
-  }
-
-  .neighborhoods-section h2 {
-    font-size: clamp(2rem, 4vw, 2.8rem);
-    font-weight: 900;
-    color: var(--yellow);
-    margin-bottom: 3rem;
-    letter-spacing: -1px;
-    min-height: 2.8rem;
-  }
-
+  /* Neighborhoods Grid - Location-specific design */
   .neighborhood-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
+    gap: 2rem;
   }
 
-  .neighborhood-item {
-    border-left: 4px solid var(--yellow);
-    padding-left: 1.5rem;
+  .neighborhood-card {
+    background: var(--gray-50);
+    padding: 2.5rem 2rem;
+    border-left: 5px solid var(--yellow);
     transition: all 0.3s ease;
+    position: relative;
   }
 
-  .neighborhood-item:hover {
-    border-left-color: var(--white);
+  .neighborhood-card:hover {
+    background: var(--white);
+    border-left-width: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
     transform: translateX(8px);
   }
 
-  .neighborhood-item h4 {
+  .neighborhood-number {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: var(--black);
+    color: var(--yellow);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 0.9rem;
+  }
+
+  .neighborhood-card h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--black);
+    margin-bottom: 0.75rem;
+    min-height: 1.4rem;
+  }
+
+  .neighborhood-card p {
+    font-size: 1rem;
+    color: var(--gray-600);
+    line-height: 1.7;
+    min-height: 1rem;
+  }
+
+  /* Why Choose Us - List style instead of cards */
+  .benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .benefit-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    background: var(--white);
+    border: 2px solid var(--gray-200);
+    border-left: 5px solid var(--black);
+    transition: all 0.3s ease;
+  }
+
+  .benefit-item:hover {
+    border-left-color: var(--yellow);
+    border-left-width: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transform: translateX(8px);
+  }
+
+  .benefit-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    background: var(--yellow);
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+    flex-shrink: 0;
+  }
+
+  .benefit-content h4 {
     font-size: 1.3rem;
     font-weight: 800;
-    color: var(--white);
+    color: var(--black);
     margin-bottom: 0.75rem;
     min-height: 1.3rem;
   }
 
-  .neighborhood-item p {
-    font-size: 1rem;
+  .benefit-content p {
+    font-size: 1.05rem;
+    color: var(--gray-600);
+    line-height: 1.7;
+    min-height: 1rem;
+  }
+
+  /* Services Overview - Simple grid */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .service-item {
+    background: var(--black);
+    color: var(--white);
+    padding: 2rem 1.5rem;
+    border-left: 4px solid var(--yellow);
+    transition: all 0.3s ease;
+  }
+
+  .service-item:hover {
+    background: var(--gray-900);
+    border-left-width: 6px;
+    transform: translateX(4px);
+  }
+
+  .service-item h4 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+    min-height: 1.1rem;
+  }
+
+  .service-item p {
+    font-size: 0.95rem;
     color: var(--gray-400);
     line-height: 1.6;
     min-height: 1rem;
   }
 
-  /* FAQ Section - Matching service page quality */
+  /* FAQ Section - Exact match to service pages */
   .faq-section {
-    margin-top: 5rem;
     padding-top: 4rem;
     border-top: 3px solid var(--gray-200);
-  }
-
-  .faq-section h2 {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
-    font-weight: 900;
-    color: var(--black);
-    margin-bottom: 3rem;
-    letter-spacing: -1px;
-    min-height: 3.5rem;
   }
 
   .faq-list {
@@ -615,7 +619,7 @@ import Layout from '../../layouts/Layout.astro';
     min-height: 1.5rem;
   }
 
-  /* Sidebar - Matching service page quality with distinction */
+  /* Sidebar - Matching service pages exactly */
   .sidebar-column {
     position: sticky;
     top: 6rem;
@@ -625,61 +629,60 @@ import Layout from '../../layouts/Layout.astro';
     gap: 2rem;
   }
 
-  .cta-box {
-    background: var(--yellow);
-    color: var(--black);
+  .cta-card {
+    background: var(--black);
+    color: var(--white);
     padding: 2.5rem 2rem;
     border-radius: 0;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
-    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
-    border: 3px solid var(--black);
+    border: 3px solid var(--gray-800);
+    overflow: hidden;
   }
 
-  .cta-box::after {
+  .cta-card::before {
     content: '';
     position: absolute;
     top: 0;
-    right: 0;
-    width: 20px;
-    height: 20px;
-    background: var(--black);
-    clip-path: polygon(100% 0, 100% 100%, 0 0);
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--yellow);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
   }
 
-  .cta-box:hover {
-    transform: translate(-4px, -4px);
-    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.3);
+  .cta-card:hover {
+    border-color: var(--yellow);
+    box-shadow: 0 8px 30px rgba(246, 245, 16, 0.3);
+  }
+
+  .cta-card:hover::before {
+    transform: scaleX(1);
   }
 
   .cta-dark {
     background: var(--black);
     color: var(--white);
-    border-color: var(--yellow);
   }
 
-  .cta-dark::after {
-    background: var(--yellow);
-  }
-
-  .cta-dark:hover {
-    box-shadow: 8px 8px 0 rgba(246, 245, 16, 0.9), 0 0 30px rgba(246, 245, 16, 0.4);
-  }
-
-  .cta-box h3 {
+  .cta-card h3 {
     font-size: 1.5rem;
-    font-weight: 900;
+    font-weight: 800;
+    color: var(--white);
     margin-bottom: 1rem;
     min-height: 1.5rem;
   }
 
-  .cta-box p {
+  .cta-card p {
+    color: var(--gray-400);
     margin-bottom: 1.5rem;
     line-height: 1.6;
     min-height: 1.5rem;
   }
 
-  .info-box {
+  .info-card {
     background: var(--white);
     padding: 2rem;
     border: 3px solid var(--black);
@@ -689,7 +692,7 @@ import Layout from '../../layouts/Layout.astro';
     clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 0 100%);
   }
 
-  .info-box::before {
+  .info-card::before {
     content: '';
     position: absolute;
     top: 0;
@@ -700,13 +703,13 @@ import Layout from '../../layouts/Layout.astro';
     clip-path: polygon(100% 0, 100% 100%, 0 0);
   }
 
-  .info-box:hover {
+  .info-card:hover {
     border-color: var(--yellow);
     transform: translate(-4px, -4px);
     box-shadow: 8px 8px 0 rgba(246, 245, 16, 0.9), 0 0 30px rgba(246, 245, 16, 0.4);
   }
 
-  .info-box h4 {
+  .info-card h4 {
     font-size: 1.2rem;
     font-weight: 800;
     color: var(--black);
@@ -714,12 +717,12 @@ import Layout from '../../layouts/Layout.astro';
     min-height: 1.2rem;
   }
 
-  .info-box ul {
+  .info-card ul {
     list-style: none;
     padding: 0;
   }
 
-  .info-box li {
+  .info-card li {
     padding: 0.75rem 0;
     color: var(--gray-600);
     font-size: 0.95rem;
@@ -727,18 +730,18 @@ import Layout from '../../layouts/Layout.astro';
     min-height: 1rem;
   }
 
-  .info-box li:last-child {
+  .info-card li:last-child {
     border-bottom: none;
   }
 
-  .info-box p {
+  .info-card p {
     color: var(--gray-600);
     line-height: 1.6;
     font-size: 0.95rem;
     min-height: 1.5rem;
   }
 
-  /* Buttons */
+  /* Buttons - Matching service pages exactly */
   .btn {
     display: inline-block;
     width: 100%;
@@ -755,29 +758,23 @@ import Layout from '../../layouts/Layout.astro';
   }
 
   .btn-primary {
-    background: var(--black);
-    color: var(--yellow);
-    border-color: var(--black);
+    background: var(--yellow);
+    color: var(--black);
+    border-color: var(--yellow);
     box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
   }
 
   .btn-primary:hover {
-    background: transparent;
+    background: var(--white);
     color: var(--black);
-    border-color: var(--black);
+    border-color: var(--yellow);
     transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 6px 6px 0 rgba(246, 245, 16, 0.7), 0 0 25px rgba(246, 245, 16, 0.5);
   }
 
   .cta-dark .btn-primary {
     background: var(--yellow);
     color: var(--black);
-  }
-
-  .cta-dark .btn-primary:hover {
-    background: transparent;
-    color: var(--yellow);
-    border-color: var(--yellow);
   }
 
   .btn-secondary {
@@ -799,7 +796,7 @@ import Layout from '../../layouts/Layout.astro';
     font-size: 1.1rem;
   }
 
-  /* CTA Section */
+  /* CTA Section - Exact match to service pages */
   .cta-section {
     background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
     padding: 6rem 2rem;
@@ -874,12 +871,12 @@ import Layout from '../../layouts/Layout.astro';
       top: 0;
     }
 
-    .features-grid {
+    .neighborhood-grid {
       grid-template-columns: 1fr;
     }
 
-    .neighborhood-grid {
-      grid-template-columns: 1fr;
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
@@ -896,26 +893,13 @@ import Layout from '../../layouts/Layout.astro';
       padding: 3rem 0;
     }
 
-    .intro-section {
-      margin-bottom: 3rem;
+    .services-grid {
+      grid-template-columns: 1fr;
     }
 
-    .location-card {
-      padding: 2rem;
-    }
-
-    .features-grid,
-    .neighborhoods-section {
-      margin-bottom: 3rem;
-    }
-
-    .neighborhoods-section {
-      padding: 2.5rem 1.5rem;
-    }
-
-    .faq-section {
-      margin-top: 3rem;
-      padding-top: 2rem;
+    .benefit-item {
+      grid-template-columns: 1fr;
+      gap: 1rem;
     }
   }
 </style>
