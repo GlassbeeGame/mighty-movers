@@ -64,41 +64,46 @@ import Layout from '../../layouts/Layout.astro';
             <h2>[Frequently Asked Questions]</h2>
             <div class="faq-list">
               <div class="faq-item">
-                <div class="faq-question">
+                <button class="faq-question">
                   <h4>[Placeholder FAQ Question 1?]</h4>
-                </div>
+                  <span class="faq-icon">+</span>
+                </button>
                 <div class="faq-answer">
                   <p>[Placeholder answer to the first frequently asked question goes here with detailed information.]</p>
                 </div>
               </div>
               <div class="faq-item">
-                <div class="faq-question">
+                <button class="faq-question">
                   <h4>[Placeholder FAQ Question 2?]</h4>
-                </div>
+                  <span class="faq-icon">+</span>
+                </button>
                 <div class="faq-answer">
                   <p>[Placeholder answer to the second frequently asked question with helpful details.]</p>
                 </div>
               </div>
               <div class="faq-item">
-                <div class="faq-question">
+                <button class="faq-question">
                   <h4>[Placeholder FAQ Question 3?]</h4>
-                </div>
+                  <span class="faq-icon">+</span>
+                </button>
                 <div class="faq-answer">
                   <p>[Placeholder answer to the third frequently asked question explaining the topic.]</p>
                 </div>
               </div>
               <div class="faq-item">
-                <div class="faq-question">
+                <button class="faq-question">
                   <h4>[Placeholder FAQ Question 4?]</h4>
-                </div>
+                  <span class="faq-icon">+</span>
+                </button>
                 <div class="faq-answer">
                   <p>[Placeholder answer to the fourth frequently asked question with more information.]</p>
                 </div>
               </div>
               <div class="faq-item">
-                <div class="faq-question">
+                <button class="faq-question">
                   <h4>[Placeholder FAQ Question 5?]</h4>
-                </div>
+                  <span class="faq-icon">+</span>
+                </button>
                 <div class="faq-answer">
                   <p>[Placeholder answer to the fifth frequently asked question providing clarity.]</p>
                 </div>
@@ -138,7 +143,56 @@ import Layout from '../../layouts/Layout.astro';
       </div>
     </div>
   </section>
+
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>[Placeholder CTA Heading]</h2>
+      <p>[Placeholder CTA description text to encourage action]</p>
+      <div class="cta-buttons">
+        <a href="/contact" class="btn btn-primary btn-large">[Primary CTA Button]</a>
+        <a href="tel:6195556683" class="btn btn-secondary btn-large">[Secondary CTA Button]</a>
+      </div>
+    </div>
+  </section>
 </Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+      const icon = item.querySelector('.faq-icon');
+
+      question?.addEventListener('click', () => {
+        const isOpen = item.classList.contains('active');
+
+        // Close all other items
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('active');
+            const otherAnswer = otherItem.querySelector('.faq-answer') as HTMLElement;
+            const otherIcon = otherItem.querySelector('.faq-icon');
+            if (otherAnswer) otherAnswer.style.maxHeight = '0';
+            if (otherIcon) otherIcon.textContent = '+';
+          }
+        });
+
+        // Toggle current item
+        if (isOpen) {
+          item.classList.remove('active');
+          if (answer) (answer as HTMLElement).style.maxHeight = '0';
+          if (icon) icon.textContent = '+';
+        } else {
+          item.classList.add('active');
+          if (answer) (answer as HTMLElement).style.maxHeight = answer.scrollHeight + 'px';
+          if (icon) icon.textContent = '−';
+        }
+      });
+    });
+  });
+</script>
 
 <style>
   .page-hero {
@@ -425,8 +479,20 @@ import Layout from '../../layouts/Layout.astro';
   }
 
   .faq-question {
+    width: 100%;
     padding: 2rem;
+    background: none;
+    border: none;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    transition: all 0.3s ease;
+  }
+
+  .faq-question:hover {
+    background: rgba(246, 245, 16, 0.05);
   }
 
   .faq-question h4 {
@@ -434,10 +500,29 @@ import Layout from '../../layouts/Layout.astro';
     font-weight: 800;
     color: var(--black);
     min-height: 1.3rem;
+    margin: 0;
+  }
+
+  .faq-icon {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--yellow);
+    line-height: 1;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 1rem;
+    width: 2rem;
+    text-align: center;
+  }
+
+  .faq-item.active .faq-icon {
+    transform: rotate(45deg);
   }
 
   .faq-answer {
-    padding: 0 2rem 2rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 
   .faq-answer p {
@@ -445,6 +530,7 @@ import Layout from '../../layouts/Layout.astro';
     color: var(--gray-600);
     line-height: 1.8;
     min-height: 1.5rem;
+    padding: 0 2rem 2rem;
   }
 
   .sidebar {
@@ -605,6 +691,61 @@ import Layout from '../../layouts/Layout.astro';
     color: var(--black);
     transform: translate(-2px, -2px);
     box-shadow: 6px 6px 0 rgba(255, 255, 255, 0.3);
+  }
+
+  .btn-large {
+    padding: 1.5rem 3rem;
+    font-size: 1.1rem;
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    padding: 6rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 4rem;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(circle at 50% 50%, rgba(246, 245, 16, 0.1) 0%, transparent 60%);
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .cta-section h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    color: var(--white);
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+    min-height: 2.5rem;
+  }
+
+  .cta-section p {
+    font-size: 1.3rem;
+    color: var(--gray-300);
+    margin-bottom: 3rem;
+    min-height: 1.5rem;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   @media (max-width: 1024px) {
