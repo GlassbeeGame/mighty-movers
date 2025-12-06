@@ -74,34 +74,34 @@ import Layout from '../../layouts/Layout.astro';
             </div>
           </div>
 
-          <!-- Service Highlights - Different from full service pages -->
-          <div class="services-overview">
-            <h2>[Our Services in La Jolla]</h2>
-            <div class="services-grid">
-              <div class="service-item">
-                <h4>[Service 1]</h4>
-                <p>[Description]</p>
-              </div>
-              <div class="service-item">
+          <!-- Services Links - Clickable cards to service detail pages -->
+          <div class="services-links-section">
+            <h2>[Our Moving Services]</h2>
+            <div class="services-links-grid">
+              <a href="/services/local-moving" class="service-link-card">
+                <div class="service-link-number">01</div>
+                <h4>Local Moving</h4>
+                <p>Professional local moving services in La Jolla</p>
+                <span class="link-arrow">→</span>
+              </a>
+              <a href="/services" class="service-link-card">
+                <div class="service-link-number">02</div>
                 <h4>[Service 2]</h4>
-                <p>[Description]</p>
-              </div>
-              <div class="service-item">
+                <p>[Service description]</p>
+                <span class="link-arrow">→</span>
+              </a>
+              <a href="/services" class="service-link-card">
+                <div class="service-link-number">03</div>
                 <h4>[Service 3]</h4>
-                <p>[Description]</p>
-              </div>
-              <div class="service-item">
+                <p>[Service description]</p>
+                <span class="link-arrow">→</span>
+              </a>
+              <a href="/services" class="service-link-card">
+                <div class="service-link-number">04</div>
                 <h4>[Service 4]</h4>
-                <p>[Description]</p>
-              </div>
-              <div class="service-item">
-                <h4>[Service 5]</h4>
-                <p>[Description]</p>
-              </div>
-              <div class="service-item">
-                <h4>[Service 6]</h4>
-                <p>[Description]</p>
-              </div>
+                <p>[Service description]</p>
+                <span class="link-arrow">→</span>
+              </a>
             </div>
           </div>
 
@@ -549,40 +549,91 @@ import Layout from '../../layouts/Layout.astro';
     min-height: 1rem;
   }
 
-  /* Services Overview - Simple grid */
-  .services-grid {
+  /* Services Links - Clickable cards to service pages */
+  .services-links-section {
+    margin-bottom: 5rem;
+  }
+
+  .services-links-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 
-  .service-item {
+  .service-link-card {
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    border: 3px solid var(--black);
+    border-radius: 0;
+    text-decoration: none;
+    color: var(--black);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    display: block;
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+  }
+
+  .service-link-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: var(--yellow);
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+  }
+
+  .service-link-card:hover {
+    border-color: var(--yellow);
+    transform: translate(-4px, -4px);
+    box-shadow: 8px 8px 0 rgba(246, 245, 16, 0.9), 0 0 30px rgba(246, 245, 16, 0.4);
+  }
+
+  .service-link-number {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
     background: var(--black);
-    color: var(--white);
-    padding: 2rem 1.5rem;
-    border-left: 4px solid var(--yellow);
-    transition: all 0.3s ease;
+    color: var(--yellow);
+    border: 2px solid var(--yellow);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 0.9rem;
+    z-index: 1;
   }
 
-  .service-item:hover {
-    background: var(--gray-900);
-    border-left-width: 6px;
-    transform: translateX(4px);
-  }
-
-  .service-item h4 {
-    font-size: 1.1rem;
+  .service-link-card h4 {
+    font-size: 1.5rem;
     font-weight: 800;
-    color: var(--white);
+    color: var(--black);
     margin-bottom: 0.75rem;
-    min-height: 1.1rem;
+    min-height: 1.5rem;
   }
 
-  .service-item p {
-    font-size: 0.95rem;
-    color: var(--gray-400);
-    line-height: 1.6;
+  .service-link-card p {
+    font-size: 1rem;
+    color: var(--gray-600);
+    line-height: 1.7;
+    margin-bottom: 1rem;
     min-height: 1rem;
+  }
+
+  .link-arrow {
+    font-size: 1.5rem;
+    color: var(--yellow);
+    font-weight: 700;
+    transition: transform 0.3s ease;
+    display: inline-block;
+  }
+
+  .service-link-card:hover .link-arrow {
+    transform: translateX(8px);
   }
 
   /* FAQ Section - Exact match to service pages */
@@ -953,7 +1004,7 @@ import Layout from '../../layouts/Layout.astro';
       padding: 3rem 0;
     }
 
-    .services-grid {
+    .services-links-grid {
       grid-template-columns: 1fr;
     }
 
