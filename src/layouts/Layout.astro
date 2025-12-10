@@ -2,9 +2,10 @@
 interface Props {
   title: string;
   description?: string;
+  noindex?: boolean;
 }
 
-const { title, description = "Professional moving services in San Diego" } = Astro.props;
+const { title, description = "Professional moving services in San Diego", noindex = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -13,6 +14,8 @@ const { title, description = "Professional moving services in San Diego" } = Ast
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+    <link rel="canonical" href={Astro.url.href} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -55,10 +58,14 @@ const { title, description = "Professional moving services in San Diego" } = Ast
           <div class="footer-section">
             <h4>Services</h4>
             <ul>
-              <li><a href="/services">Residential Moving</a></li>
-              <li><a href="/services">Commercial Moving</a></li>
-              <li><a href="/services">Packing Services</a></li>
-              <li><a href="/services">Storage Solutions</a></li>
+              <li><a href="/services/local-moving">Local Moving</a></li>
+              <li><a href="/services/long-distance-moving">Long-Distance Moving</a></li>
+              <li><a href="/services/residential-moving">Residential Moving</a></li>
+              <li><a href="/services/commercial-moving">Commercial Moving</a></li>
+              <li><a href="/services/packing-unpacking">Packing Services</a></li>
+              <li><a href="/services/military-moving">Military Moving</a></li>
+              <li><a href="/services/storage-solutions">Storage Solutions</a></li>
+              <li><a href="/services">View All Services</a></li>
             </ul>
           </div>
           <div class="footer-section">

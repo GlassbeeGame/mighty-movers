@@ -1,0 +1,10 @@
+# robots.txt for Mighty Movers
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://mightymovers.com/sitemap.xml
+
+# Crawl-delay (optional, adjust as needed)
+Crawl-delay: 1

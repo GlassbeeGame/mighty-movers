@@ -1,0 +1,790 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Storage Solutions Services" description="Storage Solutions Services - content coming soon." noindex={true}>
+
+  <section class="page-hero">
+    <div class="hero-image"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">Local Moving</div>
+      <h1>[Placeholder Hero Title]</h1>
+      <p>[Placeholder hero description text goes here]</p>
+    </div>
+  </section>
+
+  <section class="service-detail-section">
+    <div class="container">
+      <div class="content-wrapper">
+        <div class="main-content">
+          <div class="section-header">
+            <h2>[Placeholder Section Heading]</h2>
+            <p>[Placeholder section description text that introduces the content below]</p>
+          </div>
+
+          <div class="content-card">
+            <h3>[Placeholder Content Card Title]</h3>
+            <p>[Placeholder paragraph text for this content card. This is where you would add detailed information about this topic.]</p>
+          </div>
+
+          <div class="content-card">
+            <h3>[Placeholder Second Card Title]</h3>
+            <p>[Placeholder paragraph text for the second content card. Add more details and information here.]</p>
+          </div>
+
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon"></div>
+              <h4>[Feature 1 Title]</h4>
+              <p>[Placeholder description for feature one]</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon"></div>
+              <h4>[Feature 2 Title]</h4>
+              <p>[Placeholder description for feature two]</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon"></div>
+              <h4>[Feature 3 Title]</h4>
+              <p>[Placeholder description for feature three]</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon"></div>
+              <h4>[Feature 4 Title]</h4>
+              <p>[Placeholder description for feature four]</p>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <h3>[Placeholder Third Card Title]</h3>
+            <p>[Placeholder paragraph text for the third content card with additional details.]</p>
+          </div>
+
+          <div class="faq-section">
+            <h2>[Frequently Asked Questions]</h2>
+            <div class="faq-list">
+              <div class="faq-item">
+                <button class="faq-question">
+                  <h4>[Placeholder FAQ Question 1?]</h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>[Placeholder answer to the first frequently asked question goes here with detailed information.]</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">
+                  <h4>[Placeholder FAQ Question 2?]</h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>[Placeholder answer to the second frequently asked question with helpful details.]</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">
+                  <h4>[Placeholder FAQ Question 3?]</h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>[Placeholder answer to the third frequently asked question explaining the topic.]</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">
+                  <h4>[Placeholder FAQ Question 4?]</h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>[Placeholder answer to the fourth frequently asked question with more information.]</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">
+                  <h4>[Placeholder FAQ Question 5?]</h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>[Placeholder answer to the fifth frequently asked question providing clarity.]</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="sidebar">
+          <div class="cta-card">
+            <h3>[CTA Card Title]</h3>
+            <p>[Placeholder call-to-action description text]</p>
+            <a href="/contact" class="btn btn-primary">[Button Text]</a>
+          </div>
+
+          <div class="cta-card">
+            <h3>[Second CTA Title]</h3>
+            <p>[Placeholder text for second call-to-action]</p>
+            <a href="tel:6195556683" class="btn btn-secondary">[Call Button]</a>
+          </div>
+
+          <div class="info-card">
+            <h4>[Info Card Heading]</h4>
+            <ul>
+              <li>[Placeholder list item 1]</li>
+              <li>[Placeholder list item 2]</li>
+              <li>[Placeholder list item 3]</li>
+              <li>[Placeholder list item 4]</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4>[Additional Info]</h4>
+            <p>[Placeholder text for additional information card]</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>[Placeholder CTA Heading]</h2>
+      <p>[Placeholder CTA description text to encourage action]</p>
+      <div class="cta-buttons">
+        <a href="/contact" class="btn btn-primary btn-large">[Primary CTA Button]</a>
+        <a href="tel:6195556683" class="btn btn-secondary btn-large">[Secondary CTA Button]</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+      const icon = item.querySelector('.faq-icon');
+
+      question?.addEventListener('click', () => {
+        const isOpen = item.classList.contains('active');
+
+        // Close all other items
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('active');
+            const otherAnswer = otherItem.querySelector('.faq-answer') as HTMLElement;
+            const otherIcon = otherItem.querySelector('.faq-icon');
+            if (otherAnswer) otherAnswer.style.maxHeight = '0';
+            if (otherIcon) otherIcon.textContent = '+';
+          }
+        });
+
+        // Toggle current item
+        if (isOpen) {
+          item.classList.remove('active');
+          if (answer) (answer as HTMLElement).style.maxHeight = '0';
+          if (icon) icon.textContent = '+';
+        } else {
+          item.classList.add('active');
+          if (answer) (answer as HTMLElement).style.maxHeight = answer.scrollHeight + 'px';
+          if (icon) icon.textContent = '−';
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .page-hero {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 4rem 2rem;
+  }
+
+  .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&q=80') center/cover no-repeat;
+    z-index: 0;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.75) 100%);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    color: var(--yellow);
+    padding: 0.5rem 1.5rem;
+    border-radius: 0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: 2px solid var(--yellow);
+    margin-bottom: 2rem;
+    clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+  }
+
+  .page-hero h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 900;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    letter-spacing: -2px;
+    min-height: 5rem;
+  }
+
+  .page-hero p {
+    font-size: 1.3rem;
+    color: var(--gray-300);
+    max-width: 700px;
+    margin: 0 auto;
+    min-height: 2rem;
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+
+  .service-detail-section {
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-detail-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+      linear-gradient(45deg, transparent 45%, rgba(246, 245, 16, 0.02) 45%, rgba(246, 245, 16, 0.02) 55%, transparent 55%),
+      linear-gradient(-45deg, transparent 45%, rgba(0, 0, 0, 0.02) 45%, rgba(0, 0, 0, 0.02) 55%, transparent 55%);
+    background-size: 60px 60px;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 4rem;
+    position: relative;
+  }
+
+  .main-content {
+    min-width: 0;
+  }
+
+  .section-header {
+    margin-bottom: 4rem;
+  }
+
+  .section-header h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 900;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+    min-height: 3.5rem;
+  }
+
+  .section-header p {
+    font-size: 1.2rem;
+    color: var(--gray-600);
+    line-height: 1.8;
+    min-height: 2rem;
+  }
+
+  .content-card {
+    background: var(--white);
+    padding: 3rem;
+    margin-bottom: 3rem;
+    border: 3px solid var(--black);
+    border-radius: 0;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    clip-path: polygon(0 0, calc(100% - 25px) 0, 100% 25px, 100% 100%, 0 100%);
+  }
+
+  .content-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    background: var(--yellow);
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+  }
+
+  .content-card:hover {
+    border-color: var(--yellow);
+    transform: translate(-4px, -4px);
+    box-shadow: 8px 8px 0 rgba(246, 245, 16, 0.9), 0 0 30px rgba(246, 245, 16, 0.4);
+  }
+
+  .content-card h3 {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+    min-height: 2rem;
+  }
+
+  .content-card p {
+    font-size: 1.1rem;
+    color: var(--gray-600);
+    line-height: 1.8;
+    min-height: 1.5rem;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .feature-card {
+    background: var(--black);
+    color: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: 0;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 3px solid var(--gray-800);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: var(--yellow);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.4s ease;
+  }
+
+  .feature-card:hover {
+    border-color: var(--yellow);
+    transform: translateX(8px);
+    box-shadow: -8px 8px 0 rgba(246, 245, 16, 0.9), 0 0 30px rgba(246, 245, 16, 0.3);
+  }
+
+  .feature-card:hover::before {
+    transform: scaleY(1);
+  }
+
+  .feature-icon {
+    width: 4rem;
+    height: 4rem;
+    background: var(--yellow);
+    border-radius: 0;
+    margin-bottom: 1.5rem;
+    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+  }
+
+  .feature-card h4 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--white);
+    min-height: 1.3rem;
+  }
+
+  .feature-card p {
+    color: var(--gray-400);
+    line-height: 1.8;
+    min-height: 1.5rem;
+  }
+
+  .faq-section {
+    margin-top: 6rem;
+    padding-top: 4rem;
+    border-top: 3px solid var(--gray-200);
+  }
+
+  .faq-section h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 900;
+    color: var(--black);
+    margin-bottom: 3rem;
+    letter-spacing: -1px;
+    min-height: 3.5rem;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .faq-item {
+    background: var(--white);
+    border: 3px solid var(--black);
+    border-radius: 0;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+  }
+
+  .faq-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: var(--yellow);
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+  }
+
+  .faq-item:hover {
+    border-color: var(--yellow);
+    transform: translate(-4px, -4px);
+    box-shadow: 8px 8px 0 rgba(246, 245, 16, 0.9), 0 0 30px rgba(246, 245, 16, 0.4);
+  }
+
+  .faq-question {
+    width: 100%;
+    padding: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    transition: all 0.3s ease;
+  }
+
+  .faq-question:hover {
+    background: rgba(246, 245, 16, 0.05);
+  }
+
+  .faq-question h4 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--black);
+    min-height: 1.3rem;
+    margin: 0;
+  }
+
+  .faq-icon {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--yellow);
+    line-height: 1;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 1rem;
+    width: 2rem;
+    text-align: center;
+  }
+
+  .faq-item.active .faq-icon {
+    transform: rotate(45deg);
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .faq-answer p {
+    font-size: 1.1rem;
+    color: var(--gray-600);
+    line-height: 1.8;
+    min-height: 1.5rem;
+    padding: 0 2rem 2rem;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 6rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .cta-card {
+    background: var(--black);
+    color: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: 0;
+    border: 3px solid var(--gray-800);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--yellow);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+
+  .cta-card:hover {
+    border-color: var(--yellow);
+    box-shadow: 0 8px 30px rgba(246, 245, 16, 0.3);
+  }
+
+  .cta-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .cta-card h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 1rem;
+    min-height: 1.5rem;
+  }
+
+  .cta-card p {
+    color: var(--gray-400);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    min-height: 1.5rem;
+  }
+
+  .info-card {
+    background: var(--white);
+    padding: 2rem;
+    border: 3px solid var(--black);
+    border-radius: 0;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 0 100%);
+  }
+
+  .info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    background: var(--yellow);
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+  }
+
+  .info-card:hover {
+    border-color: var(--yellow);
+    transform: translate(-4px, -4px);
+    box-shadow: 8px 8px 0 rgba(246, 245, 16, 0.9), 0 0 30px rgba(246, 245, 16, 0.4);
+  }
+
+  .info-card h4 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--black);
+    margin-bottom: 1rem;
+    min-height: 1.2rem;
+  }
+
+  .info-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .info-card li {
+    padding: 0.75rem 0;
+    color: var(--gray-600);
+    font-size: 0.95rem;
+    border-bottom: 1px solid var(--gray-200);
+    min-height: 1rem;
+  }
+
+  .info-card li:last-child {
+    border-bottom: none;
+  }
+
+  .info-card p {
+    color: var(--gray-600);
+    line-height: 1.6;
+    min-height: 1.5rem;
+  }
+
+  .btn {
+    display: inline-block;
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 0;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 2px solid transparent;
+    min-height: 3rem;
+  }
+
+  .btn-primary {
+    background: var(--yellow);
+    color: var(--black);
+    border-color: var(--yellow);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+    clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
+  }
+
+  .btn-primary:hover {
+    background: var(--white);
+    color: var(--black);
+    border-color: var(--yellow);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 rgba(246, 245, 16, 0.7), 0 0 25px rgba(246, 245, 16, 0.5);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--white);
+    border-color: var(--white);
+    box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.1);
+    clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
+  }
+
+  .btn-secondary:hover {
+    background: var(--white);
+    color: var(--black);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 rgba(255, 255, 255, 0.3);
+  }
+
+  .btn-large {
+    padding: 1.5rem 3rem;
+    font-size: 1.1rem;
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    padding: 6rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 4rem;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(circle at 50% 50%, rgba(246, 245, 16, 0.1) 0%, transparent 60%);
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .cta-section h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    color: var(--white);
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+    min-height: 2.5rem;
+  }
+
+  .cta-section p {
+    font-size: 1.3rem;
+    color: var(--gray-300);
+    margin-bottom: 3rem;
+    min-height: 1.5rem;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 1024px) {
+    .content-wrapper {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .sidebar {
+      position: relative;
+      top: 0;
+    }
+
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 1.5rem;
+    }
+
+    .service-detail-section {
+      padding: 3rem 0;
+    }
+
+    .content-card {
+      padding: 2rem;
+    }
+
+    .section-header {
+      margin-bottom: 2rem;
+    }
+
+    .faq-section {
+      margin-top: 3rem;
+      padding-top: 2rem;
+    }
+  }
+</style>
