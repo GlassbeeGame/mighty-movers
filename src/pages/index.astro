@@ -222,6 +222,103 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <section class="testimonials">
+    <div class="testimonials-background"></div>
+    <div class="container">
+      <div class="section-header-artistic centered">
+        <div class="section-label centered">
+          <span class="label-line"></span>
+          <span class="label-text">What Our Customers Say</span>
+        </div>
+        <h2>Real Stories From<br/><span class="heading-accent">Real Customers</span></h2>
+        <p class="section-subtitle">See why San Diego trusts us with their moves</p>
+      </div>
+
+      <div class="testimonials-carousel">
+        <button class="carousel-nav carousel-prev" aria-label="Previous testimonial">‹</button>
+        <button class="carousel-nav carousel-next" aria-label="Next testimonial">›</button>
+
+        <div class="testimonials-track">
+          <div class="testimonial-card active">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"Outstanding service from start to finish! The team was professional, careful with our belongings, and incredibly efficient. They made our move stress-free."</p>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4>Sarah M.</h4>
+                <span class="author-location">La Jolla, CA</span>
+              </div>
+              <img src="https://www.google.com/s2/favicons?domain=google.com&sz=32" alt="Google" class="google-icon" />
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"Best moving company I've ever worked with! They were on time, handled everything with care, and the price was exactly what they quoted. Highly recommend!"</p>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4>Michael T.</h4>
+                <span class="author-location">Pacific Beach, CA</span>
+              </div>
+              <img src="https://www.google.com/s2/favicons?domain=google.com&sz=32" alt="Google" class="google-icon" />
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"Absolutely fantastic experience! The crew was friendly, professional, and worked incredibly hard. They took great care of our furniture and finished faster than expected."</p>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4>Jennifer L.</h4>
+                <span class="author-location">Downtown San Diego, CA</span>
+              </div>
+              <img src="https://www.google.com/s2/favicons?domain=google.com&sz=32" alt="Google" class="google-icon" />
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"I was impressed by how organized and efficient they were. Nothing was damaged, everything arrived on time, and the team was incredibly respectful of our home."</p>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4>David R.</h4>
+                <span class="author-location">Del Mar, CA</span>
+              </div>
+              <img src="https://www.google.com/s2/favicons?domain=google.com&sz=32" alt="Google" class="google-icon" />
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"Mighty Movers exceeded all expectations! From the initial quote to the final box, they were professional, courteous, and made moving day actually enjoyable."</p>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4>Amanda K.</h4>
+                <span class="author-location">Carlsbad, CA</span>
+              </div>
+              <img src="https://www.google.com/s2/favicons?domain=google.com&sz=32" alt="Google" class="google-icon" />
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-dots">
+          <button class="dot active" aria-label="Go to testimonial 1"></button>
+          <button class="dot" aria-label="Go to testimonial 2"></button>
+          <button class="dot" aria-label="Go to testimonial 3"></button>
+          <button class="dot" aria-label="Go to testimonial 4"></button>
+          <button class="dot" aria-label="Go to testimonial 5"></button>
+        </div>
+      </div>
+
+      <div class="google-cta">
+        <p>Read more reviews on</p>
+        <a href="https://share.google/ZC2SypG3a3OCCGblc" target="_blank" rel="noopener noreferrer" class="google-link">
+          <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google" />
+          <span class="review-badge">5.0 ★★★★★</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <section class="cta-section">
     <div class="cta-decorative-grid"></div>
     <div class="cta-shapes">
@@ -927,6 +1024,232 @@ import Layout from '../layouts/Layout.astro';
     line-height: 1.9;
   }
 
+  /* === TESTIMONIALS SECTION === */
+  .testimonials {
+    padding: 10rem 0;
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .testimonials-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+      repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(246, 245, 16, 0.03) 50px, rgba(246, 245, 16, 0.03) 51px);
+    opacity: 0.5;
+  }
+
+  .testimonials .section-header-artistic h2 {
+    color: var(--black);
+  }
+
+  .testimonials-carousel {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 4rem;
+  }
+
+  .testimonials-track {
+    position: relative;
+    min-height: 350px;
+  }
+
+  .testimonial-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    padding: 3.5rem 3rem;
+    border: 3px solid var(--black);
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    pointer-events: none;
+    clip-path: polygon(0 0, calc(100% - 25px) 0, 100% 25px, 100% 100%, 0 100%);
+  }
+
+  .testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    font-size: 8rem;
+    color: var(--yellow);
+    opacity: 0.15;
+    font-family: Georgia, serif;
+    line-height: 1;
+  }
+
+  .testimonial-card.active {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .testimonial-card.prev {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  .stars {
+    color: var(--yellow);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+  }
+
+  .testimonial-text {
+    font-size: 1.25rem;
+    line-height: 1.9;
+    color: var(--gray-700);
+    margin-bottom: 2.5rem;
+    position: relative;
+    z-index: 1;
+    font-style: italic;
+  }
+
+  .testimonial-author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--yellow);
+  }
+
+  .author-info h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 0.25rem;
+  }
+
+  .author-location {
+    font-size: 0.95rem;
+    color: var(--gray-500);
+  }
+
+  .google-icon {
+    width: 32px;
+    height: 32px;
+    opacity: 0.7;
+  }
+
+  .carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: var(--black);
+    color: var(--yellow);
+    border: 3px solid var(--yellow);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);
+  }
+
+  .carousel-nav:hover {
+    background: var(--yellow);
+    color: var(--black);
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .carousel-prev {
+    left: 0;
+  }
+
+  .carousel-next {
+    right: 0;
+  }
+
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    background: var(--gray-300);
+    border: 2px solid var(--black);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+  }
+
+  .dot:hover {
+    background: var(--gray-600);
+    transform: scale(1.2);
+  }
+
+  .dot.active {
+    background: var(--yellow);
+    border-color: var(--yellow);
+    transform: scale(1.3);
+  }
+
+  .google-cta {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 2.5rem;
+    background: var(--gray-50);
+    border: 2px solid var(--gray-200);
+  }
+
+  .google-cta p {
+    font-size: 0.95rem;
+    color: var(--gray-600);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+
+  .google-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.25rem 2.5rem;
+    background: var(--white);
+    border: 3px solid var(--black);
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
+  }
+
+  .google-link:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 6px 6px 0 rgba(246, 245, 16, 0.9);
+  }
+
+  .google-link img {
+    height: 30px;
+    width: auto;
+  }
+
+  .review-badge {
+    color: var(--yellow);
+    font-weight: 700;
+    font-size: 1.1rem;
+    background: var(--black);
+    padding: 0.5rem 1rem;
+    clip-path: polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%);
+  }
+
   /* === CTA SECTION === */
   .cta-section {
     background: var(--black);
@@ -1068,9 +1391,43 @@ import Layout from '../layouts/Layout.astro';
     .section-label {
       justify-content: center;
     }
+
+    .testimonials-carousel {
+      padding: 2rem 3rem;
+    }
   }
 
   @media (max-width: 768px) {
+    .testimonials {
+      padding: 5rem 0;
+    }
+
+    .testimonials-carousel {
+      padding: 1rem 2.5rem;
+    }
+
+    .testimonial-card {
+      padding: 2.5rem 2rem;
+    }
+
+    .testimonial-text {
+      font-size: 1.1rem;
+    }
+
+    .carousel-nav {
+      width: 40px;
+      height: 40px;
+      font-size: 1.5rem;
+    }
+
+    .google-cta {
+      padding: 2rem 1rem;
+    }
+
+    .google-link {
+      flex-direction: column;
+      gap: 1rem;
+    }
     .hero {
       min-height: auto;
       padding: 4rem 1rem;
@@ -1153,5 +1510,90 @@ import Layout from '../layouts/Layout.astro';
     .cta-shape-3 {
       display: none;
     }
+
+    .testimonials-carousel {
+      padding: 0.5rem 2rem;
+    }
+
+    .testimonial-card {
+      padding: 2rem 1.5rem;
+    }
+
+    .testimonial-card::before {
+      font-size: 5rem;
+      top: 0.5rem;
+      left: 1rem;
+    }
+
+    .carousel-nav {
+      width: 35px;
+      height: 35px;
+      font-size: 1.2rem;
+    }
+
+    .carousel-dots {
+      gap: 0.5rem;
+    }
   }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.testimonial-card');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.carousel-prev');
+    const nextBtn = document.querySelector('.carousel-next');
+
+    let currentIndex = 0;
+    const totalCards = cards.length;
+
+    function showCard(index) {
+      cards.forEach((card, i) => {
+        card.classList.remove('active', 'prev');
+        if (i === index) {
+          card.classList.add('active');
+        } else if (i < index) {
+          card.classList.add('prev');
+        }
+      });
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+
+      currentIndex = index;
+    }
+
+    function nextCard() {
+      const newIndex = (currentIndex + 1) % totalCards;
+      showCard(newIndex);
+    }
+
+    function prevCard() {
+      const newIndex = (currentIndex - 1 + totalCards) % totalCards;
+      showCard(newIndex);
+    }
+
+    prevBtn?.addEventListener('click', prevCard);
+    nextBtn?.addEventListener('click', nextCard);
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => showCard(index));
+    });
+
+    // Auto-rotate every 5 seconds
+    setInterval(nextCard, 5000);
+
+    // Pause auto-rotate on hover
+    const carousel = document.querySelector('.testimonials-carousel');
+    let autoRotate = setInterval(nextCard, 5000);
+
+    carousel?.addEventListener('mouseenter', () => {
+      clearInterval(autoRotate);
+    });
+
+    carousel?.addEventListener('mouseleave', () => {
+      autoRotate = setInterval(nextCard, 5000);
+    });
+  });
+</script>
