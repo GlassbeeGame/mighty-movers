@@ -36,12 +36,202 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Location Pages -->
+  <!-- Location Pages - Active with Content -->
   <url>
     <loc>https://mightymovers.com/locations/la-jolla</loc>
     <lastmod>2025-12-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- Location Pages - Placeholder (Low Priority until content added) -->
+  <url>
+    <loc>https://mightymovers.com/locations/chula-vista</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mightymovers.com/locations/escondido</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mightymovers.com/locations/san-marcos</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mightymovers.com/locations/poway</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mightymovers.com/locations/oceanside</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mightymovers.com/locations/carlsbad</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mightymovers.com/locations/del-mar</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mightymovers.com/locations/carmel-valley</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mightymovers.com/locations/el-cajon</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mightymovers.com/locations/alpine</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mightymovers.com/locations/rancho-bernardo</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mightymovers.com/locations/encinitas</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mightymovers.com/locations/la-mesa</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mightymovers.com/locations/rancho-santa-fe</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mightymovers.com/locations/vista</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mightymovers.com/locations/point-loma</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mightymovers.com/locations/coronado</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mightymovers.com/locations/santee</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mightymovers.com/locations/spring-valley</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mightymovers.com/locations/downtown-san-diego</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mightymovers.com/locations/pacific-beach</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mightymovers.com/locations/north-park</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mightymovers.com/locations/hillcrest</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mightymovers.com/locations/mission-valley</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mightymovers.com/locations/ocean-beach</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mightymovers.com/locations/lakeside</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mightymovers.com/locations/lemon-grove</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
 
   <!-- Service Pages - Active with Content -->
