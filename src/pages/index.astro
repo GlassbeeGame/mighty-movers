@@ -240,6 +240,7 @@ import Layout from '../layouts/Layout.astro';
 
         <div class="testimonials-track">
           <div class="testimonial-card active">
+            <div class="testimonial-corner-accent"></div>
             <div class="stars">★★★★★</div>
             <p class="testimonial-text">"Outstanding service from start to finish! The team was professional, careful with our belongings, and incredibly efficient. They made our move stress-free."</p>
             <div class="testimonial-author">
@@ -252,6 +253,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
 
           <div class="testimonial-card">
+            <div class="testimonial-corner-accent"></div>
             <div class="stars">★★★★★</div>
             <p class="testimonial-text">"Best moving company I've ever worked with! They were on time, handled everything with care, and the price was exactly what they quoted. Highly recommend!"</p>
             <div class="testimonial-author">
@@ -264,6 +266,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
 
           <div class="testimonial-card">
+            <div class="testimonial-corner-accent"></div>
             <div class="stars">★★★★★</div>
             <p class="testimonial-text">"Absolutely fantastic experience! The crew was friendly, professional, and worked incredibly hard. They took great care of our furniture and finished faster than expected."</p>
             <div class="testimonial-author">
@@ -276,6 +279,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
 
           <div class="testimonial-card">
+            <div class="testimonial-corner-accent"></div>
             <div class="stars">★★★★★</div>
             <p class="testimonial-text">"I was impressed by how organized and efficient they were. Nothing was damaged, everything arrived on time, and the team was incredibly respectful of our home."</p>
             <div class="testimonial-author">
@@ -288,6 +292,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
 
           <div class="testimonial-card">
+            <div class="testimonial-corner-accent"></div>
             <div class="stars">★★★★★</div>
             <p class="testimonial-text">"Mighty Movers exceeded all expectations! From the initial quote to the final box, they were professional, courteous, and made moving day actually enjoyable."</p>
             <div class="testimonial-author">
@@ -1026,7 +1031,7 @@ import Layout from '../layouts/Layout.astro';
 
   /* === TESTIMONIALS SECTION === */
   .testimonials {
-    padding: 10rem 0;
+    padding: 5rem 0;
     background: var(--white);
     position: relative;
     overflow: hidden;
@@ -1072,6 +1077,17 @@ import Layout from '../layouts/Layout.astro';
     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     pointer-events: none;
     clip-path: polygon(0 0, calc(100% - 25px) 0, 100% 25px, 100% 100%, 0 100%);
+  }
+
+  .testimonial-corner-accent {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    background: var(--yellow);
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+    z-index: 2;
   }
 
   .testimonial-card::before {
