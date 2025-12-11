@@ -1,28 +1,198 @@
 ---
 import ServiceTemplate from './_service-page-template.astro';
+
+const props = {
+  // Page metadata
+  title: "Local Movers San Diego | Mighty Movers San Diego",
+  description:
+    "Hire trusted local movers in San Diego for fast, affordable neighborhood moves. Mighty Movers San Diego handles apartments, condos, and homes across San Diego County with transparent hourly rates.",
+
+  // Hero section
+  heroBadge: "Local Moving",
+  heroTitle: "Stress-Free Local Moves in San Diego County",
+  heroDescription:
+    "From Pacific Beach to La Jolla, North Park to Cardiff, Mighty Movers San Diego makes local moving simple. Our professional movers handle the heavy lifting, tight stairs, and tricky parking so you can settle in faster.",
+
+  // Section header
+  sectionHeading: "Local Moving Services in San Diego",
+  sectionDescription:
+    "Looking for reliable local movers in San Diego that actually show up on time and care about your stuff? Mighty Movers San Diego specializes in neighborhood moves all across San Diego County. Whether you're moving a studio a few blocks away or upgrading to a larger home across town, our team delivers fast, friendly, and efficient service at transparent hourly rates.",
+
+  // Content cards (main body content)
+  contentCards: [
+    {
+      title: "What's Included With Our Local Moving Service",
+      content:
+        "When you book Mighty Movers for local moving in San Diego, you're getting more than just a truck and a couple of guys. Every local move includes a fully equipped moving truck sized to your home, professional movers, and all the tools and gear required to protect your belongings. Our crews arrive with hand trucks, dollies, moving pads, shrink wrap, lifting straps, and the tools needed to disassemble and reassemble basic furniture. We also bring our Quick Pack totes to help with loose items that didn't make it into boxes. You only pay our simple hourly rate with a clear minimum, and there are no surprise fees for stairs, long carries, or basic equipment. Whether you choose a 10-foot, 20-foot, or 26-foot truck, our local movers handle loading, transportation, and unloading anywhere within San Diego County."
+    },
+    {
+      title: "Common Local Moving Problems We Solve Every Day",
+      content:
+        "Local moving in San Diego comes with its own set of headaches—tight parking in beach communities, narrow staircases in older apartments, and busy streets in areas like North Park, Hillcrest, and Downtown. Our movers work in these neighborhoods every day and know how to navigate small alleys, low clearances, limited parking, and HOA rules. We regularly help customers who underestimated how long moving would take, who rented their own truck and ran out of time, or who had other movers cancel at the last minute. From heavy couches that won't fit through the door, to third-floor walk-ups with no elevator, to carefully moving fragile items, Mighty Movers is the professional solution when you need dependable local movers in San Diego."
+    },
+    {
+      title: "Our Local Moving Process: Simple, Clear, and Efficient",
+      content:
+        "Step 1: Give us a call at (619) 906-9018 for a quick local moving quote. We'll ask about where you're moving from and to, the size of your home, and any special items so we can recommend the right truck and crew.\n\nStep 2: Choose the right option for your move. Many local moves in San Diego use our 2 movers + 10FT or 20FT truck package, while larger homes benefit from a 26FT truck with a 3- or 4-mover crew. All options include protective materials and equipment.\n\nStep 3: On moving day, our crew arrives on time, walks through your home, and plans the loading order. We pad and wrap furniture, protect doorways and walls where necessary, and use dollies and lifting straps for safe handling.\n\nStep 4: We load your belongings strategically to maximize space and minimize shifting in transit. Then we transport everything directly to your new home anywhere in San Diego County.\n\nStep 5: At your new place, we unload room by room, placing furniture and boxes where you want them. We reassemble basic items we took apart and do a final walk-through to make sure everything is where you need it.\n\nStep 6: You pay only for the actual time used, subject to the hourly minimum for your package. No fuel surcharges, no mystery add-ons—just honest local moving services from a San Diego moving company that keeps it simple."
+    },
+    {
+      title: "Why Choose Mighty Movers as Your Local San Diego Movers",
+      content:
+        "There are plenty of moving companies in San Diego, but Mighty Movers focuses on what matters most for local moves: reliability, transparency, and care. Our crews are trained, experienced movers—not random day labor. We're built around neighborhood moves, which means we understand the parking quirks of Pacific Beach, the hills of La Jolla, and the busy streets of San Diego's urban neighborhoods. We offer straightforward hourly rates that already include the truck, tools, shrink wrap, moving pads, and Quick Pack totes, so you're not being nickeled and dimed for everything. Customers choose us when they want professional movers in San Diego who treat their belongings like their own, communicate clearly, and get the job done efficiently."
+    },
+    {
+      title: "Emergency, Same-Day, and Last-Minute Local Moves",
+      content:
+        "Plans changed suddenly? Lease dates shifted? Another company flaked on you? Mighty Movers offers same-day and next-day local moving services in San Diego when our schedule allows. We regularly help customers who search for same day movers San Diego or affordable movers San Diego because they need help fast. If you're in a bind, give us a call and we'll do everything we can to get a crew and truck out to you. Even for last-minute local moves, you still receive the same high level of professionalism, equipment, and care that we bring to every job."
+    },
+    {
+      title: "Local Moving Service Areas Across San Diego County",
+      content:
+        "Our local moving services cover all of San Diego County. From coastal communities like La Jolla, Pacific Beach, Ocean Beach, and Cardiff-by-the-Sea, to central neighborhoods like North Park, University Heights, Mission Valley, and Downtown, to inland cities such as Chula Vista, Poway, and Escondido, Mighty Movers has you covered. Whether you found us by searching for movers San Diego, moving companies San Diego, or local movers San Diego, we're ready to help with your neighborhood move anywhere within the county."
+    }
+  ],
+
+  // Feature grid (4 key selling points)
+  features: [
+    {
+      title: "Transparent Hourly Pricing",
+      description:
+        "Choose the crew and truck size that fits your move and pay a simple hourly rate with a clear minimum. No hidden fees for basic equipment, no surprise add-ons at the end of the job."
+    },
+    {
+      title: "Local Neighborhood Experts",
+      description:
+        "We handle local moves every day in coastal, urban, and suburban San Diego. Our team knows how to deal with tight driveways, tricky parking, HOA rules, and walk-up buildings."
+    },
+    {
+      title: "Fully Equipped Trucks",
+      description:
+        "Every truck comes stocked with moving pads, hand trucks, shrink wrap, lifting straps, tools, and our Quick Pack totes for loose items, so your belongings stay protected from start to finish."
+    },
+    {
+      title: "Flexible Crew & Truck Options",
+      description:
+        "From 2 movers and a 10FT truck for small apartments to 3–4 movers with a 26FT truck for larger homes, we scale your local move so it's completed efficiently and cost-effectively."
+    }
+  ],
+
+  // Locations / internal links
+  locationsHeading: "Local Movers Serving All of San Diego County",
+  locationLinks: [
+    {
+      href: "/locations/pacific-beach",
+      title: "Pacific Beach Local Movers",
+      description: "Fast, efficient neighborhood moves in and around Pacific Beach, home of Mighty Movers San Diego."
+    },
+    {
+      href: "/locations/la-jolla",
+      title: "La Jolla Local Moving Services",
+      description: "Professional movers for hillside homes, condos, and apartments throughout La Jolla."
+    },
+    {
+      href: "/locations/north-park",
+      title: "North Park & Urban San Diego Movers",
+      description: "Expert help for local moves in North Park, University Heights, Hillcrest, and nearby neighborhoods."
+    },
+    {
+      href: "/locations/carlsbad",
+      title: "Carlsbad & North County Coastal Movers",
+      description: "Reliable local moving services for Carlsbad and neighboring North County communities."
+    },
+    {
+      href: "/locations/chula-vista",
+      title: "Chula Vista & South Bay Movers",
+      description: "Local movers serving Chula Vista, National City, and the greater South Bay area."
+    }
+  ],
+
+  // FAQ section
+  faqHeading: "Local Moving FAQs",
+  faqs: [
+    {
+      question: "How much do local movers in San Diego cost?",
+      answer:
+        "Our local moving rates are hourly and depend on the truck and crew size you choose. For example, 2 movers with a 10FT truck are $119 per hour with a 3-hour minimum, and 2 movers with a 20FT truck are $129 per hour with a 3-hour minimum. Larger 26FT truck options with 3 or 4 movers are available for bigger homes. You only pay for the actual time used after the minimum."
+    },
+    {
+      question: "What's included in your local moving services?",
+      answer:
+        "Every local move includes a professional crew, the appropriate size moving truck, and all standard equipment: moving pads, shrink wrap, hand trucks, lifting straps, tools, and Quick Pack totes for loose items. We handle loading, transportation, and unloading anywhere in San Diego County."
+    },
+    {
+      question: "Do you offer same-day or last-minute local moves?",
+      answer:
+        "Yes, when our schedule allows, we can accommodate same-day and next-day moves. If you need last-minute local movers in San Diego, call us at (619) 906-9018 and we'll let you know our real-time availability."
+    },
+    {
+      question: "How far do you go for a local move?",
+      answer:
+        "We handle local moves anywhere within San Diego County. That includes coastal areas like La Jolla and Cardiff, central neighborhoods like North Park and Downtown, and inland communities such as Chula Vista, Poway, and Escondido."
+    },
+    {
+      question: "Can you just help with loading and unloading?",
+      answer:
+        "Yes. If you've rented your own truck, we offer labor-only moving starting at $99 per hour for 2 movers with a 2-hour minimum. This is perfect if you only need help with the heavy lifting while staying within San Diego."
+    }
+  ],
+
+  // Sidebar CTAs
+  ctaCards: [
+    {
+      title: "Get Your Local Moving Quote",
+      description:
+        "Tell us where you're moving from and to in San Diego County and we'll recommend the ideal truck and crew size for your local move.",
+      buttonText: "Call (619) 906-9018",
+      buttonHref: "tel:16199069018"
+    },
+    {
+      title: "Need Same-Day Local Movers?",
+      description:
+        "Last-minute move? We often have same-day and next-day availability for local moves within San Diego County.",
+      buttonText: "Check Availability",
+      buttonHref: "/contact",
+      isSecondary: true
+    }
+  ],
+
+  // Sidebar info cards
+  infoCards: [
+    {
+      title: "Local Moving Packages",
+      items: [
+        "2 Movers + 10FT Truck – $119/hr (3 hr min)",
+        "2 Movers + 20FT Truck – $129/hr (3 hr min)",
+        "2 Movers + 26FT Truck – $149/hr (4 hr min)",
+        "3 Movers + 26FT Truck – $189/hr (4 hr min)",
+        "4 Movers + 26FT Truck – $225/hr (4 hr min)"
+      ]
+    },
+    {
+      title: "Why Mighty Movers",
+      items: [
+        "Local San Diego neighborhood specialists",
+        "Transparent hourly pricing with no hidden fees",
+        "Fully equipped trucks and professional crews",
+        "Short-notice and same-day options when available"
+      ]
+    },
+    {
+      title: "Service Area",
+      content:
+        "Based in Pacific Beach, we provide local moving services across all of San Diego County, including coastal, central, and inland neighborhoods."
+    }
+  ],
+
+  // Bottom CTA
+  bottomCTAHeading: "Ready to Book Your Local San Diego Move?",
+  bottomCTADescription:
+    "Whether you're moving a few blocks or across San Diego County, Mighty Movers San Diego is here to make your local move faster, easier, and less stressful.",
+  bottomCTAPrimaryText: "Call for Local Moving Quote",
+  bottomCTAPrimaryHref: "tel:16199069018",
+  bottomCTASecondaryText: "Request a Free Estimate Online",
+  bottomCTASecondaryHref: "/contact"
+};
+
 ---
 
-<ServiceTemplate
-  title="Local Moving Services"
-  description="Local Moving services in San Diego."
-  noindex={true}
-  heroBadge="Local Moving"
-  heroTitle="Professional Local Moving"
-  heroDescription="Reliable local moving services in San Diego."
-  sectionHeading="Local Moving in San Diego"
-  sectionDescription="Professional local moving services for your needs."
-  contentCards={[{title:"Expert Local Moving",content:"Professional local moving with experienced team."},{title:"Why Choose Us",content:"Licensed, insured, and reliable service."},{title:"Get Started",content:"Contact us for a free quote today."}]}
-  features={[{title:"Licensed",description:"Fully licensed and insured"},{title:"Experienced",description:"Years of professional experience"},{title:"Reliable",description:"Dependable service you can trust"},{title:"Affordable",description:"Competitive rates and pricing"}]}
-  locationsHeading="Areas We Serve"
-  locationLinks={[{href:"/locations/la-jolla",title:"La Jolla",description:"Local Moving in La Jolla"},{href:"/locations/downtown-san-diego",title:"Downtown",description:"Local Moving downtown"},{href:"/locations/pacific-beach",title:"Pacific Beach",description:"Local Moving at the beach"},{href:"/locations",title:"View All Areas",description:"See all service areas"}]}
-  faqHeading="Frequently Asked Questions"
-  faqs={[{question:"What is local moving?",answer:"Professional local moving service in San Diego."},{question:"Do you offer local moving?",answer:"Yes, we specialize in local moving."},{question:"How much does it cost?",answer:"Contact us for a free, no-obligation quote."},{question:"Are you licensed?",answer:"Yes, fully licensed and insured."},{question:"Same-day service?",answer:"Yes, based on availability."}]}
-  ctaCards={[{title:"Get Free Quote",description:"Request your free quote today.",buttonText:"Get Quote",buttonHref:"/contact",isSecondary:false},{title:"Call Now",description:"Speak with a specialist.",buttonText:"(619) 555-MOVE",buttonHref:"tel:6195556683",isSecondary:true}]}
-  infoCards={[{title:"Service Hours",items:["Mon-Fri: 7AM-7PM","Sat: 8AM-6PM","Sun: 9AM-5PM","Same-day available"]},{title:"Service Info",content:"Professional local moving throughout San Diego County."}]}
-  bottomCTAHeading="Ready for Local Moving?"
-  bottomCTADescription="Get started with San Diego's trusted moving company."
-  bottomCTAPrimaryText="Get Free Quote"
-  bottomCTAPrimaryHref="/contact"
-  bottomCTASecondaryText="Call (619) 555-MOVE"
-  bottomCTASecondaryHref="tel:6195556683"
-/>
+<ServiceTemplate {...props} />
