@@ -1,28 +1,197 @@
 ---
 import ServiceTemplate from './_service-page-template.astro';
+
+const props = {
+  // Page metadata
+  title: "Long Distance Movers San Diego | Mighty Movers San Diego",
+  description:
+    "Reliable long distance movers in San Diego for statewide and cross-country relocations. Mighty Movers provides full-service packing, loading, transport, and delivery with custom long-distance moving quotes.",
+
+  // Hero
+  heroBadge: "Long Distance Moving",
+  heroTitle: "Trusted Long Distance Movers from San Diego",
+  heroDescription:
+    "Moving out of San Diego? Whether you're heading to Northern California, Arizona, Nevada, Oregon, Utah, or anywhere across the U.S., Mighty Movers San Diego provides safe, reliable long-distance household moving with clear communication and professional care.",
+
+  // Section header
+  sectionHeading: "Long Distance Moving Services from San Diego",
+  sectionDescription:
+    "Long-distance moving requires more than just a truck and manpower—it demands planning, care, and a team you can trust with your entire household. Mighty Movers San Diego provides end-to-end long-distance moving services for families, individuals, and professionals relocating out of San Diego County. From packing and loading to secure transport and delivery, our team ensures your belongings arrive safely, on time, and handled with the same attention we give to local moves.",
+
+  // Content cards
+  contentCards: [
+    {
+      title: "What's Included in Our Long Distance Moving Service",
+      content:
+        "Every long-distance move begins with a custom quote based on your inventory, destination, accessibility, and timeline. Once scheduled, our crew arrives with a fully equipped moving truck, complete with moving pads, shrink wrap, tools, lifting straps, and professional-grade equipment for heavy or delicate items. We handle full loading of your home, protect your furniture for long-haul transport, and secure your items for extended travel. Upon arrival at your destination, our team completes unloading, placement, and reassembly of basic furniture. Whether your move is heading to Los Angeles, San Francisco, Phoenix, Las Vegas, Salt Lake City, Portland, or across the country, Mighty Movers ensures safe, dependable long-distance moving with clear communication throughout the journey."
+    },
+    {
+      title: "Common Long Distance Moving Challenges We Solve",
+      content:
+        "Long-distance moves can be stressful, especially when coordinating travel, housing, and timing. Many customers come to us after being overwhelmed by national van lines that provide unclear time windows or shared trailer loads. Mighty Movers eliminates these issues by offering dedicated-truck options, predictable timelines, and direct communication with your movers—not a call center. We help solve problems like last-minute move deadlines, uncertainty about what can safely travel long distances, handling large furniture, and managing fragile or sentimental items. Our movers are trained to pack and protect belongings for multi-hour and multi-day travel, ensuring they arrive in the same condition they left. Whether you're relocating for work, family, school, or a lifestyle change, we make the long-distance process simple and worry-free."
+    },
+    {
+      title: "Our Long Distance Moving Process",
+      content:
+        "Step 1: Call (619) 906-9018 for a custom long-distance moving quote. We'll collect details about your inventory, location, destination, and timing.\n\nStep 2: We provide a detailed quote outlining estimated hours, travel distance, crew size, and any special requirements. Long-distance moves are flat-rate or hybrid-rate depending on destination.\n\nStep 3: On moving day, our crew arrives on time, completes a walkthrough, and prepares your home for loading. We pad-wrap all furniture, secure fragile items, and strategically load the truck for long-haul safety.\n\nStep 4: Transportation begins. Your belongings travel directly to your new home—no multi-stop routes, no transfers, and no mixing loads with other customers.\n\nStep 5: Upon arrival, our crew unloads, places items in your designated rooms, and reassembles basic furniture.\n\nStep 6: Final walkthrough ensures everything is placed correctly and delivered safely. Payment is made based on the agreed quote, with no hidden travel fees."
+    },
+    {
+      title: "Why Choose Mighty Movers for Your Long Distance Move",
+      content:
+        "Customers choose Mighty Movers San Diego for long-distance relocations because we provide a level of reliability and transparency many larger carriers don't. You receive a dedicated truck option, a professional crew that stays with your belongings from start to finish, and predictable arrival times. We don't outsource, subcontract, or switch drivers mid-route. Your belongings are handled by the same movers you meet on day one. Our trucks are equipped with commercial-grade equipment and protective materials to ensure your furniture and boxes remain secure throughout long hours on the road. Whether you're moving a small apartment or a large home, you'll receive consistent communication and dependable service from a local San Diego moving company that cares."
+    },
+    {
+      title: "Emergency & Short Notice Long Distance Moves",
+      content:
+        "Job relocation come up suddenly? Lease ending sooner than expected? Another moving company canceled on you at the last minute? Mighty Movers San Diego offers emergency and short-notice long-distance moving options when availability allows. Our team has completed urgent relocations including San Diego to Utah, Arizona, and Northern California with minimal notice. If your plans changed unexpectedly, give us a call and we'll do everything possible to get your move on the road quickly and professionally."
+    },
+    {
+      title: "Long Distance Moving Destinations We Serve",
+      content:
+        "We handle long-distance moves from San Diego to anywhere in California or the United States. Popular destinations include Los Angeles, San Francisco, Sacramento, Fresno, Phoenix, Tucson, Las Vegas, Reno, Salt Lake City, Portland, Seattle, Denver, and beyond. Whether you're moving 100 miles or 1,000 miles, Mighty Movers San Diego provides dependable long-distance service designed for safety and peace of mind."
+    }
+  ],
+
+  // Features grid
+  features: [
+    {
+      title: "Dedicated Truck Options",
+      description:
+        "Your belongings never share space with another customer's load. Enjoy direct, secure delivery with no transfers or layovers."
+    },
+    {
+      title: "Professional Packing for Long Hauls",
+      description:
+        "We offer optional full or partial packing services to protect belongings for long-distance travel, including fragile items and large furniture."
+    },
+    {
+      title: "Custom Long Distance Quotes",
+      description:
+        "Every move is unique. We provide tailored long-distance pricing based on inventory, destination, and timing—no guesswork."
+    },
+    {
+      title: "Experienced Long-Haul Movers",
+      description:
+        "Our team has completed long-distance relocations across California and the western United States with consistent reliability and care."
+    }
+  ],
+
+  // Internal location linking (using existing location pages)
+  locationsHeading: "Local Pickup Areas for Long Distance Moves",
+  locationLinks: [
+    { href: "/locations/pacific-beach", title: "Pacific Beach", description: "Long-distance moves originating from Pacific Beach." },
+    { href: "/locations/la-jolla", title: "La Jolla", description: "Long-distance movers serving La Jolla homes and condos." },
+    { href: "/locations/north-park", title: "North Park", description: "Reliable long-distance moving starting from North Park." },
+    { href: "/locations/hillcrest", title: "Hillcrest", description: "Professional movers for Hillcrest long-distance relocations." },
+    { href: "/locations/mission-valley", title: "Mission Valley", description: "Convenient pickups for interstate and statewide moves." },
+    { href: "/locations/ocean-beach", title: "Ocean Beach", description: "OB long-distance moving made simple." },
+    { href: "/locations/point-loma", title: "Point Loma", description: "Trusted long-distance moving from Point Loma." },
+    { href: "/locations/chula-vista", title: "Chula Vista", description: "Long-distance relocations for families and individuals." },
+    { href: "/locations/el-cajon", title: "El Cajon", description: "Statewide and interstate moves starting in El Cajon." },
+    { href: "/locations/santee", title: "Santee", description: "Long-distance home moves throughout Santee." },
+    { href: "/locations/spring-valley", title: "Spring Valley", description: "Pickups for cross-state and cross-country moves." },
+    { href: "/locations/lakeside", title: "Lakeside", description: "Dependable long-distance moving starting in Lakeside." },
+    { href: "/locations/lemon-grove", title: "Lemon Grove", description: "Long-distance moving experts serving Lemon Grove." },
+    { href: "/locations/encinitas", title: "Encinitas", description: "Coastal long-distance moves from Encinitas." },
+    { href: "/locations/carlsbad", title: "Carlsbad", description: "Long-distance residential moves originating in Carlsbad." },
+    { href: "/locations/oceanside", title: "Oceanside", description: "Reliable movers for long-haul relocations from Oceanside." },
+    { href: "/locations/vista", title: "Vista", description: "Long-distance moving services throughout Vista." },
+    { href: "/locations/san-marcos", title: "San Marcos", description: "Affordable long-distance moving from San Marcos." },
+    { href: "/locations/escondido", title: "Escondido", description: "Trusted long-distance movers in Escondido." },
+    { href: "/locations/carmel-valley", title: "Carmel Valley", description: "Long-distance moves for larger family homes." },
+    { href: "/locations/del-mar", title: "Del Mar", description: "Experienced long-distance movers serving Del Mar." },
+    { href: "/locations/la-mesa", title: "La Mesa", description: "Statewide and interstate pickups across La Mesa." },
+    { href: "/locations/coronado", title: "Coronado", description: "Long-distance moving for Coronado homes and apartments." },
+  ],
+
+  // FAQ
+  faqHeading: "Long Distance Moving FAQs",
+  faqs: [
+    {
+      question: "How do you price long-distance moves from San Diego?",
+      answer:
+        "All long-distance moves receive a custom quote based on inventory size, destination, accessibility, and timing. We provide clear flat-rate or hybrid-rate options—no hidden fees or surprise fuel charges."
+    },
+    {
+      question: "Do you offer packing for long-distance moves?",
+      answer:
+        "Yes. Full and partial packing services are available and recommended for long-haul travel to protect fragile or valuable items. Packing supplies are provided by the customer."
+    },
+    {
+      question: "Do you handle out-of-state moves?",
+      answer:
+        "Yes. We complete long-distance relocations from San Diego to destinations such as Utah, Nevada, Arizona, Oregon, Colorado, Washington, and more."
+    },
+    {
+      question: "Will my belongings be mixed with other shipments?",
+      answer:
+        "No. We provide dedicated truck options, meaning your belongings are transported alone—no load mixing, no transfers, no cross-docking."
+    },
+    {
+      question: "Can you accommodate last-minute long-distance moves?",
+      answer:
+        "When availability allows, yes. Call us at (619) 906-9018 to check same-day or next-day long-distance moving openings."
+    }
+  ],
+
+  // Sidebar CTAs
+  ctaCards: [
+    {
+      title: "Request a Long Distance Quote",
+      description:
+        "Moving out of San Diego? Get a custom quote for statewide or cross-country relocation.",
+      buttonText: "Call (619) 906-9018",
+      buttonHref: "tel:16199069018"
+    },
+    {
+      title: "Need a Fast Long Distance Move?",
+      description:
+        "Ask about short-notice and emergency long-distance availability.",
+      buttonText: "Check Availability",
+      buttonHref: "/contact",
+      isSecondary: true
+    }
+  ],
+
+  // Sidebar info cards
+  infoCards: [
+    {
+      title: "What We Provide",
+      items: [
+        "Professional long-distance movers",
+        "Fully equipped moving truck",
+        "Furniture padding & protection",
+        "Dedicated-truck option",
+        "Loading, transport & unloading",
+        "Basic furniture assembly"
+      ]
+    },
+    {
+      title: "Why Customers Choose Us",
+      items: [
+        "Dedicated-truck, no mixing loads",
+        "Direct delivery with clear timing",
+        "Trusted, experienced movers",
+        "Out-of-state relocation experts"
+      ]
+    },
+    {
+      title: "Custom Pricing",
+      content:
+        "Long-distance moves vary based on distance and size. Call us for a detailed quote tailored to your relocation."
+    }
+  ],
+
+  // Bottom CTA
+  bottomCTAHeading: "Planning a Long Distance Move from San Diego?",
+  bottomCTADescription:
+    "Our team is ready to handle your relocation anywhere in California or across the U.S. Get a dependable, custom-planned long-distance moving experience.",
+  bottomCTAPrimaryText: "Call for Long Distance Quote",
+  bottomCTAPrimaryHref: "tel:16199069018",
+  bottomCTASecondaryText: "Request Estimate Online",
+  bottomCTASecondaryHref: "/contact"
+};
+
 ---
 
-<ServiceTemplate
-  title="Long Distance Moving Services"
-  description="Long Distance Moving services in San Diego."
-  noindex={true}
-  heroBadge="Long Distance Moving"
-  heroTitle="Professional Long Distance Moving"
-  heroDescription="Reliable long distance moving services in San Diego."
-  sectionHeading="Long Distance Moving in San Diego"
-  sectionDescription="Professional long distance moving services for your needs."
-  contentCards={[{title:"Expert Long Distance Moving",content:"Professional long distance moving with experienced team."},{title:"Why Choose Us",content:"Licensed, insured, and reliable service."},{title:"Get Started",content:"Contact us for a free quote today."}]}
-  features={[{title:"Licensed",description:"Fully licensed and insured"},{title:"Experienced",description:"Years of professional experience"},{title:"Reliable",description:"Dependable service you can trust"},{title:"Affordable",description:"Competitive rates and pricing"}]}
-  locationsHeading="Areas We Serve"
-  locationLinks={[{href:"/locations/la-jolla",title:"La Jolla",description:"Long Distance Moving in La Jolla"},{href:"/locations/downtown-san-diego",title:"Downtown",description:"Long Distance Moving downtown"},{href:"/locations/pacific-beach",title:"Pacific Beach",description:"Long Distance Moving at the beach"},{href:"/locations",title:"View All Areas",description:"See all service areas"}]}
-  faqHeading="Frequently Asked Questions"
-  faqs={[{question:"What is long distance moving?",answer:"Professional long distance moving service in San Diego."},{question:"Do you offer long distance moving?",answer:"Yes, we specialize in long distance moving."},{question:"How much does it cost?",answer:"Contact us for a free, no-obligation quote."},{question:"Are you licensed?",answer:"Yes, fully licensed and insured."},{question:"Same-day service?",answer:"Yes, based on availability."}]}
-  ctaCards={[{title:"Get Free Quote",description:"Request your free quote today.",buttonText:"Get Quote",buttonHref:"/contact",isSecondary:false},{title:"Call Now",description:"Speak with a specialist.",buttonText:"(619) 555-MOVE",buttonHref:"tel:6195556683",isSecondary:true}]}
-  infoCards={[{title:"Service Hours",items:["Mon-Fri: 7AM-7PM","Sat: 8AM-6PM","Sun: 9AM-5PM","Same-day available"]},{title:"Service Info",content:"Professional long distance moving throughout San Diego County."}]}
-  bottomCTAHeading="Ready for Long Distance Moving?"
-  bottomCTADescription="Get started with San Diego's trusted moving company."
-  bottomCTAPrimaryText="Get Free Quote"
-  bottomCTAPrimaryHref="/contact"
-  bottomCTASecondaryText="Call (619) 555-MOVE"
-  bottomCTASecondaryHref="tel:6195556683"
-/>
+<ServiceTemplate {...props} />
