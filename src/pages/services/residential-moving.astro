@@ -1,28 +1,174 @@
 ---
 import ServiceTemplate from './_service-page-template.astro';
+
+const props = {
+  // Metadata
+  title: "Residential Movers San Diego | Mighty Movers San Diego",
+  description:
+    "Professional residential movers in San Diego for apartments, condos, townhomes, and single-family homes. Fast, affordable, reliable local home moving services across San Diego County.",
+
+  // Hero
+  heroBadge: "Residential Moving",
+  heroTitle: "Reliable Residential Movers in San Diego",
+  heroDescription:
+    "Whether you're moving from a studio apartment, a coastal condo, or a multi-bedroom home, Mighty Movers San Diego provides smooth, stress-free residential moving anywhere in San Diego County.",
+
+  // Section Intro
+  sectionHeading: "Residential Moving Services in San Diego",
+  sectionDescription:
+    "Moving to a new home should feel exciting—not overwhelming. Mighty Movers San Diego specializes in residential moves of all sizes throughout San Diego County. From beachside bungalows in Pacific Beach to hillside homes in La Jolla and family neighborhoods in Chula Vista, our trained residential movers handle every detail with care, professionalism, and efficiency. With transparent hourly rates and fully equipped trucks, we make home moving simple and stress-free.",
+
+  // Content cards
+  contentCards: [
+    {
+      title: "What's Included in Our Residential Moving Service",
+      content:
+        "Every residential move includes a fully equipped truck, a trained moving crew, and all the protective materials needed to keep your belongings safe. We bring moving pads, shrink wrap, dollies, hand trucks, lifting straps, and the tools required to disassemble and reassemble basic furniture. Quick Pack totes are included for loose or unboxed items. Our movers handle loading, transporting, and unloading your belongings anywhere within San Diego County. Whether you're transitioning from a studio apartment or relocating your entire family home, our residential moving service is designed to be simple, predictable, and stress-free with transparent hourly pricing and no hidden fees."
+    },
+    {
+      title: "Common Residential Moving Problems We Solve",
+      content:
+        "Residential moves often come with unexpected challenges—tight staircases, narrow hallways, steep driveways, limited parking, or large furniture pieces that simply don't want to cooperate. Many San Diego homes and apartments also have strict HOA rules, elevators that need to be reserved, or difficult access points. Our movers handle these issues daily and arrive prepared for complex residential layouts. We help customers who underestimated how much work moving requires, who need help with heavy or awkward items, or who experienced last-minute cancellations from other moving companies. From protecting your floors and walls to safely handling fragile or oversized items, we solve every common home-moving challenge so your move is completed smoothly."
+    },
+    {
+      title: "Our Residential Moving Process",
+      content:
+        "Step 1: Call us at (619) 906-9018 for a quick residential moving quote. We gather details about your home, your inventory, and your pickup and drop-off locations.\n\nStep 2: We recommend the right truck and crew size based on your home type—whether that's a studio apartment, a townhome, or a multi-bedroom house. Pricing is hourly with a clear minimum so you always know what to expect.\n\nStep 3: On moving day, our movers arrive on time, complete a walkthrough, and develop a loading plan to protect floors, walls, and high-traffic areas.\n\nStep 4: We pad-wrap furniture, shrink-wrap delicate items, and use dollies and lifting straps for safe handling. Everything is loaded strategically to maximize space inside the truck.\n\nStep 5: We drive directly to your new home and unload room by room, placing furniture and boxes exactly where you want them.\n\nStep 6: A final walkthrough ensures everything is placed correctly and delivered safely before payment is processed. Simple, smooth, and professional residential moving—done the right way."
+    },
+    {
+      title: "Why San Diego Families Choose Mighty Movers",
+      content:
+        "San Diego residents trust Mighty Movers because we make home moving predictable and stress-free. Our teams are local experts who understand the unique challenges of San Diego neighborhoods, from beach-area parking limitations to steep canyon roads and urban apartment loading zones. Customers appreciate our transparent pricing, clear communication, and the fact that all equipment is included. We treat your home and belongings with care, respect, and professionalism—whether you're moving a few blocks away or across the county. Mighty Movers is built for residential moves, and our commitment to efficiency and customer satisfaction sets us apart from other residential moving companies in San Diego."
+    },
+    {
+      title: "Emergency & Same-Day Residential Moving",
+      content:
+        "Life doesn't always stick to a schedule. If you suddenly need to move out, your landlord changed your lease date, or another mover canceled on you, we offer same-day and next-day residential moving when availability allows. Our team regularly handles urgent moves for apartments, condos, and homes across San Diego. Even under tight timelines, you receive the same professional equipment, trained movers, and high-level care we bring to all residential moves. Call to check real-time availability for last-minute home moving assistance."
+    },
+    {
+      title: "Residential Moving Throughout San Diego County",
+      content:
+        "Mighty Movers San Diego handles residential moves in every part of San Diego County. Whether you're upgrading to a larger home, relocating for a job, downsizing, or moving closer to the coast, we make the transition easy. With deep knowledge of local streets, parking challenges, building layouts, and neighborhood logistics, our movers ensure your home move is completed quickly and smoothly—no surprises, no stress."
+    }
+  ],
+
+  // Features
+  features: [
+    {
+      title: "Transparent Hourly Rates",
+      description:
+        "Simple, predictable pricing with no hidden equipment fees or surprise add-ons—ever."
+    },
+    {
+      title: "Fully Equipped Trucks",
+      description:
+        "Every truck comes stocked with moving pads, dollies, shrink wrap, tools, and Quick Pack totes."
+    },
+    {
+      title: "Apartment, Condo & Home Specialists",
+      description:
+        "We move all residential property types, from studios to large family homes."
+    },
+    {
+      title: "Local Neighborhood Experts",
+      description:
+        "We handle residential moves daily across San Diego's coastal, central, and inland communities."
+    }
+  ],
+
+  // Location links (only 3 per template)
+  locationsHeading: "Residential Movers Serving All of San Diego County",
+  locationLinks: [
+    { href: "/locations/pacific-beach", title: "Pacific Beach", description: "Residential movers for PB apartments and homes." },
+    { href: "/locations/la-jolla", title: "La Jolla", description: "Professional home moving throughout La Jolla." },
+    { href: "/locations/chula-vista", title: "Chula Vista", description: "Full-service residential moves in Chula Vista." }
+  ],
+
+  // FAQ
+  faqHeading: "Residential Moving FAQs",
+  faqs: [
+    {
+      question: "How much does a residential move cost in San Diego?",
+      answer:
+        "Pricing depends on the truck and crew size. Most residential moves use 2 movers with a 10FT, 20FT, or 26FT truck. Rates start at $119/hr with a clear hourly minimum. You only pay for the time used."
+    },
+    {
+      question: "Do you move apartments, condos, and houses?",
+      answer:
+        "Yes. We specialize in all residential property types including apartments, condos, townhomes, and single-family homes anywhere in San Diego County."
+    },
+    {
+      question: "Do you protect my furniture during the move?",
+      answer:
+        "Absolutely. We use moving pads, shrink wrap, and proper loading techniques to keep your belongings safe from damage."
+    },
+    {
+      question: "Can you help move large or heavy furniture?",
+      answer:
+        "Yes. Our movers are trained in safe handling of heavy items using dollies, lifting straps, and professional equipment."
+    },
+    {
+      question: "Do you offer same-day residential moving?",
+      answer:
+        "When available, yes. Call (619) 906-9018 to check today's openings for urgent residential moves."
+    }
+  ],
+
+  // Sidebar
+  ctaCards: [
+    {
+      title: "Get a Residential Moving Quote",
+      description:
+        "Tell us about your home and moving day needs. We'll recommend the perfect truck and crew.",
+      buttonText: "Call (619) 906-9018",
+      buttonHref: "tel:16199069018"
+    },
+    {
+      title: "Need Same-Day Movers?",
+      description: "Ask about today's residential moving availability.",
+      buttonText: "Check Availability",
+      buttonHref: "/contact",
+      isSecondary: true
+    }
+  ],
+
+  infoCards: [
+    {
+      title: "Residential Moving Packages",
+      items: [
+        "2 Movers + 10FT Truck – $119/hr (3 hr min)",
+        "2 Movers + 20FT Truck – $129/hr (3 hr min)",
+        "2 Movers + 26FT Truck – $149/hr (4 hr min)",
+        "3 Movers + 26FT Truck – $189/hr (4 hr min)",
+        "4 Movers + 26FT Truck – $225/hr (4 hr min)"
+      ]
+    },
+    {
+      title: "Why Homeowners Choose Us",
+      items: [
+        "Apartment, condo & home specialists",
+        "Transparent hourly rates",
+        "Fully equipped trucks",
+        "Friendly, experienced movers"
+      ]
+    },
+    {
+      title: "Service Area",
+      content:
+        "We provide residential moving throughout San Diego County—from coastal communities to inland suburbs."
+    }
+  ],
+
+  // Bottom CTA
+  bottomCTAHeading: "Ready for a Smooth Residential Move?",
+  bottomCTADescription:
+    "From apartments to family homes, our team makes moving easy, efficient, and stress-free.",
+  bottomCTAPrimaryText: "Call for Residential Moving Quote",
+  bottomCTAPrimaryHref: "tel:16199069018",
+  bottomCTASecondaryText: "Request an Estimate",
+  bottomCTASecondaryHref: "/contact"
+};
+
 ---
 
-<ServiceTemplate
-  title="Residential Moving Services"
-  description="Residential Moving services in San Diego."
-  noindex={true}
-  heroBadge="Residential Moving"
-  heroTitle="Professional Residential Moving"
-  heroDescription="Reliable residential moving services in San Diego."
-  sectionHeading="Residential Moving in San Diego"
-  sectionDescription="Professional residential moving services for your needs."
-  contentCards={[{title:"Expert Residential Moving",content:"Professional residential moving with experienced team."},{title:"Why Choose Us",content:"Licensed, insured, and reliable service."},{title:"Get Started",content:"Contact us for a free quote today."}]}
-  features={[{title:"Licensed",description:"Fully licensed and insured"},{title:"Experienced",description:"Years of professional experience"},{title:"Reliable",description:"Dependable service you can trust"},{title:"Affordable",description:"Competitive rates and pricing"}]}
-  locationsHeading="Areas We Serve"
-  locationLinks={[{href:"/locations/la-jolla",title:"La Jolla",description:"Residential Moving in La Jolla"},{href:"/locations/downtown-san-diego",title:"Downtown",description:"Residential Moving downtown"},{href:"/locations/pacific-beach",title:"Pacific Beach",description:"Residential Moving at the beach"},{href:"/locations",title:"View All Areas",description:"See all service areas"}]}
-  faqHeading="Frequently Asked Questions"
-  faqs={[{question:"What is residential moving?",answer:"Professional residential moving service in San Diego."},{question:"Do you offer residential moving?",answer:"Yes, we specialize in residential moving."},{question:"How much does it cost?",answer:"Contact us for a free, no-obligation quote."},{question:"Are you licensed?",answer:"Yes, fully licensed and insured."},{question:"Same-day service?",answer:"Yes, based on availability."}]}
-  ctaCards={[{title:"Get Free Quote",description:"Request your free quote today.",buttonText:"Get Quote",buttonHref:"/contact",isSecondary:false},{title:"Call Now",description:"Speak with a specialist.",buttonText:"(619) 555-MOVE",buttonHref:"tel:6195556683",isSecondary:true}]}
-  infoCards={[{title:"Service Hours",items:["Mon-Fri: 7AM-7PM","Sat: 8AM-6PM","Sun: 9AM-5PM","Same-day available"]},{title:"Service Info",content:"Professional residential moving throughout San Diego County."}]}
-  bottomCTAHeading="Ready for Residential Moving?"
-  bottomCTADescription="Get started with San Diego's trusted moving company."
-  bottomCTAPrimaryText="Get Free Quote"
-  bottomCTAPrimaryHref="/contact"
-  bottomCTASecondaryText="Call (619) 555-MOVE"
-  bottomCTASecondaryHref="tel:6195556683"
-/>
+<ServiceTemplate {...props} />
