@@ -1,28 +1,212 @@
 ---
 import ServiceTemplate from './_service-page-template.astro';
+
+const props = {
+  // Page metadata
+  title: "Military Movers San Diego | Mighty Movers San Diego",
+  description:
+    "Professional military movers in San Diego for PCS, on-base, and off-base moves. Fast, reliable moving for active-duty service members and veterans. Same-day military moving available.",
+
+  // Hero
+  heroBadge: "Military Moving",
+  heroTitle: "Military Movers in San Diego",
+  heroDescription:
+    "San Diego is home to one of the largest military communities in the country, and Mighty Movers San Diego is proud to support active-duty service members, veterans, and military families with fast, reliable, and affordable military moving services. Whether you're relocating to or from NAS North Island, MCAS Miramar, Camp Pendleton, or anywhere within San Diego County, our military movers understand the unique demands and tight timelines that come with PCS, temporary housing, on-base moves, and off-base transitions.",
+
+  // Section header
+  sectionHeading: "Military Moving Services in San Diego",
+  sectionDescription:
+    "We deliver an efficient, organized moving experience that respects your schedule, your belongings, and your service.",
+
+  // Content cards
+  contentCards: [
+    {
+      title: "What's Included in Our Military Moving Service",
+      content:
+        "Military moves often require speed, precision, and flexibility. Our service includes a trained crew of professional military movers, a fully equipped moving truck sized to your home, moving pads, shrink wrap, and furniture protection, dollies and hand trucks for efficient loading, lifting straps for heavy items like dressers, sofas, or equipment, basic disassembly and reassembly of household furniture, room-by-room unloading and furniture placement, and direct transportation anywhere within San Diego County. We're built for fast turnaround times, structured moves, and clear communication. Whether you're moving off-base, between on-base housing units, or transitioning to civilian housing, our team handles the heavy lifting."
+    },
+    {
+      title: "Common Military Moving Problems We Solve",
+      content:
+        "Military families face unique pressures when it comes to relocation. We understand those challenges and solve them every day. Typical issues we handle include tight PCS timelines, last-minute move date changes, short-term housing transitions, on-base access limitations, moving into or out of compact base housing, need for same-day movers due to unexpected orders, heavy gear or high-volume household items, and protecting belongings during local relocation. Our crews are trained to handle fast-paced moves with professionalism and care, helping relieve the stress of frequent relocations."
+    },
+    {
+      title: "Our Military Moving Process",
+      isProcess: true,
+      steps: [
+        {
+          step: 1,
+          title: "Quick Call & Quote",
+          content: "Dial (619) 906-9018 and let us know your timeline, your housing location, and whether you're moving on-base or off-base. We recommend the right crew and truck size."
+        },
+        {
+          step: 2,
+          title: "Pre-Move Preparation",
+          content: "We learn any base access requirements, parking restrictions, or gate instructions. Our team is familiar with the major military installations in San Diego."
+        },
+        {
+          step: 3,
+          title: "Arrival & Walkthrough",
+          content: "On moving day, our movers arrive on time and review your home layout to determine the safest and fastest loading path."
+        },
+        {
+          step: 4,
+          title: "Protection & Packing",
+          content: "Furniture is padded and shrink-wrapped. Items are organized for efficient transport. We use dollies, hand trucks, and lifting straps to keep everything safe."
+        },
+        {
+          step: 5,
+          title: "Direct Transport",
+          content: "Your belongings are moved directly to your new residence — no mixing loads, stopping at storage, or unnecessary delays."
+        },
+        {
+          step: 6,
+          title: "Unloading & Setup",
+          content: "We unload room by room, placing items where you want them. Basic furniture assembly is included."
+        },
+        {
+          step: 7,
+          title: "Final Review",
+          content: "We confirm everything has been placed properly and complete a walkthrough with you before finishing the job."
+        }
+      ]
+    },
+    {
+      title: "Why Military Families Choose Mighty Movers",
+      content:
+        "San Diego military families trust our moving company because we understand how unpredictable military relocations can be — and we adapt to your needs. Customers choose us because we offer fast turnaround and flexible scheduling, we understand PCS stress and short-notice orders, we handle on-base and off-base moves across all military installations, we use transparent hourly pricing with no hidden equipment fees, our crews are trained professionals who handle your belongings with care, we move efficiently while maintaining safety and precision, and we're local experts familiar with the area's housing layouts and traffic patterns. Whether you're transferring units, moving your family off-base, or starting civilian life in a new home, Mighty Movers is here to make the transition smoother."
+    },
+    {
+      title: "Emergency & Same-Day Military Moving",
+      content:
+        "Service members don't always get much notice before a move. That's why we offer same-day military moving (based on availability), next-day moving, and short-notice moving for PCS or temporary housing. If your schedule changed suddenly, your orders shifted, or you're facing a tight deadline, call (619) 906-9018 to check real-time availability."
+    },
+    {
+      title: "Military Movers Serving All of San Diego County",
+      content:
+        "We help military families move throughout the entire county, both on-base and off-base. Our team is familiar with major military installations including NAS North Island, MCAS Miramar, Camp Pendleton, and Naval Base San Diego, as well as all surrounding civilian neighborhoods where military families live."
+    }
+  ],
+
+  // Features grid
+  features: [
+    {
+      title: "PCS & Short-Notice Specialists",
+      description:
+        "We understand tight military timelines and offer fast turnaround for PCS moves and sudden relocations."
+    },
+    {
+      title: "On-Base & Off-Base Moving",
+      description:
+        "Familiar with base access requirements and housing layouts at all major San Diego military installations."
+    },
+    {
+      title: "Transparent Military Pricing",
+      description:
+        "Clear hourly rates with no hidden fees — same pricing structure as our standard residential moves."
+    },
+    {
+      title: "Same-Day Moving Available",
+      description:
+        "When orders change suddenly, we offer same-day and next-day military moving services."
+    }
+  ],
+
+  // Locations
+  locationsHeading: "Military Moving Throughout San Diego",
+  locationLinks: [
+    { href: "/locations/point-loma", title: "Point Loma", description: "Military movers serving Point Loma and Naval Base San Diego." },
+    { href: "/locations/oceanside", title: "Oceanside", description: "Expert military moving for Camp Pendleton and Oceanside families." },
+    { href: "/locations/chula-vista", title: "Chula Vista", description: "Military family moves throughout Chula Vista and South Bay." },
+    { href: "/locations", title: "View All Areas", description: "See all service areas across San Diego County" }
+  ],
+
+  // FAQ
+  faqHeading: "Military Moving FAQs",
+  faqs: [
+    {
+      question: "Do you handle on-base moves?",
+      answer:
+        "Yes. We move both on-base and off-base, and we're familiar with access requirements for major San Diego installations."
+    },
+    {
+      question: "Do military moves cost extra?",
+      answer:
+        "No. Rates are the same as our standard residential pricing. Everything is billed hourly with required minimums."
+    },
+    {
+      question: "Can you move large or heavy items?",
+      answer:
+        "Absolutely. We use professional equipment to move heavy items safely, including lifting straps and dollies."
+    },
+    {
+      question: "Do you offer same-day or next-day military moves?",
+      answer:
+        "Yes — when availability allows. We understand that orders can change quickly."
+    },
+    {
+      question: "Can you help with packing?",
+      answer:
+        "Yes. We offer full and partial packing services to help prepare your home for relocation."
+    }
+  ],
+
+  // Sidebar CTAs
+  ctaCards: [
+    {
+      title: "Get Your Military Moving Quote",
+      description:
+        "Tell us your timeline, base location, and move details. We'll provide fast, reliable military moving support.",
+      buttonText: "Call (619) 906-9018",
+      buttonHref: "tel:16199069018"
+    },
+    {
+      title: "Need Same-Day Military Movers?",
+      description:
+        "Orders changed? We offer same-day and emergency military moving when available.",
+      buttonText: "Check Availability",
+      buttonHref: "/contact",
+      isSecondary: true
+    }
+  ],
+
+  // Sidebar info cards
+  infoCards: [
+    {
+      title: "Military Moving Packages",
+      items: [
+        "2 Movers + 10FT Truck – $119/hr (3 hr min)",
+        "2 Movers + 20FT Truck – $129/hr (3 hr min)",
+        "2 Movers + 26FT Truck – $149/hr (4 hr min)",
+        "3 Movers + 26FT Truck – $189/hr (4 hr min)"
+      ]
+    },
+    {
+      title: "Why Military Families Choose Us",
+      items: [
+        "PCS & short-notice specialists",
+        "On-base & off-base moving",
+        "Transparent hourly pricing",
+        "Same-day moves available"
+      ]
+    },
+    {
+      title: "Service Area",
+      content:
+        "We serve all major military installations in San Diego County and surrounding civilian neighborhoods."
+    }
+  ],
+
+  // Bottom CTA
+  bottomCTAHeading: "Ready for Your Military Move?",
+  bottomCTADescription:
+    "From PCS relocations to on-base housing transfers, we make military moves fast, organized, and stress-free.",
+  bottomCTAPrimaryText: "Call for Military Moving Quote",
+  bottomCTAPrimaryHref: "tel:16199069018",
+  bottomCTASecondaryText: "Request Military Estimate",
+  bottomCTASecondaryHref: "/contact"
+};
+
 ---
 
-<ServiceTemplate
-  title="Military Moving Services"
-  description="Military Moving services in San Diego."
-  noindex={true}
-  heroBadge="Military Moving"
-  heroTitle="Professional Military Moving"
-  heroDescription="Reliable military moving services in San Diego."
-  sectionHeading="Military Moving in San Diego"
-  sectionDescription="Professional military moving services for your needs."
-  contentCards={[{title:"Expert Military Moving",content:"Professional military moving with experienced team."},{title:"Why Choose Us",content:"Licensed, insured, and reliable service."},{title:"Get Started",content:"Contact us for a free quote today."}]}
-  features={[{title:"Licensed",description:"Fully licensed and insured"},{title:"Experienced",description:"Years of professional experience"},{title:"Reliable",description:"Dependable service you can trust"},{title:"Affordable",description:"Competitive rates and pricing"}]}
-  locationsHeading="Areas We Serve"
-  locationLinks={[{href:"/locations/la-jolla",title:"La Jolla",description:"Military Moving in La Jolla"},{href:"/locations/downtown-san-diego",title:"Downtown",description:"Military Moving downtown"},{href:"/locations/pacific-beach",title:"Pacific Beach",description:"Military Moving at the beach"},{href:"/locations",title:"View All Areas",description:"See all service areas"}]}
-  faqHeading="Frequently Asked Questions"
-  faqs={[{question:"What is military moving?",answer:"Professional military moving service in San Diego."},{question:"Do you offer military moving?",answer:"Yes, we specialize in military moving."},{question:"How much does it cost?",answer:"Contact us for a free, no-obligation quote."},{question:"Are you licensed?",answer:"Yes, fully licensed and insured."},{question:"Same-day service?",answer:"Yes, based on availability."}]}
-  ctaCards={[{title:"Get Free Quote",description:"Request your free quote today.",buttonText:"Get Quote",buttonHref:"/contact",isSecondary:false},{title:"Call Now",description:"Speak with a specialist.",buttonText:"(619) 555-MOVE",buttonHref:"tel:6195556683",isSecondary:true}]}
-  infoCards={[{title:"Service Hours",items:["Mon-Fri: 7AM-7PM","Sat: 8AM-6PM","Sun: 9AM-5PM","Same-day available"]},{title:"Service Info",content:"Professional military moving throughout San Diego County."}]}
-  bottomCTAHeading="Ready for Military Moving?"
-  bottomCTADescription="Get started with San Diego's trusted moving company."
-  bottomCTAPrimaryText="Get Free Quote"
-  bottomCTAPrimaryHref="/contact"
-  bottomCTASecondaryText="Call (619) 555-MOVE"
-  bottomCTASecondaryHref="tel:6195556683"
-/>
+<ServiceTemplate {...props} />
