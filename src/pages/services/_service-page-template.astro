@@ -24,9 +24,18 @@
  */
 import Layout from '../../layouts/Layout.astro';
 
+interface ProcessStep {
+  step: number;
+  title?: string;
+  content: string;
+}
+
 interface ContentCard {
   title: string;
-  content: string;
+  content?: string;
+  steps?: ProcessStep[];
+  highlights?: string[];
+  isProcess?: boolean;
 }
 
 interface FeatureCard {
@@ -148,9 +157,32 @@ const {
           </div>
 
           {contentCards.slice(0, 2).map((card) => (
-            <div class="content-card">
+            <div class={`content-card ${card.isProcess ? 'process-card' : ''}`}>
               <h3>{card.title}</h3>
-              <p>{card.content}</p>
+              {card.steps ? (
+                <div class="process-steps">
+                  {card.steps.map((step) => (
+                    <div class="process-step">
+                      <div class="step-number">{step.step}</div>
+                      <div class="step-content">
+                        {step.title && <h4 class="step-title">{step.title}</h4>}
+                        <p>{step.content}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : card.highlights ? (
+                <div class="highlight-list">
+                  {card.highlights.map((highlight) => (
+                    <div class="highlight-item">
+                      <span class="highlight-marker">→</span>
+                      <p>{highlight}</p>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <p>{card.content}</p>
+              )}
             </div>
           ))}
 
@@ -165,9 +197,32 @@ const {
           </div>
 
           {contentCards.slice(2).map((card) => (
-            <div class="content-card">
+            <div class={`content-card ${card.isProcess ? 'process-card' : ''}`}>
               <h3>{card.title}</h3>
-              <p>{card.content}</p>
+              {card.steps ? (
+                <div class="process-steps">
+                  {card.steps.map((step) => (
+                    <div class="process-step">
+                      <div class="step-number">{step.step}</div>
+                      <div class="step-content">
+                        {step.title && <h4 class="step-title">{step.title}</h4>}
+                        <p>{step.content}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : card.highlights ? (
+                <div class="highlight-list">
+                  {card.highlights.map((highlight) => (
+                    <div class="highlight-item">
+                      <span class="highlight-marker">→</span>
+                      <p>{highlight}</p>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <p>{card.content}</p>
+              )}
             </div>
           ))}
 
@@ -453,6 +508,93 @@ const {
     color: var(--gray-600);
     line-height: 1.8;
     min-height: 1.5rem;
+  }
+
+  /* Process Steps Styling */
+  .process-card {
+    background: var(--gray-50);
+  }
+
+  .process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .process-step {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 2rem;
+    position: relative;
+  }
+
+  .process-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 40px;
+    top: 80px;
+    bottom: -32px;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--yellow) 0%, var(--gray-300) 100%);
+  }
+
+  .step-number {
+    width: 80px;
+    height: 80px;
+    background: var(--yellow);
+    color: var(--black);
+    font-size: 2.5rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid var(--black);
+    clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 0 100%);
+    position: relative;
+    z-index: 1;
+  }
+
+  .step-content {
+    padding-top: 0.5rem;
+  }
+
+  .step-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--black);
+    margin-bottom: 0.75rem;
+  }
+
+  .step-content p {
+    font-size: 1.05rem;
+    color: var(--gray-600);
+    line-height: 1.8;
+  }
+
+  /* Highlight List Styling */
+  .highlight-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .highlight-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .highlight-marker {
+    color: var(--yellow);
+    font-size: 1.5rem;
+    font-weight: 900;
+    flex-shrink: 0;
+    line-height: 1.8rem;
+  }
+
+  .highlight-item p {
+    flex: 1;
+    margin: 0;
   }
 
   .features-grid {

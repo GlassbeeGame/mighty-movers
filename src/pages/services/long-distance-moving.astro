@@ -32,8 +32,33 @@ const props = {
     },
     {
       title: "Our Long Distance Moving Process",
-      content:
-        "Step 1: Call (619) 906-9018 for a custom long-distance moving quote. We'll collect details about your inventory, location, destination, and timing.\n\nStep 2: We provide a detailed quote outlining estimated hours, travel distance, crew size, and any special requirements. Long-distance moves are flat-rate or hybrid-rate depending on destination.\n\nStep 3: On moving day, our crew arrives on time, completes a walkthrough, and prepares your home for loading. We pad-wrap all furniture, secure fragile items, and strategically load the truck for long-haul safety.\n\nStep 4: Transportation begins. Your belongings travel directly to your new home—no multi-stop routes, no transfers, and no mixing loads with other customers.\n\nStep 5: Upon arrival, our crew unloads, places items in your designated rooms, and reassembles basic furniture.\n\nStep 6: Final walkthrough ensures everything is placed correctly and delivered safely. Payment is made based on the agreed quote, with no hidden travel fees."
+      isProcess: true,
+      steps: [
+        {
+          step: 1,
+          content: "Call (619) 906-9018 for a custom long-distance moving quote. We'll collect details about your inventory, location, destination, and timing."
+        },
+        {
+          step: 2,
+          content: "We provide a detailed quote outlining estimated hours, travel distance, crew size, and any special requirements. Long-distance moves are flat-rate or hybrid-rate depending on destination."
+        },
+        {
+          step: 3,
+          content: "On moving day, our crew arrives on time, completes a walkthrough, and prepares your home for loading. We pad-wrap all furniture, secure fragile items, and strategically load the truck for long-haul safety."
+        },
+        {
+          step: 4,
+          content: "Transportation begins. Your belongings travel directly to your new home—no multi-stop routes, no transfers, and no mixing loads with other customers."
+        },
+        {
+          step: 5,
+          content: "Upon arrival, our crew unloads, places items in your designated rooms, and reassembles basic furniture."
+        },
+        {
+          step: 6,
+          content: "Final walkthrough ensures everything is placed correctly and delivered safely. Payment is made based on the agreed quote, with no hidden travel fees."
+        }
+      ]
     },
     {
       title: "Why Choose Mighty Movers for Your Long Distance Move",
@@ -81,27 +106,8 @@ const props = {
   locationLinks: [
     { href: "/locations/pacific-beach", title: "Pacific Beach", description: "Long-distance moves originating from Pacific Beach." },
     { href: "/locations/la-jolla", title: "La Jolla", description: "Long-distance movers serving La Jolla homes and condos." },
-    { href: "/locations/north-park", title: "North Park", description: "Reliable long-distance moving starting from North Park." },
-    { href: "/locations/hillcrest", title: "Hillcrest", description: "Professional movers for Hillcrest long-distance relocations." },
-    { href: "/locations/mission-valley", title: "Mission Valley", description: "Convenient pickups for interstate and statewide moves." },
-    { href: "/locations/ocean-beach", title: "Ocean Beach", description: "OB long-distance moving made simple." },
-    { href: "/locations/point-loma", title: "Point Loma", description: "Trusted long-distance moving from Point Loma." },
     { href: "/locations/chula-vista", title: "Chula Vista", description: "Long-distance relocations for families and individuals." },
-    { href: "/locations/el-cajon", title: "El Cajon", description: "Statewide and interstate moves starting in El Cajon." },
-    { href: "/locations/santee", title: "Santee", description: "Long-distance home moves throughout Santee." },
-    { href: "/locations/spring-valley", title: "Spring Valley", description: "Pickups for cross-state and cross-country moves." },
-    { href: "/locations/lakeside", title: "Lakeside", description: "Dependable long-distance moving starting in Lakeside." },
-    { href: "/locations/lemon-grove", title: "Lemon Grove", description: "Long-distance moving experts serving Lemon Grove." },
-    { href: "/locations/encinitas", title: "Encinitas", description: "Coastal long-distance moves from Encinitas." },
-    { href: "/locations/carlsbad", title: "Carlsbad", description: "Long-distance residential moves originating in Carlsbad." },
-    { href: "/locations/oceanside", title: "Oceanside", description: "Reliable movers for long-haul relocations from Oceanside." },
-    { href: "/locations/vista", title: "Vista", description: "Long-distance moving services throughout Vista." },
-    { href: "/locations/san-marcos", title: "San Marcos", description: "Affordable long-distance moving from San Marcos." },
-    { href: "/locations/escondido", title: "Escondido", description: "Trusted long-distance movers in Escondido." },
-    { href: "/locations/carmel-valley", title: "Carmel Valley", description: "Long-distance moves for larger family homes." },
-    { href: "/locations/del-mar", title: "Del Mar", description: "Experienced long-distance movers serving Del Mar." },
-    { href: "/locations/la-mesa", title: "La Mesa", description: "Statewide and interstate pickups across La Mesa." },
-    { href: "/locations/coronado", title: "Coronado", description: "Long-distance moving for Coronado homes and apartments." },
+    { href: "/locations", title: "View All Areas", description: "See all service areas across San Diego County" }
   ],
 
   // FAQ

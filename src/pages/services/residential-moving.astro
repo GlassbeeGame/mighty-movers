@@ -32,8 +32,33 @@ const props = {
     },
     {
       title: "Our Residential Moving Process",
-      content:
-        "Step 1: Call us at (619) 906-9018 for a quick residential moving quote. We gather details about your home, your inventory, and your pickup and drop-off locations.\n\nStep 2: We recommend the right truck and crew size based on your home type—whether that's a studio apartment, a townhome, or a multi-bedroom house. Pricing is hourly with a clear minimum so you always know what to expect.\n\nStep 3: On moving day, our movers arrive on time, complete a walkthrough, and develop a loading plan to protect floors, walls, and high-traffic areas.\n\nStep 4: We pad-wrap furniture, shrink-wrap delicate items, and use dollies and lifting straps for safe handling. Everything is loaded strategically to maximize space inside the truck.\n\nStep 5: We drive directly to your new home and unload room by room, placing furniture and boxes exactly where you want them.\n\nStep 6: A final walkthrough ensures everything is placed correctly and delivered safely before payment is processed. Simple, smooth, and professional residential moving—done the right way."
+      isProcess: true,
+      steps: [
+        {
+          step: 1,
+          content: "Call us at (619) 906-9018 for a quick residential moving quote. We gather details about your home, your inventory, and your pickup and drop-off locations."
+        },
+        {
+          step: 2,
+          content: "We recommend the right truck and crew size based on your home type—whether that's a studio apartment, a townhome, or a multi-bedroom house. Pricing is hourly with a clear minimum so you always know what to expect."
+        },
+        {
+          step: 3,
+          content: "On moving day, our movers arrive on time, complete a walkthrough, and develop a loading plan to protect floors, walls, and high-traffic areas."
+        },
+        {
+          step: 4,
+          content: "We pad-wrap furniture, shrink-wrap delicate items, and use dollies and lifting straps for safe handling. Everything is loaded strategically to maximize space inside the truck."
+        },
+        {
+          step: 5,
+          content: "We drive directly to your new home and unload room by room, placing furniture and boxes exactly where you want them."
+        },
+        {
+          step: 6,
+          content: "A final walkthrough ensures everything is placed correctly and delivered safely before payment is processed. Simple, smooth, and professional residential moving—done the right way."
+        }
+      ]
     },
     {
       title: "Why San Diego Families Choose Mighty Movers",
@@ -81,7 +106,8 @@ const props = {
   locationLinks: [
     { href: "/locations/pacific-beach", title: "Pacific Beach", description: "Residential movers for PB apartments and homes." },
     { href: "/locations/la-jolla", title: "La Jolla", description: "Professional home moving throughout La Jolla." },
-    { href: "/locations/chula-vista", title: "Chula Vista", description: "Full-service residential moves in Chula Vista." }
+    { href: "/locations/chula-vista", title: "Chula Vista", description: "Full-service residential moves in Chula Vista." },
+    { href: "/locations", title: "View All Areas", description: "See all service areas across San Diego County" }
   ],
 
   // FAQ
