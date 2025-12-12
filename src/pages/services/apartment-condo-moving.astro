@@ -1,28 +1,206 @@
 ---
 import ServiceTemplate from './_service-page-template.astro';
+
+const props = {
+  // Page metadata
+  title: "Apartment & Condo Movers San Diego | Mighty Movers San Diego",
+  description:
+    "Expert apartment and condo movers in San Diego. We handle stairs, elevators, parking, and tight spaces with care. Professional multi-story and small-space moving specialists.",
+
+  // Hero
+  heroBadge: "Apartment & Condo Moving",
+  heroTitle: "Apartment & Condo Movers in San Diego",
+  heroDescription:
+    "Moving in or out of an apartment or condo in San Diego doesn't have to be a nightmare of stairs, elevators, and tight hallways. Mighty Movers San Diego specializes in small-space and multi-story moves, handling everything from compact studios to top-floor condos with precision, care, and efficiency.",
+
+  // Section header
+  sectionHeading: "Apartment & Condo Moving Services in San Diego",
+  sectionDescription:
+    "Our apartment and condo movers in San Diego know the buildings, the parking quirks, and the logistics that make these moves unique — so you don't have to stress about them.",
+
+  // Content cards
+  contentCards: [
+    {
+      title: "What's Included With Our Apartment & Condo Moving Service",
+      content:
+        "When you book Mighty Movers San Diego for an apartment or condo move, you're getting a full-service experience designed specifically for smaller spaces and multi-unit buildings. Every move includes a fully equipped moving truck sized to your unit, professional apartment and condo movers experienced with tight spaces, heavy-duty moving pads to protect furniture and walls, shrink wrap to secure delicate or upholstered items, hand trucks and dollies for boxes and heavy pieces, lifting straps for bulky or awkward furniture, basic disassembly and reassembly of standard furniture (beds, tables, etc.), Quick Pack totes for loose, unboxed items, and loading, transportation, and unloading anywhere within San Diego County. You pay a simple, transparent hourly rate based on the truck and crew size you choose. No hidden fees for equipment, stairs, or basic protections — everything is built into your rate."
+    },
+    {
+      title: "Common Apartment & Condo Moving Problems We Solve",
+      content:
+        "Apartment and condo moves in San Diego come with a unique set of headaches. We deal with them every single day so you don't have to. We regularly solve problems like narrow staircases and tight turns that make moving couches and mattresses feel impossible, limited or tricky parking in busy neighborhoods and tight lots, elevator reservations and time windows that must be followed precisely, long walks from unit to truck especially in large complexes or gated communities, HOA and building rules about move times, noise, and loading zones, and last-minute moving emergencies when other companies cancel or friends bail on helping. Our crews know how to move quickly while still protecting your building, your belongings, and your sanity. Whether you're on the first floor or the fifth, we've seen it before and know how to handle it."
+    },
+    {
+      title: "Our Apartment & Condo Moving Process",
+      isProcess: true,
+      steps: [
+        {
+          step: 1,
+          title: "Quick Quote",
+          content: "Call us at (619) 906-9018 and tell us about your apartment or condo: floor level, elevator access, parking situation, and approximate amount of furniture and boxes. We'll recommend the ideal truck and crew size."
+        },
+        {
+          step: 2,
+          title: "Schedule Your Move",
+          content: "We lock in your move date and time, making sure we understand any building rules, elevator reservations, or HOA requirements. Our pricing is hourly with a clear minimum, so there are no surprises."
+        },
+        {
+          step: 3,
+          title: "Arrival & Walkthrough",
+          content: "On moving day, our apartment movers arrive on time, review your space, and map out the best loading route. We protect your larger pieces with pads and shrink wrap before anything leaves the unit."
+        },
+        {
+          step: 4,
+          title: "Loading the Truck",
+          content: "We carefully move items through hallways, stairwells, or elevators, using dollies and lifting straps where needed. Everything is loaded strategically to maximize space and minimize shifting during transit."
+        },
+        {
+          step: 5,
+          title: "Transportation to Your New Place",
+          content: "We drive directly to your new apartment or condo within San Diego County. No unnecessary stops, no mixing your belongings with other customers."
+        },
+        {
+          step: 6,
+          title: "Unloading & Setup",
+          content: "We unload your furniture and boxes into the right rooms, place main items where you want them, and reassemble basic furniture we disassembled. Before we leave, we walk through the space with you to be sure everything looks right."
+        }
+      ]
+    },
+    {
+      title: "Why San Diego Renters & Condo Owners Choose Mighty Movers",
+      content:
+        "People searching for apartment movers San Diego or condo movers San Diego come to Mighty Movers because we're built for this type of move. Customers choose us because we're specialists in apartments and condos, not just generic movers. We understand San Diego neighborhoods, parking, and building layouts. Our pricing is transparent and hourly, with all standard equipment included. Our crews are trained professionals, not random day labor. We move quickly but carefully, protecting both your items and your building. We can often help with short notice or same-day moves, when availability allows. Whether you're relocating for work, moving in with a partner, or just upgrading to a bigger place, Mighty Movers makes your apartment or condo move feel organized and under control."
+    },
+    {
+      title: "Emergency & Same-Day Apartment Moving",
+      content:
+        "Sometimes you don't get much notice before you need to move. Maybe your landlord moved up the date, your roommate situation changed suddenly, or another moving company in San Diego canceled on you at the last minute. When our schedule allows, we offer same-day apartment moving, next-day scheduling, and short-notice condo moves. If you're in a bind, call (619) 906-9018 and ask about our current availability. We'll be honest about what we can do and how quickly we can get a crew and truck to you."
+    },
+    {
+      title: "Service Area: Apartment & Condo Moves Across San Diego County",
+      content:
+        "We provide apartment moving services and condo moving services throughout San Diego County, from coastal communities with parking challenges to urban high-rises with strict building rules. Our movers handle everything from beachside studios to luxury condos, understanding the unique logistics of each neighborhood and building type."
+    }
+  ],
+
+  // Features grid
+  features: [
+    {
+      title: "Apartment & Condo Specialists",
+      description:
+        "We're built specifically for small-space and multi-story moves, not just generic moving services."
+    },
+    {
+      title: "Stairs & Elevator Experts",
+      description:
+        "Our crews handle walk-ups, elevator reservations, and tight hallways every single day."
+    },
+    {
+      title: "Building Rules & HOA Compliant",
+      description:
+        "We follow all building management rules, elevator times, and loading zone requirements."
+    },
+    {
+      title: "Transparent Hourly Pricing",
+      description:
+        "Simple rates with all equipment included—no hidden fees for stairs, parking, or basic protections."
+    }
+  ],
+
+  // Locations
+  locationsHeading: "Apartment & Condo Moving Throughout San Diego",
+  locationLinks: [
+    { href: "/locations/pacific-beach", title: "Pacific Beach", description: "Apartment & condo movers for PB's multi-story buildings and beachside units." },
+    { href: "/locations/north-park", title: "North Park", description: "Expert movers for North Park apartments, condos, and urban complexes." },
+    { href: "/locations/downtown-san-diego", title: "Downtown San Diego", description: "High-rise and condo moving specialists for downtown buildings." },
+    { href: "/locations", title: "View All Areas", description: "See all service areas across San Diego County" }
+  ],
+
+  // FAQ
+  faqHeading: "Apartment & Condo Moving FAQs",
+  faqs: [
+    {
+      question: "Do you move walk-up apartments without elevators?",
+      answer:
+        "Yes. Our team is used to third-floor and higher walk-ups. We handle the stairs, heavy lifting, and tight corners so you don't have to wear out your friends or your back."
+    },
+    {
+      question: "How much does it cost to move an apartment or condo in San Diego?",
+      answer:
+        "Pricing depends on the truck and crew size, as well as how long the move takes. Most small apartments use a 10-foot or 20-foot truck with 2 movers. You pay a simple hourly rate with a clear minimum — no hidden fees for equipment."
+    },
+    {
+      question: "Can you help with heavy or awkward items in a small space?",
+      answer:
+        "Absolutely. We use dollies, hand trucks, and lifting straps to safely move couches, beds, dressers, and other large pieces through narrow hallways and stairwells."
+    },
+    {
+      question: "Do you work with building management or HOAs?",
+      answer:
+        "Yes. We can follow elevator reservation times, loading zone rules, and any move-in/move-out procedures your building requires. Just let us know the rules when you book."
+    },
+    {
+      question: "Do you offer same-day apartment moving in San Diego?",
+      answer:
+        "When our schedule allows, yes. Same-day and next-day moves are often possible for apartments and condos. Call (619) 906-9018 to check current availability."
+    }
+  ],
+
+  // Sidebar CTAs
+  ctaCards: [
+    {
+      title: "Get Your Apartment Moving Quote",
+      description:
+        "Tell us about your unit, floor level, and building logistics. We'll recommend the right crew and truck size.",
+      buttonText: "Call (619) 906-9018",
+      buttonHref: "tel:16199069018"
+    },
+    {
+      title: "Need Same-Day Apartment Movers?",
+      description:
+        "Last-minute move? We often have same-day availability for apartments and condos.",
+      buttonText: "Check Availability",
+      buttonHref: "/contact",
+      isSecondary: true
+    }
+  ],
+
+  // Sidebar info cards
+  infoCards: [
+    {
+      title: "Apartment Moving Packages",
+      items: [
+        "2 Movers + 10FT Truck – $119/hr (3 hr min)",
+        "2 Movers + 20FT Truck – $129/hr (3 hr min)",
+        "2 Movers + 26FT Truck – $149/hr (4 hr min)"
+      ]
+    },
+    {
+      title: "Why Choose Us for Apartments",
+      items: [
+        "Stairs & elevator specialists",
+        "Building rules & HOA compliant",
+        "Transparent hourly pricing",
+        "Same-day moves when available"
+      ]
+    },
+    {
+      title: "Service Area",
+      content:
+        "We move apartments and condos throughout San Diego County, from coastal neighborhoods to urban high-rises."
+    }
+  ],
+
+  // Bottom CTA
+  bottomCTAHeading: "Ready for Your Apartment or Condo Move?",
+  bottomCTADescription:
+    "From studios to multi-bedroom condos, we make apartment moving simple, efficient, and stress-free.",
+  bottomCTAPrimaryText: "Call for Apartment Moving Quote",
+  bottomCTAPrimaryHref: "tel:16199069018",
+  bottomCTASecondaryText: "Request an Estimate",
+  bottomCTASecondaryHref: "/contact"
+};
+
 ---
 
-<ServiceTemplate
-  title="Apartment Condo Moving Services"
-  description="Apartment Condo Moving services in San Diego."
-  noindex={true}
-  heroBadge="Apartment Condo Moving"
-  heroTitle="Professional Apartment Condo Moving"
-  heroDescription="Reliable apartment condo moving services in San Diego."
-  sectionHeading="Apartment Condo Moving in San Diego"
-  sectionDescription="Professional apartment condo moving services for your needs."
-  contentCards={[{title:"Expert Apartment Condo Moving",content:"Professional apartment condo moving with experienced team."},{title:"Why Choose Us",content:"Licensed, insured, and reliable service."},{title:"Get Started",content:"Contact us for a free quote today."}]}
-  features={[{title:"Licensed",description:"Fully licensed and insured"},{title:"Experienced",description:"Years of professional experience"},{title:"Reliable",description:"Dependable service you can trust"},{title:"Affordable",description:"Competitive rates and pricing"}]}
-  locationsHeading="Areas We Serve"
-  locationLinks={[{href:"/locations/la-jolla",title:"La Jolla",description:"Apartment Condo Moving in La Jolla"},{href:"/locations/downtown-san-diego",title:"Downtown",description:"Apartment Condo Moving downtown"},{href:"/locations/pacific-beach",title:"Pacific Beach",description:"Apartment Condo Moving at the beach"},{href:"/locations",title:"View All Areas",description:"See all service areas"}]}
-  faqHeading="Frequently Asked Questions"
-  faqs={[{question:"What is apartment condo moving?",answer:"Professional apartment condo moving service in San Diego."},{question:"Do you offer apartment condo moving?",answer:"Yes, we specialize in apartment condo moving."},{question:"How much does it cost?",answer:"Contact us for a free, no-obligation quote."},{question:"Are you licensed?",answer:"Yes, fully licensed and insured."},{question:"Same-day service?",answer:"Yes, based on availability."}]}
-  ctaCards={[{title:"Get Free Quote",description:"Request your free quote today.",buttonText:"Get Quote",buttonHref:"/contact",isSecondary:false},{title:"Call Now",description:"Speak with a specialist.",buttonText:"(619) 555-MOVE",buttonHref:"tel:6195556683",isSecondary:true}]}
-  infoCards={[{title:"Service Hours",items:["Mon-Fri: 7AM-7PM","Sat: 8AM-6PM","Sun: 9AM-5PM","Same-day available"]},{title:"Service Info",content:"Professional apartment condo moving throughout San Diego County."}]}
-  bottomCTAHeading="Ready for Apartment Condo Moving?"
-  bottomCTADescription="Get started with San Diego's trusted moving company."
-  bottomCTAPrimaryText="Get Free Quote"
-  bottomCTAPrimaryHref="/contact"
-  bottomCTASecondaryText="Call (619) 555-MOVE"
-  bottomCTASecondaryHref="tel:6195556683"
-/>
+<ServiceTemplate {...props} />

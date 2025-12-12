@@ -1,28 +1,211 @@
 ---
 import ServiceTemplate from './_service-page-template.astro';
+
+const props = {
+  // Page metadata
+  title: "Commercial Movers San Diego | Mighty Movers San Diego",
+  description:
+    "Professional commercial movers in San Diego for offices, retail, and businesses. Fast, organized office moving with minimal downtime. Expert business relocation services.",
+
+  // Hero
+  heroBadge: "Commercial Moving",
+  heroTitle: "Commercial Movers in San Diego",
+  heroDescription:
+    "When your business needs to move, every minute counts. Mighty Movers San Diego provides fast, organized, and efficient commercial moving services designed to keep your operations running smoothly with minimal downtime. Whether you're relocating a small office, a retail storefront, or a multi-room workspace, our commercial movers in San Diego handle the heavy lifting, planning, packing, and transportation so your team can stay focused on business.",
+
+  // Section header
+  sectionHeading: "Commercial Moving Services in San Diego",
+  sectionDescription:
+    "Our commercial moving service is built for speed, structure, and protection. From tech companies and medical offices to retail shops and small professional firms, our team handles commercial moves with precision and care.",
+
+  // Content cards
+  contentCards: [
+    {
+      title: "What's Included in Our Commercial Moving Service",
+      content:
+        "Every business move includes a trained crew of professional commercial movers, a fully equipped moving truck sized to your office or workspace, moving pads and shrink wrap to protect office furniture and equipment, dollies and hand trucks for office desks, filing cabinets, and electronics, lifting straps for heavy or oversized office items, basic disassembly and reassembly of desks, workstations, and modular furniture, organized loading and unloading to minimize downtime, room-by-room placement in your new office, and transportation anywhere in San Diego County."
+    },
+    {
+      title: "Common Commercial Moving Problems We Solve",
+      content:
+        "Commercial moves aren't just 'big residential moves.' They come with their own set of challenges — logistical, structural, and timing-based. We solve them every day. Typical issues our commercial movers handle include moving during business hours without disrupting customers or staff, tight timelines or overnight/off-hours moves, protecting sensitive equipment like computers and electronics, safely moving large desks, conference tables, and file cabinets, navigating loading docks, hallways, elevators, and restricted access points, coordinating around shared office buildings and parking rules, organizing items so teams can resume work quickly after the move, and assisting with moves for expanding teams or downsizing offices. At Mighty Movers, we understand that a commercial move isn't just about relocating equipment — it's about keeping your business running."
+    },
+    {
+      title: "Our Commercial Moving Process",
+      isProcess: true,
+      steps: [
+        {
+          step: 1,
+          title: "Consultation & Quote",
+          content: "Call us at (619) 906-9018 with details about your workspace, inventory, and timeline. We assess your needs and recommend the right truck and crew size."
+        },
+        {
+          step: 2,
+          title: "Pre-Move Planning",
+          content: "We work around your operating hours and any building requirements. If needed, we schedule elevator use, loading dock access, or after-hours moving times."
+        },
+        {
+          step: 3,
+          title: "Arrival & Preparation",
+          content: "Our commercial movers arrive on time, complete a walkthrough, and prepare a plan for the fastest and safest way to load your office."
+        },
+        {
+          step: 4,
+          title: "Disassembly & Protection",
+          content: "We disassemble workstations, secure electronics, pad-wrap furniture, and safely prepare everything for transport."
+        },
+        {
+          step: 5,
+          title: "Loading & Transport",
+          content: "We load items strategically to ensure safe transport and fast unloading. Your items are moved directly to your new location — no mixing with other customers."
+        },
+        {
+          step: 6,
+          title: "Reassembly & Setup",
+          content: "At your new office, we reassemble desks, place furniture, and set up your workspace so your team can get back to business quickly."
+        },
+        {
+          step: 7,
+          title: "Final Walkthrough",
+          content: "We ensure every desk, chair, box, and piece of equipment is exactly where it needs to be."
+        }
+      ]
+    },
+    {
+      title: "Why San Diego Businesses Choose Mighty Movers",
+      content:
+        "Businesses choose Mighty Movers San Diego because we understand that commercial moves are high-stakes and time-sensitive. Companies trust us because we provide efficient, organized commercial moving. Our crews are trained to handle office furniture, electronics, and equipment. We offer transparent hourly pricing with no hidden fees. We can work after hours or weekends when available. We know the layouts and loading requirements of many San Diego office buildings. We treat your office assets with the same care we bring to residential moves — only faster and more structured. From small local businesses to growing teams moving into larger workspaces, we make every commercial move smooth, predictable, and professional."
+    },
+    {
+      title: "Emergency & Same-Day Commercial Moving",
+      content:
+        "Business emergencies happen — lease changes, last-minute expansions, unexpected closures, or movers who cancel without warning. When possible, we offer same-day commercial movers, next-day scheduling, and short-notice office relocation. Even under time pressure, you receive the same level of professionalism, equipment, and efficiency Mighty Movers is known for."
+    },
+    {
+      title: "Commercial Moving Throughout San Diego County",
+      content:
+        "We move businesses across the entire county, from downtown high-rises to suburban business parks. Our commercial movers understand the unique logistics of San Diego's diverse business districts and can handle moves of any size or complexity."
+    }
+  ],
+
+  // Features grid
+  features: [
+    {
+      title: "Minimal Business Downtime",
+      description:
+        "Fast, organized moves designed to keep your business operational and minimize lost productivity."
+    },
+    {
+      title: "Office Furniture Experts",
+      description:
+        "Trained crews who handle desks, cubicles, electronics, and sensitive equipment with professional care."
+    },
+    {
+      title: "After-Hours & Weekend Moves",
+      description:
+        "Flexible scheduling including evenings and weekends to avoid disrupting your business hours."
+    },
+    {
+      title: "Transparent Business Pricing",
+      description:
+        "Clear hourly rates with no hidden fees for equipment, disassembly, or basic office furniture handling."
+    }
+  ],
+
+  // Locations
+  locationsHeading: "Commercial Moving Throughout San Diego",
+  locationLinks: [
+    { href: "/locations/downtown-san-diego", title: "Downtown San Diego", description: "Commercial movers for downtown offices and high-rise buildings." },
+    { href: "/locations/la-jolla", title: "La Jolla", description: "Business relocation services for La Jolla professional offices." },
+    { href: "/locations/chula-vista", title: "Chula Vista", description: "Commercial moving for South Bay businesses and offices." },
+    { href: "/locations", title: "View All Areas", description: "See all service areas across San Diego County" }
+  ],
+
+  // FAQ
+  faqHeading: "Commercial Moving FAQs",
+  faqs: [
+    {
+      question: "Do you move all types of businesses?",
+      answer:
+        "Yes — we move offices, retail stores, medical offices, small warehouses, and professional service businesses throughout San Diego."
+    },
+    {
+      question: "How much does commercial moving cost?",
+      answer:
+        "Costs depend on crew size, truck size, and total time. All rates are hourly with clear minimums and no hidden equipment fees."
+    },
+    {
+      question: "Can you move large desks and office furniture?",
+      answer:
+        "Absolutely. We use tools, lifting straps, and professional equipment to handle oversized office furniture safely."
+    },
+    {
+      question: "Do you work after hours or on weekends?",
+      answer:
+        "When availability allows, yes. Many businesses prefer off-hours moves to minimize disruption."
+    },
+    {
+      question: "Can you help disassemble desks or cubicles?",
+      answer:
+        "Yes — basic disassembly and reassembly are included in your hourly rate."
+    }
+  ],
+
+  // Sidebar CTAs
+  ctaCards: [
+    {
+      title: "Get Your Commercial Moving Quote",
+      description:
+        "Tell us about your office size, equipment, and timeline. We'll create a custom moving plan for your business.",
+      buttonText: "Call (619) 906-9018",
+      buttonHref: "tel:16199069018"
+    },
+    {
+      title: "Need After-Hours Commercial Movers?",
+      description:
+        "Ask about evening, weekend, and off-hours commercial moving availability.",
+      buttonText: "Check Availability",
+      buttonHref: "/contact",
+      isSecondary: true
+    }
+  ],
+
+  // Sidebar info cards
+  infoCards: [
+    {
+      title: "Commercial Moving Packages",
+      items: [
+        "2 Movers + 20FT Truck – $129/hr (3 hr min)",
+        "3 Movers + 26FT Truck – $189/hr (4 hr min)",
+        "4 Movers + 26FT Truck – $225/hr (4 hr min)"
+      ]
+    },
+    {
+      title: "Why Businesses Choose Us",
+      items: [
+        "Minimal downtime & disruption",
+        "Office furniture specialists",
+        "After-hours moves available",
+        "Transparent business pricing"
+      ]
+    },
+    {
+      title: "Service Area",
+      content:
+        "We provide commercial moving services throughout San Diego County for offices, retail, and businesses of all sizes."
+    }
+  ],
+
+  // Bottom CTA
+  bottomCTAHeading: "Ready to Move Your Business?",
+  bottomCTADescription:
+    "From small offices to growing companies, we make commercial moves fast, organized, and stress-free.",
+  bottomCTAPrimaryText: "Call for Commercial Moving Quote",
+  bottomCTAPrimaryHref: "tel:16199069018",
+  bottomCTASecondaryText: "Request Business Estimate",
+  bottomCTASecondaryHref: "/contact"
+};
+
 ---
 
-<ServiceTemplate
-  title="Commercial Moving Services"
-  description="Commercial Moving services in San Diego."
-  noindex={true}
-  heroBadge="Commercial Moving"
-  heroTitle="Professional Commercial Moving"
-  heroDescription="Reliable commercial moving services in San Diego."
-  sectionHeading="Commercial Moving in San Diego"
-  sectionDescription="Professional commercial moving services for your needs."
-  contentCards={[{title:"Expert Commercial Moving",content:"Professional commercial moving with experienced team."},{title:"Why Choose Us",content:"Licensed, insured, and reliable service."},{title:"Get Started",content:"Contact us for a free quote today."}]}
-  features={[{title:"Licensed",description:"Fully licensed and insured"},{title:"Experienced",description:"Years of professional experience"},{title:"Reliable",description:"Dependable service you can trust"},{title:"Affordable",description:"Competitive rates and pricing"}]}
-  locationsHeading="Areas We Serve"
-  locationLinks={[{href:"/locations/la-jolla",title:"La Jolla",description:"Commercial Moving in La Jolla"},{href:"/locations/downtown-san-diego",title:"Downtown",description:"Commercial Moving downtown"},{href:"/locations/pacific-beach",title:"Pacific Beach",description:"Commercial Moving at the beach"},{href:"/locations",title:"View All Areas",description:"See all service areas"}]}
-  faqHeading="Frequently Asked Questions"
-  faqs={[{question:"What is commercial moving?",answer:"Professional commercial moving service in San Diego."},{question:"Do you offer commercial moving?",answer:"Yes, we specialize in commercial moving."},{question:"How much does it cost?",answer:"Contact us for a free, no-obligation quote."},{question:"Are you licensed?",answer:"Yes, fully licensed and insured."},{question:"Same-day service?",answer:"Yes, based on availability."}]}
-  ctaCards={[{title:"Get Free Quote",description:"Request your free quote today.",buttonText:"Get Quote",buttonHref:"/contact",isSecondary:false},{title:"Call Now",description:"Speak with a specialist.",buttonText:"(619) 555-MOVE",buttonHref:"tel:6195556683",isSecondary:true}]}
-  infoCards={[{title:"Service Hours",items:["Mon-Fri: 7AM-7PM","Sat: 8AM-6PM","Sun: 9AM-5PM","Same-day available"]},{title:"Service Info",content:"Professional commercial moving throughout San Diego County."}]}
-  bottomCTAHeading="Ready for Commercial Moving?"
-  bottomCTADescription="Get started with San Diego's trusted moving company."
-  bottomCTAPrimaryText="Get Free Quote"
-  bottomCTAPrimaryHref="/contact"
-  bottomCTASecondaryText="Call (619) 555-MOVE"
-  bottomCTASecondaryHref="tel:6195556683"
-/>
+<ServiceTemplate {...props} />

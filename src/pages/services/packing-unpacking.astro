@@ -1,28 +1,203 @@
 ---
 import ServiceTemplate from './_service-page-template.astro';
+
+const props = {
+  // Page metadata
+  title: "Packing & Unpacking Services San Diego | Mighty Movers San Diego",
+  description:
+    "Professional packing and unpacking services in San Diego. Expert packers for full-home or partial packing. Save time, reduce stress, and protect your belongings.",
+
+  // Hero
+  heroBadge: "Packing & Unpacking",
+  heroTitle: "Packing & Unpacking Services in San Diego",
+  heroDescription:
+    "Packing is the part of moving that nobody enjoys… except us. Mighty Movers San Diego offers professional packing and unpacking services designed to save you time, eliminate stress, and protect your belongings from damage. Whether you need full-home packing, help with just the kitchen, or assistance organizing fragile items, our packers make the process fast, safe, and efficient.",
+
+  // Section header
+  sectionHeading: "Professional Packing & Unpacking in San Diego",
+  sectionDescription:
+    "We handle everything from wrapping delicate pieces to organizing boxes so your unpacking is effortless. If you want your move to feel lighter — literally and figuratively — we've got you covered.",
+
+  // Content cards
+  contentCards: [
+    {
+      title: "What's Included in Our Packing & Unpacking Service",
+      content:
+        "Every packing service is completed by trained, professional packers who specialize in efficient, organized, damage-free packing. Our service includes expert packing and unpacking services from trained professionals, wrapping of delicate and fragile items (glassware, décor, electronics, etc.), protection for furniture, lamps, and artwork, labeling boxes clearly for fast unloading and easy organization, disassembly of small furniture pieces if needed, packing for kitchens, closets, bedrooms, living rooms — whatever areas you choose, and room-by-room unpacking based on your instructions. You can book full-home packing, partial packing (just select rooms), unpacking only, or packing + moving combined. Packing supplies are provided by the customer."
+    },
+    {
+      title: "Common Packing Problems We Solve",
+      content:
+        "Packing seems simple until you start doing it — then it becomes overwhelming fast. We solve the packing issues that stress homeowners, renters, families, and professionals across San Diego: not enough time to pack before moving day, difficulty packing fragile items safely, uncertainty about what supplies to use and how much, trouble organizing or labeling boxes, needing help sorting, decluttering, or preparing for a downsizing move, kitchens with endless items you forgot you owned, heavy books, awkward décor pieces, and delicate electronics, and last-minute packing emergencies after other plans fall apart. Whether you need a few hours of support or full-service packing for your entire home, we make it simple and structured."
+    },
+    {
+      title: "Our Packing & Unpacking Process",
+      isProcess: true,
+      steps: [
+        {
+          step: 1,
+          title: "Tell Us What Needs Packing",
+          content: "Call (619) 906-9018 and let us know which rooms, categories, or items you'd like packed. We tailor the service to your needs — from a single room to your entire home."
+        },
+        {
+          step: 2,
+          title: "We Create a Packing Plan",
+          content: "We recommend the right number of packers and estimate how long the job will take based on your inventory, home size, and level of organization."
+        },
+        {
+          step: 3,
+          title: "Professional Packing Begins",
+          content: "Our packers arrive on time and begin packing room by room. Fragile items are wrapped carefully, boxes are labeled clearly, and items are organized for an easy unpacking experience later."
+        },
+        {
+          step: 4,
+          title: "Moving Day Integration",
+          content: "If Mighty Movers is handling your move, everything is already organized and ready for loading — saving time and preventing damage."
+        },
+        {
+          step: 5,
+          title: "Unpacking at Your New Home",
+          content: "If you booked unpacking services, we place items where you'd like them, remove packing materials, and help organize rooms so your home feels move-in ready."
+        }
+      ]
+    },
+    {
+      title: "Why San Diego Residents Choose Mighty Movers for Packing",
+      content:
+        "Our customers love our packing services because they transform a stressful, time-consuming task into something simple and efficient. Here's why people choose us: we offer professional packers trained in safe handling, faster packing equals lower total moving time, organized boxes make unpacking dramatically easier, we protect fragile items and reduce the risk of breakage, we tailor the service to your needs and budget, we work with apartments, condos, townhomes, and full homes, and we are reliable, on-time, and extremely careful with your belongings. Whether you're preparing for a local move, a long-distance transition, or simply need help organizing your home, our packers make the process smooth and stress-free."
+    },
+    {
+      title: "Emergency & Same-Day Packing Options",
+      content:
+        "Packing surprises happen. If you're overwhelmed, behind schedule, or dealing with a sudden move, we offer same-day packing services (when available), next-day packing, and last-minute pre-move support. If you're looking around your home thinking, 'There's no way I finish this in time,' call (619) 906-9018 — we're here to help."
+    },
+    {
+      title: "Packing & Unpacking Services Throughout San Diego County",
+      content:
+        "You handle the move-in dreams — we handle the cardboard reality. Our professional packers serve all of San Diego County, bringing expert organization and careful handling to homes and apartments across the region."
+    }
+  ],
+
+  // Features grid
+  features: [
+    {
+      title: "Trained Professional Packers",
+      description:
+        "Expert packers who specialize in safe handling of fragile items, organization, and efficient packing."
+    },
+    {
+      title: "Full or Partial Packing",
+      description:
+        "Choose full-home packing, select rooms only, or just help with difficult areas like kitchens."
+    },
+    {
+      title: "Clear Labeling & Organization",
+      description:
+        "Every box is labeled and organized so unpacking at your new home is fast and stress-free."
+    },
+    {
+      title: "Same-Day Packing Available",
+      description:
+        "Last-minute packing help when you need it most — we offer same-day and emergency packing services."
+    }
+  ],
+
+  // Locations
+  locationsHeading: "Packing Services Throughout San Diego",
+  locationLinks: [
+    { href: "/locations/pacific-beach", title: "Pacific Beach", description: "Professional packing services for PB homes and apartments." },
+    { href: "/locations/la-jolla", title: "La Jolla", description: "Expert packing and unpacking throughout La Jolla." },
+    { href: "/locations/chula-vista", title: "Chula Vista", description: "Full and partial packing services in Chula Vista." },
+    { href: "/locations", title: "View All Areas", description: "See all service areas across San Diego County" }
+  ],
+
+  // FAQ
+  faqHeading: "Packing & Unpacking FAQs",
+  faqs: [
+    {
+      question: "Do I need to be home while you pack?",
+      answer:
+        "You're welcome to be present, but many clients prefer to let our packers handle everything while they focus on other tasks."
+    },
+    {
+      question: "How long does packing usually take?",
+      answer:
+        "A one-bedroom apartment may take 2–4 hours with one packer. Larger homes require more time or more packers. We tailor the crew to your needs."
+    },
+    {
+      question: "Do you provide packing supplies?",
+      answer:
+        "Packing supplies are provided by the customer. We can tell you exactly what you need before packing day."
+    },
+    {
+      question: "Can you pack fragile and valuable items?",
+      answer:
+        "Yes. Our packers specialize in safely handling delicate items like glassware, electronics, artwork, and décor."
+    },
+    {
+      question: "Do you offer unpacking after the move?",
+      answer:
+        "Absolutely. We can unpack everything, help organize your rooms, and remove all box debris."
+    }
+  ],
+
+  // Sidebar CTAs
+  ctaCards: [
+    {
+      title: "Get Your Packing Quote",
+      description:
+        "Tell us which rooms or items need packing. We'll recommend the right crew and timeline.",
+      buttonText: "Call (619) 906-9018",
+      buttonHref: "tel:16199069018"
+    },
+    {
+      title: "Need Same-Day Packing Help?",
+      description:
+        "Behind schedule? We offer same-day and last-minute packing services when available.",
+      buttonText: "Check Availability",
+      buttonHref: "/contact",
+      isSecondary: true
+    }
+  ],
+
+  // Sidebar info cards
+  infoCards: [
+    {
+      title: "Packing Services Offered",
+      items: [
+        "Full-home packing",
+        "Partial room packing",
+        "Kitchen packing specialists",
+        "Fragile item protection",
+        "Unpacking services"
+      ]
+    },
+    {
+      title: "Why Choose Our Packers",
+      items: [
+        "Trained packing professionals",
+        "Clear labeling & organization",
+        "Fragile item specialists",
+        "Same-day packing available"
+      ]
+    },
+    {
+      title: "Service Area",
+      content:
+        "We provide packing and unpacking services throughout San Diego County for homes, apartments, and condos."
+    }
+  ],
+
+  // Bottom CTA
+  bottomCTAHeading: "Ready for Stress-Free Packing?",
+  bottomCTADescription:
+    "Let our professional packers handle the hardest part of moving. From full homes to single rooms, we make packing fast and easy.",
+  bottomCTAPrimaryText: "Call for Packing Services",
+  bottomCTAPrimaryHref: "tel:16199069018",
+  bottomCTASecondaryText: "Request Packing Estimate",
+  bottomCTASecondaryHref: "/contact"
+};
+
 ---
 
-<ServiceTemplate
-  title="Packing Unpacking Services"
-  description="Packing Unpacking services in San Diego."
-  noindex={true}
-  heroBadge="Packing Unpacking"
-  heroTitle="Professional Packing Unpacking"
-  heroDescription="Reliable packing unpacking services in San Diego."
-  sectionHeading="Packing Unpacking in San Diego"
-  sectionDescription="Professional packing unpacking services for your needs."
-  contentCards={[{title:"Expert Packing Unpacking",content:"Professional packing unpacking with experienced team."},{title:"Why Choose Us",content:"Licensed, insured, and reliable service."},{title:"Get Started",content:"Contact us for a free quote today."}]}
-  features={[{title:"Licensed",description:"Fully licensed and insured"},{title:"Experienced",description:"Years of professional experience"},{title:"Reliable",description:"Dependable service you can trust"},{title:"Affordable",description:"Competitive rates and pricing"}]}
-  locationsHeading="Areas We Serve"
-  locationLinks={[{href:"/locations/la-jolla",title:"La Jolla",description:"Packing Unpacking in La Jolla"},{href:"/locations/downtown-san-diego",title:"Downtown",description:"Packing Unpacking downtown"},{href:"/locations/pacific-beach",title:"Pacific Beach",description:"Packing Unpacking at the beach"},{href:"/locations",title:"View All Areas",description:"See all service areas"}]}
-  faqHeading="Frequently Asked Questions"
-  faqs={[{question:"What is packing unpacking?",answer:"Professional packing unpacking service in San Diego."},{question:"Do you offer packing unpacking?",answer:"Yes, we specialize in packing unpacking."},{question:"How much does it cost?",answer:"Contact us for a free, no-obligation quote."},{question:"Are you licensed?",answer:"Yes, fully licensed and insured."},{question:"Same-day service?",answer:"Yes, based on availability."}]}
-  ctaCards={[{title:"Get Free Quote",description:"Request your free quote today.",buttonText:"Get Quote",buttonHref:"/contact",isSecondary:false},{title:"Call Now",description:"Speak with a specialist.",buttonText:"(619) 555-MOVE",buttonHref:"tel:6195556683",isSecondary:true}]}
-  infoCards={[{title:"Service Hours",items:["Mon-Fri: 7AM-7PM","Sat: 8AM-6PM","Sun: 9AM-5PM","Same-day available"]},{title:"Service Info",content:"Professional packing unpacking throughout San Diego County."}]}
-  bottomCTAHeading="Ready for Packing Unpacking?"
-  bottomCTADescription="Get started with San Diego's trusted moving company."
-  bottomCTAPrimaryText="Get Free Quote"
-  bottomCTAPrimaryHref="/contact"
-  bottomCTASecondaryText="Call (619) 555-MOVE"
-  bottomCTASecondaryHref="tel:6195556683"
-/>
+<ServiceTemplate {...props} />
