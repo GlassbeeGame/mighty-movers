@@ -1,28 +1,213 @@
 ---
 import ServiceTemplate from './_service-page-template.astro';
+
+const props = {
+  // Page metadata
+  title: "Piano & Specialty Movers San Diego | Mighty Movers San Diego",
+  description:
+    "Professional piano movers and specialty item moving in San Diego. Expert handling of pianos, safes, antiques, and delicate items with specialized equipment.",
+
+  // Hero
+  heroBadge: "Piano & Specialty Moving",
+  heroTitle: "Piano & Specialty Movers in San Diego",
+  heroDescription:
+    "Moving delicate, heavy, or high-value items requires more than strength — it requires precision, experience, and the right equipment. Mighty Movers San Diego provides trusted piano moving and specialty moving services for homeowners, musicians, collectors, and businesses across the county. Whether it's a full-size upright piano, baby grand, safe, antique furniture, or other complex items, our trained movers ensure everything is transported safely and professionally. We approach specialty moves with patience, planning, and technical care so your most valuable pieces arrive without a scratch.",
+
+  // Section header
+  sectionHeading: "Piano & Specialty Moving Services in San Diego",
+  sectionDescription:
+    "Specialty items require a higher level of protection and technique. We treat your piano and specialty items with the highest level of respect and caution — as if they were our own.",
+
+  // Content cards
+  contentCards: [
+    {
+      title: "What's Included in Our Piano & Specialty Moving Service",
+      content:
+        "Every specialty move includes a trained crew of professional piano movers and specialty handling experts, a fully equipped moving truck with secure loading systems, piano dollies, heavy-duty straps, and professional-grade sliders, protective moving pads, shrink wrap, and reinforced securing materials, disassembly of piano components when needed (pedals, lids, music stands), safe navigation of tight turns, staircases, and multi-level properties, expert handling for oversized or fragile specialty items, secure transportation anywhere in San Diego County, and placement and reassembly at your new location."
+    },
+    {
+      title: "Specialty Items We Commonly Move",
+      content:
+        "Our teams regularly move items that require specialized equipment, planning, and a higher skill level than standard moving. Common specialty items include upright, studio, and console pianos, baby grand pianos, antique or fragile furniture, large mirrors, glass tabletops, and artwork, safes and heavy storage cabinets, exercise equipment, and oversized décor and delicate heirlooms. If it's heavy, fragile, or uniquely shaped — we can move it safely."
+    },
+    {
+      title: "Our Piano & Specialty Moving Process",
+      isProcess: true,
+      steps: [
+        {
+          step: 1,
+          title: "Assessment & Quote",
+          content: "Call (619) 906-9018 with information about your piano or specialty item. We determine the best crew size, equipment, and time estimate."
+        },
+        {
+          step: 2,
+          title: "Pre-Move Planning",
+          content: "We evaluate access points, stairs, hallways, and door measurements. Specialty moves require careful preparation — and we handle that for you."
+        },
+        {
+          step: 3,
+          title: "Professional Protection",
+          content: "Items are padded, wrapped, and secured using specialized equipment designed specifically for pianos and heavy or fragile pieces."
+        },
+        {
+          step: 4,
+          title: "Safe Loading",
+          content: "We use piano dollies, straps, and controlled lifting techniques to safely load your item into the truck."
+        },
+        {
+          step: 5,
+          title: "Transportation",
+          content: "Your piano or specialty item is secured in place with multiple tie-down points to prevent shifting."
+        },
+        {
+          step: 6,
+          title: "Placement & Reassembly",
+          content: "We unload carefully and place the item exactly where you want it. Pianos are reassembled as needed."
+        },
+        {
+          step: 7,
+          title: "Final Inspection",
+          content: "We ensure everything is in proper condition and positioned correctly before completing the move."
+        }
+      ]
+    },
+    {
+      title: "Common Piano & Specialty Moving Problems We Solve",
+      content:
+        "Specialty items always come with unique challenges. We help customers overcome tight doorways and staircases, multi-story homes and apartment buildings, heavy pianos requiring specialized dollies, protecting hardwood floors and walls from damage, moving fragile antique items safely, securing items during transportation, loading and unloading without tipping or shifting, and items requiring partial disassembly. Our crew plans every step so your specialty items remain protected from start to finish."
+    },
+    {
+      title: "Why San Diego Trusts Mighty Movers for Specialty Items",
+      content:
+        "Customers choose us because specialty moving requires more than manpower — it requires skill. People trust Mighty Movers because we use professional equipment built for piano and specialty moving, our team is trained in advanced handling and safety techniques, we take extra time to protect high-value and delicate items, we're transparent, reliable, and careful at every step, we understand the value — financial and sentimental — of specialty items, we move pianos and specialty pieces throughout all of San Diego, and we provide clear communication and gentle handling from start to finish. When the job requires precision, we're the team that delivers."
+    },
+    {
+      title: "Specialty Moving Throughout San Diego County",
+      content:
+        "We move specialty items in homes, apartments, studios, businesses, and multi-level properties throughout the entire county. Our movers are experienced with the unique challenges of moving pianos and delicate items in properties of all types across San Diego."
+    }
+  ],
+
+  // Features grid
+  features: [
+    {
+      title: "Piano Moving Specialists",
+      description:
+        "Expert handling of upright, baby grand, and studio pianos with specialized dollies and equipment."
+    },
+    {
+      title: "Heavy Item Experts",
+      description:
+        "Trained in moving safes, exercise equipment, and oversized furniture using professional techniques."
+    },
+    {
+      title: "Antique & Heirloom Care",
+      description:
+        "Extra protection and gentle handling for fragile, valuable, and irreplaceable specialty items."
+    },
+    {
+      title: "Stair & Access Specialists",
+      description:
+        "Experienced in navigating tight spaces, staircases, and multi-level properties safely."
+    }
+  ],
+
+  // Locations
+  locationsHeading: "Piano & Specialty Moving Throughout San Diego",
+  locationLinks: [
+    { href: "/locations/la-jolla", title: "La Jolla", description: "Piano and specialty moving for La Jolla homes and estates." },
+    { href: "/locations/del-mar", title: "Del Mar", description: "Expert specialty item moving throughout Del Mar." },
+    { href: "/locations/rancho-santa-fe", title: "Rancho Santa Fe", description: "High-value piano and specialty moving in Rancho Santa Fe." },
+    { href: "/locations", title: "View All Areas", description: "See all service areas across San Diego County" }
+  ],
+
+  // FAQ
+  faqHeading: "Piano & Specialty Moving FAQs",
+  faqs: [
+    {
+      question: "Do you move upright and baby grand pianos?",
+      answer:
+        "Yes. We move both, using specialized equipment and techniques to protect the instrument."
+    },
+    {
+      question: "Do you disassemble pianos?",
+      answer:
+        "For certain models, yes — components like pedals and lids may be removed for safe transport."
+    },
+    {
+      question: "Can you move heavy safes or oversized items?",
+      answer:
+        "Absolutely. We're equipped to handle heavy, bulky, and uniquely shaped items safely."
+    },
+    {
+      question: "Is there extra cost for specialty moving?",
+      answer:
+        "Pricing depends on item complexity, stairs, access points, and required equipment. Quotes are clear and transparent."
+    },
+    {
+      question: "Do you move antiques or fragile heirlooms?",
+      answer:
+        "Yes — these items receive added padding, wrapping, and handling care."
+    }
+  ],
+
+  // Sidebar CTAs
+  ctaCards: [
+    {
+      title: "Get Your Piano Moving Quote",
+      description:
+        "Tell us about your piano or specialty item. We'll provide expert handling and careful transport.",
+      buttonText: "Call (619) 906-9018",
+      buttonHref: "tel:16199069018"
+    },
+    {
+      title: "Need Specialty Item Moving?",
+      description:
+        "Safes, antiques, or delicate items? We have the equipment and expertise.",
+      buttonText: "Request Quote",
+      buttonHref: "/contact",
+      isSecondary: true
+    }
+  ],
+
+  // Sidebar info cards
+  infoCards: [
+    {
+      title: "Specialty Items We Move",
+      items: [
+        "Upright & baby grand pianos",
+        "Safes & heavy cabinets",
+        "Antique furniture",
+        "Large artwork & mirrors",
+        "Exercise equipment"
+      ]
+    },
+    {
+      title: "Why Choose Our Specialists",
+      items: [
+        "Piano moving specialists",
+        "Heavy item experts",
+        "Antique & heirloom care",
+        "Stair & access specialists"
+      ]
+    },
+    {
+      title: "Service Area",
+      content:
+        "We provide piano and specialty moving services throughout San Diego County for homes, apartments, and businesses."
+    }
+  ],
+
+  // Bottom CTA
+  bottomCTAHeading: "Ready for Professional Piano & Specialty Moving?",
+  bottomCTADescription:
+    "From grand pianos to precious antiques, we move your most valuable items with precision and care.",
+  bottomCTAPrimaryText: "Call for Specialty Moving Quote",
+  bottomCTAPrimaryHref: "tel:16199069018",
+  bottomCTASecondaryText: "Request Specialty Move Estimate",
+  bottomCTASecondaryHref: "/contact"
+};
+
 ---
 
-<ServiceTemplate
-  title="Piano Specialty Moving Services"
-  description="Piano Specialty Moving services in San Diego."
-  noindex={true}
-  heroBadge="Piano Specialty Moving"
-  heroTitle="Professional Piano Specialty Moving"
-  heroDescription="Reliable piano specialty moving services in San Diego."
-  sectionHeading="Piano Specialty Moving in San Diego"
-  sectionDescription="Professional piano specialty moving services for your needs."
-  contentCards={[{title:"Expert Piano Specialty Moving",content:"Professional piano specialty moving with experienced team."},{title:"Why Choose Us",content:"Licensed, insured, and reliable service."},{title:"Get Started",content:"Contact us for a free quote today."}]}
-  features={[{title:"Licensed",description:"Fully licensed and insured"},{title:"Experienced",description:"Years of professional experience"},{title:"Reliable",description:"Dependable service you can trust"},{title:"Affordable",description:"Competitive rates and pricing"}]}
-  locationsHeading="Areas We Serve"
-  locationLinks={[{href:"/locations/la-jolla",title:"La Jolla",description:"Piano Specialty Moving in La Jolla"},{href:"/locations/downtown-san-diego",title:"Downtown",description:"Piano Specialty Moving downtown"},{href:"/locations/pacific-beach",title:"Pacific Beach",description:"Piano Specialty Moving at the beach"},{href:"/locations",title:"View All Areas",description:"See all service areas"}]}
-  faqHeading="Frequently Asked Questions"
-  faqs={[{question:"What is piano specialty moving?",answer:"Professional piano specialty moving service in San Diego."},{question:"Do you offer piano specialty moving?",answer:"Yes, we specialize in piano specialty moving."},{question:"How much does it cost?",answer:"Contact us for a free, no-obligation quote."},{question:"Are you licensed?",answer:"Yes, fully licensed and insured."},{question:"Same-day service?",answer:"Yes, based on availability."}]}
-  ctaCards={[{title:"Get Free Quote",description:"Request your free quote today.",buttonText:"Get Quote",buttonHref:"/contact",isSecondary:false},{title:"Call Now",description:"Speak with a specialist.",buttonText:"(619) 555-MOVE",buttonHref:"tel:6195556683",isSecondary:true}]}
-  infoCards={[{title:"Service Hours",items:["Mon-Fri: 7AM-7PM","Sat: 8AM-6PM","Sun: 9AM-5PM","Same-day available"]},{title:"Service Info",content:"Professional piano specialty moving throughout San Diego County."}]}
-  bottomCTAHeading="Ready for Piano Specialty Moving?"
-  bottomCTADescription="Get started with San Diego's trusted moving company."
-  bottomCTAPrimaryText="Get Free Quote"
-  bottomCTAPrimaryHref="/contact"
-  bottomCTASecondaryText="Call (619) 555-MOVE"
-  bottomCTASecondaryHref="tel:6195556683"
-/>
+<ServiceTemplate {...props} />

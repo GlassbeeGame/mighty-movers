@@ -1,28 +1,213 @@
 ---
 import ServiceTemplate from './_service-page-template.astro';
+
+const props = {
+  // Page metadata
+  title: "Storage Units San Diego | Mighty Movers San Diego",
+  description:
+    "Affordable storage units and storage solutions in San Diego. Short-term storage with pickup and delivery. Secure self storage near SDSU and throughout San Diego County.",
+
+  // Hero
+  heroBadge: "Storage Solutions",
+  heroTitle: "Storage Units & Storage Solutions in San Diego",
+  heroDescription:
+    "Whether you're in between homes, preparing for a renovation, staging a property for sale, or simply out of space, Mighty Movers San Diego offers secure and convenient storage solutions designed for flexibility and peace of mind. Our short-term storage units in San Diego provide a clean, protected environment for your belongings — with pickup and delivery handled entirely by professional movers. From single rooms of items to entire household loads, our self storage options offer an affordable, stress-free way to store your things right here in San Diego, CA.",
+
+  // Section header
+  sectionHeading: "Storage Units & Solutions in San Diego",
+  sectionDescription:
+    "Every storage plan includes full-service support from start to finish. With Mighty Movers, you don't need to lift a thing — we handle every step of the process.",
+
+  // Content cards
+  contentCards: [
+    {
+      title: "What's Included in Our Storage Service",
+      content:
+        "Every storage plan includes pickup from your home by professional movers, protective padding, shrink wrap, and secure loading, placement inside one of our storage units San Diego customers rely on, a full inventory list of stored items, 30-day storage with easy extensions, multiple mini storage unit sizes to match your needs, affordable, straightforward monthly rates, and delivery back to your home when you're ready."
+    },
+    {
+      title: "Storage Unit Sizes & Pricing",
+      content:
+        "We offer multiple secure unit sizes at our Mission Bay storage facility. Our 10×10 Storage Unit is ideal for 1-bedroom apartments or moderate storage needs. The 10×15 Storage Unit is perfect for 2-bedroom homes or larger furniture pieces. Our 10×20 Storage Unit is great for multi-bedroom homes, bulk storage, or oversized items. Whether you need affordable storage in San Diego, large storage units, or something smaller, we'll match you with the right space and keep your belongings protected."
+    },
+    {
+      title: "Our Storage Solutions Process",
+      isProcess: true,
+      steps: [
+        {
+          step: 1,
+          title: "Call for a Quote",
+          content: "Contact (619) 906-9018 with the items you plan to store, and we'll recommend the right unit size and duration."
+        },
+        {
+          step: 2,
+          title: "Movers Pick Up Your Items",
+          content: "We arrive with pads, wrap, and equipment to secure furniture and boxes."
+        },
+        {
+          step: 3,
+          title: "Protection & Transport",
+          content: "Your belongings are wrapped and padded before being transported to our storage facility in San Diego."
+        },
+        {
+          step: 4,
+          title: "Secure Storage Placement",
+          content: "Items are placed safely inside your unit — nothing stacked haphazardly or exposed."
+        },
+        {
+          step: 5,
+          title: "Inventory List Provided",
+          content: "You get a detailed list of everything in storage."
+        },
+        {
+          step: 6,
+          title: "Delivery Back to You",
+          content: "When you're ready, we return your belongings to your home or new residence."
+        }
+      ]
+    },
+    {
+      title: "Common Storage Problems We Solve",
+      content:
+        "San Diego customers come to us when they need short-term storage during moves, temporary space while transitioning between homes, to declutter before selling a home, extra space during remodeling projects, help storing belongings for college students near SDSU, safe, cheap storage options that still protect valuables, and a trustworthy alternative to DIY self-storage facilities. Instead of renting a truck, lifting heavy items, and packing a unit yourself, we make the entire process simple, safe, and hands-off."
+    },
+    {
+      title: "Why San Diego Chooses Mighty Movers for Storage",
+      content:
+        "Customers rely on us because our service is more convenient than traditional self-storage and far more secure than leaving belongings in a garage or spare room. People choose Mighty Movers because we offer affordable storage San Diego residents trust, pickup and delivery are handled for you, you never lift heavy items — movers do all the work, your belongings are wrapped and protected before entering storage, no long-term commitments unless requested, transparent pricing with no hidden access fees, and we serve all of San Diego County, from the coast to inland. Whether you need a month of space or extended storage, you'll always know your items are safe with us."
+    },
+    {
+      title: "Storage Solutions Across San Diego County",
+      content:
+        "We pick up and deliver to any home, apartment, or office in the region. Our storage solutions serve all of San Diego County with secure facilities and professional moving support."
+    }
+  ],
+
+  // Features grid
+  features: [
+    {
+      title: "Full-Service Pickup & Delivery",
+      description:
+        "We handle all loading, transport, and delivery — you never need to visit the storage facility."
+    },
+    {
+      title: "Multiple Unit Sizes",
+      description:
+        "From 10×10 to 10×20 storage units — we match your space needs and budget."
+    },
+    {
+      title: "Short-Term & Flexible",
+      description:
+        "30-day storage with easy extensions — no long-term commitments required."
+    },
+    {
+      title: "Protected & Inventoried",
+      description:
+        "All items wrapped, padded, and tracked with a complete inventory list for your records."
+    }
+  ],
+
+  // Locations
+  locationsHeading: "Storage Solutions Throughout San Diego",
+  locationLinks: [
+    { href: "/locations/north-park", title: "North Park", description: "Storage pickup and delivery for North Park residents." },
+    { href: "/locations/la-jolla", title: "La Jolla", description: "Secure storage solutions for La Jolla homes and condos." },
+    { href: "/locations/college-area", title: "College Area (SDSU)", description: "Student storage near SDSU and San Diego State University." },
+    { href: "/locations", title: "View All Areas", description: "See all service areas across San Diego County" }
+  ],
+
+  // FAQ
+  faqHeading: "Storage Solutions FAQs",
+  faqs: [
+    {
+      question: "Do you offer short-term storage?",
+      answer:
+        "Yes — we offer 30-day storage with extensions available."
+    },
+    {
+      question: "Are my items protected?",
+      answer:
+        "Absolutely. Everything is wrapped and padded before entering your unit."
+    },
+    {
+      question: "Do I get an inventory list?",
+      answer:
+        "Yes — you receive a complete list of stored items for reference."
+    },
+    {
+      question: "Is this a self-storage facility?",
+      answer:
+        "It's a managed storage facility, meaning movers handle all loading and unloading for you."
+    },
+    {
+      question: "Do you offer cheap storage options?",
+      answer:
+        "We offer competitive, transparent pricing with no hidden fees."
+    },
+    {
+      question: "Do you provide storage for students near SDSU?",
+      answer:
+        "Yes — we frequently help students needing temporary storage between semesters."
+    }
+  ],
+
+  // Sidebar CTAs
+  ctaCards: [
+    {
+      title: "Get Your Storage Quote",
+      description:
+        "Tell us what you need to store. We'll recommend the right unit size and handle everything.",
+      buttonText: "Call (619) 906-9018",
+      buttonHref: "tel:16199069018"
+    },
+    {
+      title: "Need Student Storage Near SDSU?",
+      description:
+        "Short-term storage for college students with pickup and delivery included.",
+      buttonText: "Request Quote",
+      buttonHref: "/contact",
+      isSecondary: true
+    }
+  ],
+
+  // Sidebar info cards
+  infoCards: [
+    {
+      title: "Storage Unit Sizes",
+      items: [
+        "10×10 – 1-bedroom apartments",
+        "10×15 – 2-bedroom homes",
+        "10×20 – Multi-bedroom homes",
+        "Full-service pickup & delivery",
+        "30-day storage + extensions"
+      ]
+    },
+    {
+      title: "Why Choose Our Storage",
+      items: [
+        "Full-service pickup & delivery",
+        "Multiple unit sizes",
+        "Short-term & flexible",
+        "Protected & inventoried"
+      ]
+    },
+    {
+      title: "Service Area",
+      content:
+        "We provide storage solutions throughout San Diego County with secure facilities and professional moving support."
+    }
+  ],
+
+  // Bottom CTA
+  bottomCTAHeading: "Ready for Stress-Free Storage?",
+  bottomCTADescription:
+    "From short-term storage to extended solutions, we handle pickup, protection, and delivery — so you don't have to.",
+  bottomCTAPrimaryText: "Call for Storage Quote",
+  bottomCTAPrimaryHref: "tel:16199069018",
+  bottomCTASecondaryText: "Request Storage Estimate",
+  bottomCTASecondaryHref: "/contact"
+};
+
 ---
 
-<ServiceTemplate
-  title="Storage Solutions Services"
-  description="Storage Solutions services in San Diego."
-  noindex={true}
-  heroBadge="Storage Solutions"
-  heroTitle="Professional Storage Solutions"
-  heroDescription="Reliable storage solutions services in San Diego."
-  sectionHeading="Storage Solutions in San Diego"
-  sectionDescription="Professional storage solutions services for your needs."
-  contentCards={[{title:"Expert Storage Solutions",content:"Professional storage solutions with experienced team."},{title:"Why Choose Us",content:"Licensed, insured, and reliable service."},{title:"Get Started",content:"Contact us for a free quote today."}]}
-  features={[{title:"Licensed",description:"Fully licensed and insured"},{title:"Experienced",description:"Years of professional experience"},{title:"Reliable",description:"Dependable service you can trust"},{title:"Affordable",description:"Competitive rates and pricing"}]}
-  locationsHeading="Areas We Serve"
-  locationLinks={[{href:"/locations/la-jolla",title:"La Jolla",description:"Storage Solutions in La Jolla"},{href:"/locations/downtown-san-diego",title:"Downtown",description:"Storage Solutions downtown"},{href:"/locations/pacific-beach",title:"Pacific Beach",description:"Storage Solutions at the beach"},{href:"/locations",title:"View All Areas",description:"See all service areas"}]}
-  faqHeading="Frequently Asked Questions"
-  faqs={[{question:"What is storage solutions?",answer:"Professional storage solutions service in San Diego."},{question:"Do you offer storage solutions?",answer:"Yes, we specialize in storage solutions."},{question:"How much does it cost?",answer:"Contact us for a free, no-obligation quote."},{question:"Are you licensed?",answer:"Yes, fully licensed and insured."},{question:"Same-day service?",answer:"Yes, based on availability."}]}
-  ctaCards={[{title:"Get Free Quote",description:"Request your free quote today.",buttonText:"Get Quote",buttonHref:"/contact",isSecondary:false},{title:"Call Now",description:"Speak with a specialist.",buttonText:"(619) 555-MOVE",buttonHref:"tel:6195556683",isSecondary:true}]}
-  infoCards={[{title:"Service Hours",items:["Mon-Fri: 7AM-7PM","Sat: 8AM-6PM","Sun: 9AM-5PM","Same-day available"]},{title:"Service Info",content:"Professional storage solutions throughout San Diego County."}]}
-  bottomCTAHeading="Ready for Storage Solutions?"
-  bottomCTADescription="Get started with San Diego's trusted moving company."
-  bottomCTAPrimaryText="Get Free Quote"
-  bottomCTAPrimaryHref="/contact"
-  bottomCTASecondaryText="Call (619) 555-MOVE"
-  bottomCTASecondaryHref="tel:6195556683"
-/>
+<ServiceTemplate {...props} />

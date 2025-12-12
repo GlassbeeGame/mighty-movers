@@ -1,28 +1,218 @@
 ---
 import ServiceTemplate from './_service-page-template.astro';
+
+const props = {
+  // Page metadata
+  title: "Same Day Movers San Diego | Mighty Movers San Diego",
+  description:
+    "Need movers today? Same day moving services in San Diego for urgent moves, last-minute help, and emergency relocation. Fast, reliable, affordable same day movers.",
+
+  // Hero
+  heroBadge: "Same Day Moving",
+  heroTitle: "Same Day Movers in San Diego",
+  heroDescription:
+    "When you need movers today, not next week, Mighty Movers San Diego delivers fast, reliable same day moving across San Diego County. Whether your plans changed suddenly, another company canceled, or you just need last-minute help with heavy lifting, our team is equipped for quick dispatch, efficient service, and professional handling of your belongings. If you're overwhelmed, behind schedule, or stuck without help — we step in and get your move back on track.",
+
+  // Section header
+  sectionHeading: "Same Day Moving Services in San Diego",
+  sectionDescription:
+    "Our same day service is designed for speed, flexibility, and full transparency. If you need movers now, we make it happen.",
+
+  // Content cards
+  contentCards: [
+    {
+      title: "What's Included in Our Same Day Moving Service",
+      content:
+        "When you book a same day move, you get a trained crew of same day movers, a fully equipped truck (10ft, 20ft, or 26ft depending on your load), dollies, pads, shrink wrap, straps, and tools included, safe loading, transportation, and unloading, furniture protection and disassembly/reassembly, quick response times and efficient on-site coordination, and clear hourly rates — no last-minute 'rush' fees."
+    },
+    {
+      title: "Situations Where Same Day Movers Are Needed",
+      content:
+        "Customers call us for same day service when another moving company doesn't show, they need to move out today due to a lease issue, they're handed unexpected notice from a landlord, a roommate suddenly moves out, they need urgent help loading or unloading a rental truck, a home closing date moves unexpectedly, or they need a team to save a move that's going off the rails. Same day moves can be chaotic. Our job is to bring order back into the process."
+    },
+    {
+      title: "Our Same Day Moving Process",
+      isProcess: true,
+      steps: [
+        {
+          step: 1,
+          title: "Call Immediately",
+          content: "Contact (619) 906-9018 and tell us what needs to be moved, where you are, and how fast you need help."
+        },
+        {
+          step: 2,
+          title: "Rapid Assessment",
+          content: "We determine the right truck size, crew, and equipment based on availability."
+        },
+        {
+          step: 3,
+          title: "Movers Dispatched",
+          content: "A team of professional movers in San Diego is assigned and sent out quickly."
+        },
+        {
+          step: 4,
+          title: "Fast, Safe Loading",
+          content: "Despite the urgency, we still pad, wrap, and protect all furniture properly."
+        },
+        {
+          step: 5,
+          title: "Transportation",
+          content: "Your belongings are moved safely and directly to the new location."
+        },
+        {
+          step: 6,
+          title: "Efficient Unloading",
+          content: "Items are placed exactly where you want them — no shortcuts."
+        },
+        {
+          step: 7,
+          title: "Completion & Review",
+          content: "We confirm everything is in place and walk through any final details."
+        }
+      ]
+    },
+    {
+      title: "Common Same Day Moving Problems We Solve",
+      content:
+        "We regularly help customers in stressful, time-sensitive situations including not enough help to finish loading in time, heavy furniture or boxes you can't move alone, needing movers by the hour at the last minute, rental truck deadlines approaching, apartments requiring same-day notice to vacate, fast turnarounds between short-term leases, and needing a local San Diego moving company on extremely short notice. We've seen every emergency scenario—so we're ready for yours."
+    },
+    {
+      title: "Why Choose Mighty Movers for Same Day Moving?",
+      content:
+        "People choose our same day movers because we specialize in local, high-speed, reliable moving support. Customers trust us because we're a San Diego moving company with real availability, we offer fair, transparent pricing — no emergency surcharges, our crews are skilled, careful, and fast under pressure, we bring all equipment needed to complete the move safely, we're familiar with tight urban areas, apartment rules, and building access, you get affordable movers San Diego residents consistently rely on, we treat your last-minute move with professionalism, not panic, and we help you recover quickly from whatever curveball life just threw at you."
+    },
+    {
+      title: "Same Day Movers Across San Diego County",
+      content:
+        "We provide urgent moving support throughout the entire region. Our same day movers are ready to respond quickly to emergency moving situations across all of San Diego County."
+    }
+  ],
+
+  // Features grid
+  features: [
+    {
+      title: "Rapid Dispatch Available",
+      description:
+        "When crews are available, we respond immediately to same day moving requests throughout San Diego."
+    },
+    {
+      title: "No Emergency Surcharges",
+      description:
+        "Standard hourly rates apply — no hidden fees or rush charges for same day service."
+    },
+    {
+      title: "Fully Equipped Teams",
+      description:
+        "Even on short notice, we bring all equipment: pads, dollies, straps, and protective materials."
+    },
+    {
+      title: "Professional Under Pressure",
+      description:
+        "Our crews stay calm, organized, and careful — even during urgent, time-sensitive moves."
+    }
+  ],
+
+  // Locations
+  locationsHeading: "Same Day Moving Throughout San Diego",
+  locationLinks: [
+    { href: "/locations/north-park", title: "North Park", description: "Emergency and same day movers for North Park residents." },
+    { href: "/locations/la-jolla", title: "La Jolla", description: "Same day moving services throughout La Jolla." },
+    { href: "/locations/el-cajon", title: "El Cajon", description: "Last-minute and urgent moving help in El Cajon." },
+    { href: "/locations", title: "View All Areas", description: "See all service areas across San Diego County" }
+  ],
+
+  // FAQ
+  faqHeading: "Same Day Moving FAQs",
+  faqs: [
+    {
+      question: "Can you really arrive the same day I call?",
+      answer:
+        "Yes — if crews are available, we dispatch immediately."
+    },
+    {
+      question: "Does same day service cost more?",
+      answer:
+        "No. Pricing is based on our standard hourly rates."
+    },
+    {
+      question: "Do you bring equipment even on last-minute moves?",
+      answer:
+        "Always. Pads, dollies, shrink wrap, straps, and tools are included."
+    },
+    {
+      question: "Can you handle apartment and condo moves?",
+      answer:
+        "Yes — we work quickly while following all building rules."
+    },
+    {
+      question: "Can you help load or unload a rental truck?",
+      answer:
+        "Absolutely. Many same day calls are for load/unload only."
+    },
+    {
+      question: "What if I only need movers for an hour or two?",
+      answer:
+        "We offer by-the-hour service with minimums depending on crew size."
+    }
+  ],
+
+  // Sidebar CTAs
+  ctaCards: [
+    {
+      title: "Need Movers Today?",
+      description:
+        "Call now to check same day availability. We respond fast to urgent moving situations.",
+      buttonText: "Call (619) 906-9018",
+      buttonHref: "tel:16199069018"
+    },
+    {
+      title: "Emergency Moving Help",
+      description:
+        "Last-minute situation? We provide fast, professional same day moving across San Diego.",
+      buttonText: "Check Availability",
+      buttonHref: "/contact",
+      isSecondary: true
+    }
+  ],
+
+  // Sidebar info cards
+  infoCards: [
+    {
+      title: "Same Day Services",
+      items: [
+        "Rapid dispatch available",
+        "Full apartment & home moves",
+        "Rental truck loading/unloading",
+        "Emergency furniture moving",
+        "All equipment included"
+      ]
+    },
+    {
+      title: "Why Choose Same Day",
+      items: [
+        "Rapid dispatch available",
+        "No emergency surcharges",
+        "Fully equipped teams",
+        "Professional under pressure"
+      ]
+    },
+    {
+      title: "Service Area",
+      content:
+        "We provide same day moving services throughout San Diego County based on crew availability and location."
+    }
+  ],
+
+  // Bottom CTA
+  bottomCTAHeading: "Need Movers Right Now?",
+  bottomCTADescription:
+    "From emergency moves to last-minute help, we respond fast with professional, affordable same day moving.",
+  bottomCTAPrimaryText: "Call for Same Day Movers",
+  bottomCTAPrimaryHref: "tel:16199069018",
+  bottomCTASecondaryText: "Check Same Day Availability",
+  bottomCTASecondaryHref: "/contact"
+};
+
 ---
 
-<ServiceTemplate
-  title="Same Day Moving Services"
-  description="Same Day Moving services in San Diego."
-  noindex={true}
-  heroBadge="Same Day Moving"
-  heroTitle="Professional Same Day Moving"
-  heroDescription="Reliable same day moving services in San Diego."
-  sectionHeading="Same Day Moving in San Diego"
-  sectionDescription="Professional same day moving services for your needs."
-  contentCards={[{title:"Expert Same Day Moving",content:"Professional same day moving with experienced team."},{title:"Why Choose Us",content:"Licensed, insured, and reliable service."},{title:"Get Started",content:"Contact us for a free quote today."}]}
-  features={[{title:"Licensed",description:"Fully licensed and insured"},{title:"Experienced",description:"Years of professional experience"},{title:"Reliable",description:"Dependable service you can trust"},{title:"Affordable",description:"Competitive rates and pricing"}]}
-  locationsHeading="Areas We Serve"
-  locationLinks={[{href:"/locations/la-jolla",title:"La Jolla",description:"Same Day Moving in La Jolla"},{href:"/locations/downtown-san-diego",title:"Downtown",description:"Same Day Moving downtown"},{href:"/locations/pacific-beach",title:"Pacific Beach",description:"Same Day Moving at the beach"},{href:"/locations",title:"View All Areas",description:"See all service areas"}]}
-  faqHeading="Frequently Asked Questions"
-  faqs={[{question:"What is same day moving?",answer:"Professional same day moving service in San Diego."},{question:"Do you offer same day moving?",answer:"Yes, we specialize in same day moving."},{question:"How much does it cost?",answer:"Contact us for a free, no-obligation quote."},{question:"Are you licensed?",answer:"Yes, fully licensed and insured."},{question:"Same-day service?",answer:"Yes, based on availability."}]}
-  ctaCards={[{title:"Get Free Quote",description:"Request your free quote today.",buttonText:"Get Quote",buttonHref:"/contact",isSecondary:false},{title:"Call Now",description:"Speak with a specialist.",buttonText:"(619) 555-MOVE",buttonHref:"tel:6195556683",isSecondary:true}]}
-  infoCards={[{title:"Service Hours",items:["Mon-Fri: 7AM-7PM","Sat: 8AM-6PM","Sun: 9AM-5PM","Same-day available"]},{title:"Service Info",content:"Professional same day moving throughout San Diego County."}]}
-  bottomCTAHeading="Ready for Same Day Moving?"
-  bottomCTADescription="Get started with San Diego's trusted moving company."
-  bottomCTAPrimaryText="Get Free Quote"
-  bottomCTAPrimaryHref="/contact"
-  bottomCTASecondaryText="Call (619) 555-MOVE"
-  bottomCTASecondaryHref="tel:6195556683"
-/>
+<ServiceTemplate {...props} />

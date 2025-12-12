@@ -1,28 +1,208 @@
 ---
 import ServiceTemplate from './_service-page-template.astro';
+
+const props = {
+  // Page metadata
+  title: "Furniture Movers San Diego | Mighty Movers San Diego",
+  description:
+    "Professional furniture movers in San Diego for heavy items, single pieces, and labor-only moves. Safe handling of couches, dressers, beds, and oversized furniture.",
+
+  // Hero
+  heroBadge: "Furniture Moving",
+  heroTitle: "Furniture Movers in San Diego",
+  heroDescription:
+    "Whether you're rearranging your home, moving a few heavy pieces to storage, or transporting furniture between properties, Mighty Movers San Diego provides reliable, careful, and efficient furniture moving services throughout San Diego County. Our trained furniture movers specialize in safely handling couches, dressers, bed frames, oversized pieces, and delicate items that require more than basic lifting. If it's bulky, heavy, awkward to carry, or valuable — we know exactly how to move it.",
+
+  // Section header
+  sectionHeading: "Furniture Moving Services in San Diego",
+  sectionDescription:
+    "Our furniture moving service is perfect for homeowners, renters, offices, realtors, designers, and anyone who needs professional help moving individual items or partial loads.",
+
+  // Content cards
+  contentCards: [
+    {
+      title: "What's Included in Our Furniture Moving Service",
+      content:
+        "Every furniture move includes a trained crew of professional furniture movers, a fully equipped moving truck (if needed), dollies, hand trucks, and lifting straps, protective moving pads and shrink wrap, disassembly of furniture when necessary, safe navigation around tight hallways, stairs, and doorways, placement of furniture exactly where you want it in your home, and clean, careful handling from start to finish. We also offer labor-only furniture moving for customers who simply need help loading or unloading a rental truck or rearranging furniture inside the same home."
+    },
+    {
+      title: "Types of Furniture We Move",
+      content:
+        "We move everything from everyday essentials to designer pieces and oversized items. Common items include sofa sets and sectionals, bed frames, mattresses, and headboards, dressers, wardrobes, and armoires, dining tables and chairs, office desks and filing cabinets, patio sets and outdoor furniture, bookshelves and entertainment centers, large mirrors and framed décor, and heavy or awkward furniture pieces. Whether you're doing a small home rearrangement or preparing for a renovation, we've got the equipment and experience to move your items safely."
+    },
+    {
+      title: "Our Furniture Moving Process",
+      isProcess: true,
+      steps: [
+        {
+          step: 1,
+          title: "Quick Assessment & Quote",
+          content: "Call (619) 906-9018 and tell us about the pieces you need moved, where they're going, and whether you need a truck or labor-only service."
+        },
+        {
+          step: 2,
+          title: "Preparation & Protection",
+          content: "We prepare your furniture with pads, shrink wrap, and protective materials to prevent damage to both your property and your belongings."
+        },
+        {
+          step: 3,
+          title: "Safe Lifting & Moving",
+          content: "Using dollies, lifting straps, and controlled techniques, our movers carefully navigate doors, stairs, and tight spaces."
+        },
+        {
+          step: 4,
+          title: "Transportation or In-Home Placement",
+          content: "Whether it's staying in the same home or being moved across San Diego, we ensure it's handled with care."
+        },
+        {
+          step: 5,
+          title: "Furniture Placement",
+          content: "We position items exactly where you want them, reassemble what we took apart, and ensure everything is stable."
+        },
+        {
+          step: 6,
+          title: "Final Check",
+          content: "Before finishing, we confirm the placement and condition of your furniture and review any remaining needs."
+        }
+      ]
+    },
+    {
+      title: "Common Furniture Moving Problems We Solve",
+      content:
+        "Furniture moving comes with challenges — we solve them every day. We regularly help customers with stairs, tight hallways, and sharp turns, protecting floors, walls, and doorways during the move, heavy items that require multiple movers, disassembling and reassembling large furniture, moving high-value items safely, transporting furniture to storage units, moving only one or two items without needing a full-service move, and loading or unloading rental trucks for DIY movers. We make sure your furniture is safe, protected, and placed exactly where you need it."
+    },
+    {
+      title: "Why San Diego Chooses Mighty Movers for Furniture Moving",
+      content:
+        "People trust Mighty Movers with their furniture because we combine strength, care, and precision — without rushing or cutting corners. Customers choose us because we specialize in safe, damage-free furniture moving, we offer labor-only options for simple in-home or on-site moves, all equipment is included — no extra fees, our movers are trained, professional, and extremely careful, we keep your home clean and protected during the move, you get transparent hourly pricing with no surprises, and we move both small loads and large items with the same level of care. Whether it's a single couch or an entire home of furniture, we handle it with professionalism."
+    },
+    {
+      title: "Furniture Moving Throughout San Diego County",
+      content:
+        "We move furniture anywhere in the county — in homes, apartments, offices, storage units, and more. Our movers are experienced with all types of properties and furniture moving scenarios across San Diego."
+    }
+  ],
+
+  // Features grid
+  features: [
+    {
+      title: "Single-Item Specialists",
+      description:
+        "We move one piece or a few items — you don't need a full house to hire professional furniture movers."
+    },
+    {
+      title: "Labor-Only Options",
+      description:
+        "Already have a truck? We provide movers to load, unload, or rearrange furniture without transportation."
+    },
+    {
+      title: "Heavy Item Experts",
+      description:
+        "Trained in safely moving oversized couches, dressers, bed frames, and awkward furniture pieces."
+    },
+    {
+      title: "Floor & Wall Protection",
+      description:
+        "We use pads, straps, and controlled techniques to prevent damage to your home during the move."
+    }
+  ],
+
+  // Locations
+  locationsHeading: "Furniture Moving Throughout San Diego",
+  locationLinks: [
+    { href: "/locations/north-park", title: "North Park", description: "Furniture movers for North Park homes and apartments." },
+    { href: "/locations/carlsbad", title: "Carlsbad", description: "Professional furniture moving throughout Carlsbad." },
+    { href: "/locations/mission-valley", title: "Mission Valley", description: "Single-item and furniture moving in Mission Valley." },
+    { href: "/locations", title: "View All Areas", description: "See all service areas across San Diego County" }
+  ],
+
+  // FAQ
+  faqHeading: "Furniture Moving FAQs",
+  faqs: [
+    {
+      question: "Do you move just one or two pieces of furniture?",
+      answer:
+        "Yes — many customers hire us for small-item or single-piece moves."
+    },
+    {
+      question: "Do you offer labor-only furniture moving?",
+      answer:
+        "Absolutely. If you already have a truck, we provide movers to load, unload, or rearrange items."
+    },
+    {
+      question: "Do you protect my floors and walls?",
+      answer:
+        "Yes. We use pads, straps, dollies, and controlled techniques to prevent damage."
+    },
+    {
+      question: "Can you move heavy or oversized furniture?",
+      answer:
+        "Yes — our equipment and training allow us to handle large, heavy, or awkward pieces safely."
+    },
+    {
+      question: "Do you move furniture into storage units?",
+      answer:
+        "Yes. We move furniture into and out of storage anywhere in San Diego."
+    }
+  ],
+
+  // Sidebar CTAs
+  ctaCards: [
+    {
+      title: "Get Your Furniture Moving Quote",
+      description:
+        "Tell us what pieces you need moved. We'll provide fast, careful furniture moving service.",
+      buttonText: "Call (619) 906-9018",
+      buttonHref: "tel:16199069018"
+    },
+    {
+      title: "Need Labor-Only Movers?",
+      description:
+        "Already have a truck? We provide professional movers for loading and unloading.",
+      buttonText: "Request Quote",
+      buttonHref: "/contact",
+      isSecondary: true
+    }
+  ],
+
+  // Sidebar info cards
+  infoCards: [
+    {
+      title: "Furniture We Move",
+      items: [
+        "Sofas & sectionals",
+        "Bed frames & mattresses",
+        "Dressers & wardrobes",
+        "Dining sets & tables",
+        "Office & patio furniture"
+      ]
+    },
+    {
+      title: "Why Choose Our Movers",
+      items: [
+        "Single-item specialists",
+        "Labor-only options",
+        "Heavy item experts",
+        "Floor & wall protection"
+      ]
+    },
+    {
+      title: "Service Area",
+      content:
+        "We provide furniture moving services throughout San Diego County for homes, apartments, offices, and storage facilities."
+    }
+  ],
+
+  // Bottom CTA
+  bottomCTAHeading: "Ready for Professional Furniture Moving?",
+  bottomCTADescription:
+    "From single pieces to full rooms, we move your furniture with care, precision, and professionalism.",
+  bottomCTAPrimaryText: "Call for Furniture Moving Quote",
+  bottomCTAPrimaryHref: "tel:16199069018",
+  bottomCTASecondaryText: "Request Furniture Move Estimate",
+  bottomCTASecondaryHref: "/contact"
+};
+
 ---
 
-<ServiceTemplate
-  title="Furniture Moving Services"
-  description="Furniture Moving services in San Diego."
-  noindex={true}
-  heroBadge="Furniture Moving"
-  heroTitle="Professional Furniture Moving"
-  heroDescription="Reliable furniture moving services in San Diego."
-  sectionHeading="Furniture Moving in San Diego"
-  sectionDescription="Professional furniture moving services for your needs."
-  contentCards={[{title:"Expert Furniture Moving",content:"Professional furniture moving with experienced team."},{title:"Why Choose Us",content:"Licensed, insured, and reliable service."},{title:"Get Started",content:"Contact us for a free quote today."}]}
-  features={[{title:"Licensed",description:"Fully licensed and insured"},{title:"Experienced",description:"Years of professional experience"},{title:"Reliable",description:"Dependable service you can trust"},{title:"Affordable",description:"Competitive rates and pricing"}]}
-  locationsHeading="Areas We Serve"
-  locationLinks={[{href:"/locations/la-jolla",title:"La Jolla",description:"Furniture Moving in La Jolla"},{href:"/locations/downtown-san-diego",title:"Downtown",description:"Furniture Moving downtown"},{href:"/locations/pacific-beach",title:"Pacific Beach",description:"Furniture Moving at the beach"},{href:"/locations",title:"View All Areas",description:"See all service areas"}]}
-  faqHeading="Frequently Asked Questions"
-  faqs={[{question:"What is furniture moving?",answer:"Professional furniture moving service in San Diego."},{question:"Do you offer furniture moving?",answer:"Yes, we specialize in furniture moving."},{question:"How much does it cost?",answer:"Contact us for a free, no-obligation quote."},{question:"Are you licensed?",answer:"Yes, fully licensed and insured."},{question:"Same-day service?",answer:"Yes, based on availability."}]}
-  ctaCards={[{title:"Get Free Quote",description:"Request your free quote today.",buttonText:"Get Quote",buttonHref:"/contact",isSecondary:false},{title:"Call Now",description:"Speak with a specialist.",buttonText:"(619) 555-MOVE",buttonHref:"tel:6195556683",isSecondary:true}]}
-  infoCards={[{title:"Service Hours",items:["Mon-Fri: 7AM-7PM","Sat: 8AM-6PM","Sun: 9AM-5PM","Same-day available"]},{title:"Service Info",content:"Professional furniture moving throughout San Diego County."}]}
-  bottomCTAHeading="Ready for Furniture Moving?"
-  bottomCTADescription="Get started with San Diego's trusted moving company."
-  bottomCTAPrimaryText="Get Free Quote"
-  bottomCTAPrimaryHref="/contact"
-  bottomCTASecondaryText="Call (619) 555-MOVE"
-  bottomCTASecondaryHref="tel:6195556683"
-/>
+<ServiceTemplate {...props} />

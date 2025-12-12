@@ -1,28 +1,208 @@
 ---
 import ServiceTemplate from './_service-page-template.astro';
+
+const props = {
+  // Page metadata
+  title: "Labor-Only Movers San Diego | Mighty Movers San Diego",
+  description:
+    "Affordable labor-only movers in San Diego for loading, unloading, and furniture moving. Professional help for U-Haul, rental trucks, and storage units.",
+
+  // Hero
+  heroBadge: "Labor-Only Moving",
+  heroTitle: "Labor-Only Movers in San Diego",
+  heroDescription:
+    "Not every move requires a truck — sometimes you just need professional movers to handle the heavy lifting. Mighty Movers San Diego provides trusted, affordable labor-only moving services for loading, unloading, rearranging furniture, staging homes, and assisting with rental trucks, portable storage units, or on-site moving needs. If you've already rented a U-Haul, Penske, Budget truck, or have a container arriving, our crew brings the muscle, tools, and skill — you supply the truck, and we handle the rest.",
+
+  // Section header
+  sectionHeading: "Labor-Only Moving Services in San Diego",
+  sectionDescription:
+    "Labor-only moves are simple, flexible, and cost-effective. This is the perfect solution for DIY movers who want to save time, prevent injuries, and ensure their rental truck is packed safely and efficiently.",
+
+  // Content cards
+  contentCards: [
+    {
+      title: "What's Included in Our Labor-Only Service",
+      content:
+        "Every service includes a trained team of professional labor-only movers, dollies, hand trucks, and lifting straps, tools for basic disassembly and reassembly, safe handling of heavy furniture and boxes, efficient loading or unloading of your truck, trailer, or storage unit, rearranging furniture inside your home, carrying items up or down stairs, and placement of items exactly where you want them."
+    },
+    {
+      title: "What We Can Help You With",
+      content:
+        "Labor-only moving is ideal when you need skilled movers but not a full-service moving truck. Common uses include loading a U-Haul, Penske, or Budget truck, unloading after a long drive into San Diego, moving items into or out of storage units, rearranging furniture within the same home, setting up rooms, offices, or event spaces, preparing for home renovations, assisting seniors or families who can't lift heavy items, and helping with apartment, condo, or small-space moves. If it requires lifting, carrying, loading, or unloading — we can handle it."
+    },
+    {
+      title: "Our Labor-Only Moving Process",
+      isProcess: true,
+      steps: [
+        {
+          step: 1,
+          title: "Tell Us What You Need",
+          content: "Call (619) 906-9018 and describe your items, your layout, and whether you need loading, unloading, or in-home moving."
+        },
+        {
+          step: 2,
+          title: "We Recommend the Right Crew",
+          content: "For most jobs, two movers are ideal — but we'll suggest more if needed based on item volume or complexity."
+        },
+        {
+          step: 3,
+          title: "Movers Arrive Fully Equipped",
+          content: "Even without a truck, we bring dollies, straps, tools, and protective equipment to handle any job safely."
+        },
+        {
+          step: 4,
+          title: "Efficient Loading or Unloading",
+          content: "We secure furniture, optimize truck space, and handle heavy items with proper technique to avoid damage."
+        },
+        {
+          step: 5,
+          title: "Placement & Setup",
+          content: "We place furniture where you want it and reassemble what we disassembled."
+        },
+        {
+          step: 6,
+          title: "Final Walkthrough",
+          content: "Before finishing, we ensure everything is safely placed and complete any remaining on-site requests."
+        }
+      ]
+    },
+    {
+      title: "Common Labor-Only Problems We Solve",
+      content:
+        "Labor-only customers often discover that moving without help turns difficult quickly. We solve issues like heavy or bulky furniture that won't fit through tight spaces, difficulty stacking a rental truck safely, unsafe lifting techniques that risk injury, not enough hands to finish loading on time, needing movers for stairs, long carries, or awkward items, complexity organizing a packed apartment or garage, and unloading after long-distance moves when you're exhausted. We take the stress out of the parts of moving you shouldn't have to do alone."
+    },
+    {
+      title: "Why San Diego Chooses Mighty Movers for Labor-Only Jobs",
+      content:
+        "Customers rely on our labor-only movers because we offer more than strength — we bring skill, precision, and professionalism to every job. People choose us because we offer affordable, flexible labor-only options, our crews are trained professionals — not day labor, we protect your items and home while moving, we load trucks in the safest, most space-efficient way, we bring all necessary tools and equipment, there are no hidden equipment fees or surprises, and we help with moves of any size — from single items to full-home loads. If you're doing a DIY move, we're the part that makes everything easier."
+    },
+    {
+      title: "Labor-Only Moving Throughout San Diego County",
+      content:
+        "We provide labor-only movers across the entire county — for rental trucks, arrivals from out of state, storage unit loads, and in-home moves. Our professional movers bring the equipment and expertise to make your DIY move successful."
+    }
+  ],
+
+  // Features grid
+  features: [
+    {
+      title: "U-Haul & Rental Truck Specialists",
+      description:
+        "Expert loading and unloading for U-Haul, Penske, Budget trucks, and all rental moving vehicles."
+    },
+    {
+      title: "Storage Unit Loading",
+      description:
+        "Efficient packing and organization for storage units, containers, and portable moving pods."
+    },
+    {
+      title: "In-Home Furniture Moving",
+      description:
+        "Rearrange rooms, move furniture between floors, or reorganize your home without a truck."
+    },
+    {
+      title: "All Equipment Included",
+      description:
+        "Dollies, straps, tools, and protective materials — no extra fees, no hidden charges."
+    }
+  ],
+
+  // Locations
+  locationsHeading: "Labor-Only Moving Throughout San Diego",
+  locationLinks: [
+    { href: "/locations/pacific-beach", title: "Pacific Beach", description: "Labor-only movers for rental trucks and storage in Pacific Beach." },
+    { href: "/locations/el-cajon", title: "El Cajon", description: "Professional labor-only moving services in El Cajon." },
+    { href: "/locations/vista", title: "Vista", description: "U-Haul loading and labor-only help throughout Vista." },
+    { href: "/locations", title: "View All Areas", description: "See all service areas across San Diego County" }
+  ],
+
+  // FAQ
+  faqHeading: "Labor-Only Moving FAQs",
+  faqs: [
+    {
+      question: "Do you bring equipment for labor-only jobs?",
+      answer:
+        "Yes — dollies, tools, straps, and protective materials are all included."
+    },
+    {
+      question: "Do I need to provide a truck?",
+      answer:
+        "Yes. For labor-only moving, you supply the vehicle; we provide the movers."
+    },
+    {
+      question: "Can you move furniture inside my home?",
+      answer:
+        "Absolutely. We can move items between rooms, floors, or areas."
+    },
+    {
+      question: "Do you load and unload rental trucks?",
+      answer:
+        "Yes — this is one of our most common labor-only requests."
+    },
+    {
+      question: "Can you help with heavy items only?",
+      answer:
+        "Yes. You can hire us just to move one or two difficult or oversized pieces."
+    }
+  ],
+
+  // Sidebar CTAs
+  ctaCards: [
+    {
+      title: "Get Your Labor-Only Quote",
+      description:
+        "Tell us what you need moved or loaded. We'll provide fast, skilled labor-only help.",
+      buttonText: "Call (619) 906-9018",
+      buttonHref: "tel:16199069018"
+    },
+    {
+      title: "Need Help Loading a U-Haul?",
+      description:
+        "Rental truck ready? We load and unload U-Haul, Penske, and Budget trucks.",
+      buttonText: "Request Quote",
+      buttonHref: "/contact",
+      isSecondary: true
+    }
+  ],
+
+  // Sidebar info cards
+  infoCards: [
+    {
+      title: "Labor-Only Services",
+      items: [
+        "U-Haul & rental truck loading",
+        "Storage unit packing",
+        "In-home furniture moving",
+        "Unloading after long drives",
+        "Heavy item specialists"
+      ]
+    },
+    {
+      title: "Why Choose Our Labor",
+      items: [
+        "Rental truck specialists",
+        "Storage unit loading",
+        "In-home moving help",
+        "All equipment included"
+      ]
+    },
+    {
+      title: "Service Area",
+      content:
+        "We provide labor-only moving services throughout San Diego County for rental trucks, storage units, and in-home moves."
+    }
+  ],
+
+  // Bottom CTA
+  bottomCTAHeading: "Ready for Professional Labor-Only Help?",
+  bottomCTADescription:
+    "From loading rental trucks to rearranging furniture, our labor-only movers make DIY moving easier and safer.",
+  bottomCTAPrimaryText: "Call for Labor-Only Quote",
+  bottomCTAPrimaryHref: "tel:16199069018",
+  bottomCTASecondaryText: "Request Labor-Only Estimate",
+  bottomCTASecondaryHref: "/contact"
+};
+
 ---
 
-<ServiceTemplate
-  title="Labor Only Moving Services"
-  description="Labor Only Moving services in San Diego."
-  noindex={true}
-  heroBadge="Labor Only Moving"
-  heroTitle="Professional Labor Only Moving"
-  heroDescription="Reliable labor only moving services in San Diego."
-  sectionHeading="Labor Only Moving in San Diego"
-  sectionDescription="Professional labor only moving services for your needs."
-  contentCards={[{title:"Expert Labor Only Moving",content:"Professional labor only moving with experienced team."},{title:"Why Choose Us",content:"Licensed, insured, and reliable service."},{title:"Get Started",content:"Contact us for a free quote today."}]}
-  features={[{title:"Licensed",description:"Fully licensed and insured"},{title:"Experienced",description:"Years of professional experience"},{title:"Reliable",description:"Dependable service you can trust"},{title:"Affordable",description:"Competitive rates and pricing"}]}
-  locationsHeading="Areas We Serve"
-  locationLinks={[{href:"/locations/la-jolla",title:"La Jolla",description:"Labor Only Moving in La Jolla"},{href:"/locations/downtown-san-diego",title:"Downtown",description:"Labor Only Moving downtown"},{href:"/locations/pacific-beach",title:"Pacific Beach",description:"Labor Only Moving at the beach"},{href:"/locations",title:"View All Areas",description:"See all service areas"}]}
-  faqHeading="Frequently Asked Questions"
-  faqs={[{question:"What is labor only moving?",answer:"Professional labor only moving service in San Diego."},{question:"Do you offer labor only moving?",answer:"Yes, we specialize in labor only moving."},{question:"How much does it cost?",answer:"Contact us for a free, no-obligation quote."},{question:"Are you licensed?",answer:"Yes, fully licensed and insured."},{question:"Same-day service?",answer:"Yes, based on availability."}]}
-  ctaCards={[{title:"Get Free Quote",description:"Request your free quote today.",buttonText:"Get Quote",buttonHref:"/contact",isSecondary:false},{title:"Call Now",description:"Speak with a specialist.",buttonText:"(619) 555-MOVE",buttonHref:"tel:6195556683",isSecondary:true}]}
-  infoCards={[{title:"Service Hours",items:["Mon-Fri: 7AM-7PM","Sat: 8AM-6PM","Sun: 9AM-5PM","Same-day available"]},{title:"Service Info",content:"Professional labor only moving throughout San Diego County."}]}
-  bottomCTAHeading="Ready for Labor Only Moving?"
-  bottomCTADescription="Get started with San Diego's trusted moving company."
-  bottomCTAPrimaryText="Get Free Quote"
-  bottomCTAPrimaryHref="/contact"
-  bottomCTASecondaryText="Call (619) 555-MOVE"
-  bottomCTASecondaryHref="tel:6195556683"
-/>
+<ServiceTemplate {...props} />
