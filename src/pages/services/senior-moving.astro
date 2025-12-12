@@ -1,28 +1,211 @@
 ---
 import ServiceTemplate from './_service-page-template.astro';
+
+const props = {
+  // Page metadata
+  title: "Senior Movers San Diego | Mighty Movers San Diego",
+  description:
+    "Compassionate senior movers in San Diego for downsizing, assisted living, and retirement transitions. Patient, caring moving services for seniors and their families.",
+
+  // Hero
+  heroBadge: "Senior Moving",
+  heroTitle: "Senior Movers in San Diego",
+  heroDescription:
+    "Moving can feel overwhelming at any age, but for seniors, it often represents a major life transition. Mighty Movers San Diego provides caring, patient, and reliable senior moving services for individuals and families throughout San Diego County. Whether downsizing, transitioning into assisted living, moving closer to family, or simply relocating to a more comfortable home, our senior movers understand the importance of moving with respect, compassion, and steady support. We take a gentle, organized approach so seniors and their families feel confident and supported throughout the entire move.",
+
+  // Section header
+  sectionHeading: "Senior Moving Services in San Diego",
+  sectionDescription:
+    "Our service is tailored to the needs of older adults, ensuring comfort, clarity, and safety at every step.",
+
+  // Content cards
+  contentCards: [
+    {
+      title: "What's Included in Our Senior Moving Service",
+      content:
+        "Every senior move includes a dedicated team of trained senior movers, a fully equipped moving truck sized appropriately for the home, moving pads, shrink wrap, and furniture protection, dollies and hand trucks for safe transport, lifting straps for heavy or delicate furniture, basic disassembly and reassembly of furniture, room-by-room placement to match your preferred layout, help organizing items as needed during the move, and extra care with sentimental and fragile belongings. Whether it's a full-home relocation or just a few key items, we're here to support seniors and their families with patience and professionalism."
+    },
+    {
+      title: "Common Senior Moving Problems We Solve",
+      content:
+        "Senior moves often come with special considerations. We understand these challenges and address them with care. We frequently help with downsizing from long-term homes, organizing items before the move, handling fragile, heirloom, or sentimental belongings, navigating tight hallways, stairs, or older home layouts, moving furniture safely without rushing the process, coordinating with family members or caregivers, ensuring comfortable pacing for seniors during moving day, and helping with transitions into retirement communities or assisted living. Our team moves at a pace that keeps seniors comfortable and supported — never rushed."
+    },
+    {
+      title: "Our Senior Moving Process",
+      isProcess: true,
+      steps: [
+        {
+          step: 1,
+          title: "Consultation & Planning",
+          content: "Call (619) 906-9018 and tell us about the home, the items being moved, and any special needs or mobility considerations. We plan the move carefully with sensitivity to the situation."
+        },
+        {
+          step: 2,
+          title: "Pre-Move Organization",
+          content: "If needed, we help organize items, separate what's going, and identify any fragile or sentimental belongings that require extra care."
+        },
+        {
+          step: 3,
+          title: "Arrival & Walkthrough",
+          content: "Our senior movers arrive on time, complete a walkthrough, and determine the safest and most comfortable moving path."
+        },
+        {
+          step: 4,
+          title: "Gentle Packing & Protection",
+          content: "Furniture, décor, and keepsakes are padded and wrapped thoughtfully. We pack and prepare items without rushing, keeping seniors comfortable throughout the process."
+        },
+        {
+          step: 5,
+          title: "Transportation",
+          content: "Items are transported safely and securely to the new home or community. We drive carefully, avoiding jostling and ensuring that fragile items remain protected."
+        },
+        {
+          step: 6,
+          title: "Unloading & Room Setup",
+          content: "We place furniture exactly where preferred and assist with basic setup so the new home feels comfortable right away."
+        },
+        {
+          step: 7,
+          title: "Final Check-In",
+          content: "We make sure everything is placed correctly, walk through the home with the senior or their family, and ensure total satisfaction."
+        }
+      ]
+    },
+    {
+      title: "Why Seniors & Families Choose Mighty Movers",
+      content:
+        "Families across San Diego trust Mighty Movers for senior moving because we understand that these relocations require more than muscle — they require empathy. People choose us because we offer patient, supportive senior movers, we take extra time with sentimental and fragile items, our pricing is transparent, clear, and budget-friendly, we improve safety and comfort throughout the move, we help families navigate downsizing and transitional housing, we're experienced with senior living communities across San Diego, we maintain steady communication before, during, and after the move, and we treat seniors with the respect and care they deserve."
+    },
+    {
+      title: "Short-Notice Options for Senior Moves",
+      content:
+        "Sometimes moves happen quickly due to medical needs, housing availability, or unexpected circumstances. While not all senior moves require urgency, we do offer next-day senior moving and short-notice scheduling when possible. If you need fast support, call (619) 906-9018 to check availability."
+    },
+    {
+      title: "Senior Moving Throughout San Diego County",
+      content:
+        "We move seniors throughout all areas of San Diego — from long-term family homes to retirement communities, assisted living facilities, and new residences. Our movers are familiar with senior living communities across the county and understand the unique requirements of these facilities."
+    }
+  ],
+
+  // Features grid
+  features: [
+    {
+      title: "Patient & Compassionate Service",
+      description:
+        "Our senior movers move at a comfortable pace, never rushing, always showing respect and understanding."
+    },
+    {
+      title: "Downsizing Specialists",
+      description:
+        "We help seniors organize, pack, and transition from larger homes to more comfortable living spaces."
+    },
+    {
+      title: "Assisted Living Experts",
+      description:
+        "Experienced with retirement communities and assisted living facilities throughout San Diego County."
+    },
+    {
+      title: "Sentimental Item Care",
+      description:
+        "Extra attention to heirlooms, fragile items, and belongings with special meaning to seniors and families."
+    }
+  ],
+
+  // Locations
+  locationsHeading: "Senior Moving Throughout San Diego",
+  locationLinks: [
+    { href: "/locations/la-mesa", title: "La Mesa", description: "Senior movers for La Mesa retirement communities and family homes." },
+    { href: "/locations/poway", title: "Poway", description: "Compassionate senior moving services throughout Poway." },
+    { href: "/locations/rancho-bernardo", title: "Rancho Bernardo", description: "Senior relocation specialists for Rancho Bernardo residents." },
+    { href: "/locations", title: "View All Areas", description: "See all service areas across San Diego County" }
+  ],
+
+  // FAQ
+  faqHeading: "Senior Moving FAQs",
+  faqs: [
+    {
+      question: "Do you help pack for senior moves?",
+      answer:
+        "Yes — we offer full and partial packing services to help seniors prepare comfortably."
+    },
+    {
+      question: "Can you help with downsizing?",
+      answer:
+        "Absolutely. We help sort items, pack what's needed, and assist with organizing belongings to simplify the transition."
+    },
+    {
+      question: "Do you work with assisted living or retirement communities?",
+      answer:
+        "Yes. We regularly move seniors into retirement homes, assisted living, and senior communities throughout San Diego."
+    },
+    {
+      question: "Will you move fragile or heirloom items?",
+      answer:
+        "With exceptional care. These items receive added protection and specialized handling."
+    },
+    {
+      question: "Can family members coordinate the move if the senior isn't available?",
+      answer:
+        "Yes. We work closely with adult children and caregivers to ensure smooth coordination."
+    }
+  ],
+
+  // Sidebar CTAs
+  ctaCards: [
+    {
+      title: "Get Your Senior Moving Quote",
+      description:
+        "Tell us about your transition needs. We'll create a gentle, supportive moving plan for your family.",
+      buttonText: "Call (619) 906-9018",
+      buttonHref: "tel:16199069018"
+    },
+    {
+      title: "Need Short-Notice Senior Movers?",
+      description:
+        "Unexpected move or quick transition? Check availability for next-day senior moving.",
+      buttonText: "Check Availability",
+      buttonHref: "/contact",
+      isSecondary: true
+    }
+  ],
+
+  // Sidebar info cards
+  infoCards: [
+    {
+      title: "Senior Moving Packages",
+      items: [
+        "2 Movers + 10FT Truck – $119/hr (3 hr min)",
+        "2 Movers + 20FT Truck – $129/hr (3 hr min)",
+        "2 Movers + 26FT Truck – $149/hr (4 hr min)"
+      ]
+    },
+    {
+      title: "Why Families Choose Us",
+      items: [
+        "Patient & compassionate service",
+        "Downsizing specialists",
+        "Assisted living experts",
+        "Sentimental item care"
+      ]
+    },
+    {
+      title: "Service Area",
+      content:
+        "We provide senior moving services throughout San Diego County, including all major retirement communities and assisted living facilities."
+    }
+  ],
+
+  // Bottom CTA
+  bottomCTAHeading: "Ready for a Caring Senior Move?",
+  bottomCTADescription:
+    "From downsizing to assisted living transitions, we make senior moves gentle, organized, and stress-free.",
+  bottomCTAPrimaryText: "Call for Senior Moving Quote",
+  bottomCTAPrimaryHref: "tel:16199069018",
+  bottomCTASecondaryText: "Request Senior Move Estimate",
+  bottomCTASecondaryHref: "/contact"
+};
+
 ---
 
-<ServiceTemplate
-  title="Senior Moving Services"
-  description="Senior Moving services in San Diego."
-  noindex={true}
-  heroBadge="Senior Moving"
-  heroTitle="Professional Senior Moving"
-  heroDescription="Reliable senior moving services in San Diego."
-  sectionHeading="Senior Moving in San Diego"
-  sectionDescription="Professional senior moving services for your needs."
-  contentCards={[{title:"Expert Senior Moving",content:"Professional senior moving with experienced team."},{title:"Why Choose Us",content:"Licensed, insured, and reliable service."},{title:"Get Started",content:"Contact us for a free quote today."}]}
-  features={[{title:"Licensed",description:"Fully licensed and insured"},{title:"Experienced",description:"Years of professional experience"},{title:"Reliable",description:"Dependable service you can trust"},{title:"Affordable",description:"Competitive rates and pricing"}]}
-  locationsHeading="Areas We Serve"
-  locationLinks={[{href:"/locations/la-jolla",title:"La Jolla",description:"Senior Moving in La Jolla"},{href:"/locations/downtown-san-diego",title:"Downtown",description:"Senior Moving downtown"},{href:"/locations/pacific-beach",title:"Pacific Beach",description:"Senior Moving at the beach"},{href:"/locations",title:"View All Areas",description:"See all service areas"}]}
-  faqHeading="Frequently Asked Questions"
-  faqs={[{question:"What is senior moving?",answer:"Professional senior moving service in San Diego."},{question:"Do you offer senior moving?",answer:"Yes, we specialize in senior moving."},{question:"How much does it cost?",answer:"Contact us for a free, no-obligation quote."},{question:"Are you licensed?",answer:"Yes, fully licensed and insured."},{question:"Same-day service?",answer:"Yes, based on availability."}]}
-  ctaCards={[{title:"Get Free Quote",description:"Request your free quote today.",buttonText:"Get Quote",buttonHref:"/contact",isSecondary:false},{title:"Call Now",description:"Speak with a specialist.",buttonText:"(619) 555-MOVE",buttonHref:"tel:6195556683",isSecondary:true}]}
-  infoCards={[{title:"Service Hours",items:["Mon-Fri: 7AM-7PM","Sat: 8AM-6PM","Sun: 9AM-5PM","Same-day available"]},{title:"Service Info",content:"Professional senior moving throughout San Diego County."}]}
-  bottomCTAHeading="Ready for Senior Moving?"
-  bottomCTADescription="Get started with San Diego's trusted moving company."
-  bottomCTAPrimaryText="Get Free Quote"
-  bottomCTAPrimaryHref="/contact"
-  bottomCTASecondaryText="Call (619) 555-MOVE"
-  bottomCTASecondaryHref="tel:6195556683"
-/>
+<ServiceTemplate {...props} />
