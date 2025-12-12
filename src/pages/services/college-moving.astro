@@ -1,28 +1,206 @@
 ---
 import ServiceTemplate from './_service-page-template.astro';
+
+const props = {
+  // Page metadata
+  title: "College Movers San Diego | Mighty Movers San Diego",
+  description:
+    "Affordable college movers in San Diego for students, dorms, and campus housing. Fast, flexible moving services for SDSU, UCSD, USD, and all San Diego colleges.",
+
+  // Hero
+  heroBadge: "College Moving",
+  heroTitle: "College Movers in San Diego",
+  heroDescription:
+    "Moving into a dorm, campus apartment, or off-campus housing shouldn't eat up your entire budget or require borrowing a friend's truck. Mighty Movers San Diego offers fast, affordable, and flexible college moving services designed specifically for students at SDSU, UC San Diego, USD, and all San Diego colleges and universities. Whether you're moving in for the semester, transitioning between dorms, or relocating off-campus for the first time, our college movers make the process simple, efficient, and affordable.",
+
+  // Section header
+  sectionHeading: "Student Moving Services in San Diego",
+  sectionDescription:
+    "We understand tight budgets, last-minute schedules, and the chaos of college move-in day. Our college moving service is built to help students move quickly without the stress.",
+
+  // Content cards
+  contentCards: [
+    {
+      title: "What's Included in Our College Moving Service",
+      content:
+        "Every college move includes a trained crew of professional movers, a fully equipped moving truck (10FT, 20FT, or 26FT), moving pads and shrink wrap for furniture and electronics, dollies and hand trucks for boxes, bins, and mini-fridges, lifting straps for mattresses, futons, and dressers, basic furniture disassembly and reassembly (beds, desks, shelving), Quick Pack totes for loose items and last-minute packing, room-by-room loading and unloading, and transportation anywhere in San Diego County. We work fast and efficiently so you're not paying for more hours than you need. Our rates are simple, hourly, and transparent — no hidden fees for equipment or basic services."
+    },
+    {
+      title: "Common College Moving Problems We Solve",
+      content:
+        "College moves come with unique challenges that most moving companies aren't equipped to handle. We deal with them every day. Common problems we solve include tight budgets and limited funds for professional help, moving into dorm rooms with narrow hallways, elevators, and shared common areas, limited parking and strict campus loading zone rules, move-in day chaos with hundreds of families arriving at once, last-minute schedule changes or delayed housing assignments, moving between semesters with tight timelines, transporting mini-fridges, futons, desks, and awkwardly shaped furniture, needing help when parents can't visit or friends aren't available, and coordinating moves around class schedules and academic calendars. Our crews understand campus logistics and can adapt quickly to the fast-paced, unpredictable environment of student housing."
+    },
+    {
+      title: "Our College Moving Process",
+      isProcess: true,
+      steps: [
+        {
+          step: 1,
+          title: "Fast Quote",
+          content: "Call or text (619) 906-9018 with your dorm or apartment location, campus, and what you need moved. We recommend the best truck and crew size for your budget."
+        },
+        {
+          step: 2,
+          title: "Plan the Move",
+          content: "We work around your schedule — move-in day, between semesters, or mid-year transfers. Flexible timing based on your academic calendar and housing availability."
+        },
+        {
+          step: 3,
+          title: "Arrival & Preparation",
+          content: "Our college movers arrive on time, check in at campus security if needed, and review your space and items to create a fast loading plan."
+        },
+        {
+          step: 4,
+          title: "Safe Handling & Transport",
+          content: "We pad-wrap furniture, protect electronics, and load everything carefully. Your belongings are moved directly to your dorm, apartment, or off-campus housing."
+        },
+        {
+          step: 5,
+          title: "Move-In Setup",
+          content: "We unload room by room, place furniture where you want it, and reassemble beds or desks as needed so your space is ready to live in."
+        },
+        {
+          step: 6,
+          title: "Final Touches",
+          content: "Quick walkthrough to confirm everything is in place. Fast, affordable, and stress-free — so you can focus on starting the semester."
+        }
+      ]
+    },
+    {
+      title: "Why San Diego Students Choose Mighty Movers",
+      content:
+        "College students across San Diego choose Mighty Movers because we understand the unique pressures of student life — tight budgets, unpredictable schedules, and the need for fast, reliable service. Students choose us because we offer affordable hourly rates designed with student budgets in mind, we're flexible and can work around move-in day schedules and campus rules, we handle dorms, campus apartments, and off-campus housing, our crews are trained to navigate campus parking, elevators, and residence hall logistics, we move efficiently to keep costs low, we accept last-minute bookings when availability allows, and we treat student belongings — laptops, textbooks, mini-fridges, futons — with care and respect. Whether you're a freshman moving into your first dorm or a senior transitioning to your own place, Mighty Movers makes college moving simple and affordable."
+    },
+    {
+      title: "Emergency & Same-Day College Moving",
+      content:
+        "Housing assignments change, roommate situations fall apart, and sometimes you need to move with almost no notice. When possible, we offer same-day college movers, next-day availability, and short-notice student moves. If you're dealing with a sudden housing change or move-in chaos, call (619) 906-9018 to check real-time availability."
+    },
+    {
+      title: "College Moving for All San Diego Universities",
+      content:
+        "We help students move in and out of dorms, residence halls, campus apartments, and off-campus housing at every college and university in San Diego County, including San Diego State University (SDSU), UC San Diego (UCSD), University of San Diego (USD), Point Loma Nazarene University, San Diego City College, Mesa College, Miramar College, and all community colleges and private institutions. Our movers know the campuses, the parking rules, and the fastest ways to navigate move-in day."
+    }
+  ],
+
+  // Features grid
+  features: [
+    {
+      title: "Student-Friendly Pricing",
+      description:
+        "Affordable hourly rates designed for college budgets — transparent pricing with no hidden fees."
+    },
+    {
+      title: "Campus Logistics Experts",
+      description:
+        "We understand dorm move-in procedures, parking restrictions, and campus building access rules."
+    },
+    {
+      title: "Flexible Scheduling",
+      description:
+        "Work around your academic calendar, move-in day schedules, and semester transitions."
+    },
+    {
+      title: "Same-Day Moves Available",
+      description:
+        "Last-minute housing changes? We offer same-day and emergency college moving when available."
+    }
+  ],
+
+  // Locations
+  locationsHeading: "College Moving Throughout San Diego",
+  locationLinks: [
+    { href: "/locations/la-jolla", title: "La Jolla", description: "College movers for UC San Diego students and campus housing." },
+    { href: "/locations/north-park", title: "North Park", description: "Student moving services for SDSU and surrounding neighborhoods." },
+    { href: "/locations/mission-valley", title: "Mission Valley", description: "College moves for USD students and nearby apartments." },
+    { href: "/locations", title: "View All Areas", description: "See all service areas across San Diego County" }
+  ],
+
+  // FAQ
+  faqHeading: "College Moving FAQs",
+  faqs: [
+    {
+      question: "How much does college moving cost in San Diego?",
+      answer:
+        "Most college moves use a 10FT or 20FT truck with 2 movers. Rates start at $119/hr with a 3-hour minimum. We work efficiently to keep costs low for students."
+    },
+    {
+      question: "Can you move me into a dorm or residence hall?",
+      answer:
+        "Yes. We're familiar with campus housing logistics, including parking permits, elevator reservations, and move-in day procedures."
+    },
+    {
+      question: "Do you move mini-fridges, futons, and dorm furniture?",
+      answer:
+        "Absolutely. We handle all standard college items including mini-fridges, microwaves, futons, desks, shelving, mattresses, and storage bins."
+    },
+    {
+      question: "Can you help with same-day or last-minute moves?",
+      answer:
+        "When availability allows, yes. We understand that student housing situations can change quickly. Call (619) 906-9018 to check."
+    },
+    {
+      question: "Do you move between dorms or campus apartments?",
+      answer:
+        "Yes — we handle moves within campus housing, between residence halls, and from on-campus to off-campus housing."
+    }
+  ],
+
+  // Sidebar CTAs
+  ctaCards: [
+    {
+      title: "Get Your College Moving Quote",
+      description:
+        "Tell us your campus, housing location, and what you're moving. We'll help you plan an affordable move.",
+      buttonText: "Call (619) 906-9018",
+      buttonHref: "tel:16199069018"
+    },
+    {
+      title: "Need Same-Day Student Movers?",
+      description:
+        "Last-minute housing change? Check availability for same-day college moving.",
+      buttonText: "Check Availability",
+      buttonHref: "/contact",
+      isSecondary: true
+    }
+  ],
+
+  // Sidebar info cards
+  infoCards: [
+    {
+      title: "Student Moving Packages",
+      items: [
+        "2 Movers + 10FT Truck – $119/hr (3 hr min)",
+        "2 Movers + 20FT Truck – $129/hr (3 hr min)",
+        "2 Movers + 26FT Truck – $149/hr (4 hr min)"
+      ]
+    },
+    {
+      title: "Why Students Choose Us",
+      items: [
+        "Affordable student pricing",
+        "Campus logistics experts",
+        "Flexible scheduling",
+        "Same-day moves available"
+      ]
+    },
+    {
+      title: "Service Area",
+      content:
+        "We move students throughout San Diego County, including all major universities and college campuses."
+    }
+  ],
+
+  // Bottom CTA
+  bottomCTAHeading: "Ready for Your College Move?",
+  bottomCTADescription:
+    "From dorm move-in to off-campus apartments, we make student moving fast, affordable, and stress-free.",
+  bottomCTAPrimaryText: "Call for Student Moving Quote",
+  bottomCTAPrimaryHref: "tel:16199069018",
+  bottomCTASecondaryText: "Request College Move Estimate",
+  bottomCTASecondaryHref: "/contact"
+};
+
 ---
 
-<ServiceTemplate
-  title="College Moving Services"
-  description="College Moving services in San Diego."
-  noindex={true}
-  heroBadge="College Moving"
-  heroTitle="Professional College Moving"
-  heroDescription="Reliable college moving services in San Diego."
-  sectionHeading="College Moving in San Diego"
-  sectionDescription="Professional college moving services for your needs."
-  contentCards={[{title:"Expert College Moving",content:"Professional college moving with experienced team."},{title:"Why Choose Us",content:"Licensed, insured, and reliable service."},{title:"Get Started",content:"Contact us for a free quote today."}]}
-  features={[{title:"Licensed",description:"Fully licensed and insured"},{title:"Experienced",description:"Years of professional experience"},{title:"Reliable",description:"Dependable service you can trust"},{title:"Affordable",description:"Competitive rates and pricing"}]}
-  locationsHeading="Areas We Serve"
-  locationLinks={[{href:"/locations/la-jolla",title:"La Jolla",description:"College Moving in La Jolla"},{href:"/locations/downtown-san-diego",title:"Downtown",description:"College Moving downtown"},{href:"/locations/pacific-beach",title:"Pacific Beach",description:"College Moving at the beach"},{href:"/locations",title:"View All Areas",description:"See all service areas"}]}
-  faqHeading="Frequently Asked Questions"
-  faqs={[{question:"What is college moving?",answer:"Professional college moving service in San Diego."},{question:"Do you offer college moving?",answer:"Yes, we specialize in college moving."},{question:"How much does it cost?",answer:"Contact us for a free, no-obligation quote."},{question:"Are you licensed?",answer:"Yes, fully licensed and insured."},{question:"Same-day service?",answer:"Yes, based on availability."}]}
-  ctaCards={[{title:"Get Free Quote",description:"Request your free quote today.",buttonText:"Get Quote",buttonHref:"/contact",isSecondary:false},{title:"Call Now",description:"Speak with a specialist.",buttonText:"(619) 555-MOVE",buttonHref:"tel:6195556683",isSecondary:true}]}
-  infoCards={[{title:"Service Hours",items:["Mon-Fri: 7AM-7PM","Sat: 8AM-6PM","Sun: 9AM-5PM","Same-day available"]},{title:"Service Info",content:"Professional college moving throughout San Diego County."}]}
-  bottomCTAHeading="Ready for College Moving?"
-  bottomCTADescription="Get started with San Diego's trusted moving company."
-  bottomCTAPrimaryText="Get Free Quote"
-  bottomCTAPrimaryHref="/contact"
-  bottomCTASecondaryText="Call (619) 555-MOVE"
-  bottomCTASecondaryHref="tel:6195556683"
-/>
+<ServiceTemplate {...props} />
