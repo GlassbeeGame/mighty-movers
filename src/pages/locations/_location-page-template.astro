@@ -36,30 +36,25 @@ interface Props {
   locationBadge: string;
   heroTitle: string;
   heroDescription: string;
-  heroCTAPrimaryText: string;
-  heroCTAPrimaryHref: string;
-  heroCTASecondaryText: string;
-  heroCTASecondaryHref: string;
 
-  // Intro section
+  // Intro section - Main content area (no boxes!)
   introHeading: string;
   introText: string;
 
-  // Why Choose Us (moved higher)
+  // Main content - One cohesive section
+  mainContentHeading?: string;
+  mainContent: string;
+
+  // Why Choose Us
   whyHeading: string;
   benefits: BenefitItem[];
 
-  // Services Overview
+  // Services Overview - Simple grid, no boxes
   servicesHeading: string;
-  servicesIntro: string;
   services: ServiceCard[];
 
-  // Local Service Details
-  localHeading: string;
-  localContent: string;
-  drivingDirections?: string;
-  responseTimes?: string;
-  weatherConsiderations?: string;
+  // Local details (optional)
+  localKnowledgeText?: string;
 
   // Neighborhoods
   neighborhoodsHeading: string;
@@ -88,22 +83,15 @@ const {
   locationBadge,
   heroTitle,
   heroDescription,
-  heroCTAPrimaryText,
-  heroCTAPrimaryHref,
-  heroCTASecondaryText,
-  heroCTASecondaryHref,
   introHeading,
   introText,
+  mainContentHeading,
+  mainContent,
   whyHeading,
   benefits,
   servicesHeading,
-  servicesIntro,
   services,
-  localHeading,
-  localContent,
-  drivingDirections,
-  responseTimes,
-  weatherConsiderations,
+  localKnowledgeText,
   neighborhoodsHeading,
   neighborhoods,
   trustBadges,
@@ -119,7 +107,7 @@ const {
 ---
 
 <Layout title={title} description={description} noindex={noindex}>
-  <!-- Hero Section with CTAs -->
+  <!-- Hero Section -->
   <section class="location-hero">
     <div class="hero-background"></div>
     <div class="hero-overlay"></div>
@@ -128,127 +116,123 @@ const {
       <h1>{heroTitle}</h1>
       <p>{heroDescription}</p>
       <div class="hero-cta-buttons">
-        <a href={heroCTAPrimaryHref} class="btn btn-primary btn-large">{heroCTAPrimaryText}</a>
-        <a href={heroCTASecondaryHref} class="btn btn-secondary btn-large">{heroCTASecondaryText}</a>
+        <a href={bottomCTAPrimaryHref} class="btn btn-primary btn-large">{bottomCTAPrimaryText}</a>
+        <a href={bottomCTASecondaryHref} class="btn btn-secondary btn-large">{bottomCTASecondaryText}</a>
       </div>
     </div>
   </section>
 
-  <!-- Main Content - Full Width -->
+  <!-- Main Content Area - Simple, Clean -->
   <div class="location-content">
     <div class="container">
 
-      <!-- Intro Section -->
+      <!-- Intro Section - No box, just text -->
       <section class="intro-section">
         <h2>{introHeading}</h2>
-        <p>{introText}</p>
+        <p class="intro-lead">{introText}</p>
       </section>
 
-      <!-- Why Choose Us - Moved Higher -->
-      <section class="why-section">
-        <h2>{whyHeading}</h2>
-        <div class="benefits-grid">
-          {benefits.map((benefit) => (
-            <div class="benefit-card">
-              <div class="benefit-icon"></div>
-              <h3>{benefit.title}</h3>
-              <p>{benefit.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <!-- Services Overview -->
-      <section class="services-section">
-        <h2>{servicesHeading}</h2>
-        <p class="services-intro">{servicesIntro}</p>
-        <div class="services-grid">
-          {services.map((service) => (
-            <div class="service-card">
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <!-- Local Service Details -->
-      <section class="local-section">
-        <h2>{localHeading}</h2>
-        <div class="local-content-main">
-          <p>{localContent}</p>
-        </div>
-
-        {(drivingDirections || responseTimes || weatherConsiderations) && (
-          <div class="local-details-grid">
-            {drivingDirections && (
-              <div class="local-detail-card">
-                <h3>Driving Directions</h3>
-                <p>{drivingDirections}</p>
-              </div>
-            )}
-            {responseTimes && (
-              <div class="local-detail-card">
-                <h3>Response Times</h3>
-                <p>{responseTimes}</p>
-              </div>
-            )}
-            {weatherConsiderations && (
-              <div class="local-detail-card">
-                <h3>Weather Considerations</h3>
-                <p>{weatherConsiderations}</p>
-              </div>
-            )}
-          </div>
-        )}
-      </section>
-
-      <!-- Neighborhoods -->
-      <section class="neighborhoods-section">
-        <h2>{neighborhoodsHeading}</h2>
-        <div class="neighborhoods-grid">
-          {neighborhoods.map((neighborhood, index) => (
-            <div class="neighborhood-card">
-              <div class="neighborhood-number">{String(index + 1).padStart(2, '0')}</div>
-              <h3>{neighborhood.title}</h3>
-              <p>{neighborhood.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <!-- Trust Badges -->
-      <section class="trust-section">
-        <div class="trust-badges">
-          {trustBadges.map((badge) => (
-            <div class="trust-badge">
-              <div class="trust-metric">{badge.metric}</div>
-              <div class="trust-label">{badge.label}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <!-- FAQ Section -->
-      <section class="faq-section">
-        <h2>{faqHeading}</h2>
-        <div class="faq-list">
-          {faqs.map((faq) => (
-            <div class="faq-item">
-              <button class="faq-question">
-                <h3>{faq.question}</h3>
-                <span class="faq-icon">+</span>
-              </button>
-              <div class="faq-answer">
-                <p>{faq.answer}</p>
-              </div>
-            </div>
-          ))}
+      <!-- Main Content - ONE section, not multiple boxes -->
+      <section class="main-content-section">
+        {mainContentHeading && <h2>{mainContentHeading}</h2>}
+        <div class="main-content-text">
+          <p>{mainContent}</p>
         </div>
       </section>
 
     </div>
   </div>
+
+  <!-- Why Choose Us - Full width background change -->
+  <section class="why-section-wrapper">
+    <div class="container">
+      <h2>{whyHeading}</h2>
+      <div class="benefits-grid">
+        {benefits.map((benefit: BenefitItem) => (
+          <div class="benefit-card">
+            <div class="benefit-icon"></div>
+            <h3>{benefit.title}</h3>
+            <p>{benefit.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section - Back to white, simple grid -->
+  <section class="services-section">
+    <div class="container">
+      <h2>{servicesHeading}</h2>
+      <div class="services-grid">
+        {services.map((service: ServiceCard) => (
+          <div class="service-item">
+            <h3>{service.title}</h3>
+            <p>{service.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Local Knowledge - Optional callout section -->
+  {localKnowledgeText && (
+    <section class="local-knowledge-section">
+      <div class="container">
+        <div class="local-knowledge-box">
+          <div class="knowledge-icon"></div>
+          <p>{localKnowledgeText}</p>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Neighborhoods - Simple grid -->
+  <section class="neighborhoods-section">
+    <div class="container">
+      <h2>{neighborhoodsHeading}</h2>
+      <div class="neighborhoods-grid">
+        {neighborhoods.map((neighborhood: NeighborhoodCard, index: number) => (
+          <div class="neighborhood-card">
+            <div class="neighborhood-number">{String(index + 1).padStart(2, '0')}</div>
+            <h3>{neighborhood.title}</h3>
+            <p>{neighborhood.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Badges - Full width dark section -->
+  <section class="trust-section">
+    <div class="trust-badges">
+      {trustBadges.map((badge: TrustBadge) => (
+        <div class="trust-badge">
+          <div class="trust-metric">{badge.metric}</div>
+          <div class="trust-label">{badge.label}</div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <h2>{faqHeading}</h2>
+      <div class="faq-list">
+        {faqs.map((faq: FAQItem) => (
+          <div class="faq-item">
+            <button class="faq-question">
+              <h3>{faq.question}</h3>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>{faq.answer}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
   <!-- Bottom CTA Section -->
   <section class="cta-section">
@@ -300,14 +284,14 @@ const {
 </script>
 
 <style>
-  /* Hero Section with CTAs */
+  /* Hero Section */
   .location-hero {
-    min-height: 65vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
-    padding: 5rem 0;
+    padding: 6rem 0;
   }
 
   .hero-background {
@@ -336,7 +320,7 @@ const {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 3rem;
-    max-width: 700px;
+    max-width: 750px;
   }
 
   .location-badge {
@@ -353,7 +337,7 @@ const {
   }
 
   .location-hero h1 {
-    font-size: clamp(3rem, 7vw, 5rem);
+    font-size: clamp(3rem, 7vw, 5.5rem);
     font-weight: 900;
     color: var(--white);
     margin-bottom: 1.5rem;
@@ -362,11 +346,10 @@ const {
   }
 
   .location-hero p {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     color: var(--gray-200);
     line-height: 1.7;
     margin-bottom: 2.5rem;
-    max-width: 600px;
   }
 
   .hero-cta-buttons {
@@ -382,63 +365,78 @@ const {
     padding: 0 3rem;
   }
 
+  /* Location Content - Clean, no boxes */
   .location-content {
     padding: 6rem 0 4rem;
-    position: relative;
-    overflow: hidden;
+    background: var(--white);
   }
 
-  .location-content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image:
-      linear-gradient(45deg, transparent 45%, rgba(246, 245, 16, 0.02) 45%, rgba(246, 245, 16, 0.02) 55%, transparent 55%),
-      linear-gradient(-45deg, transparent 45%, rgba(0, 0, 0, 0.02) 45%, rgba(0, 0, 0, 0.02) 55%, transparent 55%);
-    background-size: 60px 60px;
-    opacity: 0.5;
-    pointer-events: none;
+  /* Intro Section - Simple, no box */
+  .intro-section {
+    margin-bottom: 5rem;
+    text-align: center;
   }
 
-  /* Section Spacing */
-  .intro-section,
-  .why-section,
-  .services-section,
-  .local-section,
-  .neighborhoods-section,
-  .trust-section,
-  .faq-section {
-    margin-bottom: 6rem;
-    position: relative;
-    z-index: 1;
-  }
-
-  /* Section Headings */
-  h2 {
+  .intro-section h2 {
     font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 900;
+    color: var(--black);
+    margin-bottom: 2rem;
+    letter-spacing: -2px;
+  }
+
+  .intro-lead {
+    font-size: 1.35rem;
+    color: var(--gray-600);
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* Main Content - ONE cohesive section, not boxes */
+  .main-content-section {
+    margin-bottom: 6rem;
+  }
+
+  .main-content-section h2 {
+    font-size: clamp(2.2rem, 4vw, 3rem);
     font-weight: 900;
     color: var(--black);
     margin-bottom: 2.5rem;
     letter-spacing: -2px;
-    line-height: 1.1;
   }
 
-  /* Intro Section */
-  .intro-section p {
-    font-size: 1.3rem;
-    color: var(--gray-600);
-    line-height: 1.8;
+  .main-content-text {
     max-width: 900px;
   }
 
-  /* Why Choose Us - Grid Cards */
+  .main-content-text p {
+    font-size: 1.15rem;
+    color: var(--gray-700);
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Why Choose Us - Full width background */
+  .why-section-wrapper {
+    background: var(--gray-50);
+    padding: 6rem 0;
+    margin-bottom: 0;
+  }
+
+  .why-section-wrapper h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 900;
+    color: var(--black);
+    margin-bottom: 3rem;
+    letter-spacing: -2px;
+    text-align: center;
+  }
+
   .benefits-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    gap: 2.5rem;
   }
 
   .benefit-card {
@@ -488,97 +486,111 @@ const {
     line-height: 1.7;
   }
 
-  /* Services Section */
-  .services-intro {
-    font-size: 1.2rem;
-    color: var(--gray-600);
-    line-height: 1.8;
+  /* Services Section - Simple grid, no heavy boxes */
+  .services-section {
+    padding: 6rem 0;
+    background: var(--white);
+  }
+
+  .services-section h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 900;
+    color: var(--black);
     margin-bottom: 3rem;
-    max-width: 900px;
+    letter-spacing: -2px;
+    text-align: center;
   }
 
   .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
   }
 
-  .service-card {
-    background: var(--gray-50);
-    padding: 2.5rem 2rem;
-    border-left: 5px solid var(--yellow);
+  .service-item {
+    padding: 2rem 0;
+    border-bottom: 3px solid var(--gray-100);
     transition: all 0.3s ease;
   }
 
-  .service-card:hover {
-    background: var(--white);
-    border-left-width: 8px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-    transform: translateX(8px);
+  .service-item:hover {
+    border-bottom-color: var(--yellow);
+    padding-left: 1.5rem;
   }
 
-  .service-card h3 {
+  .service-item h3 {
     font-size: 1.4rem;
     font-weight: 800;
     color: var(--black);
     margin-bottom: 0.75rem;
   }
 
-  .service-card p {
+  .service-item p {
     font-size: 1.05rem;
     color: var(--gray-600);
     line-height: 1.7;
   }
 
-  /* Local Section */
-  .local-content-main {
-    margin-bottom: 3rem;
-  }
-
-  .local-content-main p {
-    font-size: 1.15rem;
-    color: var(--gray-600);
-    line-height: 1.8;
-  }
-
-  .local-details-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-  }
-
-  .local-detail-card {
+  /* Local Knowledge Callout */
+  .local-knowledge-section {
+    padding: 0 0 6rem;
     background: var(--white);
-    padding: 2rem;
-    border: 2px solid var(--gray-200);
-    border-left: 5px solid var(--black);
-    transition: all 0.3s ease;
   }
 
-  .local-detail-card:hover {
-    border-left-color: var(--yellow);
-    border-left-width: 8px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-    transform: translateX(8px);
+  .local-knowledge-box {
+    background: linear-gradient(135deg, var(--black) 0%, #1a1a1a 100%);
+    padding: 3rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 0 100%);
   }
 
-  .local-detail-card h3 {
-    font-size: 1.3rem;
-    font-weight: 800;
+  .local-knowledge-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: var(--yellow);
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+  }
+
+  .knowledge-icon {
+    width: 4rem;
+    height: 4rem;
+    background: var(--yellow);
+    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+    flex-shrink: 0;
+  }
+
+  .local-knowledge-box p {
+    font-size: 1.15rem;
+    color: var(--gray-200);
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  /* Neighborhoods - Simple grid */
+  .neighborhoods-section {
+    padding: 6rem 0;
+    background: var(--white);
+  }
+
+  .neighborhoods-section h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 900;
     color: var(--black);
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
+    letter-spacing: -2px;
+    text-align: center;
   }
 
-  .local-detail-card p {
-    font-size: 1rem;
-    color: var(--gray-600);
-    line-height: 1.7;
-  }
-
-  /* Neighborhoods */
   .neighborhoods-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
   }
 
@@ -627,12 +639,10 @@ const {
     line-height: 1.7;
   }
 
-  /* Trust Badges */
+  /* Trust Badges - Full width dark */
   .trust-section {
     background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    padding: 4rem 3rem;
+    padding: 5rem 3rem;
   }
 
   .trust-badges {
@@ -661,7 +671,7 @@ const {
   }
 
   .trust-metric {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 900;
     color: var(--yellow);
     margin-bottom: 0.5rem;
@@ -678,7 +688,17 @@ const {
 
   /* FAQ Section */
   .faq-section {
-    padding-top: 2rem;
+    padding: 6rem 0;
+    background: var(--white);
+  }
+
+  .faq-section h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 900;
+    color: var(--black);
+    margin-bottom: 3rem;
+    letter-spacing: -2px;
+    text-align: center;
   }
 
   .faq-list {
@@ -686,6 +706,7 @@ const {
     flex-direction: column;
     gap: 1.5rem;
     max-width: 900px;
+    margin: 0 auto;
   }
 
   .faq-item {
@@ -894,7 +915,6 @@ const {
 
     .benefits-grid,
     .services-grid,
-    .local-details-grid,
     .neighborhoods-grid {
       grid-template-columns: 1fr;
     }
@@ -910,6 +930,11 @@ const {
 
     .cta-buttons .btn {
       width: 100%;
+    }
+
+    .local-knowledge-box {
+      flex-direction: column;
+      text-align: center;
     }
   }
 </style>
