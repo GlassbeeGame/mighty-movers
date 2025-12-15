@@ -1,38 +1,9 @@
-<!--
-  LOCATION PAGE TEMPLATE
-
-  This template creates a location detail page for Mighty Movers website.
-
-  HOW TO USE:
-  1. Import this template in your location page
-  2. Pass all required props as defined in the Props interface below
-  3. The template handles all HTML structure and styling
-  4. You only need to provide the content data
-
-  EXAMPLE:
-  ---
-  import LocationTemplate from './_location-page-template.astro';
-  ---
-  <LocationTemplate
-    title="La Jolla Moving Services"
-    description="Professional moving services in La Jolla..."
-    locationBadge="La Jolla"
-    heroTitle="Your Moving Title"
-    ...all other props
-  />
--->
 ---
 import Layout from '../../layouts/Layout.astro';
 
-interface ServiceLink {
-  href: string;
+interface ServiceCard {
   title: string;
   description: string;
-}
-
-interface ContentCard {
-  title: string;
-  content: string;
 }
 
 interface BenefitItem {
@@ -41,7 +12,6 @@ interface BenefitItem {
 }
 
 interface NeighborhoodCard {
-  number: string;
   title: string;
   description: string;
 }
@@ -51,18 +21,9 @@ interface FAQItem {
   answer: string;
 }
 
-interface CTACard {
-  title: string;
-  description: string;
-  buttonText: string;
-  buttonHref: string;
-  isDark?: boolean;
-}
-
-interface InfoCard {
-  title: string;
-  items?: string[];
-  content?: string;
+interface TrustBadge {
+  metric: string;
+  label: string;
 }
 
 interface Props {
@@ -75,33 +36,41 @@ interface Props {
   locationBadge: string;
   heroTitle: string;
   heroDescription: string;
+  heroCTAPrimaryText: string;
+  heroCTAPrimaryHref: string;
+  heroCTASecondaryText: string;
+  heroCTASecondaryHref: string;
 
   // Intro section
   introHeading: string;
   introText: string;
 
-  // Content cards
-  contentCards: ContentCard[];
-
-  // Services links
-  servicesHeading: string;
-  serviceLinks: ServiceLink[];
-
-  // Why Choose Us
+  // Why Choose Us (moved higher)
   whyHeading: string;
   benefits: BenefitItem[];
+
+  // Services Overview
+  servicesHeading: string;
+  servicesIntro: string;
+  services: ServiceCard[];
+
+  // Local Service Details
+  localHeading: string;
+  localContent: string;
+  drivingDirections?: string;
+  responseTimes?: string;
+  weatherConsiderations?: string;
 
   // Neighborhoods
   neighborhoodsHeading: string;
   neighborhoods: NeighborhoodCard[];
 
+  // Trust badges
+  trustBadges: TrustBadge[];
+
   // FAQ
   faqHeading: string;
   faqs: FAQItem[];
-
-  // Sidebar
-  ctaCards: CTACard[];
-  infoCards: InfoCard[];
 
   // Bottom CTA
   bottomCTAHeading: string;
@@ -119,19 +88,27 @@ const {
   locationBadge,
   heroTitle,
   heroDescription,
+  heroCTAPrimaryText,
+  heroCTAPrimaryHref,
+  heroCTASecondaryText,
+  heroCTASecondaryHref,
   introHeading,
   introText,
-  contentCards,
-  servicesHeading,
-  serviceLinks,
   whyHeading,
   benefits,
+  servicesHeading,
+  servicesIntro,
+  services,
+  localHeading,
+  localContent,
+  drivingDirections,
+  responseTimes,
+  weatherConsiderations,
   neighborhoodsHeading,
   neighborhoods,
+  trustBadges,
   faqHeading,
   faqs,
-  ctaCards,
-  infoCards,
   bottomCTAHeading,
   bottomCTADescription,
   bottomCTAPrimaryText,
@@ -142,6 +119,7 @@ const {
 ---
 
 <Layout title={title} description={description} noindex={noindex}>
+  <!-- Hero Section with CTAs -->
   <section class="location-hero">
     <div class="hero-background"></div>
     <div class="hero-overlay"></div>
@@ -149,122 +127,130 @@ const {
       <div class="location-badge">{locationBadge}</div>
       <h1>{heroTitle}</h1>
       <p>{heroDescription}</p>
-    </div>
-  </section>
-
-  <section class="location-content-section">
-    <div class="container">
-      <div class="content-layout">
-        <div class="main-column">
-          <!-- Intro Section -->
-          <div class="intro-section">
-            <h2>{introHeading}</h2>
-            <p>{introText}</p>
-          </div>
-
-          <!-- Content Cards - SEO content sections -->
-          {contentCards.map((card) => (
-            <div class="content-card">
-              <h3>{card.title}</h3>
-              <p>{card.content}</p>
-            </div>
-          ))}
-
-          <!-- Services Links - Simple list style -->
-          <div class="services-links-section">
-            <h2>{servicesHeading}</h2>
-            <div class="services-links-list">
-              {serviceLinks.map((service) => (
-                <a href={service.href} class="service-link-item">
-                  <div class="service-link-content">
-                    <h4>{service.title}</h4>
-                    <p>{service.description}</p>
-                  </div>
-                  <span class="service-link-arrow">→</span>
-                </a>
-              ))}
-            </div>
-          </div>
-
-          <!-- Why Choose Us - Location specific -->
-          <div class="why-section">
-            <h2>{whyHeading}</h2>
-            <div class="benefits-list">
-              {benefits.map((benefit) => (
-                <div class="benefit-item">
-                  <div class="benefit-icon"></div>
-                  <div class="benefit-content">
-                    <h4>{benefit.title}</h4>
-                    <p>{benefit.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <!-- Other Neighborhoods - Moved lower on page -->
-          <div class="neighborhoods-section">
-            <h2>{neighborhoodsHeading}</h2>
-            <div class="neighborhood-grid">
-              {neighborhoods.map((neighborhood) => (
-                <div class="neighborhood-card">
-                  <div class="neighborhood-number">{neighborhood.number}</div>
-                  <h3>{neighborhood.title}</h3>
-                  <p>{neighborhood.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <!-- FAQ Section - Matching service pages -->
-          <div class="faq-section">
-            <h2>{faqHeading}</h2>
-            <div class="faq-list">
-              {faqs.map((faq) => (
-                <div class="faq-item">
-                  <button class="faq-question">
-                    <h4>{faq.question}</h4>
-                    <span class="faq-icon">+</span>
-                  </button>
-                  <div class="faq-answer">
-                    <p>{faq.answer}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <!-- Sidebar - Same CTA buttons as service pages -->
-        <aside class="sidebar-column">
-          {ctaCards.map((cta) => (
-            <div class={`cta-card ${cta.isDark ? 'cta-dark' : ''}`}>
-              <h3>{cta.title}</h3>
-              <p>{cta.description}</p>
-              <a href={cta.buttonHref} class={`btn ${cta.isDark ? 'btn-secondary' : 'btn-primary'}`}>
-                {cta.buttonText}
-              </a>
-            </div>
-          ))}
-
-          {infoCards.map((info) => (
-            <div class="info-card">
-              <h4>{info.title}</h4>
-              {info.items ? (
-                <ul>
-                  {info.items.map((item) => <li>{item}</li>)}
-                </ul>
-              ) : (
-                <p>{info.content}</p>
-              )}
-            </div>
-          ))}
-        </aside>
+      <div class="hero-cta-buttons">
+        <a href={heroCTAPrimaryHref} class="btn btn-primary btn-large">{heroCTAPrimaryText}</a>
+        <a href={heroCTASecondaryHref} class="btn btn-secondary btn-large">{heroCTASecondaryText}</a>
       </div>
     </div>
   </section>
 
-  <!-- CTA Section - Matching service pages exactly -->
+  <!-- Main Content - Full Width -->
+  <div class="location-content">
+    <div class="container">
+
+      <!-- Intro Section -->
+      <section class="intro-section">
+        <h2>{introHeading}</h2>
+        <p>{introText}</p>
+      </section>
+
+      <!-- Why Choose Us - Moved Higher -->
+      <section class="why-section">
+        <h2>{whyHeading}</h2>
+        <div class="benefits-grid">
+          {benefits.map((benefit) => (
+            <div class="benefit-card">
+              <div class="benefit-icon"></div>
+              <h3>{benefit.title}</h3>
+              <p>{benefit.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Services Overview -->
+      <section class="services-section">
+        <h2>{servicesHeading}</h2>
+        <p class="services-intro">{servicesIntro}</p>
+        <div class="services-grid">
+          {services.map((service) => (
+            <div class="service-card">
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Local Service Details -->
+      <section class="local-section">
+        <h2>{localHeading}</h2>
+        <div class="local-content-main">
+          <p>{localContent}</p>
+        </div>
+
+        {(drivingDirections || responseTimes || weatherConsiderations) && (
+          <div class="local-details-grid">
+            {drivingDirections && (
+              <div class="local-detail-card">
+                <h3>Driving Directions</h3>
+                <p>{drivingDirections}</p>
+              </div>
+            )}
+            {responseTimes && (
+              <div class="local-detail-card">
+                <h3>Response Times</h3>
+                <p>{responseTimes}</p>
+              </div>
+            )}
+            {weatherConsiderations && (
+              <div class="local-detail-card">
+                <h3>Weather Considerations</h3>
+                <p>{weatherConsiderations}</p>
+              </div>
+            )}
+          </div>
+        )}
+      </section>
+
+      <!-- Neighborhoods -->
+      <section class="neighborhoods-section">
+        <h2>{neighborhoodsHeading}</h2>
+        <div class="neighborhoods-grid">
+          {neighborhoods.map((neighborhood, index) => (
+            <div class="neighborhood-card">
+              <div class="neighborhood-number">{String(index + 1).padStart(2, '0')}</div>
+              <h3>{neighborhood.title}</h3>
+              <p>{neighborhood.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Trust Badges -->
+      <section class="trust-section">
+        <div class="trust-badges">
+          {trustBadges.map((badge) => (
+            <div class="trust-badge">
+              <div class="trust-metric">{badge.metric}</div>
+              <div class="trust-label">{badge.label}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq-section">
+        <h2>{faqHeading}</h2>
+        <div class="faq-list">
+          {faqs.map((faq) => (
+            <div class="faq-item">
+              <button class="faq-question">
+                <h3>{faq.question}</h3>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>{faq.answer}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Bottom CTA Section -->
   <section class="cta-section">
     <div class="cta-content">
       <h2>{bottomCTAHeading}</h2>
@@ -314,9 +300,9 @@ const {
 </script>
 
 <style>
-  /* Hero - Left-aligned, location-focused */
+  /* Hero Section with CTAs */
   .location-hero {
-    min-height: 55vh;
+    min-height: 65vh;
     display: flex;
     align-items: center;
     position: relative;
@@ -350,7 +336,7 @@ const {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 3rem;
-    max-width: 650px;
+    max-width: 700px;
   }
 
   .location-badge {
@@ -367,36 +353,42 @@ const {
   }
 
   .location-hero h1 {
-    font-size: clamp(3.5rem, 7vw, 5.5rem);
+    font-size: clamp(3rem, 7vw, 5rem);
     font-weight: 900;
     color: var(--white);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     letter-spacing: -3px;
-    line-height: 0.95;
-    min-height: 5.5rem;
+    line-height: 1;
   }
 
   .location-hero p {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     color: var(--gray-200);
     line-height: 1.7;
-    max-width: 550px;
-    min-height: 2rem;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
   }
 
+  .hero-cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  /* Container */
   .container {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 3rem;
   }
 
-  .location-content-section {
-    padding: 6rem 0;
+  .location-content {
+    padding: 6rem 0 4rem;
     position: relative;
     overflow: hidden;
   }
 
-  .location-content-section::before {
+  .location-content::before {
     content: '';
     position: absolute;
     top: 0;
@@ -411,58 +403,54 @@ const {
     pointer-events: none;
   }
 
-  .content-layout {
-    display: grid;
-    grid-template-columns: 1fr 400px;
-    gap: 4rem;
-  }
-
-  .main-column {
-    min-width: 0;
-  }
-
-  /* Shared heading styles with service pages */
+  /* Section Spacing */
   .intro-section,
-  .neighborhoods-section,
   .why-section,
-  .services-overview,
+  .services-section,
+  .local-section,
+  .neighborhoods-section,
+  .trust-section,
   .faq-section {
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
+    position: relative;
+    z-index: 1;
   }
 
-  .intro-section h2,
-  .neighborhoods-section h2,
-  .why-section h2,
-  .services-overview h2,
-  .faq-section h2 {
+  /* Section Headings */
+  h2 {
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 900;
     color: var(--black);
-    margin-bottom: 3rem;
-    letter-spacing: -1px;
-    min-height: 3.5rem;
+    margin-bottom: 2.5rem;
+    letter-spacing: -2px;
+    line-height: 1.1;
   }
 
+  /* Intro Section */
   .intro-section p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--gray-600);
     line-height: 1.8;
-    min-height: 2rem;
+    max-width: 900px;
   }
 
-  /* Content Cards - SEO content sections */
-  .content-card {
+  /* Why Choose Us - Grid Cards */
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .benefit-card {
     background: var(--white);
     padding: 2.5rem 2rem;
-    border-radius: 0;
     border: 3px solid var(--black);
-    margin-bottom: 2.5rem;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
     clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 
-  .content-card::before {
+  .benefit-card::before {
     content: '';
     position: absolute;
     top: 0;
@@ -473,31 +461,124 @@ const {
     clip-path: polygon(100% 0, 100% 100%, 0 0);
   }
 
-  .content-card:hover {
+  .benefit-card:hover {
     border-color: var(--yellow);
     transform: translate(-4px, -4px);
     box-shadow: 8px 8px 0 rgba(246, 245, 16, 0.9), 0 0 30px rgba(246, 245, 16, 0.4);
   }
 
-  .content-card h3 {
-    font-size: 1.8rem;
+  .benefit-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    background: var(--yellow);
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+    margin-bottom: 1.5rem;
+  }
+
+  .benefit-card h3 {
+    font-size: 1.4rem;
     font-weight: 800;
     color: var(--black);
-    margin-bottom: 1.25rem;
-    min-height: 1.8rem;
+    margin-bottom: 0.75rem;
   }
 
-  .content-card p {
+  .benefit-card p {
     font-size: 1.05rem;
     color: var(--gray-600);
-    line-height: 1.8;
-    min-height: 1.5rem;
+    line-height: 1.7;
   }
 
-  /* Neighborhoods Grid - Location-specific design */
-  .neighborhood-grid {
+  /* Services Section */
+  .services-intro {
+    font-size: 1.2rem;
+    color: var(--gray-600);
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    max-width: 900px;
+  }
+
+  .services-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .service-card {
+    background: var(--gray-50);
+    padding: 2.5rem 2rem;
+    border-left: 5px solid var(--yellow);
+    transition: all 0.3s ease;
+  }
+
+  .service-card:hover {
+    background: var(--white);
+    border-left-width: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transform: translateX(8px);
+  }
+
+  .service-card h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--black);
+    margin-bottom: 0.75rem;
+  }
+
+  .service-card p {
+    font-size: 1.05rem;
+    color: var(--gray-600);
+    line-height: 1.7;
+  }
+
+  /* Local Section */
+  .local-content-main {
+    margin-bottom: 3rem;
+  }
+
+  .local-content-main p {
+    font-size: 1.15rem;
+    color: var(--gray-600);
+    line-height: 1.8;
+  }
+
+  .local-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .local-detail-card {
+    background: var(--white);
+    padding: 2rem;
+    border: 2px solid var(--gray-200);
+    border-left: 5px solid var(--black);
+    transition: all 0.3s ease;
+  }
+
+  .local-detail-card:hover {
+    border-left-color: var(--yellow);
+    border-left-width: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transform: translateX(8px);
+  }
+
+  .local-detail-card h3 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--black);
+    margin-bottom: 1rem;
+  }
+
+  .local-detail-card p {
+    font-size: 1rem;
+    color: var(--gray-600);
+    line-height: 1.7;
+  }
+
+  /* Neighborhoods */
+  .neighborhoods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
   }
 
@@ -505,8 +586,8 @@ const {
     background: var(--gray-50);
     padding: 2.5rem 2rem;
     border-left: 5px solid var(--yellow);
-    transition: all 0.3s ease;
     position: relative;
+    transition: all 0.3s ease;
   }
 
   .neighborhood-card:hover {
@@ -533,159 +614,83 @@ const {
   }
 
   .neighborhood-card h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 800;
     color: var(--black);
     margin-bottom: 0.75rem;
-    min-height: 1.4rem;
+    padding-right: 3rem;
   }
 
   .neighborhood-card p {
     font-size: 1rem;
     color: var(--gray-600);
     line-height: 1.7;
-    min-height: 1rem;
   }
 
-  /* Why Choose Us - List style instead of cards */
-  .benefits-list {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  /* Trust Badges */
+  .trust-section {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    padding: 4rem 3rem;
   }
 
-  .benefit-item {
+  .trust-badges {
+    max-width: 1200px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+  }
+
+  .trust-badge {
+    text-align: center;
     padding: 2rem;
-    background: var(--white);
-    border: 2px solid var(--gray-200);
-    border-left: 5px solid var(--black);
-    transition: all 0.3s ease;
-  }
-
-  .benefit-item:hover {
-    border-left-color: var(--yellow);
-    border-left-width: 8px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-    transform: translateX(8px);
-  }
-
-  .benefit-icon {
-    width: 3.5rem;
-    height: 3.5rem;
-    background: var(--yellow);
-    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
-    flex-shrink: 0;
-  }
-
-  .benefit-content h4 {
-    font-size: 1.3rem;
-    font-weight: 800;
-    color: var(--black);
-    margin-bottom: 0.75rem;
-    min-height: 1.3rem;
-  }
-
-  .benefit-content p {
-    font-size: 1.05rem;
-    color: var(--gray-600);
-    line-height: 1.7;
-    min-height: 1rem;
-  }
-
-  /* Services Links - Clean list style */
-  .services-links-section {
-    margin-bottom: 5rem;
-    background: var(--gray-50);
-    padding: 3rem 2.5rem;
-    border-left: 5px solid var(--yellow);
-  }
-
-  .services-links-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .service-link-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 0;
-    border-bottom: 2px solid var(--gray-200);
-    text-decoration: none;
-    color: var(--black);
-    transition: all 0.3s ease;
     position: relative;
   }
 
-  .service-link-item:last-child {
-    border-bottom: none;
-  }
-
-  .service-link-item:hover {
-    padding-left: 1.5rem;
-    border-bottom-color: var(--yellow);
-  }
-
-  .service-link-item:hover::before {
+  .trust-badge::before {
     content: '';
     position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 5px;
-    height: 60%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 3px;
     background: var(--yellow);
   }
 
-  .service-link-content h4 {
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: var(--black);
-    margin-bottom: 0.5rem;
-    min-height: 1.4rem;
-  }
-
-  .service-link-content p {
-    font-size: 1rem;
-    color: var(--gray-600);
-    line-height: 1.6;
-    min-height: 1rem;
-  }
-
-  .service-link-arrow {
-    font-size: 2rem;
-    color: var(--black);
-    font-weight: 300;
-    transition: all 0.3s ease;
-    flex-shrink: 0;
-    margin-left: 2rem;
-  }
-
-  .service-link-item:hover .service-link-arrow {
+  .trust-metric {
+    font-size: 3rem;
+    font-weight: 900;
     color: var(--yellow);
-    transform: translateX(10px);
+    margin-bottom: 0.5rem;
+    letter-spacing: -2px;
   }
 
-  /* FAQ Section - Exact match to service pages */
+  .trust-label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gray-300);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* FAQ Section */
   .faq-section {
-    padding-top: 4rem;
-    border-top: 3px solid var(--gray-200);
+    padding-top: 2rem;
   }
 
   .faq-list {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
+    max-width: 900px;
   }
 
   .faq-item {
     background: var(--white);
     border: 3px solid var(--black);
-    border-radius: 0;
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
@@ -701,6 +706,7 @@ const {
     height: 20px;
     background: var(--yellow);
     clip-path: polygon(100% 0, 100% 100%, 0 0);
+    z-index: 1;
   }
 
   .faq-item:hover {
@@ -711,7 +717,7 @@ const {
 
   .faq-question {
     width: 100%;
-    padding: 2rem;
+    padding: 1.75rem 2rem;
     background: none;
     border: none;
     cursor: pointer;
@@ -726,12 +732,11 @@ const {
     background: rgba(246, 245, 16, 0.05);
   }
 
-  .faq-question h4 {
-    font-size: 1.3rem;
+  .faq-question h3 {
+    font-size: 1.2rem;
     font-weight: 800;
     color: var(--black);
     margin: 0;
-    min-height: 1.3rem;
   }
 
   .faq-icon {
@@ -757,148 +762,22 @@ const {
   }
 
   .faq-answer p {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: var(--gray-600);
     line-height: 1.8;
     padding: 0 2rem 2rem;
-    min-height: 1.5rem;
   }
 
-  /* Sidebar - Matching service pages exactly */
-  .sidebar-column {
-    position: sticky;
-    top: 6rem;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .cta-card {
-    background: var(--black);
-    color: var(--white);
-    padding: 2.5rem 2rem;
-    border-radius: 0;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    position: relative;
-    border: 3px solid var(--gray-800);
-    overflow: hidden;
-  }
-
-  .cta-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background: var(--yellow);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.4s ease;
-  }
-
-  .cta-card:hover {
-    border-color: var(--yellow);
-    box-shadow: 0 8px 30px rgba(246, 245, 16, 0.3);
-  }
-
-  .cta-card:hover::before {
-    transform: scaleX(1);
-  }
-
-  .cta-dark {
-    background: var(--black);
-    color: var(--white);
-  }
-
-  .cta-card h3 {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--white);
-    margin-bottom: 1rem;
-    min-height: 1.5rem;
-  }
-
-  .cta-card p {
-    color: var(--gray-400);
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-    min-height: 1.5rem;
-  }
-
-  .info-card {
-    background: var(--white);
-    padding: 2rem;
-    border: 3px solid var(--black);
-    border-radius: 0;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    position: relative;
-    clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 0 100%);
-  }
-
-  .info-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 15px;
-    height: 15px;
-    background: var(--yellow);
-    clip-path: polygon(100% 0, 100% 100%, 0 0);
-  }
-
-  .info-card:hover {
-    border-color: var(--yellow);
-    transform: translate(-4px, -4px);
-    box-shadow: 8px 8px 0 rgba(246, 245, 16, 0.9), 0 0 30px rgba(246, 245, 16, 0.4);
-  }
-
-  .info-card h4 {
-    font-size: 1.2rem;
-    font-weight: 800;
-    color: var(--black);
-    margin-bottom: 1.5rem;
-    min-height: 1.2rem;
-  }
-
-  .info-card ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .info-card li {
-    padding: 0.75rem 0;
-    color: var(--gray-600);
-    font-size: 0.95rem;
-    border-bottom: 1px solid var(--gray-200);
-    min-height: 1rem;
-  }
-
-  .info-card li:last-child {
-    border-bottom: none;
-  }
-
-  .info-card p {
-    color: var(--gray-600);
-    line-height: 1.6;
-    font-size: 0.95rem;
-    min-height: 1.5rem;
-  }
-
-  /* Buttons - Matching service pages exactly */
+  /* Buttons */
   .btn {
     display: inline-block;
-    width: 100%;
-    padding: 1rem 2rem;
-    font-size: 1rem;
+    padding: 1.25rem 2.5rem;
+    font-size: 1.05rem;
     font-weight: 700;
     text-decoration: none;
     text-align: center;
-    border-radius: 0;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     border: 2px solid transparent;
-    min-height: 3rem;
     clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
   }
 
@@ -915,11 +794,6 @@ const {
     border-color: var(--yellow);
     transform: translate(-2px, -2px);
     box-shadow: 6px 6px 0 rgba(246, 245, 16, 0.7), 0 0 25px rgba(246, 245, 16, 0.5);
-  }
-
-  .cta-dark .btn-primary {
-    background: var(--yellow);
-    color: var(--black);
   }
 
   .btn-secondary {
@@ -941,14 +815,13 @@ const {
     font-size: 1.1rem;
   }
 
-  /* CTA Section - Exact match to service pages */
+  /* Bottom CTA Section */
   .cta-section {
     background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-    padding: 6rem 2rem;
+    padding: 6rem 3rem;
     text-align: center;
     position: relative;
     overflow: hidden;
-    margin-top: 4rem;
   }
 
   .cta-section::before {
@@ -973,15 +846,13 @@ const {
     font-weight: 900;
     color: var(--white);
     margin-bottom: 1rem;
-    letter-spacing: -1px;
-    min-height: 2.5rem;
+    letter-spacing: -2px;
   }
 
   .cta-section p {
     font-size: 1.3rem;
     color: var(--gray-300);
     margin-bottom: 3rem;
-    min-height: 1.5rem;
   }
 
   .cta-buttons {
@@ -1001,30 +872,9 @@ const {
     background: transparent;
     color: var(--yellow);
     border-color: var(--yellow);
-    box-shadow: 6px 6px 0 rgba(246, 245, 16, 0.7), 0 0 25px rgba(246, 245, 16, 0.5);
   }
 
   /* Responsive */
-  @media (max-width: 1024px) {
-    .content-layout {
-      grid-template-columns: 1fr;
-      gap: 3rem;
-    }
-
-    .sidebar-column {
-      position: relative;
-      top: 0;
-    }
-
-    .neighborhood-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .services-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
   @media (max-width: 768px) {
     .container {
       padding: 0 1.5rem;
@@ -1034,29 +884,32 @@ const {
       padding: 0 1.5rem;
     }
 
-    .location-content-section {
-      padding: 3rem 0;
-    }
-
-    .services-links-section {
-      padding: 2rem 1.5rem;
-    }
-
-    .service-link-item {
+    .hero-cta-buttons {
       flex-direction: column;
-      align-items: flex-start;
-      padding: 1.5rem 0;
     }
 
-    .service-link-arrow {
-      align-self: flex-end;
-      margin-left: 0;
-      margin-top: 1rem;
+    .hero-cta-buttons .btn {
+      width: 100%;
     }
 
-    .benefit-item {
+    .benefits-grid,
+    .services-grid,
+    .local-details-grid,
+    .neighborhoods-grid {
       grid-template-columns: 1fr;
-      gap: 1rem;
+    }
+
+    .trust-badges {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+    }
+
+    .cta-buttons .btn {
+      width: 100%;
     }
   }
 </style>
