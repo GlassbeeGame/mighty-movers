@@ -3,29 +3,164 @@ import LocationTemplate from './_location-page-template.astro';
 ---
 
 <LocationTemplate
-  title="Pacific Beach Moving Services"
-  description="Professional moving services in Pacific Beach, San Diego."
-  noindex={true}
+  title="Pacific Beach Movers — Trusted Local Moving Services in Pacific Beach, CA"
+  description="Professional movers in Pacific Beach offering reliable local residential moving services, transparent hourly pricing, same‑day/next‑day availability, and neighborhood expertise throughout Pacific Beach and greater San Diego."
+  noindex={false}
+
   locationBadge="Pacific Beach"
-  heroTitle="Professional Movers in Pacific Beach"
-  heroDescription="Reliable moving services for Pacific Beach."
-  introHeading="Moving Services in Pacific Beach"
-  introText="Mighty Movers provides professional moving services throughout Pacific Beach."
-  contentCards={[{title:"Local Pacific Beach Moving",content:"Expert moving services in Pacific Beach."},{title:"Why Choose Us",content:"Licensed and insured movers."},{title:"Get Started",content:"Contact us today."}]}
-  servicesHeading="Our Moving Services"
-  serviceLinks={[{href:"/services/local-moving",title:"Local Moving",description:"Local services in Pacific Beach"},{href:"/services/residential-moving",title:"Residential",description:"Home moves"},{href:"/services/commercial-moving",title:"Commercial",description:"Business moves"},{href:"/services/packing-unpacking",title:"Packing",description:"Packing services"}]}
-  whyHeading="Why Choose Mighty Movers"
-  benefits={[{title:"Licensed & Insured",description:"Fully licensed and insured"},{title:"Experienced Team",description:"Professional movers"},{title:"Competitive Rates",description:"Fair pricing"},{title:"Same-Day Service",description:"Fast service"}]}
-  neighborhoodsHeading="Other Areas We Serve"
-  neighborhoods={[{number:"01",title:"La Jolla",description:"Coastal moves"},{number:"02",title:"Downtown",description:"Urban solutions"},{number:"03",title:"Pacific Beach",description:"Beach services"},{number:"04",title:"Del Mar",description:"North County"}]}
-  faqHeading="Frequently Asked Questions"
-  faqs={[{question:"Do you serve Pacific Beach?",answer:"Yes! We serve all of San Diego County."},{question:"What services?",answer:"Local moving, packing, commercial, and more."},{question:"Same-day service?",answer:"Yes, based on availability."},{question:"Licensed?",answer:"Yes, fully licensed and insured."},{question:"How to get quote?",answer:"Contact us by phone or website."}]}
-  ctaCards={[{title:"Get Your Free Quote",description:"Request a free quote today.",buttonText:"Get Free Quote",buttonHref:"/contact",isDark:false},{title:"Call Us Today",description:"Speak with a specialist.",buttonText:"(619) 555-MOVE",buttonHref:"tel:6195556683",isDark:true}]}
-  infoCards={[{title:"Service Hours",items:["Mon-Fri: 7AM-7PM","Sat: 8AM-6PM","Sun: 9AM-5PM","Same-day available"]},{title:"Service Area",content:"Serving Pacific Beach and San Diego County."}]}
-  bottomCTAHeading="Ready to Move?"
-  bottomCTADescription="Get started with San Diego's trusted movers."
-  bottomCTAPrimaryText="Get Free Quote"
+  heroTitle="Top Movers in Pacific Beach, CA — Fast, Friendly, Neighborhood Moving Services"
+  heroDescription="Mighty Movers San Diego provides dependable Pacific Beach moving services with clear pricing, professional teams, and same‑day/next‑day availability. Whether you're moving down the block or across Pacific Beach, our crew delivers a smooth, stress‑free experience."
+
+  introHeading="Welcome to Pacific Beach"
+  introText="If you're searching for movers in Pacific Beach, you've come to the right place. Mighty Movers San Diego is a trusted San Diego moving company specializing in local residential relocations throughout Pacific Beach and all of San Diego County. From apartment moves near Mission Blvd to homes by the boardwalk, our experienced team handles every step with care and professionalism."
+
+  mainContentHeading="Pacific Beach Moving Services You Can Rely On"
+  mainContent="Pacific Beach has a vibrant coastal lifestyle with unique moving logistics: narrow streets near the beach, limited parking zones around Mission Boulevard, and units close to Sand/Boardwalk areas. Our movers know the neighborhood, how to navigate local access challenges, and plan moves strategically around foot traffic and beach parking.
+
+Mighty Movers offers full‑service local moves with padded protection, shrink wrap, professional tools, and a trained team to make your Pacific Beach relocation smooth — whether you're in a studio, condo, or family home. We also provide labor‑only help for loading/unloading and coordinate with storage services when needed.
+
+All of our hourly pricing is transparent and equipment included, and you can check availability for same‑day or next‑day moves right from our website or by calling (619) 906‑9018.
+
+Pacific Beach moves often involve boardwalk access, narrow residential streets, and restricted curb zones near Mission and Grand Avenues. We plan routes and timing to avoid peak beach traffic and coordinate parking permits or loading zones when necessary — all to keep your Pacific Beach move efficient and stress‑free."
+
+  servicesHeading="Our Pacific Beach Moving Services"
+  services={[
+    {
+      title: "Local Residential Moving",
+      description: "Movers in Pacific Beach who know the beaches, boardwalk areas, and neighborhood logistics."
+    },
+    {
+      title: "Truck & Crew Options",
+      description: "Choose the right truck and crew size for your home size and needs."
+    },
+    {
+      title: "Labor‑Only Assistance",
+      description: "Need help loading or unloading? We've got you covered."
+    },
+    {
+      title: "Packing Services",
+      description: "Partial or full packing support available. Packing supplies not included."
+    },
+    {
+      title: "Short‑Term Storage Coordination",
+      description: "We help arrange storage when your move needs it."
+    },
+    {
+      title: "All Equipment Included",
+      description: "Moving pads, dollies, shrink wrap, and quick‑pack totes included on full moves."
+    }
+  ]}
+
+  whyHeading="Why Pacific Beach Residents Choose Mighty Movers"
+  benefits={[
+    {
+      title: "Local Pacific Beach Knowledge",
+      description: "We understand the flow of traffic, beach access, and neighborhood parking near the boardwalk and Mission Blvd."
+    },
+    {
+      title: "Transparent Hourly Pricing",
+      description: "Clear rates with all standard equipment included — no hidden fees."
+    },
+    {
+      title: "Same‑Day & Next‑Day Options",
+      description: "Flexible scheduling when availability allows."
+    },
+    {
+      title: "Professional & Well‑Equipped Crews",
+      description: "Modern trucks, pads, tools, lifting straps, and protective materials on every move."
+    },
+    {
+      title: "Multiple Service Levels",
+      description: "Full moves, labor‑only loading/unloading, packing help, and more."
+    },
+    {
+      title: "Service Throughout San Diego County",
+      description: "Not just PB — coastal and inland neighborhoods served with reliable care."
+    }
+  ]}
+
+  neighborhoodsHeading="Pacific Beach & Nearby Areas We Serve"
+  neighborhoods={[
+    {
+      title: "North Pacific Beach",
+      description: "Coastal residences and apartments with boardwalk access near Crystal Pier."
+    },
+    {
+      title: "South Pacific Beach",
+      description: "Homes and condos closer to Tourmaline Surfing Park and quieter beach zones."
+    },
+    {
+      title: "Bayview Park",
+      description: "Residential streets with easy beach access and neighborhood moves."
+    },
+    {
+      title: "Mission Blvd Corridor",
+      description: "Apartments and homes near shopping, dining, and transit."
+    }
+  ]}
+
+  faqHeading="Pacific Beach Moving FAQs"
+  faqs={[
+    {
+      question: "What makes moving in Pacific Beach different?",
+      answer: "Pacific Beach has narrow streets, limited curb parking near the boardwalk, and high foot traffic near beaches. Our movers plan around these local conditions to keep your move smooth and compliant."
+    },
+    {
+      question: "Can I schedule a same‑day move?",
+      answer: "Yes — Mighty Movers offers same‑day movers in Pacific Beach when our crews are available. Call (619) 906‑9018 or check online to confirm."
+    },
+    {
+      question: "Are moving supplies included in my quote?",
+      answer: "Yes. All full‑service moves include professional equipment like moving pads, dollies, straps, and quick‑pack totes. Packing supplies such as boxes are not included."
+    },
+    {
+      question: "Do you handle apartment and condo moves in PB?",
+      answer: "Absolutely. We're experienced with apartments, condos, stair access, and narrow load zones common in Pacific Beach."
+    },
+    {
+      question: "How is pricing determined?",
+      answer: "Moves are hourly with minimums based on truck size and crew configuration. We provide transparent quotes over the phone or online."
+    }
+  ]}
+
+  ctaCards={[
+    {
+      title: "Get Your Free Pacific Beach Moving Quote",
+      description: "Call or complete our online form for a clear, transparent moving estimate today.",
+      buttonText: "Get A Quote",
+      buttonHref: "/contact",
+      isDark: false
+    },
+    {
+      title: "Need a Same‑Day Move in Pacific Beach?",
+      description: "We offer same‑day and next‑day movers in Pacific Beach when availability allows — call now!",
+      buttonText: "Call Now",
+      buttonHref: "tel:+16199069018",
+      isDark: true
+    }
+  ]}
+
+  infoCards={[
+    {
+      title: "Pacific Beach Service Area",
+      items: [
+        "North Pacific Beach",
+        "South Pacific Beach",
+        "Bayview Park",
+        "Mission Blvd area",
+        "Boardwalk & beachfront homes"
+      ]
+    },
+    {
+      title: "Contact & Booking",
+      content: "Call (619) 906‑9018 for free quotes, availability, and scheduling."
+    }
+  ]}
+
+  bottomCTAHeading="Ready to Move in Pacific Beach?"
+  bottomCTADescription="Whether you're relocating within Pacific Beach or heading elsewhere in San Diego County, Mighty Movers delivers dependable service with transparent pricing and experienced crews."
+  bottomCTAPrimaryText="Book Your Move"
   bottomCTAPrimaryHref="/contact"
-  bottomCTASecondaryText="Call (619) 555-MOVE"
-  bottomCTASecondaryHref="tel:6195556683"
+  bottomCTASecondaryText="Learn More Services"
+  bottomCTASecondaryHref="/services"
 />
