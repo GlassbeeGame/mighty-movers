@@ -51,7 +51,7 @@ interface Props {
 
   // Services Overview - Simple grid, no boxes
   servicesHeading: string;
-  services: ServiceCard[];
+  services?: ServiceCard[];
 
   // Local details (optional)
   localKnowledgeText?: string;
@@ -61,7 +61,7 @@ interface Props {
   neighborhoods: NeighborhoodCard[];
 
   // Trust badges
-  trustBadges: TrustBadge[];
+  trustBadges?: TrustBadge[];
 
   // FAQ
   faqHeading: string;
@@ -160,19 +160,21 @@ const {
   </section>
 
   <!-- Services Section - Back to white, simple grid -->
-  <section class="services-section">
-    <div class="container">
-      <h2>{servicesHeading}</h2>
-      <div class="services-grid">
-        {services.map((service: ServiceCard) => (
-          <div class="service-item">
-            <h3>{service.title}</h3>
-            <p>{service.description}</p>
-          </div>
-        ))}
+  {services && (
+    <section class="services-section">
+      <div class="container">
+        <h2>{servicesHeading}</h2>
+        <div class="services-grid">
+          {services.map((service: ServiceCard) => (
+            <div class="service-item">
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  )}
 
   <!-- Local Knowledge - Optional callout section -->
   {localKnowledgeText && (
@@ -203,16 +205,18 @@ const {
   </section>
 
   <!-- Trust Badges - Full width dark section -->
-  <section class="trust-section">
-    <div class="trust-badges">
-      {trustBadges.map((badge: TrustBadge) => (
-        <div class="trust-badge">
-          <div class="trust-metric">{badge.metric}</div>
-          <div class="trust-label">{badge.label}</div>
-        </div>
-      ))}
-    </div>
-  </section>
+  {trustBadges && (
+    <section class="trust-section">
+      <div class="trust-badges">
+        {trustBadges.map((badge: TrustBadge) => (
+          <div class="trust-badge">
+            <div class="trust-metric">{badge.metric}</div>
+            <div class="trust-label">{badge.label}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+  )}
 
   <!-- FAQ Section -->
   <section class="faq-section">
