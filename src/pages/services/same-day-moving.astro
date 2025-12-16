@@ -156,50 +156,57 @@ const props = {
     }
   ],
 
+  // Trust badges
+  trustBadges: [
+    {
+      metric: "1000+",
+      label: "Moves Completed"
+    },
+    {
+      metric: "Licensed",
+      label: "& Insured"
+    },
+    {
+      metric: "All SD",
+      label: "County Coverage"
+    }
+  ],
+
   // Sidebar CTAs
   ctaCards: [
     {
-      title: "Need Movers Today?",
+      title: "Get Your Free Quote",
       description:
         "Call now to check same day availability. We respond fast to urgent moving situations.",
-      buttonText: "Call (619) 906-9018",
-      buttonHref: "tel:16199069018"
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
     },
     {
-      title: "Emergency Moving Help",
+      title: "Call Us Today",
       description:
-        "Last-minute situation? We provide fast, professional same day moving across San Diego.",
-      buttonText: "Check Availability",
-      buttonHref: "/contact",
-      isSecondary: true
+        "Speak with a moving specialist about same-day moving availability.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
     }
   ],
 
   // Sidebar info cards
   infoCards: [
     {
-      title: "Same Day Services",
+      title: "Service Hours",
       items: [
-        "Rapid dispatch available",
-        "Full apartment & home moves",
-        "Rental truck loading/unloading",
-        "Emergency furniture moving",
-        "All equipment included"
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Same-day service available"
       ]
     },
     {
-      title: "Why Choose Same Day",
-      items: [
-        "Rapid dispatch available",
-        "No emergency surcharges",
-        "Fully equipped teams",
-        "Professional under pressure"
-      ]
-    },
-    {
-      title: "Service Area",
+      title: "Why Choose Us",
       content:
-        "We provide same day moving services throughout San Diego County based on crew availability and location."
+        "Over 10 years serving San Diego County with professional same-day moving services. Licensed, insured, and locally owned."
     }
   ],
 

@@ -141,50 +141,57 @@ const props = {
     }
   ],
 
+  // Trust badges
+  trustBadges: [
+    {
+      metric: "1000+",
+      label: "Moves Completed"
+    },
+    {
+      metric: "Licensed",
+      label: "& Insured"
+    },
+    {
+      metric: "All SD",
+      label: "County Coverage"
+    }
+  ],
+
   // Sidebar CTAs
   ctaCards: [
     {
-      title: "Get Your Packing Quote",
+      title: "Get Your Free Quote",
       description:
         "Tell us which rooms or items need packing. We'll recommend the right crew and timeline.",
-      buttonText: "Call (619) 906-9018",
-      buttonHref: "tel:16199069018"
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
     },
     {
-      title: "Need Same-Day Packing Help?",
+      title: "Call Us Today",
       description:
-        "Behind schedule? We offer same-day and last-minute packing services when available.",
-      buttonText: "Check Availability",
-      buttonHref: "/contact",
-      isSecondary: true
+        "Speak with a moving specialist about your packing needs.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
     }
   ],
 
   // Sidebar info cards
   infoCards: [
     {
-      title: "Packing Services Offered",
+      title: "Service Hours",
       items: [
-        "Full-home packing",
-        "Partial room packing",
-        "Kitchen packing specialists",
-        "Fragile item protection",
-        "Unpacking services"
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Same-day service available"
       ]
     },
     {
-      title: "Why Choose Our Packers",
-      items: [
-        "Trained packing professionals",
-        "Clear labeling & organization",
-        "Fragile item specialists",
-        "Same-day packing available"
-      ]
-    },
-    {
-      title: "Service Area",
+      title: "Why Choose Us",
       content:
-        "We provide packing and unpacking services throughout San Diego County for homes, apartments, and condos."
+        "Over 10 years serving San Diego County with professional packing and unpacking services. Licensed, insured, and locally owned."
     }
   ],
 

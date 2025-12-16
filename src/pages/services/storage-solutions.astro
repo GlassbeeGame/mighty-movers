@@ -151,50 +151,57 @@ const props = {
     }
   ],
 
+  // Trust badges
+  trustBadges: [
+    {
+      metric: "1000+",
+      label: "Moves Completed"
+    },
+    {
+      metric: "Licensed",
+      label: "& Insured"
+    },
+    {
+      metric: "All SD",
+      label: "County Coverage"
+    }
+  ],
+
   // Sidebar CTAs
   ctaCards: [
     {
-      title: "Get Your Storage Quote",
+      title: "Get Your Free Quote",
       description:
         "Tell us what you need to store. We'll recommend the right unit size and handle everything.",
-      buttonText: "Call (619) 906-9018",
-      buttonHref: "tel:16199069018"
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
     },
     {
-      title: "Need Student Storage Near SDSU?",
+      title: "Call Us Today",
       description:
-        "Short-term storage for college students with pickup and delivery included.",
-      buttonText: "Request Quote",
-      buttonHref: "/contact",
-      isSecondary: true
+        "Speak with a moving specialist about your storage needs.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
     }
   ],
 
   // Sidebar info cards
   infoCards: [
     {
-      title: "Storage Unit Sizes",
+      title: "Service Hours",
       items: [
-        "10×10 – 1-bedroom apartments",
-        "10×15 – 2-bedroom homes",
-        "10×20 – Multi-bedroom homes",
-        "Full-service pickup & delivery",
-        "30-day storage + extensions"
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Flexible storage solutions"
       ]
     },
     {
-      title: "Why Choose Our Storage",
-      items: [
-        "Full-service pickup & delivery",
-        "Multiple unit sizes",
-        "Short-term & flexible",
-        "Protected & inventoried"
-      ]
-    },
-    {
-      title: "Service Area",
+      title: "Why Choose Us",
       content:
-        "We provide storage solutions throughout San Diego County with secure facilities and professional moving support."
+        "Over 10 years serving San Diego County with professional storage solutions. Licensed, insured, and locally owned."
     }
   ],
 

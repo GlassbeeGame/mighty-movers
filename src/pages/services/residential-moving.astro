@@ -140,48 +140,55 @@ const props = {
     }
   ],
 
+  // Trust badges
+  trustBadges: [
+    {
+      metric: "1000+",
+      label: "Moves Completed"
+    },
+    {
+      metric: "Licensed",
+      label: "& Insured"
+    },
+    {
+      metric: "All SD",
+      label: "County Coverage"
+    }
+  ],
+
   // Sidebar
   ctaCards: [
     {
       title: "Get a Residential Moving Quote",
       description:
         "Tell us about your home and moving day needs. We'll recommend the perfect truck and crew.",
-      buttonText: "Call (619) 906-9018",
-      buttonHref: "tel:16199069018"
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
     },
     {
-      title: "Need Same-Day Movers?",
-      description: "Ask about today's residential moving availability.",
-      buttonText: "Check Availability",
-      buttonHref: "/contact",
-      isSecondary: true
+      title: "Call Us Today",
+      description: "Speak with a moving specialist about your residential move.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
     }
   ],
 
   infoCards: [
     {
-      title: "Residential Moving Packages",
+      title: "Service Hours",
       items: [
-        "2 Movers + 10FT Truck – $119/hr (3 hr min)",
-        "2 Movers + 20FT Truck – $129/hr (3 hr min)",
-        "2 Movers + 26FT Truck – $149/hr (4 hr min)",
-        "3 Movers + 26FT Truck – $189/hr (4 hr min)",
-        "4 Movers + 26FT Truck – $225/hr (4 hr min)"
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Same-day service available"
       ]
     },
     {
-      title: "Why Homeowners Choose Us",
-      items: [
-        "Apartment, condo & home specialists",
-        "Transparent hourly rates",
-        "Fully equipped trucks",
-        "Friendly, experienced movers"
-      ]
-    },
-    {
-      title: "Service Area",
+      title: "Why Choose Us",
       content:
-        "We provide residential moving throughout San Diego County—from coastal communities to inland suburbs."
+        "Over 10 years serving San Diego County with professional residential moving services. Licensed, insured, and locally owned."
     }
   ],
 

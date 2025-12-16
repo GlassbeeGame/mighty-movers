@@ -151,48 +151,57 @@ const props = {
     }
   ],
 
+  // Trust badges
+  trustBadges: [
+    {
+      metric: "1000+",
+      label: "Moves Completed"
+    },
+    {
+      metric: "Licensed",
+      label: "& Insured"
+    },
+    {
+      metric: "All SD",
+      label: "County Coverage"
+    }
+  ],
+
   // Sidebar CTAs
   ctaCards: [
     {
-      title: "Get Your Senior Moving Quote",
+      title: "Get Your Free Quote",
       description:
         "Tell us about your transition needs. We'll create a gentle, supportive moving plan for your family.",
-      buttonText: "Call (619) 906-9018",
-      buttonHref: "tel:16199069018"
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
     },
     {
-      title: "Need Short-Notice Senior Movers?",
+      title: "Call Us Today",
       description:
-        "Unexpected move or quick transition? Check availability for next-day senior moving.",
-      buttonText: "Check Availability",
-      buttonHref: "/contact",
-      isSecondary: true
+        "Speak with a moving specialist about your senior move.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
     }
   ],
 
   // Sidebar info cards
   infoCards: [
     {
-      title: "Senior Moving Packages",
+      title: "Service Hours",
       items: [
-        "2 Movers + 10FT Truck – $119/hr (3 hr min)",
-        "2 Movers + 20FT Truck – $129/hr (3 hr min)",
-        "2 Movers + 26FT Truck – $149/hr (4 hr min)"
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Flexible scheduling available"
       ]
     },
     {
-      title: "Why Families Choose Us",
-      items: [
-        "Patient & compassionate service",
-        "Downsizing specialists",
-        "Assisted living experts",
-        "Sentimental item care"
-      ]
-    },
-    {
-      title: "Service Area",
+      title: "Why Choose Us",
       content:
-        "We provide senior moving services throughout San Diego County, including all major retirement communities and assisted living facilities."
+        "Over 10 years serving San Diego County with professional senior moving services. Licensed, insured, and locally owned."
     }
   ],
 

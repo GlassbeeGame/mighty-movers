@@ -146,48 +146,57 @@ const props = {
     }
   ],
 
+  // Trust badges
+  trustBadges: [
+    {
+      metric: "1000+",
+      label: "Moves Completed"
+    },
+    {
+      metric: "Licensed",
+      label: "& Insured"
+    },
+    {
+      metric: "All SD",
+      label: "County Coverage"
+    }
+  ],
+
   // Sidebar CTAs
   ctaCards: [
     {
-      title: "Get Your College Moving Quote",
+      title: "Get Your Free Quote",
       description:
         "Tell us your campus, housing location, and what you're moving. We'll help you plan an affordable move.",
-      buttonText: "Call (619) 906-9018",
-      buttonHref: "tel:16199069018"
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
     },
     {
-      title: "Need Same-Day Student Movers?",
+      title: "Call Us Today",
       description:
-        "Last-minute housing change? Check availability for same-day college moving.",
-      buttonText: "Check Availability",
-      buttonHref: "/contact",
-      isSecondary: true
+        "Speak with a moving specialist about your college move.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
     }
   ],
 
   // Sidebar info cards
   infoCards: [
     {
-      title: "Student Moving Packages",
+      title: "Service Hours",
       items: [
-        "2 Movers + 10FT Truck – $119/hr (3 hr min)",
-        "2 Movers + 20FT Truck – $129/hr (3 hr min)",
-        "2 Movers + 26FT Truck – $149/hr (4 hr min)"
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Same-day service available"
       ]
     },
     {
-      title: "Why Students Choose Us",
-      items: [
-        "Affordable student pricing",
-        "Campus logistics experts",
-        "Flexible scheduling",
-        "Same-day moves available"
-      ]
-    },
-    {
-      title: "Service Area",
+      title: "Why Choose Us",
       content:
-        "We move students throughout San Diego County, including all major universities and college campuses."
+        "Over 10 years serving San Diego County with professional college moving services. Licensed, insured, and locally owned."
     }
   ],
 

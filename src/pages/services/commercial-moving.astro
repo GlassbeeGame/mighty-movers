@@ -151,48 +151,57 @@ const props = {
     }
   ],
 
+  // Trust badges
+  trustBadges: [
+    {
+      metric: "1000+",
+      label: "Moves Completed"
+    },
+    {
+      metric: "Licensed",
+      label: "& Insured"
+    },
+    {
+      metric: "All SD",
+      label: "County Coverage"
+    }
+  ],
+
   // Sidebar CTAs
   ctaCards: [
     {
-      title: "Get Your Commercial Moving Quote",
+      title: "Get Your Free Quote",
       description:
         "Tell us about your office size, equipment, and timeline. We'll create a custom moving plan for your business.",
-      buttonText: "Call (619) 906-9018",
-      buttonHref: "tel:16199069018"
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
     },
     {
-      title: "Need After-Hours Commercial Movers?",
+      title: "Call Us Today",
       description:
-        "Ask about evening, weekend, and off-hours commercial moving availability.",
-      buttonText: "Check Availability",
-      buttonHref: "/contact",
-      isSecondary: true
+        "Speak with a moving specialist about your commercial move.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
     }
   ],
 
   // Sidebar info cards
   infoCards: [
     {
-      title: "Commercial Moving Packages",
+      title: "Service Hours",
       items: [
-        "2 Movers + 20FT Truck – $129/hr (3 hr min)",
-        "3 Movers + 26FT Truck – $189/hr (4 hr min)",
-        "4 Movers + 26FT Truck – $225/hr (4 hr min)"
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "After-hours moves available"
       ]
     },
     {
-      title: "Why Businesses Choose Us",
-      items: [
-        "Minimal downtime & disruption",
-        "Office furniture specialists",
-        "After-hours moves available",
-        "Transparent business pricing"
-      ]
-    },
-    {
-      title: "Service Area",
+      title: "Why Choose Us",
       content:
-        "We provide commercial moving services throughout San Diego County for offices, retail, and businesses of all sizes."
+        "Over 10 years serving San Diego County with professional commercial moving services. Licensed, insured, and locally owned."
     }
   ],
 

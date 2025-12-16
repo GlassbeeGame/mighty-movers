@@ -146,50 +146,57 @@ const props = {
     }
   ],
 
+  // Trust badges
+  trustBadges: [
+    {
+      metric: "1000+",
+      label: "Moves Completed"
+    },
+    {
+      metric: "Licensed",
+      label: "& Insured"
+    },
+    {
+      metric: "All SD",
+      label: "County Coverage"
+    }
+  ],
+
   // Sidebar CTAs
   ctaCards: [
     {
-      title: "Get Your Labor-Only Quote",
+      title: "Get Your Free Quote",
       description:
         "Tell us what you need moved or loaded. We'll provide fast, skilled labor-only help.",
-      buttonText: "Call (619) 906-9018",
-      buttonHref: "tel:16199069018"
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
     },
     {
-      title: "Need Help Loading a U-Haul?",
+      title: "Call Us Today",
       description:
-        "Rental truck ready? We load and unload U-Haul, Penske, and Budget trucks.",
-      buttonText: "Request Quote",
-      buttonHref: "/contact",
-      isSecondary: true
+        "Speak with a moving specialist about your labor-only moving needs.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
     }
   ],
 
   // Sidebar info cards
   infoCards: [
     {
-      title: "Labor-Only Services",
+      title: "Service Hours",
       items: [
-        "U-Haul & rental truck loading",
-        "Storage unit packing",
-        "In-home furniture moving",
-        "Unloading after long drives",
-        "Heavy item specialists"
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Same-day service available"
       ]
     },
     {
-      title: "Why Choose Our Labor",
-      items: [
-        "Rental truck specialists",
-        "Storage unit loading",
-        "In-home moving help",
-        "All equipment included"
-      ]
-    },
-    {
-      title: "Service Area",
+      title: "Why Choose Us",
       content:
-        "We provide labor-only moving services throughout San Diego County for rental trucks, storage units, and in-home moves."
+        "Over 10 years serving San Diego County with professional labor-only moving services. Licensed, insured, and locally owned."
     }
   ],
 

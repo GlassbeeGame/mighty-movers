@@ -140,51 +140,57 @@ const props = {
     }
   ],
 
+  // Trust badges
+  trustBadges: [
+    {
+      metric: "1000+",
+      label: "Moves Completed"
+    },
+    {
+      metric: "Licensed",
+      label: "& Insured"
+    },
+    {
+      metric: "All SD",
+      label: "County Coverage"
+    }
+  ],
+
   // Sidebar CTAs
   ctaCards: [
     {
-      title: "Request a Long Distance Quote",
+      title: "Get Your Free Quote",
       description:
         "Moving out of San Diego? Get a custom quote for statewide or cross-country relocation.",
-      buttonText: "Call (619) 906-9018",
-      buttonHref: "tel:16199069018"
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
     },
     {
-      title: "Need a Fast Long Distance Move?",
+      title: "Call Us Today",
       description:
-        "Ask about short-notice and emergency long-distance availability.",
-      buttonText: "Check Availability",
-      buttonHref: "/contact",
-      isSecondary: true
+        "Speak with a moving specialist about your long-distance move.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
     }
   ],
 
   // Sidebar info cards
   infoCards: [
     {
-      title: "What We Provide",
+      title: "Service Hours",
       items: [
-        "Professional long-distance movers",
-        "Fully equipped moving truck",
-        "Furniture padding & protection",
-        "Dedicated-truck option",
-        "Loading, transport & unloading",
-        "Basic furniture assembly"
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Emergency moves available"
       ]
     },
     {
-      title: "Why Customers Choose Us",
-      items: [
-        "Dedicated-truck, no mixing loads",
-        "Direct delivery with clear timing",
-        "Trusted, experienced movers",
-        "Out-of-state relocation experts"
-      ]
-    },
-    {
-      title: "Custom Pricing",
+      title: "Why Choose Us",
       content:
-        "Long-distance moves vary based on distance and size. Call us for a detailed quote tailored to your relocation."
+        "Over 10 years serving San Diego County with professional long-distance moving services. Licensed, insured, and locally owned."
     }
   ],
 

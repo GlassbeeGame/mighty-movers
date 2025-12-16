@@ -151,50 +151,57 @@ const props = {
     }
   ],
 
+  // Trust badges
+  trustBadges: [
+    {
+      metric: "1000+",
+      label: "Moves Completed"
+    },
+    {
+      metric: "Licensed",
+      label: "& Insured"
+    },
+    {
+      metric: "All SD",
+      label: "County Coverage"
+    }
+  ],
+
   // Sidebar CTAs
   ctaCards: [
     {
-      title: "Get Your Piano Moving Quote",
+      title: "Get Your Free Quote",
       description:
         "Tell us about your piano or specialty item. We'll provide expert handling and careful transport.",
-      buttonText: "Call (619) 906-9018",
-      buttonHref: "tel:16199069018"
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
     },
     {
-      title: "Need Specialty Item Moving?",
+      title: "Call Us Today",
       description:
-        "Safes, antiques, or delicate items? We have the equipment and expertise.",
-      buttonText: "Request Quote",
-      buttonHref: "/contact",
-      isSecondary: true
+        "Speak with a moving specialist about your piano or specialty item move.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
     }
   ],
 
   // Sidebar info cards
   infoCards: [
     {
-      title: "Specialty Items We Move",
+      title: "Service Hours",
       items: [
-        "Upright & baby grand pianos",
-        "Safes & heavy cabinets",
-        "Antique furniture",
-        "Large artwork & mirrors",
-        "Exercise equipment"
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Specialty moves by appointment"
       ]
     },
     {
-      title: "Why Choose Our Specialists",
-      items: [
-        "Piano moving specialists",
-        "Heavy item experts",
-        "Antique & heirloom care",
-        "Stair & access specialists"
-      ]
-    },
-    {
-      title: "Service Area",
+      title: "Why Choose Us",
       content:
-        "We provide piano and specialty moving services throughout San Diego County for homes, apartments, and businesses."
+        "Over 10 years serving San Diego County with professional piano and specialty moving services. Licensed, insured, and locally owned."
     }
   ],
 
