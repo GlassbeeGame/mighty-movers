@@ -164,6 +164,31 @@ const {
               <p>{mainContent}</p>
             </div>
           </section>
+
+          <!-- Services Section - Inside main column -->
+          {services && (
+            <section class="services-section-inline">
+              <h2>{servicesHeading}</h2>
+              <div class="services-grid">
+                {services.map((service: ServiceCard) => (
+                  <div class="service-item">
+                    <h3>{service.title}</h3>
+                    <p>{service.description}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
+          <!-- Local Knowledge - Inside main column -->
+          {localKnowledgeText && (
+            <section class="local-knowledge-inline">
+              <div class="local-knowledge-box">
+                <div class="knowledge-icon"></div>
+                <p>{localKnowledgeText}</p>
+              </div>
+            </section>
+          )}
         </div>
 
         <!-- Sidebar Column -->
@@ -217,35 +242,6 @@ const {
       </div>
     </div>
   </section>
-
-  <!-- Services Section - Back to white, simple grid -->
-  {services && (
-    <section class="services-section">
-      <div class="container">
-        <h2>{servicesHeading}</h2>
-        <div class="services-grid">
-          {services.map((service: ServiceCard) => (
-            <div class="service-item">
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )}
-
-  <!-- Local Knowledge - Optional callout section -->
-  {localKnowledgeText && (
-    <section class="local-knowledge-section">
-      <div class="container">
-        <div class="local-knowledge-box">
-          <div class="knowledge-icon"></div>
-          <p>{localKnowledgeText}</p>
-        </div>
-      </div>
-    </section>
-  )}
 
   <!-- Neighborhoods - Simple grid -->
   <section class="neighborhoods-section">
@@ -606,6 +602,90 @@ const {
     margin: 0;
   }
 
+  /* Services Section - Inline in main column */
+  .services-section-inline {
+    margin-top: 4rem;
+  }
+
+  .services-section-inline h2 {
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    font-weight: 900;
+    color: var(--black);
+    margin-bottom: 2.5rem;
+    letter-spacing: -2px;
+  }
+
+  .services-section-inline .services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .services-section-inline .service-item {
+    padding: 1.5rem 0;
+    border-bottom: 3px solid var(--gray-100);
+    transition: all 0.3s ease;
+  }
+
+  .services-section-inline .service-item:hover {
+    border-bottom-color: var(--yellow);
+    padding-left: 1.5rem;
+  }
+
+  .services-section-inline .service-item h3 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--black);
+    margin-bottom: 0.75rem;
+  }
+
+  .services-section-inline .service-item p {
+    font-size: 1rem;
+    color: var(--gray-600);
+    line-height: 1.7;
+  }
+
+  /* Local Knowledge - Inline in main column */
+  .local-knowledge-inline {
+    margin-top: 4rem;
+  }
+
+  .local-knowledge-inline .local-knowledge-box {
+    background: linear-gradient(135deg, var(--black) 0%, #1a1a1a 100%);
+    padding: 2.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    clip-path: polygon(0 0, calc(100% - 25px) 0, 100% 25px, 100% 100%, 0 100%);
+  }
+
+  .local-knowledge-inline .local-knowledge-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    background: var(--yellow);
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+  }
+
+  .local-knowledge-inline .knowledge-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    background: var(--yellow);
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+    flex-shrink: 0;
+  }
+
+  .local-knowledge-inline .local-knowledge-box p {
+    font-size: 1rem;
+    color: var(--gray-200);
+    line-height: 1.7;
+    margin: 0;
+  }
+
   /* Why Choose Us - Full width background */
   .why-section-wrapper {
     background: var(--gray-50);
@@ -673,93 +753,6 @@ const {
     font-size: 1.05rem;
     color: var(--gray-600);
     line-height: 1.7;
-  }
-
-  /* Services Section - Simple grid, no heavy boxes */
-  .services-section {
-    padding: 6rem 0;
-    background: var(--white);
-  }
-
-  .services-section h2 {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
-    font-weight: 900;
-    color: var(--black);
-    margin-bottom: 3rem;
-    letter-spacing: -2px;
-    text-align: center;
-  }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-  }
-
-  .service-item {
-    padding: 2rem 0;
-    border-bottom: 3px solid var(--gray-100);
-    transition: all 0.3s ease;
-  }
-
-  .service-item:hover {
-    border-bottom-color: var(--yellow);
-    padding-left: 1.5rem;
-  }
-
-  .service-item h3 {
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: var(--black);
-    margin-bottom: 0.75rem;
-  }
-
-  .service-item p {
-    font-size: 1.05rem;
-    color: var(--gray-600);
-    line-height: 1.7;
-  }
-
-  /* Local Knowledge Callout */
-  .local-knowledge-section {
-    padding: 0 0 6rem;
-    background: var(--white);
-  }
-
-  .local-knowledge-box {
-    background: linear-gradient(135deg, var(--black) 0%, #1a1a1a 100%);
-    padding: 3rem;
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 0 100%);
-  }
-
-  .local-knowledge-box::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 30px;
-    height: 30px;
-    background: var(--yellow);
-    clip-path: polygon(100% 0, 100% 100%, 0 0);
-  }
-
-  .knowledge-icon {
-    width: 4rem;
-    height: 4rem;
-    background: var(--yellow);
-    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
-    flex-shrink: 0;
-  }
-
-  .local-knowledge-box p {
-    font-size: 1.15rem;
-    color: var(--gray-200);
-    line-height: 1.8;
-    margin: 0;
   }
 
   /* Neighborhoods - Simple grid */
