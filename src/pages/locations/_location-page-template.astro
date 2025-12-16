@@ -157,17 +157,77 @@ const {
             <p class="intro-lead">{introText}</p>
           </section>
 
-          <!-- Main Content - ONE section, not multiple boxes -->
-          {mainContent && (
-            <section class="main-content-section">
-              {mainContentHeading && <h2>{mainContentHeading}</h2>}
-              <div class="main-content-text">
-                {mainContent.split('\n\n').map((paragraph: string) => (
-                  paragraph.trim() && <p>{paragraph}</p>
-                ))}
-              </div>
-            </section>
-          )}
+          <!-- Main Content - Enhanced visual layout with better structure -->
+          {mainContent && (() => {
+            const paragraphs = mainContent.split('\n\n').filter(p => p.trim());
+            const totalParagraphs = paragraphs.length;
+            
+            return (
+              <section class="main-content-section">
+                {mainContentHeading && <h2>{mainContentHeading}</h2>}
+                <div class="main-content-text">
+                  {paragraphs.map((paragraph: string, index: number) => {
+                    const trimmed = paragraph.trim();
+                    if (!trimmed) return null;
+                    
+                    // First paragraph - lead paragraph with visual separation
+                    if (index === 0) {
+                      return (
+                        <div class="content-block content-block-lead">
+                          <p class="lead-paragraph">{trimmed}</p>
+                        </div>
+                      );
+                    }
+                    
+                    // Check for key paragraphs that deserve highlight treatment
+                    const isImportant = /(local knowledge|transparent|flexible|professional equipment|weather|landmarks|compared to)/i.test(trimmed);
+                    const isLongImportant = isImportant && trimmed.length > 150;
+                    
+                    // Middle paragraphs - regular content with visual breaks
+                    if (index > 0 && index < totalParagraphs - 2) {
+                      if (isLongImportant) {
+                        return (
+                          <div class="content-block content-block-highlight">
+                            <p>{trimmed}</p>
+                          </div>
+                        );
+                      }
+                      
+                      return (
+                        <div class="content-block">
+                          <p>{trimmed}</p>
+                        </div>
+                      );
+                    }
+                    
+                    // Second-to-last paragraph - often contains comparison/important info
+                    if (index === totalParagraphs - 2) {
+                      return (
+                        <div class="content-block content-block-emphasis">
+                          <p>{trimmed}</p>
+                        </div>
+                      );
+                    }
+                    
+                    // Last paragraph - call-to-action style
+                    if (index === totalParagraphs - 1) {
+                      return (
+                        <div class="content-block content-block-cta">
+                          <p>{trimmed}</p>
+                        </div>
+                      );
+                    }
+                    
+                    return (
+                      <div class="content-block">
+                        <p>{trimmed}</p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </section>
+            );
+          })()}
 
           <!-- Services Section - Inside main column -->
           {services && (
@@ -479,7 +539,7 @@ const {
     margin: 0 auto;
   }
 
-  /* Main Content - ONE cohesive section, not boxes */
+  /* Main Content - Enhanced visual layout with structured blocks */
   .main-content-section {
     margin-bottom: 6rem;
   }
@@ -496,11 +556,154 @@ const {
     max-width: 900px;
   }
 
-  .main-content-text p {
+  /* Content blocks for visual separation */
+  .content-block {
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+  }
+
+  .content-block p {
     font-size: 1.15rem;
     color: var(--gray-700);
     line-height: 1.9;
-    margin-bottom: 1.5rem;
+    margin: 0;
+  }
+
+  /* Lead paragraph block - first paragraph, more prominent */
+  .content-block-lead {
+    margin-bottom: 3rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 3px solid var(--gray-200);
+  }
+
+  .content-block-lead .lead-paragraph {
+    font-size: 1.3rem;
+    color: var(--black);
+    font-weight: 500;
+    line-height: 2;
+    letter-spacing: -0.2px;
+  }
+
+  /* Highlight block - for important information */
+  .content-block-highlight {
+    background: linear-gradient(135deg, rgba(246, 245, 16, 0.08) 0%, rgba(246, 245, 16, 0.03) 100%);
+    border-left: 5px solid var(--yellow);
+    padding: 2rem 2.5rem;
+    margin: 2.5rem -2.5rem;
+    border-radius: 0 8px 8px 0;
+    position: relative;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+  }
+
+  .content-block-highlight:hover {
+    box-shadow: 0 4px 20px rgba(246, 245, 16, 0.15);
+    transform: translateX(4px);
+    border-left-width: 6px;
+  }
+
+  .content-block-highlight p {
+    color: var(--gray-800);
+    font-weight: 400;
+    position: relative;
+  }
+
+  /* Emphasis block - for comparison/important info */
+  .content-block-emphasis {
+    background: var(--gray-50);
+    border: 2px solid var(--gray-200);
+    padding: 2rem 2.5rem;
+    margin: 2.5rem -2.5rem;
+    border-radius: 8px;
+    position: relative;
+  }
+
+  .content-block-emphasis::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--yellow) 0%, transparent 100%);
+    border-radius: 8px 8px 0 0;
+  }
+
+  .content-block-emphasis p {
+    color: var(--gray-800);
+    font-weight: 400;
+  }
+
+  /* CTA block - for final call-to-action paragraph */
+  .content-block-cta {
+    background: linear-gradient(135deg, var(--black) 0%, #1a1a1a 100%);
+    border: 3px solid var(--yellow);
+    padding: 2.5rem 3rem;
+    margin: 3rem -3rem 0;
+    border-radius: 8px;
+    position: relative;
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  }
+
+  .content-block-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: var(--yellow);
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+  }
+
+  .content-block-cta p {
+    color: var(--white);
+    font-size: 1.2rem;
+    line-height: 1.95;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  /* Regular content blocks - subtle visual breaks */
+  .content-block:not(.content-block-lead):not(.content-block-highlight):not(.content-block-emphasis):not(.content-block-cta) {
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--gray-200);
+    position: relative;
+  }
+
+  .content-block:not(.content-block-lead):not(.content-block-highlight):not(.content-block-emphasis):not(.content-block-cta)::before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: 0;
+    width: 2px;
+    height: 0;
+    background: var(--yellow);
+    transition: height 0.3s ease;
+  }
+
+  .content-block:not(.content-block-lead):not(.content-block-highlight):not(.content-block-emphasis):not(.content-block-cta):hover::before {
+    height: 100%;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .content-block-highlight,
+    .content-block-emphasis,
+    .content-block-cta {
+      margin-left: 0;
+      margin-right: 0;
+      padding: 1.5rem;
+    }
+
+    .content-block-lead .lead-paragraph {
+      font-size: 1.2rem;
+    }
+
+    .content-block-cta p {
+      font-size: 1.1rem;
+    }
   }
 
   /* Sidebar CTA Cards */
