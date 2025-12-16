@@ -161,7 +161,9 @@ const {
           <section class="main-content-section">
             {mainContentHeading && <h2>{mainContentHeading}</h2>}
             <div class="main-content-text">
-              <p>{mainContent}</p>
+              {mainContent.split('\n\n').map((paragraph: string) => (
+                paragraph.trim() && <p>{paragraph}</p>
+              ))}
             </div>
           </section>
 
