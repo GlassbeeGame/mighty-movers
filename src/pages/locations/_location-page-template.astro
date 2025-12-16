@@ -26,6 +26,20 @@ interface TrustBadge {
   label: string;
 }
 
+interface CTACard {
+  title: string;
+  description: string;
+  buttonText: string;
+  buttonHref: string;
+  isDark?: boolean;
+}
+
+interface InfoCard {
+  title: string;
+  items?: string[];
+  content?: string;
+}
+
 interface Props {
   // Page metadata
   title: string;
@@ -55,6 +69,10 @@ interface Props {
 
   // Local details (optional)
   localKnowledgeText?: string;
+
+  // Sidebar CTAs and Info
+  ctaCards?: CTACard[];
+  infoCards?: InfoCard[];
 
   // Neighborhoods
   neighborhoodsHeading: string;
@@ -92,6 +110,8 @@ const {
   servicesHeading,
   services,
   localKnowledgeText,
+  ctaCards,
+  infoCards,
   neighborhoodsHeading,
   neighborhoods,
   trustBadges,
@@ -126,19 +146,58 @@ const {
   <div class="location-content">
     <div class="container">
 
-      <!-- Intro Section - No box, just text -->
-      <section class="intro-section">
-        <h2>{introHeading}</h2>
-        <p class="intro-lead">{introText}</p>
-      </section>
+      <!-- Two-column layout: Main content + Sidebar -->
+      <div class="content-with-sidebar">
 
-      <!-- Main Content - ONE section, not multiple boxes -->
-      <section class="main-content-section">
-        {mainContentHeading && <h2>{mainContentHeading}</h2>}
-        <div class="main-content-text">
-          <p>{mainContent}</p>
+        <!-- Main Content Column -->
+        <div class="main-column">
+          <!-- Intro Section - No box, just text -->
+          <section class="intro-section">
+            <h2>{introHeading}</h2>
+            <p class="intro-lead">{introText}</p>
+          </section>
+
+          <!-- Main Content - ONE section, not multiple boxes -->
+          <section class="main-content-section">
+            {mainContentHeading && <h2>{mainContentHeading}</h2>}
+            <div class="main-content-text">
+              <p>{mainContent}</p>
+            </div>
+          </section>
         </div>
-      </section>
+
+        <!-- Sidebar Column -->
+        {(ctaCards || infoCards) && (
+          <aside class="sidebar-column">
+
+            {/* CTA Cards */}
+            {ctaCards && ctaCards.map((card: CTACard) => (
+              <div class={`sidebar-cta-card ${card.isDark ? 'dark' : ''}`}>
+                <h3>{card.title}</h3>
+                <p>{card.description}</p>
+                <a href={card.buttonHref} class="btn btn-primary btn-block">{card.buttonText}</a>
+              </div>
+            ))}
+
+            {/* Info Cards */}
+            {infoCards && infoCards.map((card: InfoCard) => (
+              <div class="sidebar-info-card">
+                <h3>{card.title}</h3>
+                {card.items && (
+                  <ul>
+                    {card.items.map((item: string) => (
+                      <li>{item}</li>
+                    ))}
+                  </ul>
+                )}
+                {card.content && <p>{card.content}</p>}
+              </div>
+            ))}
+
+          </aside>
+        )}
+
+      </div>
 
     </div>
   </div>
@@ -375,6 +434,26 @@ const {
     background: var(--white);
   }
 
+  /* Two-column layout */
+  .content-with-sidebar {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .main-column {
+    min-width: 0; /* Prevents grid overflow */
+  }
+
+  .sidebar-column {
+    position: sticky;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
   /* Intro Section - Simple, no box */
   .intro-section {
     margin-bottom: 5rem;
@@ -419,6 +498,112 @@ const {
     color: var(--gray-700);
     line-height: 1.9;
     margin-bottom: 1.5rem;
+  }
+
+  /* Sidebar CTA Cards */
+  .sidebar-cta-card {
+    background: var(--white);
+    border: 3px solid var(--black);
+    padding: 2.5rem 2rem;
+    position: relative;
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .sidebar-cta-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: var(--yellow);
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+  }
+
+  .sidebar-cta-card.dark {
+    background: linear-gradient(135deg, var(--black) 0%, #1a1a1a 100%);
+    border-color: var(--yellow);
+  }
+
+  .sidebar-cta-card:hover {
+    border-color: var(--yellow);
+    transform: translate(-4px, -4px);
+    box-shadow: 8px 8px 0 rgba(246, 245, 16, 0.9), 0 0 30px rgba(246, 245, 16, 0.4);
+  }
+
+  .sidebar-cta-card h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--black);
+    margin-bottom: 1rem;
+  }
+
+  .sidebar-cta-card.dark h3 {
+    color: var(--white);
+  }
+
+  .sidebar-cta-card p {
+    font-size: 1rem;
+    color: var(--gray-600);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .sidebar-cta-card.dark p {
+    color: var(--gray-300);
+  }
+
+  .btn-block {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Sidebar Info Cards */
+  .sidebar-info-card {
+    background: var(--gray-50);
+    border-left: 5px solid var(--yellow);
+    padding: 2rem 1.5rem;
+  }
+
+  .sidebar-info-card h3 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--black);
+    margin-bottom: 1rem;
+  }
+
+  .sidebar-info-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sidebar-info-card ul li {
+    font-size: 0.95rem;
+    color: var(--gray-700);
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .sidebar-info-card ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: var(--yellow);
+    clip-path: polygon(0 0, calc(100% - 3px) 0, 100% 3px, 100% 100%, 0 100%);
+  }
+
+  .sidebar-info-card p {
+    font-size: 1rem;
+    color: var(--gray-700);
+    line-height: 1.7;
+    margin: 0;
   }
 
   /* Why Choose Us - Full width background */
@@ -900,6 +1085,17 @@ const {
   }
 
   /* Responsive */
+  @media (max-width: 968px) {
+    .content-with-sidebar {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .sidebar-column {
+      position: static;
+    }
+  }
+
   @media (max-width: 768px) {
     .container {
       padding: 0 1.5rem;
