@@ -262,13 +262,15 @@ const {
   <!-- Trust Badges - Full width dark section -->
   {trustBadges && (
     <section class="trust-section">
-      <div class="trust-badges">
-        {trustBadges.map((badge: TrustBadge) => (
-          <div class="trust-badge">
-            <div class="trust-metric">{badge.metric}</div>
-            <div class="trust-label">{badge.label}</div>
-          </div>
-        ))}
+      <div class="container">
+        <div class="trust-badges">
+          {trustBadges.map((badge: TrustBadge) => (
+            <div class="trust-badge">
+              <div class="trust-metric">{badge.metric}</div>
+              <div class="trust-label">{badge.label}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )}
@@ -825,48 +827,52 @@ const {
   /* Trust Badges - Full width dark */
   .trust-section {
     background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-    padding: 5rem 3rem;
+    padding: 6rem 0;
   }
 
   .trust-badges {
-    max-width: 1200px;
-    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
   }
 
   .trust-badge {
     text-align: center;
-    padding: 2rem;
+    padding: 2.5rem 1.5rem;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
-  .trust-badge::before {
+  .trust-badge::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 60%;
-    height: 3px;
+    width: 80px;
+    height: 4px;
     background: var(--yellow);
   }
 
   .trust-metric {
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 900;
     color: var(--yellow);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     letter-spacing: -2px;
+    line-height: 1;
   }
 
   .trust-label {
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 700;
     color: var(--gray-300);
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+    line-height: 1.4;
   }
 
   /* FAQ Section */
@@ -1088,6 +1094,11 @@ const {
     .sidebar-column {
       position: static;
     }
+
+    .trust-badges {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+    }
   }
 
   @media (max-width: 768px) {
@@ -1115,7 +1126,15 @@ const {
 
     .trust-badges {
       grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
+      gap: 2.5rem;
+    }
+
+    .trust-metric {
+      font-size: 3rem;
+    }
+
+    .trust-label {
+      font-size: 0.85rem;
     }
 
     .cta-buttons {
