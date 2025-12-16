@@ -3,29 +3,167 @@ import LocationTemplate from './_location-page-template.astro';
 ---
 
 <LocationTemplate
-  title="Downtown San Diego Moving Services"
-  description="Professional moving services in Downtown San Diego, San Diego."
-  noindex={true}
+  title="Downtown San Diego Movers — Local & Trusted Moving Services in Downtown San Diego, CA"
+  description="Professional San Diego moving company offering reliable local moving services, transparent pricing, same-day scheduling, and expert neighborhood moves throughout Downtown San Diego."
+  noindex={false}
+
   locationBadge="Downtown San Diego"
-  heroTitle="Professional Movers in Downtown San Diego"
-  heroDescription="Reliable moving services for Downtown San Diego."
-  introHeading="Moving Services in Downtown San Diego"
-  introText="Mighty Movers provides professional moving services throughout Downtown San Diego."
-  contentCards={[{title:"Local Downtown San Diego Moving",content:"Expert moving services in Downtown San Diego."},{title:"Why Choose Us",content:"Licensed and insured movers."},{title:"Get Started",content:"Contact us today."}]}
-  servicesHeading="Our Moving Services"
-  serviceLinks={[{href:"/services/local-moving",title:"Local Moving",description:"Local services in Downtown San Diego"},{href:"/services/residential-moving",title:"Residential",description:"Home moves"},{href:"/services/commercial-moving",title:"Commercial",description:"Business moves"},{href:"/services/packing-unpacking",title:"Packing",description:"Packing services"}]}
-  whyHeading="Why Choose Mighty Movers"
-  benefits={[{title:"Licensed & Insured",description:"Fully licensed and insured"},{title:"Experienced Team",description:"Professional movers"},{title:"Competitive Rates",description:"Fair pricing"},{title:"Same-Day Service",description:"Fast service"}]}
-  neighborhoodsHeading="Other Areas We Serve"
-  neighborhoods={[{number:"01",title:"La Jolla",description:"Coastal moves"},{number:"02",title:"Downtown",description:"Urban solutions"},{number:"03",title:"Pacific Beach",description:"Beach services"},{number:"04",title:"Del Mar",description:"North County"}]}
-  faqHeading="Frequently Asked Questions"
-  faqs={[{question:"Do you serve Downtown San Diego?",answer:"Yes! We serve all of San Diego County."},{question:"What services?",answer:"Local moving, packing, commercial, and more."},{question:"Same-day service?",answer:"Yes, based on availability."},{question:"Licensed?",answer:"Yes, fully licensed and insured."},{question:"How to get quote?",answer:"Contact us by phone or website."}]}
-  ctaCards={[{title:"Get Your Free Quote",description:"Request a free quote today.",buttonText:"Get Free Quote",buttonHref:"/contact",isDark:false},{title:"Call Us Today",description:"Speak with a specialist.",buttonText:"(619) 555-MOVE",buttonHref:"tel:6195556683",isDark:true}]}
-  infoCards={[{title:"Service Hours",items:["Mon-Fri: 7AM-7PM","Sat: 8AM-6PM","Sun: 9AM-5PM","Same-day available"]},{title:"Service Area",content:"Serving Downtown San Diego and San Diego County."}]}
-  bottomCTAHeading="Ready to Move?"
-  bottomCTADescription="Get started with San Diego's trusted movers."
-  bottomCTAPrimaryText="Get Free Quote"
+  heroTitle="Top Movers in Downtown San Diego, CA — Fast, Friendly, Local Moving Services"
+  heroDescription="Mighty Movers San Diego is your trusted San Diego moving company serving Downtown San Diego. Whether you're moving within the Gaslamp Quarter or to Little Italy, our experienced team delivers dependable San Diego moving services with clear pricing and same-day availability."
+
+  introHeading="Welcome to Downtown San Diego"
+  introText="Looking for dependable movers in San Diego? As leading moving companies in San Diego CA, Mighty Movers San Diego provides professional local moves throughout the urban core of Downtown San Diego. From high-rise condos with elevator access to walk-ups and historic flats, our crew has the skills and tools to handle moves of every size with care and precision."
+
+  mainContentHeading="Our Moving Services in Downtown San Diego"
+  mainContent="As a top moving company in San Diego CA, Mighty Movers specializes in residential moves within Downtown and across San Diego County. We understand the logistics of city moves — narrow streets, parking permits, elevators, and tight stairwells — and plan every detail for a smooth, stress-free experience.
+
+We're one of the best moving companies San Diego residents rely on for honest hourly rates with no hidden fees. Choose the right crew size and truck for your move, with all professional equipment included.
+
+Need help today? We offer same-day movers San Diego and next-day booking when available. Just give us a call at (619) 906-9018 or book online to check availability and lock in your move.
+
+From full packing services to labor-only loading and unloading, our San Diego moving professionals are here to make your move easier. Professional packers ensure your items are secure, and our labor-only teams handle heavy lifting with care.
+
+Mighty Movers typically begins Downtown San Diego jobs near the iconic Gaslamp Quarter. From there, we travel throughout Downtown via streets like 5th Ave, Broadway, and Pacific Hwy to reach your home or destination. Our teams plan routes to avoid peak traffic and coordinate parking permits when necessary for smooth access.
+
+Downtown San Diego's coastal location brings mild temperatures year-round, but morning marine layer fog and occasional summer heat can impact move timing. Our crews monitor conditions and schedule strategic loading/unloading during cooler hours to maximize comfort and safety.
+
+Mighty Movers supports residential moves for employees of key Downtown San Diego employers, including San Diego Convention Center staff, finance & tech firms in the Core District, hospitality industry in Gaslamp Quarter and Marina, small business owners and startups across downtown offices, and legal and professional services near Civic Center.
+
+Response times by area: Gaslamp Quarter typically 15–30 minutes, Little Italy 20–35 minutes, Marina District 25–40 minutes, and East Village 25–40 minutes.
+
+Downtown San Diego has many San Diego local movers, including national brands, boutique movers, and labor-only crews. What sets Mighty Movers apart is our transparent pricing, fully equipped teams, and flexible same-day/next-day scheduling. While some competitors advertise low rates but add hidden fees, we provide clear, upfront quotes and dependable professionalism on every move."
+
+  servicesHeading="Our Moving Services in Downtown San Diego"
+  services={[
+    {
+      title: "Local Residential Moving",
+      description: "Trusted local movers serving Downtown neighborhoods."
+    },
+    {
+      title: "Truck & Crew Options",
+      description: "Multiple truck sizes with trained crews for moves of any size."
+    },
+    {
+      title: "Packing & Labor Only Services",
+      description: "Full or partial packing and dedicated loading support."
+    },
+    {
+      title: "Same-Day/Next-Day Scheduling",
+      description: "Quick scheduling options to fit your timeline."
+    },
+    {
+      title: "Short-Term Storage Options",
+      description: "Convenient San Diego storage solutions when needed."
+    },
+    {
+      title: "All Equipment Included",
+      description: "Moving pads, shrink wrap, dollies, and other tools ready for your move."
+    }
+  ]}
+
+  whyHeading="Why Choose Mighty Movers in Downtown San Diego"
+  benefits={[
+    {
+      title: "Local San Diego Expertise",
+      description: "Deep knowledge of San Diego's streets, buildings, and access challenges."
+    },
+    {
+      title: "Transparent Pricing",
+      description: "Honest rates with all essential moving equipment included."
+    },
+    {
+      title: "Flexible Scheduling",
+      description: "Same-day and next-day availability based on demand."
+    },
+    {
+      title: "Professional Teams",
+      description: "Experienced movers with the right tools for residential moves."
+    },
+    {
+      title: "Multiple Services",
+      description: "From full service to labor-only support."
+    },
+    {
+      title: "Convenient Storage Solutions",
+      description: "Short-term storage available when your move requires it."
+    }
+  ]}
+
+  neighborhoodsHeading="Neighborhoods We Serve in Downtown San Diego"
+  neighborhoods={[
+    {
+      title: "Gaslamp Quarter",
+      description: "Historic entertainment district with busy streets and unique access needs."
+    },
+    {
+      title: "Little Italy",
+      description: "Urban moves near plazas, markets, and walkable neighborhoods."
+    },
+    {
+      title: "Marina District",
+      description: "Waterfront living with views and careful planning."
+    },
+    {
+      title: "East Village",
+      description: "Apartments and lofts near Petco Park and transit hubs."
+    }
+  ]}
+
+  faqHeading="San Diego Moving FAQs"
+  faqs={[
+    {
+      question: "What makes a great moving company in San Diego?",
+      answer: "A great San Diego moving company knows local buildings, access logistics, and offers clear, honest pricing. With Mighty Movers, you get trained professionals with quality equipment and transparent communication."
+    },
+    {
+      question: "Do you offer moves for apartments and high-rises?",
+      answer: "Yes — our team is experienced with apartment and condo moves downtown, whether elevator access or stair-only units."
+    },
+    {
+      question: "Can I book a same-day move?",
+      answer: "Yes! We offer same-day movers San Diego when availability allows. Call (619) 906-9018 or book online to check open slots."
+    },
+    {
+      question: "Are packing supplies included?",
+      answer: "Professional equipment like moving pads, shrink wrap, tools, and quick pack totes are included with full-service moves. Packing supplies like boxes are not included but can be provided by the customer."
+    }
+  ]}
+
+  ctaCards={[
+    {
+      title: "Get Your Free Downtown San Diego Moving Quote",
+      description: "Call or fill out a form for a transparent moving estimate today.",
+      buttonText: "Get A Quote",
+      buttonHref: "/contact",
+      isDark: false
+    },
+    {
+      title: "Need Same-Day Move?",
+      description: "Ask about same-day availability when you call.",
+      buttonText: "Call Now",
+      buttonHref: "tel:+16199069018",
+      isDark: true
+    }
+  ]}
+
+  infoCards={[
+    {
+      title: "Service Area",
+      items: [
+        "Downtown San Diego & Greater San Diego County",
+        "Gaslamp Quarter, Little Italy, Marina District, East Village"
+      ]
+    },
+    {
+      title: "Contact Info",
+      content: "Call (619) 906-9018 for free quotes and scheduling."
+    }
+  ]}
+
+  bottomCTAHeading="Ready to Move in Downtown San Diego?"
+  bottomCTADescription="Whether you're settling into a condo in the heart of the city or relocating within San Diego County, Mighty Movers is here to make your move smooth and stress-free."
+  bottomCTAPrimaryText="Book Your Move"
   bottomCTAPrimaryHref="/contact"
-  bottomCTASecondaryText="Call (619) 555-MOVE"
-  bottomCTASecondaryHref="tel:6195556683"
+  bottomCTASecondaryText="Learn More Services"
+  bottomCTASecondaryHref="/services"
 />
