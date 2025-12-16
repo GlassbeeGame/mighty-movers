@@ -159,47 +159,54 @@ const props = {
   // Sidebar CTAs
   ctaCards: [
     {
-      title: "Get Your Local Moving Quote",
+      title: "Get Your Free Quote",
       description:
         "Tell us where you're moving from and to in San Diego County and we'll recommend the ideal truck and crew size for your local move.",
-      buttonText: "Call (619) 906-9018",
-      buttonHref: "tel:16199069018"
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
     },
     {
-      title: "Need Same-Day Local Movers?",
+      title: "Call Us Today",
       description:
-        "Last-minute move? We often have same-day and next-day availability for local moves within San Diego County.",
-      buttonText: "Check Availability",
-      buttonHref: "/contact",
-      isSecondary: true
+        "Speak with a moving specialist about your local San Diego move.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
     }
   ],
 
   // Sidebar info cards
   infoCards: [
     {
-      title: "Local Moving Packages",
+      title: "Service Hours",
       items: [
-        "2 Movers + 10FT Truck – $119/hr (3 hr min)",
-        "2 Movers + 20FT Truck – $129/hr (3 hr min)",
-        "2 Movers + 26FT Truck – $149/hr (4 hr min)",
-        "3 Movers + 26FT Truck – $189/hr (4 hr min)",
-        "4 Movers + 26FT Truck – $225/hr (4 hr min)"
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Same-day service available"
       ]
     },
     {
-      title: "Why Mighty Movers",
-      items: [
-        "Local San Diego neighborhood specialists",
-        "Transparent hourly pricing with no hidden fees",
-        "Fully equipped trucks and professional crews",
-        "Short-notice and same-day options when available"
-      ]
-    },
-    {
-      title: "Service Area",
+      title: "Why Choose Us",
       content:
-        "Based in Pacific Beach, we provide local moving services across all of San Diego County, including coastal, central, and inland neighborhoods."
+        "Over 10 years serving San Diego County with professional local moving services. Licensed, insured, and locally owned."
+    }
+  ],
+
+  // Trust badges
+  trustBadges: [
+    {
+      metric: "1000+",
+      label: "Moves Completed"
+    },
+    {
+      metric: "Licensed",
+      label: "& Insured"
+    },
+    {
+      metric: "All SD",
+      label: "County Coverage"
     }
   ],
 
