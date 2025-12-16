@@ -57,11 +57,7 @@ interface Props {
 
   // Main content - One cohesive section
   mainContentHeading?: string;
-  mainContent?: string;
-
-  // OLD: Backward compatibility (deprecated)
-  contentCards?: any[];
-  serviceLinks?: any[];
+  mainContent: string;
 
   // Why Choose Us
   whyHeading: string;
@@ -109,8 +105,6 @@ const {
   introText,
   mainContentHeading,
   mainContent,
-  contentCards, // deprecated
-  serviceLinks, // deprecated
   whyHeading,
   benefits,
   servicesHeading,
@@ -164,14 +158,12 @@ const {
           </section>
 
           <!-- Main Content - ONE section, not multiple boxes -->
-          {mainContent && (
-            <section class="main-content-section">
-              {mainContentHeading && <h2>{mainContentHeading}</h2>}
-              <div class="main-content-text">
-                <p>{mainContent}</p>
-              </div>
-            </section>
-          )}
+          <section class="main-content-section">
+            {mainContentHeading && <h2>{mainContentHeading}</h2>}
+            <div class="main-content-text">
+              <p>{mainContent}</p>
+            </div>
+          </section>
 
           <!-- Services Section - Inside main column -->
           {services && (
