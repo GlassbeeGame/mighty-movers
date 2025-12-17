@@ -4,40 +4,30 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Home" description="Mighty Movers - Professional moving services in San Diego. Reliable, affordable, and stress-free moving solutions.">
   <section class="hero">
-    <div class="hero-background">
-      <div class="hero-overlay"></div>
-      <div class="hero-pattern"></div>
-    </div>
+    <div class="hero-background"></div>
     <div class="hero-content">
-      <span class="hero-badge" data-animate="fade-up">San Diego's Premier Movers</span>
-      <div class="hero-logo-container" data-animate="scale-in">
-        <svg xmlns="http://www.w3.org/2000/svg"
-             viewBox="0 0 500 500"
-             class="hero-logo-svg">
-          <circle cx="250" cy="250" r="156"
-                  fill="none"
-                  stroke="#F6F510"
-                  stroke-width="5" />
-          <polygon points="321,250 285,286 254,254 254,343 321,307"
-                   fill="#F6F510" />
-          <polygon points="182,250 181,306 249,343 249,254 217,285"
-                   fill="#F6F510" />
-          <polygon points="347,229 315,213 253,250 286,266"
-                   fill="#F6F510" />
-          <polygon points="253,173 316,210 347,194 286,155"
-                   fill="#F6F510" />
-          <polygon points="217,155 154,192 185,211 156,230 221,266 249,249 186,212 250,173"
-                   fill="#F6F510" />
-        </svg>
-        <div class="hero-logo-glow"></div>
-      </div>
-      <h1 data-animate="fade-up" data-delay="200">
-        Moving Made <span class="highlight">Simple</span>
-      </h1>
-      <p class="hero-subtitle" data-animate="fade-up" data-delay="400">
-        Professional moving services you can trust. Licensed, insured, and ready to handle your move with care.
-      </p>
-      <div class="hero-buttons" data-animate="fade-up" data-delay="600">
+      <span class="hero-badge">San Diego's Premier Movers</span>
+      <svg xmlns="http://www.w3.org/2000/svg"
+           viewBox="0 0 500 500"
+           class="hero-logo-svg">
+        <circle cx="250" cy="250" r="156"
+                fill="none"
+                stroke="#F6F510"
+                stroke-width="5" />
+        <polygon points="321,250 285,286 254,254 254,343 321,307"
+                 fill="#F6F510" />
+        <polygon points="182,250 181,306 249,343 249,254 217,285"
+                 fill="#F6F510" />
+        <polygon points="347,229 315,213 253,250 286,266"
+                 fill="#F6F510" />
+        <polygon points="253,173 316,210 347,194 286,155"
+                 fill="#F6F510" />
+        <polygon points="217,155 154,192 185,211 156,230 221,266 249,249 186,212 250,173"
+                 fill="#F6F510" />
+      </svg>
+      <h1>Moving Made <span class="highlight">Simple</span></h1>
+      <p class="hero-subtitle">Professional moving services you can trust. Licensed, insured, and ready to handle your move with care.</p>
+      <div class="hero-buttons">
         <a href="/contact" class="btn btn-primary">
           <span>Get Free Quote</span>
           <span class="btn-arrow">→</span>
@@ -47,9 +37,9 @@ import Layout from '../layouts/Layout.astro';
           <span>(619) 555-MOVE</span>
         </a>
       </div>
-      <div class="hero-trust" data-animate="fade-up" data-delay="800">
+      <div class="hero-trust">
         <div class="trust-item">
-          <div class="trust-number" data-count="500">0</div>
+          <div class="trust-number">500+</div>
           <span class="trust-label">Successful Moves</span>
         </div>
         <div class="trust-divider"></div>
@@ -59,14 +49,10 @@ import Layout from '../layouts/Layout.astro';
         </div>
         <div class="trust-divider"></div>
         <div class="trust-item">
-          <div class="trust-number" data-count="10">0</div>
+          <div class="trust-number">10+</div>
           <span class="trust-label">Years Experience</span>
         </div>
       </div>
-    </div>
-    <div class="hero-scroll-indicator">
-      <div class="scroll-line"></div>
-      <span>Scroll</span>
     </div>
   </section>
 
@@ -367,7 +353,7 @@ import Layout from '../layouts/Layout.astro';
   /* === HERO SECTION === */
   .hero {
     position: relative;
-    min-height: 100vh;
+    min-height: 95vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -382,34 +368,16 @@ import Layout from '../layouts/Layout.astro';
     right: 0;
     bottom: 0;
     background: url('/images/mightyimages/LANDING.JPG') center/cover no-repeat;
-    transform: scale(1.05);
-    transition: transform 20s ease-out;
   }
 
-  .hero:hover .hero-background {
-    transform: scale(1.1);
-  }
-
-  .hero-overlay {
+  .hero-background::after {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.75) 100%);
-    z-index: 1;
-  }
-
-  .hero-pattern {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-      repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(246, 245, 16, 0.03) 2px, rgba(246, 245, 16, 0.03) 4px);
-    opacity: 0.4;
-    z-index: 1;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.55) 100%);
   }
 
 
@@ -419,94 +387,41 @@ import Layout from '../layouts/Layout.astro';
     max-width: 1400px;
     text-align: center;
     padding: 4rem 2rem;
-    width: 100%;
   }
 
   .hero-badge {
     display: inline-block;
     color: var(--yellow);
-    padding: 0.65rem 2rem;
-    font-size: 0.9rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.85rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     border: 2px solid var(--yellow);
     border-radius: 0;
-    clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
-    animation: fadeInUp 0.8s ease-out;
-    margin-bottom: 2.5rem;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 20px rgba(246, 245, 16, 0.2);
-    transition: all 0.3s ease;
+    clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+    animation: fadeIn 0.8s ease-out;
+    margin-bottom: 2rem;
   }
 
-  .hero-badge:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 25px rgba(246, 245, 16, 0.4);
-    background: rgba(0, 0, 0, 0.5);
-  }
-
-  @keyframes fadeInUp {
-    from { 
-      opacity: 0; 
-      transform: translateY(20px); 
-    }
-    to { 
-      opacity: 1; 
-      transform: translateY(0); 
-    }
-  }
-
-  .hero-logo-container {
-    position: relative;
-    display: inline-block;
-    margin: 0 auto 3rem;
-    animation: fadeInScale 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   .hero-logo-svg {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 2.5rem;
     display: block;
-    filter: drop-shadow(0 10px 30px rgba(246, 245, 16, 0.5));
-    position: relative;
-    z-index: 2;
-    transition: transform 0.5s ease;
-  }
-
-  .hero-logo-container:hover .hero-logo-svg {
-    transform: scale(1.05) rotate(5deg);
-  }
-
-  .hero-logo-glow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 280px;
-    height: 280px;
-    background: radial-gradient(circle, rgba(246, 245, 16, 0.3) 0%, transparent 70%);
-    border-radius: 50%;
-    z-index: 1;
-    animation: pulse 3s ease-in-out infinite;
-  }
-
-  @keyframes pulse {
-    0%, 100% {
-      opacity: 0.5;
-      transform: translate(-50%, -50%) scale(1);
-    }
-    50% {
-      opacity: 0.8;
-      transform: translate(-50%, -50%) scale(1.1);
-    }
+    filter: drop-shadow(0 8px 20px rgba(246, 245, 16, 0.4));
+    animation: fadeInScale 1s ease-out;
   }
 
   @keyframes fadeInScale {
     from {
       opacity: 0;
-      transform: scale(0.8) rotate(-10deg);
+      transform: scale(0.85) rotate(-5deg);
     }
     to {
       opacity: 1;
@@ -515,43 +430,25 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .hero h1 {
-    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 900;
     color: var(--white);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     line-height: 1.1;
-    letter-spacing: -3px;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    animation: fadeInUp 1s ease-out 0.2s both;
+    letter-spacing: -2px;
   }
 
   .hero h1 .highlight {
     color: var(--yellow);
     position: relative;
-    display: inline-block;
-  }
-
-  .hero h1 .highlight::after {
-    content: '';
-    position: absolute;
-    bottom: 0.1em;
-    left: 0;
-    right: 0;
-    height: 0.15em;
-    background: var(--yellow);
-    opacity: 0.3;
-    transform: skewX(-10deg);
-    z-index: -1;
   }
 
   .hero-subtitle {
-    font-size: clamp(1.15rem, 2.2vw, 1.5rem);
-    color: var(--gray-200);
-    max-width: 750px;
-    margin: 0 auto 3.5rem;
-    line-height: 1.9;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    animation: fadeInUp 1s ease-out 0.4s both;
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: var(--gray-300);
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    line-height: 1.8;
   }
 
   .hero-buttons {
@@ -560,7 +457,6 @@ import Layout from '../layouts/Layout.astro';
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 5rem;
-    animation: fadeInUp 1s ease-out 0.6s both;
   }
 
   .btn {
@@ -568,8 +464,8 @@ import Layout from '../layouts/Layout.astro';
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    padding: 1.35rem 2.75rem;
-    font-size: 1.05rem;
+    padding: 1.25rem 2.5rem;
+    font-size: 1rem;
     font-weight: 700;
     text-decoration: none;
     border-radius: 0;
@@ -577,8 +473,7 @@ import Layout from '../layouts/Layout.astro';
     border: 3px solid transparent;
     position: relative;
     overflow: hidden;
-    clip-path: polygon(14px 0, 100% 0, calc(100% - 14px) 100%, 0 100%);
-    letter-spacing: 0.5px;
+    clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
   }
 
   .btn::before {
@@ -588,16 +483,12 @@ import Layout from '../layouts/Layout.astro';
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
-    transition: left 0.6s;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: left 0.5s;
   }
 
   .btn:hover::before {
     left: 100%;
-  }
-
-  .btn:active {
-    transform: translate(-1px, -1px);
   }
 
   .btn-arrow {
@@ -614,30 +505,29 @@ import Layout from '../layouts/Layout.astro';
     background: var(--yellow);
     color: var(--black);
     border-color: var(--yellow);
-    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.3), 0 0 20px rgba(246, 245, 16, 0.3);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
   }
 
   .btn-primary:hover {
     background: var(--black);
     color: var(--yellow);
     border-color: var(--yellow);
-    transform: translate(-3px, -3px);
-    box-shadow: 8px 8px 0 rgba(246, 245, 16, 0.8), 0 0 35px rgba(246, 245, 16, 0.6);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 rgba(246, 245, 16, 0.7), 0 0 25px rgba(246, 245, 16, 0.5);
   }
 
   .btn-secondary {
-    background: rgba(255, 255, 255, 0.1);
+    background: transparent;
     color: var(--white);
     border-color: var(--white);
-    box-shadow: 5px 5px 0 rgba(255, 255, 255, 0.15), 0 0 15px rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.1);
   }
 
   .btn-secondary:hover {
     background: var(--white);
     color: var(--black);
-    transform: translate(-3px, -3px);
-    box-shadow: 8px 8px 0 rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.3);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 rgba(255, 255, 255, 0.3);
   }
 
   .btn-large {
@@ -652,23 +542,14 @@ import Layout from '../layouts/Layout.astro';
   .hero-trust {
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    gap: 2rem;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 2.5rem 3rem;
-    background: rgba(0, 0, 0, 0.5);
-    border: 2px solid rgba(246, 245, 16, 0.3);
-    clip-path: polygon(25px 0, 100% 0, calc(100% - 25px) 100%, 0 100%);
-    backdrop-filter: blur(15px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(246, 245, 16, 0.05);
-    animation: fadeInUp 1s ease-out 0.8s both;
-    transition: all 0.3s ease;
-  }
-
-  .hero-trust:hover {
-    border-color: rgba(246, 245, 16, 0.5);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), inset 0 0 25px rgba(246, 245, 16, 0.1);
-    transform: translateY(-2px);
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(246, 245, 16, 0.2);
+    clip-path: polygon(20px 0, 100% 0, calc(100% - 20px) 100%, 0 100%);
+    backdrop-filter: blur(10px);
   }
 
   .trust-item {
@@ -679,16 +560,11 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .trust-number {
-    font-size: 3rem;
+    font-size: 2.8rem;
     font-weight: 900;
     color: var(--yellow);
     line-height: 1;
-    text-shadow: 0 0 20px rgba(246, 245, 16, 0.5), 2px 2px 0 rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-  }
-
-  .trust-item:hover .trust-number {
-    transform: scale(1.1);
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
   }
 
   .trust-label {
@@ -701,55 +577,8 @@ import Layout from '../layouts/Layout.astro';
 
   .trust-divider {
     width: 2px;
-    height: 60px;
-    background: linear-gradient(to bottom, transparent, rgba(246, 245, 16, 0.3), var(--yellow), rgba(246, 245, 16, 0.3), transparent);
-    opacity: 0.6;
-  }
-
-  .hero-scroll-indicator {
-    position: absolute;
-    bottom: 3rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--yellow);
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    z-index: 3;
-    opacity: 0.8;
-    animation: fadeInUp 1s ease-out 1s both, bounce 2s ease-in-out 2s infinite;
-  }
-
-  .scroll-line {
-    width: 2px;
-    height: 40px;
-    background: linear-gradient(to bottom, var(--yellow), transparent);
-    animation: scrollLine 2s ease-in-out infinite;
-  }
-
-  @keyframes scrollLine {
-    0%, 100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    50% {
-      transform: translateY(10px);
-      opacity: 0.5;
-    }
-  }
-
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateX(-50%) translateY(0);
-    }
-    50% {
-      transform: translateX(-50%) translateY(-10px);
-    }
+    height: 50px;
+    background: linear-gradient(to bottom, transparent, var(--yellow), transparent);
   }
 
   .container {
@@ -807,11 +636,6 @@ import Layout from '../layouts/Layout.astro';
     margin-bottom: 1.5rem;
     line-height: 1.1;
     letter-spacing: -2px;
-    transition: transform 0.3s ease;
-  }
-
-  .section-header-artistic:hover h2 {
-    transform: translateX(5px);
   }
 
   .heading-accent {
@@ -831,7 +655,7 @@ import Layout from '../layouts/Layout.astro';
 
   /* === FEATURES SECTION === */
   .features {
-    padding: 12rem 0;
+    padding: 10rem 0;
     background: var(--white);
     position: relative;
     overflow: hidden;
@@ -860,12 +684,11 @@ import Layout from '../layouts/Layout.astro';
 
   .feature-card {
     background: var(--white);
-    padding: 3.5rem 2.5rem;
+    padding: 3rem 2rem;
     border: 3px solid var(--black);
-    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
-    clip-path: polygon(0 0, calc(100% - 25px) 0, 100% 25px, 100% 100%, 0 100%);
-    background: linear-gradient(135deg, var(--white) 0%, var(--gray-50) 100%);
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
   }
 
   .feature-corner-accent {
@@ -891,9 +714,8 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .feature-card:hover {
-    transform: translate(-6px, -6px);
-    box-shadow: 10px 10px 0 rgba(246, 245, 16, 0.95), 0 0 40px rgba(246, 245, 16, 0.5);
-    border-color: var(--yellow);
+    transform: translate(-4px, -4px);
+    box-shadow: 8px 8px 0 rgba(246, 245, 16, 0.9), 0 0 30px rgba(246, 245, 16, 0.4);
   }
 
   .feature-card:hover .feature-diagonal-line {
@@ -913,17 +735,12 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .feature-card h3 {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     font-weight: 800;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
     color: var(--black);
     position: relative;
     z-index: 1;
-    transition: color 0.3s ease;
-  }
-
-  .feature-card:hover h3 {
-    color: var(--black);
   }
 
   .feature-card p {
@@ -935,7 +752,7 @@ import Layout from '../layouts/Layout.astro';
 
   /* === SERVICES SECTION === */
   .services-preview {
-    padding: 12rem 0;
+    padding: 10rem 0;
     background: var(--black);
     position: relative;
     overflow: hidden;
@@ -988,11 +805,11 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .service-card {
-    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 50%, #000000 100%);
+    background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
     color: var(--white);
-    padding: 3.5rem 2.5rem;
+    padding: 3rem 2.5rem;
     border: 3px solid var(--gray-800);
-    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
     overflow: hidden;
   }
@@ -1022,9 +839,8 @@ import Layout from '../layouts/Layout.astro';
 
   .service-card:hover {
     border-color: var(--yellow);
-    transform: translateX(10px);
-    box-shadow: -10px 10px 0 rgba(246, 245, 16, 0.95), 0 0 40px rgba(246, 245, 16, 0.4);
-    background: linear-gradient(135deg, #222222 0%, #111111 50%, #000000 100%);
+    transform: translateX(8px);
+    box-shadow: -8px 8px 0 rgba(246, 245, 16, 0.9), 0 0 30px rgba(246, 245, 16, 0.3);
   }
 
   .service-card:hover::before {
@@ -1063,15 +879,10 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .service-card h3 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-weight: 800;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
     color: var(--white);
-    transition: color 0.3s ease;
-  }
-
-  .service-card:hover h3 {
-    color: var(--yellow);
   }
 
   .service-card p {
@@ -1104,8 +915,8 @@ import Layout from '../layouts/Layout.astro';
 
   /* === PROCESS SECTION === */
   .process {
-    padding: 12rem 0;
-    background: linear-gradient(180deg, var(--gray-50) 0%, var(--white) 100%);
+    padding: 10rem 0;
+    background: var(--gray-50);
     position: relative;
     overflow: hidden;
   }
@@ -1151,17 +962,15 @@ import Layout from '../layouts/Layout.astro';
 
   .process-step {
     position: relative;
-    padding: 3.5rem 2.5rem;
+    padding: 3rem 2rem;
     background: var(--white);
     border: 3px solid var(--black);
-    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    background: linear-gradient(135deg, var(--white) 0%, var(--gray-50) 100%);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 
   .process-step:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 0 rgba(246, 245, 16, 0.95), 0 0 35px rgba(246, 245, 16, 0.4);
-    border-color: var(--yellow);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 0 rgba(246, 245, 16, 0.9), 0 0 25px rgba(246, 245, 16, 0.35);
   }
 
   .step-accent-line {
@@ -1209,14 +1018,9 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .step-content h3 {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     font-weight: 800;
-    margin-bottom: 1.2rem;
-    color: var(--black);
-    transition: color 0.3s ease;
-  }
-
-  .process-step:hover .step-content h3 {
+    margin-bottom: 1rem;
     color: var(--black);
   }
 
@@ -1227,7 +1031,7 @@ import Layout from '../layouts/Layout.astro';
 
   /* === TESTIMONIALS SECTION === */
   .testimonials {
-    padding: 8rem 0;
+    padding: 5rem 0;
     background: var(--white);
     position: relative;
     overflow: hidden;
@@ -1302,7 +1106,7 @@ import Layout from '../layouts/Layout.astro';
     opacity: 1;
     transform: translateX(0);
     pointer-events: auto;
-    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.15), 0 0 30px rgba(246, 245, 16, 0.1);
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.1);
   }
 
   .testimonial-card.prev {
@@ -1464,8 +1268,8 @@ import Layout from '../layouts/Layout.astro';
 
   /* === CTA SECTION === */
   .cta-section {
-    background: linear-gradient(135deg, #0a0a0a 0%, var(--black) 50%, #0a0a0a 100%);
-    padding: 12rem 2rem;
+    background: var(--black);
+    padding: 10rem 2rem;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -1645,23 +1449,14 @@ import Layout from '../layouts/Layout.astro';
       padding: 4rem 1rem;
     }
 
-    .hero-logo-container {
-      margin-bottom: 2rem;
-    }
-
     .hero-logo-svg {
-      width: 160px;
-      height: 160px;
-    }
-
-    .hero-logo-glow {
-      width: 200px;
-      height: 200px;
+      width: 150px;
+      height: 150px;
     }
 
     .hero-trust {
       gap: 1.5rem;
-      padding: 1.5rem 2rem;
+      padding: 1.5rem;
     }
 
     .trust-divider {
@@ -1670,15 +1465,6 @@ import Layout from '../layouts/Layout.astro';
 
     .trust-number {
       font-size: 2.2rem;
-    }
-
-    .hero-scroll-indicator {
-      bottom: 2rem;
-      font-size: 0.65rem;
-    }
-
-    .scroll-line {
-      height: 30px;
     }
 
 
@@ -1690,10 +1476,6 @@ import Layout from '../layouts/Layout.astro';
     .services-preview,
     .process,
     .cta-section {
-      padding: 6rem 0;
-    }
-
-    .testimonials {
       padding: 5rem 0;
     }
 
@@ -1708,16 +1490,10 @@ import Layout from '../layouts/Layout.astro';
       transform: none !important;
     }
 
-    .feature-card:hover {
-      transform: translate(-3px, -3px) !important;
-    }
-
-    .service-card:hover {
-      transform: translateX(5px) !important;
-    }
-
+    .feature-card:hover,
+    .service-card:hover,
     .process-step:hover {
-      transform: translateY(-5px) !important;
+      transform: translateY(-4px) !important;
     }
 
     .btn {
@@ -1779,7 +1555,6 @@ import Layout from '../layouts/Layout.astro';
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    // Testimonials carousel
     const cards = document.querySelectorAll('.testimonial-card');
     const dots = document.querySelectorAll('.dot');
     const prevBtn = document.querySelector('.carousel-prev');
@@ -1788,7 +1563,7 @@ import Layout from '../layouts/Layout.astro';
     let currentIndex = 0;
     const totalCards = cards.length;
 
-    function showCard(index: number) {
+    function showCard(index) {
       cards.forEach((card, i) => {
         card.classList.remove('active', 'prev');
         if (i === index) {
@@ -1819,14 +1594,16 @@ import Layout from '../layouts/Layout.astro';
     nextBtn?.addEventListener('click', nextCard);
 
     dots.forEach((dot, index) => {
-      (dot as HTMLElement).addEventListener('click', () => showCard(index));
+      dot.addEventListener('click', () => showCard(index));
     });
 
     // Auto-rotate every 5 seconds
-    let autoRotate = setInterval(nextCard, 5000);
+    setInterval(nextCard, 5000);
 
     // Pause auto-rotate on hover
     const carousel = document.querySelector('.testimonials-carousel');
+    let autoRotate = setInterval(nextCard, 5000);
+
     carousel?.addEventListener('mouseenter', () => {
       clearInterval(autoRotate);
     });
@@ -1834,87 +1611,5 @@ import Layout from '../layouts/Layout.astro';
     carousel?.addEventListener('mouseleave', () => {
       autoRotate = setInterval(nextCard, 5000);
     });
-
-    // Scroll animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const target = entry.target as HTMLElement;
-          target.style.opacity = '1';
-          target.style.transform = 'translateY(0)';
-        }
-      });
-    }, observerOptions);
-
-    // Animate elements on scroll
-    document.querySelectorAll('[data-animate]').forEach((el) => {
-      const element = el as HTMLElement;
-      const delay = element.getAttribute('data-delay') || '0';
-      element.style.opacity = '0';
-      element.style.transform = 'translateY(30px)';
-      element.style.transition = `opacity 0.8s ease-out ${delay}ms, transform 0.8s ease-out ${delay}ms`;
-      observer.observe(element);
-    });
-
-    // Number counting animation
-    function animateCounter(element: HTMLElement, target: number, duration = 2000) {
-      const start = 0;
-      const increment = target / (duration / 16);
-      let current = start;
-
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          element.textContent = target + '+';
-          clearInterval(timer);
-        } else {
-          element.textContent = Math.floor(current) + '+';
-        }
-      }, 16);
-    }
-
-    // Observe trust numbers
-    const trustNumbers = document.querySelectorAll('[data-count]');
-    const numberObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
-          const target = parseInt(entry.target.getAttribute('data-count') || '0');
-          entry.target.classList.add('counted');
-          animateCounter(entry.target as HTMLElement, target);
-        }
-      });
-    }, { threshold: 0.5 });
-
-    trustNumbers.forEach(num => numberObserver.observe(num));
-
-    // Smooth scroll for scroll indicator
-    const scrollIndicator = document.querySelector('.hero-scroll-indicator') as HTMLElement;
-    if (scrollIndicator) {
-      scrollIndicator.addEventListener('click', () => {
-        window.scrollTo({
-          top: window.innerHeight,
-          behavior: 'smooth'
-        });
-      });
-
-      // Hide scroll indicator after scrolling
-      let scrollIndicatorVisible = true;
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 100 && scrollIndicatorVisible) {
-          scrollIndicator.style.opacity = '0';
-          scrollIndicator.style.pointerEvents = 'none';
-          scrollIndicatorVisible = false;
-        } else if (window.scrollY <= 100 && !scrollIndicatorVisible) {
-          scrollIndicator.style.opacity = '0.8';
-          scrollIndicator.style.pointerEvents = 'auto';
-          scrollIndicatorVisible = true;
-        }
-      });
-    }
   });
 </script>
