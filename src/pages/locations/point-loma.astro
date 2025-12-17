@@ -3,30 +3,184 @@ import LocationTemplate from './_location-page-template.astro';
 ---
 
 <LocationTemplate
-  title="Point Loma Moving Services"
-  description="Professional moving services in Point Loma, San Diego."
-  noindex={true}
-  locationBadge="Point Loma"
-  heroTitle="Professional Movers in Point Loma"
-  heroDescription="Reliable moving services for Point Loma."
-  introHeading="Moving Services in Point Loma"
-  introText="Mighty Movers provides professional moving services throughout Point Loma."
-  mainContentHeading="Professional Point Loma Moving Services"
-  mainContent="Mighty Movers provides comprehensive moving services throughout Point Loma. Our experienced team understands the unique characteristics of this coastal peninsula community and delivers reliable, professional moving services for residential customers."
-  servicesHeading="Our Moving Services"
-  services={[{title:"Local Moving",description:"Local services in Point Loma"},{title:"Residential Moving",description:"Home moves throughout Point Loma"},{title:"Commercial Moving",description:"Business moves in Point Loma"},{title:"Packing Services",description:"Professional packing assistance"}]}
-  whyHeading="Why Choose Mighty Movers"
-  benefits={[{title:"Licensed & Insured",description:"Fully licensed and insured"},{title:"Experienced Team",description:"Professional movers"},{title:"Competitive Rates",description:"Fair pricing"},{title:"Same-Day Service",description:"Fast service"}]}
-  neighborhoodsHeading="Other Areas We Serve"
-  neighborhoods={[{title:"La Jolla",description:"Coastal moves"},{title:"Downtown",description:"Urban solutions"},{title:"Pacific Beach",description:"Beach services"},{title:"Del Mar",description:"North County"}]}
-  faqHeading="Frequently Asked Questions"
-  faqs={[{question:"Do you serve Point Loma?",answer:"Yes! We serve all of San Diego County."},{question:"What services?",answer:"Local moving, packing, commercial, and more."},{question:"Same-day service?",answer:"Yes, based on availability."},{question:"Licensed?",answer:"Yes, fully licensed and insured."},{question:"How to get quote?",answer:"Contact us by phone or website."}]}
-  ctaCards={[{title:"Get Your Free Quote",description:"Request a free quote today.",buttonText:"Get Free Quote",buttonHref:"/contact",isDark:false},{title:"Call Us Today",description:"Speak with a specialist.",buttonText:"(619) 555-MOVE",buttonHref:"tel:6195556683",isDark:true}]}
-  infoCards={[{title:"Service Hours",items:["Mon-Fri: 7AM-7PM","Sat: 8AM-6PM","Sun: 9AM-5PM","Same-day available"]},{title:"Service Area",content:"Serving Point Loma and San Diego County."}]}
-  bottomCTAHeading="Ready to Move?"
-  bottomCTADescription="Get started with San Diego's trusted movers."
-  bottomCTAPrimaryText="Get Free Quote"
+  title="Point Loma Movers | Military & Residential Moving Services"
+  description="Reliable Point Loma movers specializing in residential and military relocations. Mighty Movers provides professional moving services in Point Loma, including PCS-adjacent and military moves, with transparent pricing and local expertise."
+  noindex={false}
+
+  locationBadge="Point Loma Moving Company"
+  heroTitle="Trusted Point Loma Movers & Military Relocation Support"
+  heroDescription="Mighty Movers is a professional Point Loma moving company providing efficient, well-organized moving services for homes, apartments, and military relocations. Our experienced local movers understand Point Loma's layout, access challenges, and military presence—and plan every move accordingly."
+
+  introHeading="Point Loma Movers With Military & Local Experience"
+  introText="Point Loma is one of San Diego's most distinctive coastal communities, combining residential neighborhoods, historic homes, and a strong military presence. Moving in Point Loma requires careful planning due to narrow streets, elevation changes, limited parking, and base-adjacent access considerations. Mighty Movers specializes in Point Loma moving services designed to support both residential and military relocations with efficiency and care."
+
+  mainContentHeading="Residential & Military Moving Services in Point Loma"
+  mainContent={`Mighty Movers is a locally operated moving company serving Point Loma and surrounding coastal neighborhoods. We focus on residential neighborhood moves and frequently assist active-duty service members, military families, and civilian contractors relocating within Point Loma and greater San Diego.
+
+Point Loma features a mix of single-family homes, older apartments, duplexes, and hillside properties. Many residences are located on elevated terrain with narrow streets and limited driveway access. Our Point Loma movers are familiar with these conditions and plan each move carefully to avoid delays, protect property, and ensure safe handling of belongings.
+
+Point Loma is also home to Naval Base Point Loma, making it a central hub for military-related moves. We regularly support customers searching for military movers in San Diego and san diego military movers who need reliable, flexible service near base facilities. Our team understands PCS-adjacent timelines, temporary housing transitions, and the importance of clear communication during military relocations.
+
+Traffic and access planning are especially important in Point Loma. Major routes such as Rosecrans Street, Catalina Boulevard, Nimitz Boulevard, and Sports Arena Boulevard can become congested during peak hours. Our movers plan arrival times strategically and assess access points in advance to keep moves efficient and on schedule.
+
+Weather conditions also factor into Point Loma moves. Coastal humidity, marine layer moisture, and wind exposure can affect hillside and ocean-facing homes. Our movers use professional protective materials and careful handling techniques to safeguard furniture, electronics, and sensitive items.
+
+Our Point Loma moving services are commonly used for local relocations, military-related transitions, and short-distance moves between nearby coastal neighborhoods. Many customers searching for military moving companies in San Diego choose Mighty Movers because we provide a structured, transparent approach without unnecessary complexity.
+
+Unlike many moving companies in Point Loma, we emphasize clarity and preparation. Our hourly pricing is explained upfront and includes professional equipment such as moving pads, shrink wrap, dollies, lifting straps, and tools. There are no hidden charges for standard protections.
+
+If you're looking for dependable Point Loma movers or experienced military movers in San Diego, Mighty Movers offers a reliable, well-organized moving solution built for both residential and military needs.`}
+
+  servicesHeading="Point Loma Moving Services"
+  services={[
+    {
+      title: "Residential Moving",
+      description: "Professional moving services for Point Loma homes, apartments, and duplexes."
+    },
+    {
+      title: "Military & PCS-Adjacent Moves",
+      description: "Support for service members and military families relocating near Naval Base Point Loma and nearby installations."
+    },
+    {
+      title: "Labor-Only Moving",
+      description: "Experienced movers to assist with loading and unloading rental trucks or containers."
+    },
+    {
+      title: "Packing Assistance",
+      description: "Optional packing services for customers who want help preparing before moving day."
+    }
+  ]}
+
+  localKnowledgeText="Our Point Loma movers are experienced with hillside streets, base-adjacent neighborhoods, limited parking, and coastal access challenges common throughout the area."
+
+  whyHeading="Why Point Loma Residents & Service Members Choose Mighty Movers"
+  benefits={[
+    {
+      title: "Point Loma–Specific Experience",
+      description: "Familiar with elevation changes, narrow streets, and residential layouts."
+    },
+    {
+      title: "Military-Aware Scheduling",
+      description: "Experience supporting PCS timelines and base-adjacent relocations."
+    },
+    {
+      title: "Transparent Pricing",
+      description: "Clear hourly rates with equipment included—no hidden fees."
+    },
+    {
+      title: "Flexible Crew Options",
+      description: "Choose the right team size for homes, apartments, or military housing."
+    },
+    {
+      title: "Professional Equipment Included",
+      description: "Pads, shrink wrap, dollies, straps, and tools come standard."
+    }
+  ]}
+
+  neighborhoodsHeading="Point Loma Areas We Serve"
+  neighborhoods={[
+    {
+      title: "Loma Portal",
+      description: "Residential homes near Rosecrans Street and Liberty Station."
+    },
+    {
+      title: "Fleetridge",
+      description: "Hillside properties with elevation changes and limited street access."
+    },
+    {
+      title: "Sunset Cliffs Border",
+      description: "Coastal homes near cliffside areas and narrow streets."
+    },
+    {
+      title: "Liberty Station Area",
+      description: "Apartments and townhomes near shopping and dining."
+    },
+    {
+      title: "Point Loma Heights",
+      description: "Residential blocks near schools and local parks."
+    }
+  ]}
+
+  trustBadges={[
+    {
+      metric: "3,000+",
+      label: "San Diego County Moves"
+    },
+    {
+      metric: "Military-Friendly",
+      label: "Local Expertise"
+    },
+    {
+      metric: "100%",
+      label: "Transparent Pricing"
+    }
+  ]}
+
+  faqHeading="Point Loma & Military Moving FAQs"
+  faqs={[
+    {
+      question: "Is Point Loma considered a military area?",
+      answer: "Yes. Point Loma is home to Naval Base Point Loma and is close to several major military installations, making it a common area for military relocations."
+    },
+    {
+      question: "Do you provide military moving services in San Diego?",
+      answer: "Yes. We regularly assist service members and military families looking for reliable military movers in San Diego."
+    },
+    {
+      question: "Do you help with PCS-related local moves?",
+      answer: "We frequently support PCS-adjacent relocations, temporary housing moves, and short-distance transitions near military bases."
+    },
+    {
+      question: "Are hillside homes more difficult to move?",
+      answer: "They can be. Elevation changes and narrow streets require careful planning, which we account for in advance."
+    },
+    {
+      question: "Is parking or base-adjacent access reviewed before moving day?",
+      answer: "Yes. Parking, access, and any base-related considerations are discussed ahead of time to avoid delays."
+    },
+    {
+      question: "How far in advance should I book Point Loma movers?",
+      answer: "One to two weeks is recommended, though availability may vary during peak seasons."
+    }
+  ]}
+
+  ctaCards={[
+    {
+      title: "Get Your Free Quote",
+      description: "Request a free, no-obligation quote for your Point Loma move today.",
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
+    },
+    {
+      title: "Call Us Today",
+      description: "Speak with a moving specialist about your Point Loma move.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
+    }
+  ]}
+
+  infoCards={[
+    {
+      title: "Service Hours",
+      items: [
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Same-day service available"
+      ]
+    },
+    {
+      title: "Why Choose Us",
+      content: "Over 10 years serving Point Loma with professional moving services. Licensed, insured, and locally owned."
+    }
+  ]}
+
+  bottomCTAHeading="Schedule Your Point Loma Move Today"
+  bottomCTADescription="If you're planning a move in Point Loma—residential or military-related—Mighty Movers is ready to help. Call today for a free quote and work with experienced local movers who understand Point Loma and military relocations."
+  bottomCTAPrimaryText="Get a Free Quote"
   bottomCTAPrimaryHref="/contact"
-  bottomCTASecondaryText="Call (619) 555-MOVE"
-  bottomCTASecondaryHref="tel:6195556683"
+  bottomCTASecondaryText="Call (619) 906-9018"
+  bottomCTASecondaryHref="tel:16199069018"
 />
