@@ -3,30 +3,184 @@ import LocationTemplate from './_location-page-template.astro';
 ---
 
 <LocationTemplate
-  title="Ocean Beach Moving Services"
-  description="Professional moving services in Ocean Beach, San Diego."
-  noindex={true}
-  locationBadge="Ocean Beach"
-  heroTitle="Professional Movers in Ocean Beach"
-  heroDescription="Reliable moving services for Ocean Beach."
-  introHeading="Moving Services in Ocean Beach"
-  introText="Mighty Movers provides professional moving services throughout Ocean Beach."
-  mainContentHeading="Professional Ocean Beach Moving Services"
-  mainContent="Mighty Movers provides comprehensive moving services throughout Ocean Beach. Our experienced team understands the unique characteristics of this laid-back beach community and delivers reliable, professional moving services for residential customers."
-  servicesHeading="Our Moving Services"
-  services={[{title:"Local Moving",description:"Local services in Ocean Beach"},{title:"Residential Moving",description:"Home moves throughout Ocean Beach"},{title:"Commercial Moving",description:"Business moves in Ocean Beach"},{title:"Packing Services",description:"Professional packing assistance"}]}
-  whyHeading="Why Choose Mighty Movers"
-  benefits={[{title:"Licensed & Insured",description:"Fully licensed and insured"},{title:"Experienced Team",description:"Professional movers"},{title:"Competitive Rates",description:"Fair pricing"},{title:"Same-Day Service",description:"Fast service"}]}
-  neighborhoodsHeading="Other Areas We Serve"
-  neighborhoods={[{title:"La Jolla",description:"Coastal moves"},{title:"Downtown",description:"Urban solutions"},{title:"Pacific Beach",description:"Beach services"},{title:"Del Mar",description:"North County"}]}
-  faqHeading="Frequently Asked Questions"
-  faqs={[{question:"Do you serve Ocean Beach?",answer:"Yes! We serve all of San Diego County."},{question:"What services?",answer:"Local moving, packing, commercial, and more."},{question:"Same-day service?",answer:"Yes, based on availability."},{question:"Licensed?",answer:"Yes, fully licensed and insured."},{question:"How to get quote?",answer:"Contact us by phone or website."}]}
-  ctaCards={[{title:"Get Your Free Quote",description:"Request a free quote today.",buttonText:"Get Free Quote",buttonHref:"/contact",isDark:false},{title:"Call Us Today",description:"Speak with a specialist.",buttonText:"(619) 555-MOVE",buttonHref:"tel:6195556683",isDark:true}]}
-  infoCards={[{title:"Service Hours",items:["Mon-Fri: 7AM-7PM","Sat: 8AM-6PM","Sun: 9AM-5PM","Same-day available"]},{title:"Service Area",content:"Serving Ocean Beach and San Diego County."}]}
-  bottomCTAHeading="Ready to Move?"
-  bottomCTADescription="Get started with San Diego's trusted movers."
-  bottomCTAPrimaryText="Get Free Quote"
+  title="Ocean Beach Movers | Mighty Movers"
+  description="Reliable Ocean Beach movers specializing in apartments, beach bungalows, and local neighborhood moves. Mighty Movers provides professional, stress-free moving services in Ocean Beach with transparent pricing."
+  noindex={false}
+
+  locationBadge="Ocean Beach Moving Company"
+  heroTitle="Trusted Ocean Beach Movers"
+  heroDescription="Mighty Movers is a professional Ocean Beach moving company providing efficient, affordable moving services throughout OB. From beach apartments to classic bungalows, our local movers understand Ocean Beach logistics and plan every move accordingly."
+
+  introHeading="Ocean Beach Movers Who Understand Coastal Living"
+  introText="Ocean Beach is one of San Diego's most unique coastal neighborhoods, known for its laid-back lifestyle, older homes, and tight-knit community. Moving here comes with specific challenges—narrow streets, limited parking, older buildings, and beach-area access. Mighty Movers specializes in Ocean Beach moving services designed to keep your move smooth, organized, and stress-free."
+
+  mainContentHeading="Professional Moving Services in Ocean Beach, San Diego"
+  mainContent={`Mighty Movers is a locally operated moving company serving Ocean Beach and surrounding coastal neighborhoods. We focus on residential neighborhood moves, helping renters, homeowners, and long-term residents relocate efficiently within Ocean Beach and nearby areas.
+
+Ocean Beach features a mix of older apartment buildings, beach bungalows, duplexes, and small residential properties—many built decades ago. These homes often include narrow hallways, tight staircases, minimal driveways, and street-only parking. Our Ocean Beach movers are familiar with these conditions and plan each move carefully to avoid delays and protect property.
+
+Parking is one of the most common challenges in OB, especially near Newport Avenue, Sunset Cliffs Boulevard, and residential streets closer to the beach. Our crews plan arrival times strategically and review access details in advance to minimize downtime and keep moves moving efficiently.
+
+We regularly assist customers moving near Ocean Beach landmarks such as Newport Avenue, Ocean Beach Pier, Sunset Cliffs, Robb Field, and the OB Dog Beach area. Our movers understand traffic patterns, pedestrian activity, and peak times that can affect moving day logistics.
+
+Ocean Beach's coastal environment also impacts moves. Marine layer moisture, sand, salt air, and warmer afternoon temperatures can affect furniture and electronics if not handled properly. Our movers use professional protective materials and careful handling techniques to safeguard belongings throughout the move.
+
+Our Ocean Beach moving services are especially popular with renters and long-term residents who want a straightforward, stress-free experience. Many OB moves are short-distance relocations within the neighborhood or nearby coastal areas, making efficiency and local knowledge especially important.
+
+Compared to many Ocean Beach moving companies, Mighty Movers offers a transparent, no-nonsense approach. Our hourly pricing is clearly explained upfront and includes professional equipment such as moving pads, shrink wrap, dollies, lifting straps, and tools. We don't charge extra for basic protections that should already be standard.
+
+If you're searching for dependable Ocean Beach movers who understand the neighborhood's layout, lifestyle, and access challenges, Mighty Movers provides a reliable, well-organized moving solution built for coastal San Diego.`}
+
+  servicesHeading="Ocean Beach Moving Services"
+  services={[
+    {
+      title: "Apartment & Bungalow Moving",
+      description: "Professional moving services for Ocean Beach apartments, bungalows, and duplexes."
+    },
+    {
+      title: "Local Neighborhood Moves",
+      description: "Ideal for short-distance relocations within OB and nearby coastal areas."
+    },
+    {
+      title: "Labor-Only Moving",
+      description: "Experienced movers to assist with loading and unloading rental trucks or containers."
+    },
+    {
+      title: "Packing Assistance",
+      description: "Optional packing services for customers who want help preparing before moving day."
+    }
+  ]}
+
+  localKnowledgeText="Our Ocean Beach movers are experienced with tight streets, limited parking, older homes, and beach-area access challenges common throughout OB."
+
+  whyHeading="Why Ocean Beach Residents Choose Mighty Movers"
+  benefits={[
+    {
+      title: "Ocean Beach–Specific Experience",
+      description: "We understand OB streets, parking limitations, and older residential layouts."
+    },
+    {
+      title: "Stress-Free Process",
+      description: "Clear communication, careful planning, and no rushed labor."
+    },
+    {
+      title: "Transparent Pricing",
+      description: "Straightforward hourly rates with equipment included."
+    },
+    {
+      title: "Flexible Scheduling",
+      description: "Ideal for short-distance and same-neighborhood moves."
+    },
+    {
+      title: "Professional Equipment Included",
+      description: "Pads, shrink wrap, dollies, straps, and tools come standard."
+    }
+  ]}
+
+  neighborhoodsHeading="Ocean Beach Areas We Serve"
+  neighborhoods={[
+    {
+      title: "Newport Avenue Corridor",
+      description: "Apartments and residences near shops, dining, and local businesses."
+    },
+    {
+      title: "Sunset Cliffs Area",
+      description: "Coastal homes with limited access and elevation changes."
+    },
+    {
+      title: "OB Core",
+      description: "Dense residential blocks near the beach with heavy parking demand."
+    },
+    {
+      title: "Robb Field Area",
+      description: "Residential moves near parks and community spaces."
+    },
+    {
+      title: "Point Loma Border",
+      description: "Homes and apartments near the eastern edge of Ocean Beach."
+    }
+  ]}
+
+  trustBadges={[
+    {
+      metric: "3,000+",
+      label: "San Diego Moves Completed"
+    },
+    {
+      metric: "Coastal SD",
+      label: "Neighborhood Moves"
+    },
+    {
+      metric: "100%",
+      label: "Transparent Pricing"
+    }
+  ]}
+
+  faqHeading="Ocean Beach Moving FAQs"
+  faqs={[
+    {
+      question: "Do you regularly handle moves in Ocean Beach?",
+      answer: "Yes. Ocean Beach is one of the coastal neighborhoods we serve frequently."
+    },
+    {
+      question: "Is parking usually difficult during Ocean Beach moves?",
+      answer: "Parking can be limited, especially near the beach and Newport Avenue. We review access details ahead of time to avoid delays."
+    },
+    {
+      question: "Do you move older homes and beach bungalows?",
+      answer: "Yes. Our movers are experienced with older homes, narrow hallways, and unique layouts common in OB."
+    },
+    {
+      question: "Are Ocean Beach moves usually short-distance?",
+      answer: "Many OB moves involve relocating within the neighborhood or nearby coastal areas and can often be completed efficiently."
+    },
+    {
+      question: "How do beach conditions affect moving day?",
+      answer: "Sand, marine layer moisture, and coastal air are common. We use protective materials to safeguard belongings."
+    },
+    {
+      question: "How far in advance should I book Ocean Beach movers?",
+      answer: "One to two weeks is recommended, though same-day availability may be possible depending on demand."
+    }
+  ]}
+
+  ctaCards={[
+    {
+      title: "Get Your Free Quote",
+      description: "Request a free, no-obligation quote for your Ocean Beach move today.",
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
+    },
+    {
+      title: "Call Us Today",
+      description: "Speak with a moving specialist about your Ocean Beach move.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
+    }
+  ]}
+
+  infoCards={[
+    {
+      title: "Service Hours",
+      items: [
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Same-day service available"
+      ]
+    },
+    {
+      title: "Why Choose Us",
+      content: "Over 10 years serving Ocean Beach with professional moving services. Licensed, insured, and locally owned."
+    }
+  ]}
+
+  bottomCTAHeading="Schedule Your Ocean Beach Move Today"
+  bottomCTADescription="If you're planning a move in Ocean Beach, San Diego, Mighty Movers is ready to help. Call today for a free quote and work with experienced local movers who know OB inside and out."
+  bottomCTAPrimaryText="Get a Free Quote"
   bottomCTAPrimaryHref="/contact"
-  bottomCTASecondaryText="Call (619) 555-MOVE"
-  bottomCTASecondaryHref="tel:6195556683"
+  bottomCTASecondaryText="Call (619) 906-9018"
+  bottomCTASecondaryHref="tel:16199069018"
 />
