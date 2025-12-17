@@ -3,30 +3,186 @@ import LocationTemplate from './_location-page-template.astro';
 ---
 
 <LocationTemplate
-  title="Coronado Moving Services"
-  description="Professional moving services in Coronado, San Diego."
-  noindex={true}
-  locationBadge="Coronado"
-  heroTitle="Professional Movers in Coronado"
-  heroDescription="Reliable moving services for Coronado."
-  introHeading="Moving Services in Coronado"
-  introText="Mighty Movers provides professional moving services throughout Coronado."
-  mainContentHeading="Professional Coronado Moving Services"
-  mainContent="Mighty Movers provides comprehensive moving services throughout Coronado. Our experienced team understands the unique characteristics of this beautiful island community and delivers reliable, professional moving services for residential customers."
-  servicesHeading="Our Moving Services"
-  services={[{title:"Local Moving",description:"Local services in Coronado"},{title:"Residential Moving",description:"Home moves throughout Coronado"},{title:"Commercial Moving",description:"Business moves in Coronado"},{title:"Packing Services",description:"Professional packing assistance"}]}
-  whyHeading="Why Choose Mighty Movers"
-  benefits={[{title:"Licensed & Insured",description:"Fully licensed and insured"},{title:"Experienced Team",description:"Professional movers"},{title:"Competitive Rates",description:"Fair pricing"},{title:"Same-Day Service",description:"Fast service"}]}
-  neighborhoodsHeading="Other Areas We Serve"
-  neighborhoods={[{title:"La Jolla",description:"Coastal moves"},{title:"Downtown",description:"Urban solutions"},{title:"Pacific Beach",description:"Beach services"},{title:"Del Mar",description:"North County"}]}
-  faqHeading="Frequently Asked Questions"
-  faqs={[{question:"Do you serve Coronado?",answer:"Yes! We serve all of San Diego County."},{question:"What services?",answer:"Local moving, packing, commercial, and more."},{question:"Same-day service?",answer:"Yes, based on availability."},{question:"Licensed?",answer:"Yes, fully licensed and insured."},{question:"How to get quote?",answer:"Contact us by phone or website."}]}
-  ctaCards={[{title:"Get Your Free Quote",description:"Request a free quote today.",buttonText:"Get Free Quote",buttonHref:"/contact",isDark:false},{title:"Call Us Today",description:"Speak with a specialist.",buttonText:"(619) 555-MOVE",buttonHref:"tel:6195556683",isDark:true}]}
-  infoCards={[{title:"Service Hours",items:["Mon-Fri: 7AM-7PM","Sat: 8AM-6PM","Sun: 9AM-5PM","Same-day available"]},{title:"Service Area",content:"Serving Coronado and San Diego County."}]}
-  bottomCTAHeading="Ready to Move?"
-  bottomCTADescription="Get started with San Diego's trusted movers."
-  bottomCTAPrimaryText="Get Free Quote"
+  title="Coronado Movers | Military & Residential Moving Services"
+  description="Reliable Coronado movers specializing in residential, military, and short-term storage solutions. Mighty Movers provides professional moving services in Coronado with transparent pricing and local expertise."
+  noindex={false}
+
+  locationBadge="Coronado Moving & Storage Company"
+  heroTitle="Trusted Coronado Movers & Military Relocation Support"
+  heroDescription="Mighty Movers is a professional Coronado moving company providing efficient, well-organized moving services for homes, apartments, and military relocations. Our experienced local movers understand Coronado's access restrictions, military presence, and storage needs—and plan every move accordingly."
+
+  introHeading="Coronado Movers With Military & Island Experience"
+  introText="Coronado is one of San Diego's most unique communities—an island city with a strong military presence, limited access points, and high residential demand. Moving in Coronado requires precise planning due to bridge access, parking restrictions, military housing considerations, and space constraints. Mighty Movers specializes in Coronado moving services designed to support both residential and military relocations with efficiency and care."
+
+  mainContentHeading="Residential, Military & Storage Services in Coronado"
+  mainContent={`Mighty Movers is a locally operated moving company serving Coronado and surrounding San Diego coastal communities. We focus on residential neighborhood moves and frequently assist active-duty service members, military families, and long-term residents relocating within Coronado and greater San Diego.
+
+Coronado features a mix of single-family homes, apartments, condos, and military housing. Many residences have limited driveway access, strict parking rules, and regulated move windows. Our Coronado movers are familiar with these conditions and plan each move carefully to avoid delays, fines, or access issues.
+
+Coronado is home to Naval Base Coronado, making the area a major hub for military-related relocations. We regularly support customers searching for military movers in San Diego and Coronado military movers who need reliable service near base facilities. Our team understands PCS timelines, temporary lodging transitions, and the importance of efficiency when working with service members and their families.
+
+Access to Coronado is another critical consideration. The San Diego–Coronado Bridge and Silver Strand are the primary routes on and off the island. Traffic congestion, accidents, or restricted hours can impact move timing. Our movers plan arrival and departure times strategically to keep moves on schedule.
+
+In addition to moving services, we offer short-term storage solutions that are especially valuable for Coronado residents. Many customers search for Coronado self storage, storage in Coronado, or storage units in Coronado, CA when dealing with renovations, military transitions, delayed move-ins, or downsizing. Our storage options simplify the process by combining moving and storage with one coordinated team.
+
+Rather than coordinating separate movers and storage facilities, customers can rely on Mighty Movers to handle transport, inventory, storage, and redelivery. This approach is particularly useful in Coronado, where space is limited and timing is critical.
+
+Weather and coastal conditions also affect Coronado moves. Marine layer moisture, salt air, and wind exposure are common. Our movers use professional protective materials and careful handling techniques to safeguard furniture, electronics, and sensitive items.
+
+Compared to many Coronado moving companies, Mighty Movers emphasizes preparation and transparency. Our hourly pricing is clearly explained upfront and includes professional equipment such as moving pads, shrink wrap, dollies, lifting straps, and tools. There are no hidden charges for standard protections or storage coordination.
+
+If you're searching for dependable Coronado movers, experienced military movers in San Diego, or flexible Coronado storage solutions, Mighty Movers offers a reliable, well-organized solution built specifically for island living and military demand.`}
+
+  servicesHeading="Coronado Moving & Storage Services"
+  services={[
+    {
+      title: "Residential Moving",
+      description: "Professional moving services for Coronado homes, apartments, and condominiums."
+    },
+    {
+      title: "Military & PCS-Adjacent Moves",
+      description: "Support for service members and military families relocating near Naval Base Coronado."
+    },
+    {
+      title: "Labor-Only Moving",
+      description: "Experienced movers to assist with loading and unloading rental trucks or containers."
+    },
+    {
+      title: "Short-Term Storage Solutions",
+      description: "Secure storage options for customers needing flexibility during military transitions, renovations, or delayed move-ins."
+    }
+  ]}
+
+  localKnowledgeText="Our Coronado movers are experienced with bridge access planning, military housing considerations, limited parking, and coastal conditions unique to the island."
+
+  whyHeading="Why Coronado Residents & Service Members Choose Mighty Movers"
+  benefits={[
+    {
+      title: "Coronado-Specific Experience",
+      description: "Familiar with island access, parking rules, and residential layouts."
+    },
+    {
+      title: "Military-Aware Coordination",
+      description: "Experience supporting PCS timelines and base-adjacent moves."
+    },
+    {
+      title: "Integrated Storage Options",
+      description: "Moving and storage handled through one trusted company."
+    },
+    {
+      title: "Transparent Pricing",
+      description: "Clear hourly rates with equipment included—no hidden fees."
+    },
+    {
+      title: "Professional Equipment Included",
+      description: "Pads, shrink wrap, dollies, straps, and tools come standard."
+    }
+  ]}
+
+  neighborhoodsHeading="Coronado Areas We Serve"
+  neighborhoods={[
+    {
+      title: "Coronado Village",
+      description: "Residential homes and apartments near Orange Avenue and local shops."
+    },
+    {
+      title: "Naval Base Coronado Housing",
+      description: "Military housing and nearby residential areas."
+    },
+    {
+      title: "Silver Strand Area",
+      description: "Beach-adjacent residences with limited access points."
+    },
+    {
+      title: "Coronado Shores",
+      description: "High-rise condos with elevator scheduling and parking coordination."
+    },
+    {
+      title: "Glorietta Bay Area",
+      description: "Homes near waterfront areas and parks."
+    }
+  ]}
+
+  trustBadges={[
+    {
+      metric: "3,000+",
+      label: "San Diego County Moves"
+    },
+    {
+      metric: "Military-Friendly",
+      label: "Relocation Support"
+    },
+    {
+      metric: "Storage Available",
+      label: "Short-Term Options"
+    }
+  ]}
+
+  faqHeading="Coronado Moving, Military & Storage FAQs"
+  faqs={[
+    {
+      question: "Do you regularly handle moves in Coronado?",
+      answer: "Yes. Coronado is a unique island community we serve frequently."
+    },
+    {
+      question: "Is Coronado a military area?",
+      answer: "Yes. Coronado is home to Naval Base Coronado and has a strong military presence."
+    },
+    {
+      question: "Do you provide military moving services in Coronado?",
+      answer: "Yes. We regularly assist service members and military families with local and PCS-adjacent moves."
+    },
+    {
+      question: "Do you offer storage units in Coronado, CA?",
+      answer: "We provide short-term storage solutions that are ideal for Coronado residents. Items are moved, inventoried, stored securely, and delivered when ready."
+    },
+    {
+      question: "When is storage useful during a Coronado move?",
+      answer: "Storage is commonly used during military transitions, renovations, downsizing, or when coordinating delayed move-in dates."
+    },
+    {
+      question: "How far in advance should I book Coronado movers?",
+      answer: "One to two weeks is recommended, especially due to bridge access and limited move windows."
+    }
+  ]}
+
+  ctaCards={[
+    {
+      title: "Get Your Free Quote",
+      description: "Request a free, no-obligation quote for your Coronado move today.",
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
+    },
+    {
+      title: "Call Us Today",
+      description: "Speak with a moving specialist about your Coronado move.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
+    }
+  ]}
+
+  infoCards={[
+    {
+      title: "Service Hours",
+      items: [
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Same-day service available"
+      ]
+    },
+    {
+      title: "Why Choose Us",
+      content: "Over 10 years serving Coronado with professional moving services. Licensed, insured, and locally owned."
+    }
+  ]}
+
+  bottomCTAHeading="Plan Your Coronado Move With Confidence"
+  bottomCTADescription="If you're planning a move in Coronado—whether residential, military-related, or involving storage—Mighty Movers is ready to help. Call today for a free quote and work with experienced local movers who understand Coronado inside and out."
+  bottomCTAPrimaryText="Get a Free Quote"
   bottomCTAPrimaryHref="/contact"
-  bottomCTASecondaryText="Call (619) 555-MOVE"
-  bottomCTASecondaryHref="tel:6195556683"
+  bottomCTASecondaryText="Call (619) 906-9018"
+  bottomCTASecondaryHref="tel:16199069018"
 />
