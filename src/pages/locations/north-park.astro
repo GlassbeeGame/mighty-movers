@@ -3,30 +3,184 @@ import LocationTemplate from './_location-page-template.astro';
 ---
 
 <LocationTemplate
-  title="North Park Moving Services"
-  description="Professional moving services in North Park, San Diego."
-  noindex={true}
-  locationBadge="North Park"
-  heroTitle="Professional Movers in North Park"
-  heroDescription="Reliable moving services for North Park."
-  introHeading="Moving Services in North Park"
-  introText="Mighty Movers provides professional moving services throughout North Park."
-  mainContentHeading="Professional North Park Moving Services"
-  mainContent="Mighty Movers San Diego provides comprehensive moving services throughout North Park. Our experienced team understands the unique characteristics of this vibrant urban neighborhood and delivers reliable, professional moving services for residential customers."
-  servicesHeading="Our Moving Services"
-  services={[{title:"Local Moving",description:"Local services in North Park"},{title:"Residential Moving",description:"Home moves throughout North Park"},{title:"Commercial Moving",description:"Business moves in North Park"},{title:"Packing Services",description:"Professional packing assistance"}]}
-  whyHeading="Why Choose Mighty Movers"
-  benefits={[{title:"Licensed & Insured",description:"Fully licensed and insured"},{title:"Experienced Team",description:"Professional movers"},{title:"Competitive Rates",description:"Fair pricing"},{title:"Same-Day Service",description:"Fast service"}]}
-  neighborhoodsHeading="Other Areas We Serve"
-  neighborhoods={[{title:"La Jolla",description:"Coastal moves"},{title:"Downtown",description:"Urban solutions"},{title:"Pacific Beach",description:"Beach services"},{title:"Del Mar",description:"North County"}]}
-  faqHeading="Frequently Asked Questions"
-  faqs={[{question:"Do you serve North Park?",answer:"Yes! We serve all of San Diego County."},{question:"What services?",answer:"Local moving, packing, commercial, and more."},{question:"Same-day service?",answer:"Yes, based on availability."},{question:"Licensed?",answer:"Yes, fully licensed and insured."},{question:"How to get quote?",answer:"Contact us by phone or website."}]}
-  ctaCards={[{title:"Get Your Free Quote",description:"Request a free quote today.",buttonText:"Get Free Quote",buttonHref:"/contact",isDark:false},{title:"Call Us Today",description:"Speak with a specialist.",buttonText:"(619) 555-MOVE",buttonHref:"tel:6195556683",isDark:true}]}
-  infoCards={[{title:"Service Hours",items:["Mon-Fri: 7AM-7PM","Sat: 8AM-6PM","Sun: 9AM-5PM","Same-day available"]},{title:"Service Area",content:"Serving North Park and San Diego County."}]}
-  bottomCTAHeading="Ready to Move?"
-  bottomCTADescription="Get started with San Diego's trusted movers."
-  bottomCTAPrimaryText="Get Free Quote"
+  title="North Park Movers | Mighty Movers San Diego"
+  description="Reliable North Park movers specializing in apartments, craftsman homes, and local neighborhood moves. Mighty Movers San Diego provides professional, stress-free moving services in North Park with transparent pricing."
+  noindex={false}
+
+  locationBadge="North Park Moving Company"
+  heroTitle="Trusted North Park Movers"
+  heroDescription="Mighty Movers San Diego is a professional North Park moving company providing efficient, stress-free moving services for apartments, homes, and local relocations. Our experienced local movers understand North Park's streets, housing styles, and parking challenges—and plan every move accordingly."
+
+  introHeading="North Park Movers Who Know the Neighborhood"
+  introText="North Park is one of San Diego's most vibrant and densely populated neighborhoods, and moving here requires local knowledge and careful coordination. From narrow residential streets and limited parking to older homes and multi-unit buildings, North Park moves demand experience. Mighty Movers San Diego specializes in North Park moving services designed to keep your move organized, efficient, and as stress-free as possible."
+
+  mainContentHeading="Stress-Free Moving Services in North Park, San Diego"
+  mainContent={`Mighty Movers San Diego is a locally operated moving company serving North Park and surrounding central San Diego neighborhoods. We focus on residential neighborhood moves, helping renters, homeowners, and families relocate efficiently within North Park and nearby areas.
+
+North Park features a mix of craftsman-style homes, duplexes, apartment buildings, and multi-unit properties, many of which were built decades ago. These properties often include tight staircases, limited driveway access, and street-only parking. Our North Park movers are familiar with these conditions and plan each move to avoid delays, protect property, and reduce stress.
+
+Parking and traffic are common challenges in North Park, especially along University Avenue, El Cajon Boulevard, 30th Street, and surrounding residential blocks. Our crews schedule arrivals strategically and plan loading zones in advance to minimize downtime and keep moves moving smoothly.
+
+We regularly assist customers moving near North Park landmarks such as Morley Field, Balboa Park, North Park Observatory, and nearby commercial corridors filled with restaurants, bars, and shops. Whether you're relocating within North Park or moving from another part of San Diego, our movers understand the flow of the neighborhood and work efficiently within it.
+
+Weather in North Park is generally mild, but warmer afternoons and direct sun exposure can impact moving days. Our team plans accordingly to maintain steady productivity and protect furniture, electronics, and boxed items.
+
+Our North Park moving services are designed to reduce the most common sources of moving stress—poor communication, unclear pricing, and rushed labor. Many customers searching for San Diego stress free movers choose Mighty Movers San Diego because we take a structured, transparent approach from the first call to the final walkthrough.
+
+We offer clear hourly pricing, flexible crew sizes, and professional equipment included with every full-service move. There are no hidden fees for moving pads, shrink wrap, dollies, lifting straps, or tools—these are standard.
+
+If you're looking for dependable North Park movers who understand the neighborhood and prioritize a smooth, well-organized experience, Mighty Movers San Diego delivers a reliable solution built for central San Diego moves.`}
+
+  servicesHeading="North Park Moving Services"
+  services={[
+    {
+      title: "Apartment & Duplex Moving",
+      description: "Professional moving services for North Park apartments, duplexes, and multi-unit properties."
+    },
+    {
+      title: "Single-Family Home Moving",
+      description: "Careful handling for craftsman homes and older residential properties."
+    },
+    {
+      title: "Labor-Only Moving",
+      description: "Experienced movers to assist with loading and unloading rental trucks or containers."
+    },
+    {
+      title: "Packing Assistance",
+      description: "Optional packing services for customers who want help preparing before moving day."
+    }
+  ]}
+
+  localKnowledgeText="Our North Park movers are experienced with older homes, street-only parking, narrow roads, and high-density residential blocks common throughout the neighborhood."
+
+  whyHeading="Why North Park Residents Choose Mighty Movers"
+  benefits={[
+    {
+      title: "North Park–Specific Experience",
+      description: "We understand the layout, housing styles, and parking challenges unique to the area."
+    },
+    {
+      title: "Stress-Free Approach",
+      description: "Clear communication, structured planning, and no rushed labor."
+    },
+    {
+      title: "Transparent Pricing",
+      description: "Straightforward hourly rates with equipment included."
+    },
+    {
+      title: "Flexible Crew Options",
+      description: "Choose the right team size for your space and timeline."
+    },
+    {
+      title: "Professional Equipment Included",
+      description: "Pads, shrink wrap, dollies, straps, and tools come standard."
+    }
+  ]}
+
+  neighborhoodsHeading="North Park Areas We Serve"
+  neighborhoods={[
+    {
+      title: "University Avenue Corridor",
+      description: "Apartments and mixed-use buildings near shops, dining, and nightlife."
+    },
+    {
+      title: "30th Street Area",
+      description: "Dense residential blocks with limited parking and older buildings."
+    },
+    {
+      title: "Morley Field Area",
+      description: "Residential moves near Balboa Park and surrounding neighborhoods."
+    },
+    {
+      title: "South Park Border",
+      description: "Craftsman homes and quiet residential streets near the southern edge of North Park."
+    },
+    {
+      title: "North Park Hills",
+      description: "Slight elevation changes and tightly packed residential streets."
+    }
+  ]}
+
+  trustBadges={[
+    {
+      metric: "3,000+",
+      label: "San Diego Moves Completed"
+    },
+    {
+      metric: "Stress-Free",
+      label: "Local Moves"
+    },
+    {
+      metric: "100%",
+      label: "Transparent Pricing"
+    }
+  ]}
+
+  faqHeading="North Park Moving FAQs"
+  faqs={[
+    {
+      question: "Do you regularly handle moves in North Park?",
+      answer: "Yes. North Park is one of the central San Diego neighborhoods we serve most frequently."
+    },
+    {
+      question: "Is parking usually a challenge during North Park moves?",
+      answer: "Parking can be limited on residential streets, especially near busy corridors. We review parking and access details ahead of time to avoid delays."
+    },
+    {
+      question: "Do you move older homes and craftsman-style houses?",
+      answer: "Yes. Our movers are experienced with older homes, tight staircases, and delicate interior features."
+    },
+    {
+      question: "Can you help make my move less stressful?",
+      answer: "Absolutely. Many customers choose us specifically for a structured, organized approach that reduces common moving frustrations."
+    },
+    {
+      question: "Do you handle short-distance moves within North Park?",
+      answer: "Yes. Many North Park moves involve relocating within the neighborhood or nearby areas and can often be completed efficiently."
+    },
+    {
+      question: "How far in advance should I book North Park movers?",
+      answer: "One to two weeks is recommended, though availability may vary during peak moving seasons."
+    }
+  ]}
+
+  ctaCards={[
+    {
+      title: "Get Your Free Quote",
+      description: "Request a free, no-obligation quote for your North Park move today.",
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
+    },
+    {
+      title: "Call Us Today",
+      description: "Speak with a moving specialist about your North Park move.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
+    }
+  ]}
+
+  infoCards={[
+    {
+      title: "Service Hours",
+      items: [
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Same-day service available"
+      ]
+    },
+    {
+      title: "Why Choose Us",
+      content: "Over 10 years serving North Park with professional moving services. Licensed, insured, and locally owned."
+    }
+  ]}
+
+  bottomCTAHeading="Schedule Your North Park Move Today"
+  bottomCTADescription="If you're planning a move in North Park, San Diego, Mighty Movers San Diego is ready to help. Call today for a free quote and work with experienced local movers who know North Park inside and out."
+  bottomCTAPrimaryText="Get a Free Quote"
   bottomCTAPrimaryHref="/contact"
-  bottomCTASecondaryText="Call (619) 555-MOVE"
-  bottomCTASecondaryHref="tel:6195556683"
+  bottomCTASecondaryText="Call (619) 906-9018"
+  bottomCTASecondaryHref="tel:16199069018"
 />
