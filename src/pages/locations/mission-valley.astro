@@ -3,30 +3,184 @@ import LocationTemplate from './_location-page-template.astro';
 ---
 
 <LocationTemplate
-  title="Mission Valley Moving Services"
-  description="Professional moving services in Mission Valley, San Diego."
-  noindex={true}
-  locationBadge="Mission Valley"
-  heroTitle="Professional Movers in Mission Valley"
-  heroDescription="Reliable moving services for Mission Valley."
-  introHeading="Moving Services in Mission Valley"
-  introText="Mighty Movers provides professional moving services throughout Mission Valley."
-  mainContentHeading="Professional Mission Valley Moving Services"
-  mainContent="Mighty Movers provides comprehensive moving services throughout Mission Valley. Our experienced team understands the unique characteristics of this central San Diego community and delivers reliable, professional moving services for residential customers."
-  servicesHeading="Our Moving Services"
-  services={[{title:"Local Moving",description:"Local services in Mission Valley"},{title:"Residential Moving",description:"Home moves throughout Mission Valley"},{title:"Commercial Moving",description:"Business moves in Mission Valley"},{title:"Packing Services",description:"Professional packing assistance"}]}
-  whyHeading="Why Choose Mighty Movers"
-  benefits={[{title:"Licensed & Insured",description:"Fully licensed and insured"},{title:"Experienced Team",description:"Professional movers"},{title:"Competitive Rates",description:"Fair pricing"},{title:"Same-Day Service",description:"Fast service"}]}
-  neighborhoodsHeading="Other Areas We Serve"
-  neighborhoods={[{title:"La Jolla",description:"Coastal moves"},{title:"Downtown",description:"Urban solutions"},{title:"Pacific Beach",description:"Beach services"},{title:"Del Mar",description:"North County"}]}
-  faqHeading="Frequently Asked Questions"
-  faqs={[{question:"Do you serve Mission Valley?",answer:"Yes! We serve all of San Diego County."},{question:"What services?",answer:"Local moving, packing, commercial, and more."},{question:"Same-day service?",answer:"Yes, based on availability."},{question:"Licensed?",answer:"Yes, fully licensed and insured."},{question:"How to get quote?",answer:"Contact us by phone or website."}]}
-  ctaCards={[{title:"Get Your Free Quote",description:"Request a free quote today.",buttonText:"Get Free Quote",buttonHref:"/contact",isDark:false},{title:"Call Us Today",description:"Speak with a specialist.",buttonText:"(619) 555-MOVE",buttonHref:"tel:6195556683",isDark:true}]}
-  infoCards={[{title:"Service Hours",items:["Mon-Fri: 7AM-7PM","Sat: 8AM-6PM","Sun: 9AM-5PM","Same-day available"]},{title:"Service Area",content:"Serving Mission Valley and San Diego County."}]}
-  bottomCTAHeading="Ready to Move?"
-  bottomCTADescription="Get started with San Diego's trusted movers."
-  bottomCTAPrimaryText="Get Free Quote"
+  title="Mission Valley Movers | Mighty Movers"
+  description="Reliable Mission Valley movers specializing in apartments, condos, and local relocations. Mighty Movers provides professional, efficient moving services in Mission Valley with transparent pricing."
+  noindex={false}
+
+  locationBadge="Mission Valley Moving Company"
+  heroTitle="Professional Mission Valley Movers"
+  heroDescription="Mighty Movers is a trusted Mission Valley moving company providing efficient, professional moving services for apartments, condos, and neighborhood moves. Our experienced local movers understand Mission Valley's layout, traffic patterns, and residential buildings—and plan every move accordingly."
+
+  introHeading="Mission Valley Movers Who Understand Central San Diego"
+  introText="Mission Valley sits at the center of San Diego, and moving here comes with a unique mix of challenges and conveniences. High-density apartment communities, major shopping centers, freeway access, and busy traffic corridors all require careful coordination. Mighty Movers specializes in Mission Valley moving services designed to keep moves organized, efficient, and stress-free."
+
+  mainContentHeading="Efficient Moving Services in Mission Valley, San Diego"
+  mainContent={`Mighty Movers is a locally operated moving company serving Mission Valley and surrounding central San Diego neighborhoods. We focus on residential neighborhood moves, helping renters, homeowners, and professionals relocate smoothly within Mission Valley and nearby areas.
+
+Mission Valley is known for its large apartment complexes, condominium communities, and mixed-use residential developments. Many buildings feature elevators, structured parking garages, gated access, and scheduled move windows. Our Mission Valley movers are familiar with these requirements and coordinate moves to avoid delays and building conflicts.
+
+Traffic flow is one of the most important considerations in Mission Valley moves. The area is bordered by major freeways including Interstate 8, Interstate 805, and State Route 163, along with busy surface streets like Friars Road and Camino del Rio. Our crews plan arrival times strategically to work around congestion and keep moves moving efficiently.
+
+Mission Valley's geography also includes low-lying areas near the San Diego River. During heavy rain seasons, access routes and parking conditions can change. Our local movers account for these factors when planning moves to avoid complications and protect belongings.
+
+We regularly assist customers moving near major Mission Valley landmarks such as Fashion Valley Mall, Westfield Mission Valley, Snapdragon Stadium, and nearby medical offices and business parks. Many of our customers are professionals, students, and families who value punctuality, organization, and clear communication.
+
+Our Mission Valley moving services are ideal for short-distance relocations, apartment-to-apartment moves, and transitions between nearby neighborhoods like Hillcrest, Normal Heights, Serra Mesa, and Clairemont. These moves benefit from efficient planning and crews who understand the area's layout.
+
+Compared to many moving companies in Mission Valley, Mighty Movers emphasizes transparency. Our hourly pricing is explained clearly upfront and includes professional equipment such as moving pads, shrink wrap, dollies, lifting straps, and tools. We don't charge extra for basic protections that should already be standard.
+
+If you're searching for dependable Mission Valley movers who understand the area's density, traffic, and residential buildings, Mighty Movers offers a reliable, well-organized moving solution built for central San Diego.`}
+
+  servicesHeading="Mission Valley Moving Services"
+  services={[
+    {
+      title: "Apartment & Condo Moving",
+      description: "Professional moving services for Mission Valley apartments and condominium communities."
+    },
+    {
+      title: "Elevator & Gated Community Moves",
+      description: "Experience coordinating moves with building management and scheduled move windows."
+    },
+    {
+      title: "Labor-Only Moving",
+      description: "Skilled movers to assist with loading and unloading rental trucks or containers."
+    },
+    {
+      title: "Packing Assistance",
+      description: "Optional packing services for customers who want help preparing before moving day."
+    }
+  ]}
+
+  localKnowledgeText="Our Mission Valley movers are experienced with elevator scheduling, parking garages, gated access, and freeway-adjacent traffic patterns common throughout the area."
+
+  whyHeading="Why Mission Valley Residents Choose Mighty Movers"
+  benefits={[
+    {
+      title: "Mission Valley–Specific Experience",
+      description: "Familiar with large apartment communities, elevators, and gated access."
+    },
+    {
+      title: "Efficient Scheduling",
+      description: "Strategic planning around freeway traffic and peak congestion."
+    },
+    {
+      title: "Transparent Pricing",
+      description: "Clear hourly rates with equipment included—no hidden fees."
+    },
+    {
+      title: "Flexible Crew Options",
+      description: "Choose the right team size for apartment or condo moves."
+    },
+    {
+      title: "Professional Equipment Included",
+      description: "Pads, shrink wrap, dollies, straps, and tools are standard."
+    }
+  ]}
+
+  neighborhoodsHeading="Mission Valley Areas We Serve"
+  neighborhoods={[
+    {
+      title: "Fashion Valley Area",
+      description: "Apartment and condo moves near shopping centers and freeway access."
+    },
+    {
+      title: "Civita",
+      description: "Modern residential communities with structured parking and elevators."
+    },
+    {
+      title: "Friars Road Corridor",
+      description: "Dense apartment complexes and mixed-use developments."
+    },
+    {
+      title: "Hotel Circle Area",
+      description: "Residential buildings near major transit routes and business centers."
+    },
+    {
+      title: "Camino del Rio",
+      description: "Central apartment communities with easy freeway connections."
+    }
+  ]}
+
+  trustBadges={[
+    {
+      metric: "3,000+",
+      label: "San Diego Moves Completed"
+    },
+    {
+      metric: "Central SD",
+      label: "Apartment Moves"
+    },
+    {
+      metric: "100%",
+      label: "Transparent Pricing"
+    }
+  ]}
+
+  faqHeading="Mission Valley Moving FAQs"
+  faqs={[
+    {
+      question: "Do you regularly handle moves in Mission Valley?",
+      answer: "Yes. Mission Valley is one of the central San Diego areas we serve frequently, especially for apartment and condo moves."
+    },
+    {
+      question: "Are Mission Valley apartment complexes difficult to move in and out of?",
+      answer: "Some buildings require elevator reservations, scheduled move windows, or gated access. We coordinate these details in advance to keep moves on track."
+    },
+    {
+      question: "How do you plan around Mission Valley traffic?",
+      answer: "We schedule arrivals strategically and plan routes around peak congestion near I-8, I-805, and major surface streets."
+    },
+    {
+      question: "Do you handle short-distance moves within Mission Valley?",
+      answer: "Yes. Many Mission Valley moves involve relocating between nearby apartment communities or neighborhoods."
+    },
+    {
+      question: "Are parking garages and elevators reviewed before moving day?",
+      answer: "Yes. We discuss access details during the estimate to avoid delays or complications."
+    },
+    {
+      question: "How far in advance should I book Mission Valley movers?",
+      answer: "One to two weeks is recommended, though availability may vary during peak moving seasons."
+    }
+  ]}
+
+  ctaCards={[
+    {
+      title: "Get Your Free Quote",
+      description: "Request a free, no-obligation quote for your Mission Valley move today.",
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
+    },
+    {
+      title: "Call Us Today",
+      description: "Speak with a moving specialist about your Mission Valley move.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
+    }
+  ]}
+
+  infoCards={[
+    {
+      title: "Service Hours",
+      items: [
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Same-day service available"
+      ]
+    },
+    {
+      title: "Why Choose Us",
+      content: "Over 10 years serving Mission Valley with professional moving services. Licensed, insured, and locally owned."
+    }
+  ]}
+
+  bottomCTAHeading="Schedule Your Mission Valley Move Today"
+  bottomCTADescription="If you're planning a move in Mission Valley, San Diego, Mighty Movers is ready to help. Call today for a free quote and work with experienced local movers who understand Mission Valley inside and out."
+  bottomCTAPrimaryText="Get a Free Quote"
   bottomCTAPrimaryHref="/contact"
-  bottomCTASecondaryText="Call (619) 555-MOVE"
-  bottomCTASecondaryHref="tel:6195556683"
+  bottomCTASecondaryText="Call (619) 906-9018"
+  bottomCTASecondaryHref="tel:16199069018"
 />
