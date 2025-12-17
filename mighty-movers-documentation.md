@@ -1,8 +1,8 @@
-# Mighty Movers San Diego - Complete Documentation
+# Mighty Movers - Complete Documentation
 
 ## Company Information
 
-- **Business Name:** Mighty Movers San Diego
+- **Business Name:** Mighty Movers
 - **Address:** 3962 Jewell Street, San Diego, CA 92109
 - **Phone:** (619) 906-9018
 - **Website:** https://www.mighty-movers.com/

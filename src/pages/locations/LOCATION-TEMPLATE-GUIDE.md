@@ -169,7 +169,7 @@ When creating a new location page, copy from `alpine.astro` (or any working loca
 
 3. **Update the mainContent** with location-specific information:
    ```astro
-   mainContent="Mighty Movers San Diego provides comprehensive moving services throughout [Your Location]. Our experienced team understands the unique characteristics of this [community type] and delivers reliable, professional moving services for residential customers."
+   mainContent="Mighty Movers provides comprehensive moving services throughout [Your Location]. Our experienced team understands the unique characteristics of this [community type] and delivers reliable, professional moving services for residential customers."
    ```
 
 4. **Customize services** if needed (usually keep the same 4 services)
@@ -198,4 +198,7 @@ If you're unsure about a prop, check the working examples:
 - `la-jolla.astro` - Full-featured example
 
 Or check the template file itself: `_location-page-template.astro` - the interface at the top shows all available props.
+
+
+
 
