@@ -3,30 +3,184 @@ import LocationTemplate from './_location-page-template.astro';
 ---
 
 <LocationTemplate
-  title="Hillcrest Moving Services"
-  description="Professional moving services in Hillcrest, San Diego."
-  noindex={true}
-  locationBadge="Hillcrest"
-  heroTitle="Professional Movers in Hillcrest"
-  heroDescription="Reliable moving services for Hillcrest."
-  introHeading="Moving Services in Hillcrest"
-  introText="Mighty Movers provides professional moving services throughout Hillcrest."
-  mainContentHeading="Professional Hillcrest Moving Services"
-  mainContent="Mighty Movers San Diego provides comprehensive moving services throughout Hillcrest. Our experienced team understands the unique characteristics of this vibrant urban neighborhood and delivers reliable, professional moving services for residential customers."
-  servicesHeading="Our Moving Services"
-  services={[{title:"Local Moving",description:"Local services in Hillcrest"},{title:"Residential Moving",description:"Home moves throughout Hillcrest"},{title:"Commercial Moving",description:"Business moves in Hillcrest"},{title:"Packing Services",description:"Professional packing assistance"}]}
-  whyHeading="Why Choose Mighty Movers"
-  benefits={[{title:"Licensed & Insured",description:"Fully licensed and insured"},{title:"Experienced Team",description:"Professional movers"},{title:"Competitive Rates",description:"Fair pricing"},{title:"Same-Day Service",description:"Fast service"}]}
-  neighborhoodsHeading="Other Areas We Serve"
-  neighborhoods={[{title:"La Jolla",description:"Coastal moves"},{title:"Downtown",description:"Urban solutions"},{title:"Pacific Beach",description:"Beach services"},{title:"Del Mar",description:"North County"}]}
-  faqHeading="Frequently Asked Questions"
-  faqs={[{question:"Do you serve Hillcrest?",answer:"Yes! We serve all of San Diego County."},{question:"What services?",answer:"Local moving, packing, commercial, and more."},{question:"Same-day service?",answer:"Yes, based on availability."},{question:"Licensed?",answer:"Yes, fully licensed and insured."},{question:"How to get quote?",answer:"Contact us by phone or website."}]}
-  ctaCards={[{title:"Get Your Free Quote",description:"Request a free quote today.",buttonText:"Get Free Quote",buttonHref:"/contact",isDark:false},{title:"Call Us Today",description:"Speak with a specialist.",buttonText:"(619) 555-MOVE",buttonHref:"tel:6195556683",isDark:true}]}
-  infoCards={[{title:"Service Hours",items:["Mon-Fri: 7AM-7PM","Sat: 8AM-6PM","Sun: 9AM-5PM","Same-day available"]},{title:"Service Area",content:"Serving Hillcrest and San Diego County."}]}
-  bottomCTAHeading="Ready to Move?"
-  bottomCTADescription="Get started with San Diego's trusted movers."
-  bottomCTAPrimaryText="Get Free Quote"
+  title="Hillcrest Movers | Mighty Movers San Diego"
+  description="Professional Hillcrest movers specializing in apartments, condos, and neighborhood moves. Mighty Movers San Diego provides reliable, stress-free moving services in Hillcrest with transparent pricing."
+  noindex={false}
+
+  locationBadge="Hillcrest Moving Company"
+  heroTitle="Reliable Hillcrest Movers"
+  heroDescription="Mighty Movers San Diego is a trusted Hillcrest moving company providing efficient, professional moving services for apartments, condos, and local relocations. Our experienced local movers understand Hillcrest's layout, parking challenges, and building styles—and plan every move accordingly."
+
+  introHeading="Hillcrest Movers Who Know Central San Diego"
+  introText="Hillcrest is one of San Diego's most centrally located and densely populated neighborhoods, and moving here requires careful coordination and local experience. From older apartment buildings and duplexes to limited parking and busy streets, Hillcrest moves come with unique challenges. Mighty Movers San Diego specializes in Hillcrest moving services designed to keep your move organized, efficient, and stress-free."
+
+  mainContentHeading="Professional Moving Services in Hillcrest, San Diego"
+  mainContent={`Mighty Movers San Diego is a locally operated moving company serving Hillcrest and surrounding central San Diego neighborhoods. We focus on residential neighborhood moves, helping renters, homeowners, and professionals relocate smoothly within Hillcrest and nearby areas.
+
+Hillcrest features a mix of older apartment buildings, condominiums, duplexes, and small residential complexes, many built decades ago. These properties often include narrow staircases, tight hallways, limited elevators, and street-only parking. Our Hillcrest movers are familiar with these conditions and plan each move to avoid delays, protect property, and reduce stress.
+
+Parking and traffic are common considerations in Hillcrest, especially near University Avenue, Washington Street, Sixth Avenue, and surrounding residential blocks. Our crews plan arrival times strategically and assess loading zones in advance to keep moves efficient and minimize downtime.
+
+We regularly assist customers moving near major Hillcrest landmarks and institutions, including UC San Diego Health, Scripps Mercy Hospital, Balboa Park, and the Hillcrest Medical District. Many of our customers are healthcare professionals, students, and long-term residents who value punctuality, professionalism, and clear communication.
+
+Hillcrest's central location also means frequent short-distance moves—relocating between apartments, moving closer to work, or transitioning to nearby neighborhoods. Our Hillcrest moving services are designed to handle these moves efficiently without rushing or cutting corners.
+
+Weather in Hillcrest is generally mild, but warmer afternoons and direct sun exposure can affect moving days. Our movers plan accordingly to maintain steady productivity and protect furniture, electronics, and boxed items throughout the move.
+
+Many customers searching for Hillcrest movers want a reliable, stress-free experience without hidden fees or last-minute surprises. Mighty Movers San Diego delivers clear hourly pricing, flexible crew sizes, and professional equipment included with every full-service move. Moving pads, shrink wrap, dollies, lifting straps, and tools are standard—not add-ons.
+
+If you're looking for dependable movers in Hillcrest who understand the neighborhood's layout and lifestyle, Mighty Movers San Diego offers a practical, well-organized moving solution built for central San Diego.`}
+
+  servicesHeading="Hillcrest Moving Services"
+  services={[
+    {
+      title: "Apartment & Condo Moving",
+      description: "Professional moving services for Hillcrest apartments, condos, and multi-unit buildings."
+    },
+    {
+      title: "Duplex & Small Home Moving",
+      description: "Careful handling for older residential properties common throughout Hillcrest."
+    },
+    {
+      title: "Labor-Only Moving",
+      description: "Experienced movers to assist with loading and unloading rental trucks or containers."
+    },
+    {
+      title: "Packing Assistance",
+      description: "Optional packing services for customers who need help preparing before moving day."
+    }
+  ]}
+
+  localKnowledgeText="Our Hillcrest movers are experienced with street-only parking, older buildings, tight staircases, and high-density residential blocks common throughout the neighborhood."
+
+  whyHeading="Why Hillcrest Residents Choose Mighty Movers"
+  benefits={[
+    {
+      title: "Hillcrest-Specific Experience",
+      description: "We understand local streets, parking limitations, and building layouts."
+    },
+    {
+      title: "Stress-Free Process",
+      description: "Clear communication, structured planning, and no rushed labor."
+    },
+    {
+      title: "Transparent Pricing",
+      description: "Straightforward hourly rates with equipment included."
+    },
+    {
+      title: "Flexible Scheduling",
+      description: "Ideal for short-distance moves and weekday relocations."
+    },
+    {
+      title: "Professional Equipment Included",
+      description: "Pads, shrink wrap, dollies, straps, and tools are standard."
+    }
+  ]}
+
+  neighborhoodsHeading="Hillcrest Areas We Serve"
+  neighborhoods={[
+    {
+      title: "University Avenue Corridor",
+      description: "Apartments and mixed-use buildings near shops, dining, and nightlife."
+    },
+    {
+      title: "Washington Street Area",
+      description: "Dense residential blocks with limited parking and older buildings."
+    },
+    {
+      title: "Medical District",
+      description: "Moves near hospitals and healthcare offices requiring efficient scheduling."
+    },
+    {
+      title: "Balboa Park Border",
+      description: "Residential properties adjacent to parkland and major roadways."
+    },
+    {
+      title: "Hillcrest Core",
+      description: "Central residential streets with apartments, duplexes, and condos."
+    }
+  ]}
+
+  trustBadges={[
+    {
+      metric: "3,000+",
+      label: "San Diego Moves Completed"
+    },
+    {
+      metric: "Central SD",
+      label: "Neighborhood Moves"
+    },
+    {
+      metric: "100%",
+      label: "Transparent Pricing"
+    }
+  ]}
+
+  faqHeading="Hillcrest Moving FAQs"
+  faqs={[
+    {
+      question: "Do you regularly handle moves in Hillcrest?",
+      answer: "Yes. Hillcrest is one of the central San Diego neighborhoods we serve frequently."
+    },
+    {
+      question: "Are Hillcrest apartment buildings difficult to move in and out of?",
+      answer: "Some buildings have tight staircases, limited elevators, or street-only parking. We plan for these factors in advance to keep moves on track."
+    },
+    {
+      question: "Do you move healthcare professionals or hospital staff?",
+      answer: "Yes. We regularly assist healthcare workers moving near medical centers and hospitals in Hillcrest."
+    },
+    {
+      question: "Can you handle short-distance moves within Hillcrest?",
+      answer: "Absolutely. Many Hillcrest moves involve relocating within the neighborhood or nearby areas."
+    },
+    {
+      question: "Is parking reviewed before moving day?",
+      answer: "Yes. We discuss parking and access details during the estimate to avoid delays."
+    },
+    {
+      question: "How far in advance should I book Hillcrest movers?",
+      answer: "One to two weeks is recommended, though availability may vary during peak seasons."
+    }
+  ]}
+
+  ctaCards={[
+    {
+      title: "Get Your Free Quote",
+      description: "Request a free, no-obligation quote for your Hillcrest move today.",
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
+    },
+    {
+      title: "Call Us Today",
+      description: "Speak with a moving specialist about your Hillcrest move.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
+    }
+  ]}
+
+  infoCards={[
+    {
+      title: "Service Hours",
+      items: [
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Same-day service available"
+      ]
+    },
+    {
+      title: "Why Choose Us",
+      content: "Over 10 years serving Hillcrest with professional moving services. Licensed, insured, and locally owned."
+    }
+  ]}
+
+  bottomCTAHeading="Book Your Hillcrest Move Today"
+  bottomCTADescription="If you're planning a move in Hillcrest, San Diego, Mighty Movers San Diego is ready to help. Call today for a free quote and work with experienced local movers who know Hillcrest inside and out."
+  bottomCTAPrimaryText="Get a Free Quote"
   bottomCTAPrimaryHref="/contact"
-  bottomCTASecondaryText="Call (619) 555-MOVE"
-  bottomCTASecondaryHref="tel:6195556683"
+  bottomCTASecondaryText="Call (619) 906-9018"
+  bottomCTASecondaryHref="tel:16199069018"
 />
