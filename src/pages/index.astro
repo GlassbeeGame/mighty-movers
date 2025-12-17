@@ -413,8 +413,8 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .hero-logo-svg {
-    width: 300px;
-    height: 300px;
+    width: 320px;
+    height: 320px;
     margin: 0 auto 2.5rem;
     display: block;
     filter: drop-shadow(0 8px 20px rgba(246, 245, 16, 0.4));
@@ -549,7 +549,7 @@ import Layout from '../layouts/Layout.astro';
     justify-content: center;
     flex-wrap: wrap;
     padding: 3rem 4rem;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.65);
     border: 3px solid rgba(246, 245, 16, 0.4);
     clip-path: polygon(25px 0, 100% 0, calc(100% - 25px) 100%, 0 100%);
     backdrop-filter: blur(15px);
@@ -578,7 +578,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .trust-icon {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--yellow);
     margin-bottom: 0.25rem;
     opacity: 0.9;
@@ -602,48 +602,24 @@ import Layout from '../layouts/Layout.astro';
     font-weight: 900;
     color: var(--yellow);
     line-height: 1;
-    text-shadow: 0 0 20px rgba(246, 245, 16, 0.6), 2px 2px 0 rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3), 0 0 20px rgba(246, 245, 16, 0.3);
     letter-spacing: -1px;
-    background: linear-gradient(135deg, var(--yellow) 0%, #fffb00 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    position: relative;
-  }
-
-  .trust-number::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
-    height: 3px;
-    background: var(--yellow);
-    box-shadow: 0 0 10px rgba(246, 245, 16, 0.8);
   }
 
   .trust-label {
-    font-size: 0.95rem;
-    color: var(--white);
+    font-size: 0.9rem;
+    color: var(--gray-200);
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     font-weight: 700;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    margin-top: 0.5rem;
+    text-align: center;
   }
 
   .trust-divider {
-    width: 3px;
-    height: 70px;
-    background: linear-gradient(to bottom, 
-      transparent 0%, 
-      rgba(246, 245, 16, 0.3) 20%, 
-      var(--yellow) 50%, 
-      rgba(246, 245, 16, 0.3) 80%, 
-      transparent 100%);
-    box-shadow: 0 0 10px rgba(246, 245, 16, 0.4);
-    border-radius: 2px;
+    width: 2px;
+    height: 60px;
+    background: linear-gradient(to bottom, transparent, var(--yellow), transparent);
+    opacity: 0.6;
   }
 
   .container {
@@ -1521,7 +1497,7 @@ import Layout from '../layouts/Layout.astro';
 
     .hero-trust {
       gap: 2rem;
-      padding: 2rem 2.5rem;
+      padding: 2rem 1.5rem;
     }
 
     .trust-divider {
@@ -1533,11 +1509,7 @@ import Layout from '../layouts/Layout.astro';
     }
 
     .trust-icon {
-      font-size: 1.5rem;
-    }
-
-    .trust-label {
-      font-size: 0.85rem;
+      font-size: 2rem;
     }
 
 
