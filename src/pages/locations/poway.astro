@@ -5,6 +5,8 @@ import LocationTemplate from './_location-page-template.astro';
 <LocationTemplate
   title="Poway Movers | Local & Residential Moving Services"
   description="Professional Poway movers providing reliable residential moving services. Mighty Movers is a trusted moving company in Poway offering transparent pricing and experienced local movers."
+  noindex={false}
+
   locationBadge="Poway Moving Company"
   heroTitle="Trusted Poway Movers"
   heroDescription="Mighty Movers is a professional moving company in Poway specializing in residential and local moves. Our experienced movers understand Poway's neighborhoods, larger properties, and access considerations—delivering organized, high-quality moving services."
@@ -53,9 +55,42 @@ If you're searching for a dependable moving company in Poway, experienced local 
     {title:"Rancho Arbolitos Border",description:"Residential areas near surrounding inland communities."}
   ]}
   trustBadges={[
-    {stat:"3,000+",label:"San Diego County Moves"},
-    {stat:"North County Inland",label:"Residential Expertise"},
-    {stat:"100%",label:"Transparent Pricing"}
+    {metric:"3,000+",label:"San Diego County Moves"},
+    {metric:"North County Inland",label:"Residential Expertise"},
+    {metric:"100%",label:"Transparent Pricing"}
+  ]}
+
+  ctaCards={[
+    {
+      title: "Get Your Free Quote",
+      description: "Request a free, no-obligation quote for your Poway move today.",
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
+    },
+    {
+      title: "Call Us Today",
+      description: "Speak with a moving specialist about your Poway move.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
+    }
+  ]}
+
+  infoCards={[
+    {
+      title: "Service Hours",
+      items: [
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Same-day service available"
+      ]
+    },
+    {
+      title: "Why Choose Us",
+      content: "Over 10 years serving Poway with professional moving services. Licensed, insured, and locally owned."
+    }
   ]}
   faqHeading="Poway Moving FAQs"
   faqs={[

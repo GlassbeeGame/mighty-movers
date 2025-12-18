@@ -5,6 +5,8 @@ import LocationTemplate from './_location-page-template.astro';
 <LocationTemplate
   title="Encinitas Movers | Local & Coastal Moving Services"
   description="Professional Encinitas movers providing reliable residential moving services. Mighty Movers is a trusted Encinitas moving company serving Encinitas and Cardiff-by-the-Sea with transparent pricing."
+  noindex={false}
+
   locationBadge="Encinitas Moving Company"
   heroTitle="Trusted Encinitas Movers"
   heroDescription="Mighty Movers is a professional Encinitas moving company specializing in residential and local coastal moves. Our experienced movers understand Encinitas neighborhoods, HOA requirements, and coastal access challenges."
@@ -51,9 +53,42 @@ If you're searching for dependable Encinitas movers or a reliable Encinitas movi
     {title:"New Encinitas",description:"Suburban neighborhoods near shopping and schools."}
   ]}
   trustBadges={[
-    {stat:"3,000+",label:"San Diego County Moves"},
-    {stat:"North County",label:"Coastal Expertise"},
-    {stat:"100%",label:"Transparent Pricing"}
+    {metric:"3,000+",label:"San Diego County Moves"},
+    {metric:"North County",label:"Coastal Expertise"},
+    {metric:"100%",label:"Transparent Pricing"}
+  ]}
+
+  ctaCards={[
+    {
+      title: "Get Your Free Quote",
+      description: "Request a free, no-obligation quote for your Encinitas move today.",
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
+    },
+    {
+      title: "Call Us Today",
+      description: "Speak with a moving specialist about your Encinitas move.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
+    }
+  ]}
+
+  infoCards={[
+    {
+      title: "Service Hours",
+      items: [
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Same-day service available"
+      ]
+    },
+    {
+      title: "Why Choose Us",
+      content: "Over 10 years serving Encinitas with professional moving services. Licensed, insured, and locally owned."
+    }
   ]}
   faqHeading="Encinitas & Cardiff Moving FAQs"
   faqs={[

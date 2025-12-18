@@ -5,6 +5,8 @@ import LocationTemplate from './_location-page-template.astro';
 <LocationTemplate
   title="Lemon Grove Movers | Local & Residential Moving Services"
   description="Reliable Lemon Grove movers providing professional residential moving services. Mighty Movers offers transparent pricing and experienced local movers serving Lemon Grove, CA."
+  noindex={false}
+
   locationBadge="Lemon Grove Moving Company"
   heroTitle="Professional Lemon Grove Movers"
   heroDescription="Mighty Movers is a trusted Lemon Grove moving company providing efficient, well-planned moving services for apartments, homes, and residential neighborhoods. Our local movers understand Lemon Grove's streets, access points, and East County logistics."
@@ -51,9 +53,42 @@ If you're looking for dependable Lemon Grove movers or a professional Lemon Grov
     {title:"La Mesa Border Areas",description:"Residential zones near west Lemon Grove access points."}
   ]}
   trustBadges={[
-    {stat:"3,000+",label:"San Diego County Moves"},
-    {stat:"East County",label:"Local Expertise"},
-    {stat:"100%",label:"Transparent Pricing"}
+    {metric:"3,000+",label:"San Diego County Moves"},
+    {metric:"East County",label:"Local Expertise"},
+    {metric:"100%",label:"Transparent Pricing"}
+  ]}
+
+  ctaCards={[
+    {
+      title: "Get Your Free Quote",
+      description: "Request a free, no-obligation quote for your Lemon Grove move today.",
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
+    },
+    {
+      title: "Call Us Today",
+      description: "Speak with a moving specialist about your Lemon Grove move.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
+    }
+  ]}
+
+  infoCards={[
+    {
+      title: "Service Hours",
+      items: [
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Same-day service available"
+      ]
+    },
+    {
+      title: "Why Choose Us",
+      content: "Over 10 years serving Lemon Grove with professional moving services. Licensed, insured, and locally owned."
+    }
   ]}
   faqHeading="Lemon Grove Moving FAQs"
   faqs={[

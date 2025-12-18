@@ -5,6 +5,8 @@ import LocationTemplate from './_location-page-template.astro';
 <LocationTemplate
   title="Carmel Valley Movers | Local & Residential Moving Services"
   description="Professional Carmel Valley movers providing reliable residential moving services. Mighty Movers is a trusted Carmel Valley moving company offering transparent pricing and experienced local movers."
+  noindex={false}
+
   locationBadge="Carmel Valley Moving Company"
   heroTitle="Trusted Carmel Valley Movers"
   heroDescription="Mighty Movers is a professional Carmel Valley moving company specializing in residential and local moves. Our experienced movers understand Carmel Valley's neighborhoods, HOA requirements, and family-focused residential layouts."
@@ -51,9 +53,42 @@ If you're searching for dependable Carmel Valley movers, a professional Carmel V
     {title:"Central Carmel Valley",description:"Family-oriented communities with planned layouts."}
   ]}
   trustBadges={[
-    {stat:"3,000+",label:"San Diego County Moves"},
-    {stat:"Family-Focused",label:"HOA-Aware Expertise"},
-    {stat:"100%",label:"Transparent Pricing"}
+    {metric:"3,000+",label:"San Diego County Moves"},
+    {metric:"Family-Focused",label:"HOA-Aware Expertise"},
+    {metric:"100%",label:"Transparent Pricing"}
+  ]}
+
+  ctaCards={[
+    {
+      title: "Get Your Free Quote",
+      description: "Request a free, no-obligation quote for your Carmel Valley move today.",
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
+    },
+    {
+      title: "Call Us Today",
+      description: "Speak with a moving specialist about your Carmel Valley move.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
+    }
+  ]}
+
+  infoCards={[
+    {
+      title: "Service Hours",
+      items: [
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Same-day service available"
+      ]
+    },
+    {
+      title: "Why Choose Us",
+      content: "Over 10 years serving Carmel Valley with professional moving services. Licensed, insured, and locally owned."
+    }
   ]}
   faqHeading="Carmel Valley Moving FAQs"
   faqs={[

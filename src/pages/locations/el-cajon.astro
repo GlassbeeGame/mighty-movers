@@ -5,6 +5,8 @@ import LocationTemplate from './_location-page-template.astro';
 <LocationTemplate
   title="El Cajon Movers | Local & Residential Moving Services"
   description="Reliable El Cajon movers specializing in residential and local relocations. Mighty Movers provides professional moving services in El Cajon with transparent pricing and East County expertise."
+  noindex={false}
+
   locationBadge="El Cajon Moving Company"
   heroTitle="Trusted El Cajon Movers"
   heroDescription="Mighty Movers is a professional El Cajon moving company providing efficient, well-organized moving services for homes, apartments, and local relocations. Our experienced local movers understand El Cajon's layout, climate, and distance factors—and plan every move accordingly."
@@ -51,9 +53,42 @@ If you're searching for dependable El Cajon movers who understand East County di
     {title:"Gillespie Field Area",description:"Residential moves near business parks and transit corridors."}
   ]}
   trustBadges={[
-    {stat:"3,000+",label:"San Diego County Moves"},
-    {stat:"East County",label:"Local Expertise"},
-    {stat:"100%",label:"Transparent Pricing"}
+    {metric:"3,000+",label:"San Diego County Moves"},
+    {metric:"East County",label:"Local Expertise"},
+    {metric:"100%",label:"Transparent Pricing"}
+  ]}
+
+  ctaCards={[
+    {
+      title: "Get Your Free Quote",
+      description: "Request a free, no-obligation quote for your El Cajon move today.",
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
+    },
+    {
+      title: "Call Us Today",
+      description: "Speak with a moving specialist about your El Cajon move.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
+    }
+  ]}
+
+  infoCards={[
+    {
+      title: "Service Hours",
+      items: [
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Same-day service available"
+      ]
+    },
+    {
+      title: "Why Choose Us",
+      content: "Over 10 years serving El Cajon with professional moving services. Licensed, insured, and locally owned."
+    }
   ]}
   faqHeading="El Cajon Moving FAQs"
   faqs={[

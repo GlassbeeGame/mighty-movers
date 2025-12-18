@@ -5,6 +5,8 @@ import LocationTemplate from './_location-page-template.astro';
 <LocationTemplate
   title="Del Mar Movers | Local & Residential Moving Services"
   description="Professional Del Mar movers providing reliable residential moving services. Mighty Movers is a trusted Del Mar moving company offering transparent pricing and experienced local movers."
+  noindex={false}
+
   locationBadge="Del Mar Moving Company"
   heroTitle="Trusted Del Mar Movers"
   heroDescription="Mighty Movers is a professional Del Mar moving company specializing in residential and local coastal moves. Our experienced movers understand Del Mar's neighborhoods, access limitations, and high-care moving requirements."
@@ -51,9 +53,42 @@ If you're searching for dependable Del Mar movers or a professional Del Mar movi
     {title:"Hillside Areas",description:"Homes requiring stair access and careful planning."}
   ]}
   trustBadges={[
-    {stat:"3,000+",label:"San Diego County Moves"},
-    {stat:"Coastal",label:"High-Care Expertise"},
-    {stat:"100%",label:"Transparent Pricing"}
+    {metric:"3,000+",label:"San Diego County Moves"},
+    {metric:"Coastal",label:"High-Care Expertise"},
+    {metric:"100%",label:"Transparent Pricing"}
+  ]}
+
+  ctaCards={[
+    {
+      title: "Get Your Free Quote",
+      description: "Request a free, no-obligation quote for your Del Mar move today.",
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
+    },
+    {
+      title: "Call Us Today",
+      description: "Speak with a moving specialist about your Del Mar move.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
+    }
+  ]}
+
+  infoCards={[
+    {
+      title: "Service Hours",
+      items: [
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Same-day service available"
+      ]
+    },
+    {
+      title: "Why Choose Us",
+      content: "Over 10 years serving Del Mar with professional moving services. Licensed, insured, and locally owned."
+    }
   ]}
   faqHeading="Del Mar Moving FAQs"
   faqs={[

@@ -5,6 +5,8 @@ import LocationTemplate from './_location-page-template.astro';
 <LocationTemplate
   title="Oceanside Movers | Local & Residential Moving Services"
   description="Professional Oceanside movers providing reliable residential moving services. Mighty Movers is a trusted Oceanside moving company offering transparent pricing and coastal North County expertise."
+  noindex={false}
+
   locationBadge="Oceanside Moving Company"
   heroTitle="Reliable Movers in Oceanside"
   heroDescription="Mighty Movers is a professional Oceanside moving company providing efficient, well-organized moving services for homes, apartments, military-adjacent housing, and coastal neighborhoods. Our local movers understand Oceanside's layout, traffic patterns, and diverse residential communities."
@@ -53,9 +55,42 @@ If you're searching for dependable movers in Oceanside, experienced local movers
     {title:"South Oceanside",description:"Established residential areas near Carlsbad border."}
   ]}
   trustBadges={[
-    {stat:"3,000+",label:"San Diego County Moves"},
-    {stat:"Coastal & Military-Aware",label:"North County Expertise"},
-    {stat:"100%",label:"Transparent Pricing"}
+    {metric:"3,000+",label:"San Diego County Moves"},
+    {metric:"Coastal & Military-Aware",label:"North County Expertise"},
+    {metric:"100%",label:"Transparent Pricing"}
+  ]}
+
+  ctaCards={[
+    {
+      title: "Get Your Free Quote",
+      description: "Request a free, no-obligation quote for your Oceanside move today.",
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
+    },
+    {
+      title: "Call Us Today",
+      description: "Speak with a moving specialist about your Oceanside move.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
+    }
+  ]}
+
+  infoCards={[
+    {
+      title: "Service Hours",
+      items: [
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Same-day service available"
+      ]
+    },
+    {
+      title: "Why Choose Us",
+      content: "Over 10 years serving Oceanside with professional moving services. Licensed, insured, and locally owned."
+    }
   ]}
   faqHeading="Oceanside Moving FAQs"
   faqs={[

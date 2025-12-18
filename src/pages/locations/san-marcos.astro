@@ -5,6 +5,8 @@ import LocationTemplate from './_location-page-template.astro';
 <LocationTemplate
   title="San Marcos Movers | Local San Marcos Moving Company"
   description="Professional San Marcos movers providing reliable local residential moving services. Mighty Movers is a trusted San Marcos moving company serving homes, apartments, and condos throughout the city."
+  noindex={false}
+
   locationBadge="San Marcos Moving Company"
   heroTitle="Trusted San Marcos Movers"
   heroDescription="Mighty Movers is a professional San Marcos moving company offering dependable local moving services. Our experienced San Marcos movers help residents relocate efficiently throughout San Marcos, CA and nearby North County areas."
@@ -47,9 +49,42 @@ If you're searching for dependable San Marcos movers, an experienced San Marcos 
     {title:"South San Marcos",description:"Established residential streets"}
   ]}
   trustBadges={[
-    {stat:"3,000+",label:"San Diego County Moves"},
-    {stat:"Local",label:"San Marcos Expertise"},
-    {stat:"100%",label:"Transparent Pricing"}
+    {metric:"3,000+",label:"San Diego County Moves"},
+    {metric:"Local",label:"San Marcos Expertise"},
+    {metric:"100%",label:"Transparent Pricing"}
+  ]}
+
+  ctaCards={[
+    {
+      title: "Get Your Free Quote",
+      description: "Request a free, no-obligation quote for your San Marcos move today.",
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
+    },
+    {
+      title: "Call Us Today",
+      description: "Speak with a moving specialist about your San Marcos move.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
+    }
+  ]}
+
+  infoCards={[
+    {
+      title: "Service Hours",
+      items: [
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Same-day service available"
+      ]
+    },
+    {
+      title: "Why Choose Us",
+      content: "Over 10 years serving San Marcos with professional moving services. Licensed, insured, and locally owned."
+    }
   ]}
   faqHeading="San Marcos Moving FAQs"
   faqs={[

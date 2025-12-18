@@ -5,6 +5,8 @@ import LocationTemplate from './_location-page-template.astro';
 <LocationTemplate
   title="Rancho Bernardo Movers | Local Rancho Bernardo Moving Company"
   description="Professional Rancho Bernardo movers providing reliable local residential moving services. Mighty Movers is a trusted Rancho Bernardo moving company serving this master-planned San Diego neighborhood with HOA-aware planning and family-focused moving expertise."
+  noindex={false}
+
   locationBadge="Rancho Bernardo Moving Company"
   heroTitle="Trusted Rancho Bernardo Movers"
   heroDescription="Mighty Movers is a professional Rancho Bernardo moving company offering dependable local moving services. Our experienced Rancho Bernardo movers help residents relocate efficiently throughout Rancho Bernardo, San Diego and nearby North County areas."
@@ -49,9 +51,42 @@ If you're searching for dependable Rancho Bernardo movers, an experienced Rancho
     {title:"North Rancho Bernardo",description:"Suburban neighborhoods near Poway border"}
   ]}
   trustBadges={[
-    {stat:"3,000+",label:"San Diego County Moves"},
-    {stat:"Local",label:"Rancho Bernardo Expertise"},
-    {stat:"100%",label:"Transparent Pricing"}
+    {metric:"3,000+",label:"San Diego County Moves"},
+    {metric:"Local",label:"Rancho Bernardo Expertise"},
+    {metric:"100%",label:"Transparent Pricing"}
+  ]}
+
+  ctaCards={[
+    {
+      title: "Get Your Free Quote",
+      description: "Request a free, no-obligation quote for your Rancho Bernardo move today.",
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
+    },
+    {
+      title: "Call Us Today",
+      description: "Speak with a moving specialist about your Rancho Bernardo move.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
+    }
+  ]}
+
+  infoCards={[
+    {
+      title: "Service Hours",
+      items: [
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Same-day service available"
+      ]
+    },
+    {
+      title: "Why Choose Us",
+      content: "Over 10 years serving Rancho Bernardo with professional moving services. Licensed, insured, and locally owned."
+    }
   ]}
   faqHeading="Rancho Bernardo Moving FAQs"
   faqs={[

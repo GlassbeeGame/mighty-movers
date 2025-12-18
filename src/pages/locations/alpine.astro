@@ -5,6 +5,8 @@ import LocationTemplate from './_location-page-template.astro';
 <LocationTemplate
   title="Alpine Movers | Local & Residential Moving Services"
   description="Reliable Alpine movers specializing in residential and local relocations. Mighty Movers provides professional moving services in Alpine with transparent pricing and East County foothill expertise."
+  noindex={false}
+
   locationBadge="Alpine Moving Company"
   heroTitle="Trusted Alpine Movers"
   heroDescription="Mighty Movers is a professional Alpine moving company providing efficient, well-organized moving services for homes, ranch-style properties, and local relocations. Our experienced local movers understand Alpine's terrain, distance, and rural access considerations—and plan every move accordingly."
@@ -51,9 +53,42 @@ If you're searching for dependable Alpine movers or a reliable Alpine moving com
     {title:"Viejas Border Area",description:"Properties near the eastern edge of Alpine and surrounding hills."}
   ]}
   trustBadges={[
-    {stat:"3,000+",label:"San Diego County Moves"},
-    {stat:"East County",label:"Foothill Expertise"},
-    {stat:"100%",label:"Transparent Pricing"}
+    {metric:"3,000+",label:"San Diego County Moves"},
+    {metric:"East County",label:"Foothill Expertise"},
+    {metric:"100%",label:"Transparent Pricing"}
+  ]}
+
+  ctaCards={[
+    {
+      title: "Get Your Free Quote",
+      description: "Request a free, no-obligation quote for your Alpine move today.",
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
+    },
+    {
+      title: "Call Us Today",
+      description: "Speak with a moving specialist about your Alpine move.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
+    }
+  ]}
+
+  infoCards={[
+    {
+      title: "Service Hours",
+      items: [
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Same-day service available"
+      ]
+    },
+    {
+      title: "Why Choose Us",
+      content: "Over 10 years serving Alpine with professional moving services. Licensed, insured, and locally owned."
+    }
   ]}
   faqHeading="Alpine Moving FAQs"
   faqs={[

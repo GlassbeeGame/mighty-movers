@@ -5,6 +5,8 @@ import LocationTemplate from './_location-page-template.astro';
 <LocationTemplate
   title="Santee Movers | Local & Residential Moving Services"
   description="Reliable Santee movers specializing in residential and local relocations. Mighty Movers provides professional moving services in Santee with transparent pricing and East County expertise."
+  noindex={false}
+
   locationBadge="Santee Moving Company"
   heroTitle="Trusted Santee Movers"
   heroDescription="Mighty Movers is a professional Santee moving company providing efficient, well-organized moving services for homes, apartments, and local relocations. Our experienced local movers understand Santee's neighborhoods, layout, and East County logistics—and plan every move accordingly."
@@ -51,9 +53,42 @@ If you're searching for dependable Santee movers or a reliable Santee moving com
     {title:"Lakeside Border",description:"Residential areas near eastern county connections."}
   ]}
   trustBadges={[
-    {stat:"3,000+",label:"San Diego County Moves"},
-    {stat:"East County",label:"Local Expertise"},
-    {stat:"100%",label:"Transparent Pricing"}
+    {metric:"3,000+",label:"San Diego County Moves"},
+    {metric:"East County",label:"Local Expertise"},
+    {metric:"100%",label:"Transparent Pricing"}
+  ]}
+
+  ctaCards={[
+    {
+      title: "Get Your Free Quote",
+      description: "Request a free, no-obligation quote for your Santee move today.",
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
+    },
+    {
+      title: "Call Us Today",
+      description: "Speak with a moving specialist about your Santee move.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
+    }
+  ]}
+
+  infoCards={[
+    {
+      title: "Service Hours",
+      items: [
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Same-day service available"
+      ]
+    },
+    {
+      title: "Why Choose Us",
+      content: "Over 10 years serving Santee with professional moving services. Licensed, insured, and locally owned."
+    }
   ]}
   faqHeading="Santee Moving FAQs"
   faqs={[

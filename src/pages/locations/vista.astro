@@ -5,6 +5,8 @@ import LocationTemplate from './_location-page-template.astro';
 <LocationTemplate
   title="Vista Movers | Local & Residential Moving Services"
   description="Professional Vista movers providing reliable residential moving services. Mighty Movers is a trusted Vista moving company offering transparent pricing and experienced local movers."
+  noindex={false}
+
   locationBadge="Vista Moving Company"
   heroTitle="Trusted Vista Movers"
   heroDescription="Mighty Movers is a professional Vista moving company specializing in residential and local moves throughout North County San Diego. Our experienced movers understand Vista's neighborhoods, distances, and access requirements."
@@ -51,9 +53,42 @@ If you're searching for dependable Vista movers, a reliable Vista moving company
     {title:"West Vista",description:"Established neighborhoods near major road access."}
   ]}
   trustBadges={[
-    {stat:"3,000+",label:"San Diego County Moves"},
-    {stat:"North County",label:"Local Expertise"},
-    {stat:"100%",label:"Transparent Pricing"}
+    {metric:"3,000+",label:"San Diego County Moves"},
+    {metric:"North County",label:"Local Expertise"},
+    {metric:"100%",label:"Transparent Pricing"}
+  ]}
+
+  ctaCards={[
+    {
+      title: "Get Your Free Quote",
+      description: "Request a free, no-obligation quote for your Vista move today.",
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
+    },
+    {
+      title: "Call Us Today",
+      description: "Speak with a moving specialist about your Vista move.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
+    }
+  ]}
+
+  infoCards={[
+    {
+      title: "Service Hours",
+      items: [
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Same-day service available"
+      ]
+    },
+    {
+      title: "Why Choose Us",
+      content: "Over 10 years serving Vista with professional moving services. Licensed, insured, and locally owned."
+    }
   ]}
   faqHeading="Vista Moving FAQs"
   faqs={[

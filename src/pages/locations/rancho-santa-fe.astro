@@ -5,6 +5,8 @@ import LocationTemplate from './_location-page-template.astro';
 <LocationTemplate
   title="Rancho Santa Fe Movers | Local & Estate Moving Services"
   description="Professional Rancho Santa Fe movers providing high-care residential moving services. Mighty Movers is a trusted Rancho Santa Fe moving company offering discreet, well-organized moves for estate properties."
+  noindex={false}
+
   locationBadge="Rancho Santa Fe Moving Company"
   heroTitle="Trusted Rancho Santa Fe Movers"
   heroDescription="Mighty Movers is a professional Rancho Santa Fe moving company specializing in residential, estate, and high-value moves. Our experienced movers understand Rancho Santa Fe's private properties, gated access, and elevated moving requirements."
@@ -51,9 +53,42 @@ If you're searching for dependable Rancho Santa Fe movers, a professional Rancho
     {title:"Gated Enclaves",description:"Private residential communities throughout Rancho Santa Fe."}
   ]}
   trustBadges={[
-    {stat:"3,000+",label:"San Diego County Moves"},
-    {stat:"Luxury Residential",label:"High-Care Expertise"},
-    {stat:"100%",label:"Transparent Pricing"}
+    {metric:"3,000+",label:"San Diego County Moves"},
+    {metric:"Luxury Residential",label:"High-Care Expertise"},
+    {metric:"100%",label:"Transparent Pricing"}
+  ]}
+
+  ctaCards={[
+    {
+      title: "Get Your Free Quote",
+      description: "Request a free, no-obligation quote for your Rancho Santa Fe move today.",
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
+    },
+    {
+      title: "Call Us Today",
+      description: "Speak with a moving specialist about your Rancho Santa Fe move.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
+    }
+  ]}
+
+  infoCards={[
+    {
+      title: "Service Hours",
+      items: [
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Same-day service available"
+      ]
+    },
+    {
+      title: "Why Choose Us",
+      content: "Over 10 years serving Rancho Santa Fe with professional moving services. Licensed, insured, and locally owned."
+    }
   ]}
   faqHeading="Rancho Santa Fe Moving FAQs"
   faqs={[

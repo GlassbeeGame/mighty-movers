@@ -5,6 +5,8 @@ import LocationTemplate from './_location-page-template.astro';
 <LocationTemplate
   title="La Mesa Movers | Local & Residential Moving Services"
   description="Reliable La Mesa movers specializing in residential and local relocations. Mighty Movers provides professional moving services in La Mesa with transparent pricing and East County expertise."
+  noindex={false}
+
   locationBadge="La Mesa Moving Company"
   heroTitle="Trusted La Mesa Movers"
   heroDescription="Mighty Movers is a professional La Mesa moving company providing efficient, well-organized moving services for homes, apartments, and local relocations. Our experienced local movers understand La Mesa's neighborhoods, terrain, and access considerations—and plan every move accordingly."
@@ -51,9 +53,42 @@ If you're searching for dependable La Mesa movers or a professional La Mesa movi
     {title:"Rolando Border",description:"Residential areas near central San Diego connections."}
   ]}
   trustBadges={[
-    {stat:"3,000+",label:"San Diego County Moves"},
-    {stat:"East County",label:"Local Expertise"},
-    {stat:"100%",label:"Transparent Pricing"}
+    {metric:"3,000+",label:"San Diego County Moves"},
+    {metric:"East County",label:"Local Expertise"},
+    {metric:"100%",label:"Transparent Pricing"}
+  ]}
+
+  ctaCards={[
+    {
+      title: "Get Your Free Quote",
+      description: "Request a free, no-obligation quote for your La Mesa move today.",
+      buttonText: "Get Free Quote",
+      buttonHref: "/contact",
+      isDark: false
+    },
+    {
+      title: "Call Us Today",
+      description: "Speak with a moving specialist about your La Mesa move.",
+      buttonText: "(619) 906-9018",
+      buttonHref: "tel:+16199069018",
+      isDark: true
+    }
+  ]}
+
+  infoCards={[
+    {
+      title: "Service Hours",
+      items: [
+        "Monday - Friday: 7AM - 7PM",
+        "Saturday: 8AM - 6PM",
+        "Sunday: 9AM - 5PM",
+        "Same-day service available"
+      ]
+    },
+    {
+      title: "Why Choose Us",
+      content: "Over 10 years serving La Mesa with professional moving services. Licensed, insured, and locally owned."
+    }
   ]}
   faqHeading="La Mesa Moving FAQs"
   faqs={[
