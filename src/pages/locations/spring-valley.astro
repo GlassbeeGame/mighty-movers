@@ -3,30 +3,71 @@ import LocationTemplate from './_location-page-template.astro';
 ---
 
 <LocationTemplate
-  title="Spring Valley Moving Services"
-  description="Professional moving services in Spring Valley, San Diego."
-  noindex={true}
-  locationBadge="Spring Valley"
-  heroTitle="Professional Movers in Spring Valley"
-  heroDescription="Reliable moving services for Spring Valley."
-  introHeading="Moving Services in Spring Valley"
-  introText="Mighty Movers provides professional moving services throughout Spring Valley."
-  mainContentHeading="Professional Spring Valley Moving Services"
-  mainContent="Mighty Movers provides comprehensive moving services throughout Spring Valley. Our experienced team understands the unique characteristics of this East County community and delivers reliable, professional moving services for residential customers."
-  servicesHeading="Our Moving Services"
-  services={[{title:"Local Moving",description:"Local services in Spring Valley"},{title:"Residential Moving",description:"Home moves throughout Spring Valley"},{title:"Commercial Moving",description:"Business moves in Spring Valley"},{title:"Packing Services",description:"Professional packing assistance"}]}
-  whyHeading="Why Choose Mighty Movers"
-  benefits={[{title:"Licensed & Insured",description:"Fully licensed and insured"},{title:"Experienced Team",description:"Professional movers"},{title:"Competitive Rates",description:"Fair pricing"},{title:"Same-Day Service",description:"Fast service"}]}
-  neighborhoodsHeading="Other Areas We Serve"
-  neighborhoods={[{title:"La Jolla",description:"Coastal moves"},{title:"Downtown",description:"Urban solutions"},{title:"Pacific Beach",description:"Beach services"},{title:"Del Mar",description:"North County"}]}
-  faqHeading="Frequently Asked Questions"
-  faqs={[{question:"Do you serve Spring Valley?",answer:"Yes! We serve all of San Diego County."},{question:"What services?",answer:"Local moving, packing, commercial, and more."},{question:"Same-day service?",answer:"Yes, based on availability."},{question:"Licensed?",answer:"Yes, fully licensed and insured."},{question:"How to get quote?",answer:"Contact us by phone or website."}]}
-  ctaCards={[{title:"Get Your Free Quote",description:"Request a free quote today.",buttonText:"Get Free Quote",buttonHref:"/contact",isDark:false},{title:"Call Us Today",description:"Speak with a specialist.",buttonText:"(619) 555-MOVE",buttonHref:"tel:6195556683",isDark:true}]}
-  infoCards={[{title:"Service Hours",items:["Mon-Fri: 7AM-7PM","Sat: 8AM-6PM","Sun: 9AM-5PM","Same-day available"]},{title:"Service Area",content:"Serving Spring Valley and San Diego County."}]}
-  bottomCTAHeading="Ready to Move?"
-  bottomCTADescription="Get started with San Diego's trusted movers."
-  bottomCTAPrimaryText="Get Free Quote"
+  title="Spring Valley Movers | Local & Residential Moving Services"
+  description="Reliable Spring Valley movers specializing in residential and local relocations. Mighty Movers provides professional moving services in Spring Valley with transparent pricing and East County expertise."
+  locationBadge="Spring Valley Moving Company"
+  heroTitle="Trusted Spring Valley Movers"
+  heroDescription="Mighty Movers is a professional Spring Valley moving company providing efficient, well-organized moving services for homes, apartments, and local relocations. Our experienced local movers understand Spring Valley's neighborhoods, terrain, and access considerations—and plan every move accordingly."
+  introHeading="Spring Valley Movers With East County Experience"
+  introText="Spring Valley sits between central San Diego and East County, offering a mix of residential neighborhoods, hillside areas, and apartment communities. Moving in Spring Valley often involves elevation changes, narrow residential streets, and longer travel distances. Mighty Movers specializes in Spring Valley moving services designed to keep moves efficient, protected, and stress-free."
+  mainContentHeading="Professional Moving Services in Spring Valley, CA"
+  mainContent="Mighty Movers is a locally operated moving company serving Spring Valley and surrounding East County communities. We focus on residential neighborhood moves and regularly assist families, renters, and homeowners relocating within Spring Valley and nearby areas.
+
+Spring Valley features a diverse housing mix, including single-family homes, duplexes, townhomes, and apartment complexes. Many neighborhoods include hillside streets, limited driveway access, and older construction. Our Spring Valley movers are familiar with these conditions and plan each move carefully to avoid delays and protect both property and belongings.
+
+Route planning is an important factor for Spring Valley moves. Relocations often involve travel along State Route 94, State Route 125, and surface streets connecting to La Mesa, Lemon Grove, El Cajon, and downtown San Diego. Our crews plan routes strategically to reduce travel time and keep moves on schedule.
+
+Weather also plays a role in Spring Valley moves. The area experiences warmer temperatures than coastal neighborhoods, particularly during summer months. Our movers plan pacing accordingly and use protective materials to safeguard heat-sensitive items throughout the move.
+
+We regularly assist customers moving near major Spring Valley landmarks such as Dictionary Hill, Sweetwater Reservoir, and surrounding residential corridors. Many customers choose Spring Valley for its affordability, central location, and access to both East County and coastal San Diego.
+
+Our Spring Valley moving services are commonly used for local relocations, apartment moves, family transitions, and moves between East County communities. These moves benefit from experienced crews who understand residential layouts and regional logistics.
+
+Compared to many Spring Valley moving companies, Mighty Movers emphasizes transparency and preparation. Our hourly pricing is clearly explained upfront and includes professional equipment such as moving pads, shrink wrap, dollies, lifting straps, and tools. We do not charge extra for basic protections that should already be included.
+
+If you're searching for dependable Spring Valley movers or a reliable Spring Valley moving company that understands East County living, Mighty Movers offers a well-organized moving solution built for this region."
+  servicesHeading="Spring Valley Moving Services"
+  services={[
+    {title:"Residential Moving",description:"Professional moving services for Spring Valley homes, apartments, and townhomes."},
+    {title:"Local & East County Moves",description:"Ideal for relocations within Spring Valley and nearby communities."},
+    {title:"Labor-Only Moving",description:"Experienced movers to assist with loading and unloading rental trucks or containers."},
+    {title:"Packing Assistance",description:"Optional packing services for customers who want help preparing before moving day."}
+  ]}
+  localKnowledgeText="Our Spring Valley movers are experienced with hillside neighborhoods, residential streets, warmer temperatures, and East County travel routes."
+  whyHeading="Why Spring Valley Residents Choose Mighty Movers"
+  benefits={[
+    {title:"Spring Valley–Specific Experience",description:"Familiar with neighborhood layouts and elevation changes."},
+    {title:"East County Expertise",description:"Experienced with regional routes and logistics."},
+    {title:"Transparent Pricing",description:"Clear hourly rates with equipment included—no hidden fees."},
+    {title:"Flexible Crew Sizes",description:"Options for apartments, townhomes, and full-house moves."},
+    {title:"Professional Equipment Included",description:"Pads, shrink wrap, dollies, straps, and tools come standard."}
+  ]}
+  neighborhoodsHeading="Spring Valley Areas We Serve"
+  neighborhoods={[
+    {title:"Dictionary Hill Area",description:"Hillside homes with elevation changes and limited street access."},
+    {title:"Sweetwater Reservoir Area",description:"Residential neighborhoods near open space and scenic routes."},
+    {title:"Bancroft Area",description:"Apartments and homes near central Spring Valley corridors."},
+    {title:"Casa de Oro Border",description:"Residential areas near La Mesa and Lemon Grove."},
+    {title:"La Presa Border",description:"Family neighborhoods with convenient freeway access."}
+  ]}
+  trustBadges={[
+    {stat:"3,000+",label:"San Diego County Moves"},
+    {stat:"East County",label:"Local Expertise"},
+    {stat:"100%",label:"Transparent Pricing"}
+  ]}
+  faqHeading="Spring Valley Moving FAQs"
+  faqs={[
+    {question:"Do you regularly handle moves in Spring Valley?",answer:"Yes. Spring Valley is a core East County community that we serve frequently."},
+    {question:"Are Spring Valley moves affected by hills or elevation changes?",answer:"Some neighborhoods include hillside streets, which we plan for in advance to ensure safe and efficient moves."},
+    {question:"Do you move between Spring Valley and nearby cities?",answer:"Yes. We regularly handle moves to and from La Mesa, Lemon Grove, El Cajon, and surrounding areas."},
+    {question:"Is freeway travel included in estimates?",answer:"Yes. Distance and travel time are discussed upfront to avoid surprises."},
+    {question:"How do you handle hot weather during Spring Valley moves?",answer:"We pace work carefully and protect heat-sensitive items during warmer conditions."},
+    {question:"How far in advance should I book Spring Valley movers?",answer:"One to two weeks is recommended, especially during peak summer months."}
+  ]}
+  bottomCTAHeading="Schedule Your Spring Valley Move Today"
+  bottomCTADescription="If you're planning a move in Spring Valley or East County San Diego, Mighty Movers is ready to help. Call today for a free quote and work with experienced local movers who understand Spring Valley inside and out."
+  bottomCTAPrimaryText="Get a Free Quote"
   bottomCTAPrimaryHref="/contact"
-  bottomCTASecondaryText="Call (619) 555-MOVE"
-  bottomCTASecondaryHref="tel:6195556683"
+  bottomCTASecondaryText="Call (619) 906-9018"
+  bottomCTASecondaryHref="tel:16199069018"
 />

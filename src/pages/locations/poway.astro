@@ -3,30 +3,72 @@ import LocationTemplate from './_location-page-template.astro';
 ---
 
 <LocationTemplate
-  title="Poway Moving Services"
-  description="Professional moving services in Poway, San Diego."
-  noindex={true}
-  locationBadge="Poway"
-  heroTitle="Professional Movers in Poway"
-  heroDescription="Reliable moving services for Poway."
-  introHeading="Moving Services in Poway"
-  introText="Mighty Movers provides professional moving services throughout Poway."
-  mainContentHeading="Professional Poway Moving Services"
-  mainContent="Mighty Movers provides comprehensive moving services throughout Poway. Our experienced team understands the unique characteristics of this North County community and delivers reliable, professional moving services for residential customers."
-  servicesHeading="Our Moving Services"
-  services={[{title:"Local Moving",description:"Local services in Poway"},{title:"Residential Moving",description:"Home moves throughout Poway"},{title:"Commercial Moving",description:"Business moves in Poway"},{title:"Packing Services",description:"Professional packing assistance"}]}
-  whyHeading="Why Choose Mighty Movers"
-  benefits={[{title:"Licensed & Insured",description:"Fully licensed and insured"},{title:"Experienced Team",description:"Professional movers"},{title:"Competitive Rates",description:"Fair pricing"},{title:"Same-Day Service",description:"Fast service"}]}
-  neighborhoodsHeading="Other Areas We Serve"
-  neighborhoods={[{title:"La Jolla",description:"Coastal moves"},{title:"Downtown",description:"Urban solutions"},{title:"Pacific Beach",description:"Beach services"},{title:"Del Mar",description:"North County"}]}
-  faqHeading="Frequently Asked Questions"
-  faqs={[{question:"Do you serve Poway?",answer:"Yes! We serve all of San Diego County."},{question:"What services?",answer:"Local moving, packing, commercial, and more."},{question:"Same-day service?",answer:"Yes, based on availability."},{question:"Licensed?",answer:"Yes, fully licensed and insured."},{question:"How to get quote?",answer:"Contact us by phone or website."}]}
-  ctaCards={[{title:"Get Your Free Quote",description:"Request a free quote today.",buttonText:"Get Free Quote",buttonHref:"/contact",isDark:false},{title:"Call Us Today",description:"Speak with a specialist.",buttonText:"(619) 555-MOVE",buttonHref:"tel:6195556683",isDark:true}]}
-  infoCards={[{title:"Service Hours",items:["Mon-Fri: 7AM-7PM","Sat: 8AM-6PM","Sun: 9AM-5PM","Same-day available"]},{title:"Service Area",content:"Serving Poway and San Diego County."}]}
-  bottomCTAHeading="Ready to Move?"
-  bottomCTADescription="Get started with San Diego's trusted movers."
-  bottomCTAPrimaryText="Get Free Quote"
+  title="Poway Movers | Local & Residential Moving Services"
+  description="Professional Poway movers providing reliable residential moving services. Mighty Movers is a trusted moving company in Poway offering transparent pricing and experienced local movers."
+  locationBadge="Poway Moving Company"
+  heroTitle="Trusted Poway Movers"
+  heroDescription="Mighty Movers is a professional moving company in Poway specializing in residential and local moves. Our experienced movers understand Poway's neighborhoods, larger properties, and access considerations—delivering organized, high-quality moving services."
+  introHeading="Local Movers Serving Poway, CA"
+  introText="Poway is a unique North County community known for its spacious neighborhoods, larger homes, and quieter residential layout. Moving in Poway often involves longer driveways, multi-level homes, gated properties, and careful handling of high-value items. Mighty Movers provides moving services in Poway designed for these exact conditions."
+  mainContentHeading="Professional Moving Services in Poway"
+  mainContent="Mighty Movers is a locally operated moving company serving Poway and surrounding inland North County communities. We specialize in residential neighborhood moves and regularly assist homeowners, renters, and families relocating within Poway or moving to nearby cities.
+
+Poway features predominantly single-family homes, estates, and planned communities with larger lots. Many properties include long driveways, stairs, garages, and private access points. Our Poway movers are experienced with these layouts and plan crew size, equipment, and timelines accordingly.
+
+Route planning is especially important for Poway moves. The city connects primarily through State Route 67 and nearby arterial roads rather than major freeways. Our crews plan routes strategically to avoid delays and keep moves efficient.
+
+Poway's inland location also means warmer temperatures compared to coastal San Diego. Our movers pace work carefully, protect heat-sensitive items, and schedule moves with seasonal conditions in mind—particularly during summer months.
+
+We frequently assist customers moving near Poway landmarks such as Old Poway Park, Blue Sky Ecological Reserve, and surrounding residential neighborhoods. Many residents choose Poway for its privacy, space, and strong community atmosphere.
+
+Our moving services in Poway, CA include full-service residential moves, labor-only assistance, and optional packing services. For clients requiring elevated care, we also offer a white glove moving service in San Diego, ideal for fragile items, custom furniture, and high-end homes.
+
+All full-service moves include professional equipment such as moving pads, shrink wrap, dollies, lifting straps, and tools—provided as part of the service.
+
+Compared to other Poway moving companies, Mighty Movers emphasizes preparation, discretion, and transparency. Our pricing is clear, our crews are experienced, and our approach is designed for high-quality residential moves.
+
+If you're searching for a dependable moving company in Poway, experienced local movers Poway residents trust, or professional movers in Poway, Mighty Movers delivers a refined and reliable moving experience."
+  servicesHeading="Poway Moving Services"
+  services={[
+    {title:"Residential Moving Services",description:"Full-service moves for Poway homes, estates, and private properties."},
+    {title:"Local North County Moves",description:"Efficient relocations within Poway and nearby inland communities."},
+    {title:"Labor-Only Moving",description:"Professional movers to assist with loading or unloading customer-provided trucks."},
+    {title:"Packing Assistance",description:"Optional packing support for careful preparation before moving day."}
+  ]}
+  localKnowledgeText="Our Poway movers are experienced with larger properties, long driveways, gated access, and inland North County travel routes."
+  whyHeading="Why Choose Mighty Movers in Poway"
+  benefits={[
+    {title:"Poway-Specific Experience",description:"Familiar with estate homes, gated properties, and private access."},
+    {title:"Careful Route Planning",description:"Efficient scheduling using SR-67 and inland corridors."},
+    {title:"Transparent Pricing",description:"Clear hourly rates with professional equipment included."},
+    {title:"Flexible Crew Sizes",description:"Right-sized teams for larger homes and detailed moves."},
+    {title:"Professional Equipment Included",description:"Pads, wrap, dollies, straps, and tools standard."}
+  ]}
+  neighborhoodsHeading="Poway Areas We Serve"
+  neighborhoods={[
+    {title:"Old Poway",description:"Residential neighborhoods near parks and community centers."},
+    {title:"Green Valley",description:"Larger homes with private driveways and quiet streets."},
+    {title:"Poway Hills",description:"Elevated properties with multi-level layouts."},
+    {title:"Garden Road Area",description:"Suburban neighborhoods with estate-style homes."},
+    {title:"Rancho Arbolitos Border",description:"Residential areas near surrounding inland communities."}
+  ]}
+  trustBadges={[
+    {stat:"3,000+",label:"San Diego County Moves"},
+    {stat:"North County Inland",label:"Residential Expertise"},
+    {stat:"100%",label:"Transparent Pricing"}
+  ]}
+  faqHeading="Poway Moving FAQs"
+  faqs={[
+    {question:"Do you regularly provide moving services in Poway?",answer:"Yes. Poway is a core inland North County area that we serve frequently."},
+    {question:"Are Poway moves typically larger residential moves?",answer:"Often, yes. Many Poway homes are larger and require detailed planning."},
+    {question:"Do you handle gated or private properties?",answer:"Yes. Our movers regularly work with gated access and private driveways."},
+    {question:"Can you provide higher-care moving services for valuable items?",answer:"Yes. We offer white glove–level care for fragile or high-value belongings."},
+    {question:"Do you move between Poway and nearby cities?",answer:"Yes. We frequently handle moves to and from San Marcos, Rancho Bernardo, and Escondido."}
+  ]}
+  bottomCTAHeading="Plan Your Poway Move With Confidence"
+  bottomCTADescription="If you're planning a move in Poway or inland North County San Diego, Mighty Movers is ready to help. Call today for a free quote and work with experienced local movers who understand Poway."
+  bottomCTAPrimaryText="Get a Free Quote"
   bottomCTAPrimaryHref="/contact"
-  bottomCTASecondaryText="Call (619) 555-MOVE"
-  bottomCTASecondaryHref="tel:6195556683"
+  bottomCTASecondaryText="Call (619) 906-9018"
+  bottomCTASecondaryHref="tel:16199069018"
 />

@@ -3,30 +3,70 @@ import LocationTemplate from './_location-page-template.astro';
 ---
 
 <LocationTemplate
-  title="Encinitas Moving Services"
-  description="Professional moving services in Encinitas, San Diego."
-  noindex={true}
-  locationBadge="Encinitas"
-  heroTitle="Professional Movers in Encinitas"
-  heroDescription="Reliable moving services for Encinitas."
-  introHeading="Moving Services in Encinitas"
-  introText="Mighty Movers provides professional moving services throughout Encinitas."
-  mainContentHeading="Professional Encinitas Moving Services"
-  mainContent="Mighty Movers provides comprehensive moving services throughout Encinitas. Our experienced team understands the unique characteristics of this North County coastal community and delivers reliable, professional moving services for residential customers."
-  servicesHeading="Our Moving Services"
-  services={[{title:"Local Moving",description:"Local services in Encinitas"},{title:"Residential Moving",description:"Home moves throughout Encinitas"},{title:"Commercial Moving",description:"Business moves in Encinitas"},{title:"Packing Services",description:"Professional packing assistance"}]}
-  whyHeading="Why Choose Mighty Movers"
-  benefits={[{title:"Licensed & Insured",description:"Fully licensed and insured"},{title:"Experienced Team",description:"Professional movers"},{title:"Competitive Rates",description:"Fair pricing"},{title:"Same-Day Service",description:"Fast service"}]}
-  neighborhoodsHeading="Other Areas We Serve"
-  neighborhoods={[{title:"La Jolla",description:"Coastal moves"},{title:"Downtown",description:"Urban solutions"},{title:"Pacific Beach",description:"Beach services"},{title:"Del Mar",description:"North County"}]}
-  faqHeading="Frequently Asked Questions"
-  faqs={[{question:"Do you serve Encinitas?",answer:"Yes! We serve all of San Diego County."},{question:"What services?",answer:"Local moving, packing, commercial, and more."},{question:"Same-day service?",answer:"Yes, based on availability."},{question:"Licensed?",answer:"Yes, fully licensed and insured."},{question:"How to get quote?",answer:"Contact us by phone or website."}]}
-  ctaCards={[{title:"Get Your Free Quote",description:"Request a free quote today.",buttonText:"Get Free Quote",buttonHref:"/contact",isDark:false},{title:"Call Us Today",description:"Speak with a specialist.",buttonText:"(619) 555-MOVE",buttonHref:"tel:6195556683",isDark:true}]}
-  infoCards={[{title:"Service Hours",items:["Mon-Fri: 7AM-7PM","Sat: 8AM-6PM","Sun: 9AM-5PM","Same-day available"]},{title:"Service Area",content:"Serving Encinitas and San Diego County."}]}
-  bottomCTAHeading="Ready to Move?"
-  bottomCTADescription="Get started with San Diego's trusted movers."
-  bottomCTAPrimaryText="Get Free Quote"
+  title="Encinitas Movers | Local & Coastal Moving Services"
+  description="Professional Encinitas movers providing reliable residential moving services. Mighty Movers is a trusted Encinitas moving company serving Encinitas and Cardiff-by-the-Sea with transparent pricing."
+  locationBadge="Encinitas Moving Company"
+  heroTitle="Trusted Encinitas Movers"
+  heroDescription="Mighty Movers is a professional Encinitas moving company specializing in residential and local coastal moves. Our experienced movers understand Encinitas neighborhoods, HOA requirements, and coastal access challenges."
+  introHeading="Local Movers Serving Encinitas & Cardiff-by-the-Sea"
+  introText="Encinitas is a coastal North County community known for its residential neighborhoods, beach access, and hillside homes. Moving in Encinitas often requires careful coordination around HOAs, narrow streets, multi-level properties, and coastal traffic patterns. Mighty Movers provides moving services in Encinitas designed specifically for these conditions."
+  mainContentHeading="Professional Moving Services in Encinitas"
+  mainContent="Mighty Movers is a locally operated moving company serving Encinitas and surrounding coastal North County communities. We focus on residential neighborhood moves and regularly assist homeowners, renters, and families relocating within Encinitas or moving to nearby cities.
+
+Encinitas features a wide variety of housing types, including single-family homes, townhomes, apartments, and hillside properties with elevation changes. Many neighborhoods include HOAs, stair access, and limited curbside parking. Our Encinitas movers are familiar with these access considerations and plan each move carefully.
+
+Traffic planning is especially important in Encinitas. Coast Highway 101, Interstate 5, and local beach corridors can become congested, particularly during weekends and peak hours. Our crews schedule arrival times strategically to keep moves efficient and avoid unnecessary delays.
+
+Coastal conditions also play a role in Encinitas moves. Salt air and humidity require careful handling of furniture and belongings. Our movers use professional-grade moving pads, shrink wrap, and secure loading techniques to protect items throughout the move.
+
+We frequently assist customers near Encinitas landmarks such as Downtown Encinitas, Moonlight Beach, and surrounding residential neighborhoods. Many residents choose Encinitas for its coastal lifestyle, walkability, and proximity to North County employment centers.
+
+Our moving services in Encinitas include full-service residential moves, labor-only assistance, and optional packing services. All full-service moves include professional equipment such as moving pads, shrink wrap, dollies, lifting straps, and tools—provided as part of the service.
+
+Compared to other Encinitas moving companies, Mighty Movers focuses on transparency, preparation, and local coastal expertise. Our pricing is clear, our crews are experienced, and our goal is smooth residential moves throughout coastal North County.
+
+If you're searching for dependable Encinitas movers or a reliable Encinitas moving company, Mighty Movers offers a trusted local moving solution."
+  servicesHeading="Encinitas Moving Services"
+  services={[
+    {title:"Residential Moving Services",description:"Full-service moves for Encinitas homes, apartments, and townhomes."},
+    {title:"Local Coastal Moves",description:"Relocations within Encinitas and nearby beach communities."},
+    {title:"Labor-Only Moving",description:"Professional movers to assist with loading or unloading rental trucks."},
+    {title:"Packing Assistance",description:"Optional packing help for customers preparing before moving day."}
+  ]}
+  localKnowledgeText="Our Encinitas movers are experienced with coastal neighborhoods, HOA rules, multi-story homes, and North County traffic patterns."
+  whyHeading="Why Choose Mighty Movers in Encinitas"
+  benefits={[
+    {title:"Encinitas & Coastal Expertise",description:"Familiar with beach access, hillsides, and HOA communities."},
+    {title:"Traffic-Aware Scheduling",description:"Planned around I-5 and Coast Highway congestion."},
+    {title:"Transparent Pricing",description:"Clear hourly rates with equipment included."},
+    {title:"Flexible Crew Sizes",description:"Right-sized teams for condos, townhomes, and houses."},
+    {title:"Professional Equipment Included",description:"Pads, wrap, dollies, straps, and tools standard."}
+  ]}
+  neighborhoodsHeading="Encinitas & Cardiff Areas We Serve"
+  neighborhoods={[
+    {title:"Downtown Encinitas",description:"Apartments, condos, and nearby residential streets."},
+    {title:"Leucadia",description:"Coastal neighborhoods with mixed housing styles."},
+    {title:"Olivenhain",description:"Larger properties and hillside homes inland."},
+    {title:"Cardiff-by-the-Sea",description:"Coastal homes, apartments, and hillside streets near the beach."},
+    {title:"New Encinitas",description:"Suburban neighborhoods near shopping and schools."}
+  ]}
+  trustBadges={[
+    {stat:"3,000+",label:"San Diego County Moves"},
+    {stat:"North County",label:"Coastal Expertise"},
+    {stat:"100%",label:"Transparent Pricing"}
+  ]}
+  faqHeading="Encinitas & Cardiff Moving FAQs"
+  faqs={[
+    {question:"Do you provide moving services in Cardiff-by-the-Sea?",answer:"Yes. We regularly assist customers searching for Cardiff movers and provide service throughout Cardiff-by-the-Sea."},
+    {question:"Are Encinitas moves affected by HOAs or city rules?",answer:"Often, yes. Many Encinitas and Cardiff neighborhoods have HOA or access requirements that we plan for in advance."},
+    {question:"Do you handle hillside and multi-level homes?",answer:"Yes. Our movers are experienced with stairs, elevation changes, and coastal hillside properties."},
+    {question:"How do you plan around coastal traffic in Encinitas?",answer:"We schedule moves around known congestion along Coast Highway 101 and Interstate 5."},
+    {question:"Do you move between Encinitas and nearby coastal cities?",answer:"Yes. We frequently handle moves to and from Carlsbad, Solana Beach, and Del Mar."}
+  ]}
+  bottomCTAHeading="Book Your Encinitas Move Today"
+  bottomCTADescription="If you're planning a move in Encinitas or Cardiff-by-the-Sea, Mighty Movers is ready to help. Call today for a free quote and work with experienced local movers who understand coastal North County."
+  bottomCTAPrimaryText="Get a Free Quote"
   bottomCTAPrimaryHref="/contact"
-  bottomCTASecondaryText="Call (619) 555-MOVE"
-  bottomCTASecondaryHref="tel:6195556683"
+  bottomCTASecondaryText="Call (619) 906-9018"
+  bottomCTASecondaryHref="tel:16199069018"
 />

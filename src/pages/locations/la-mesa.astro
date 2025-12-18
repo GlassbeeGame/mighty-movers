@@ -3,30 +3,71 @@ import LocationTemplate from './_location-page-template.astro';
 ---
 
 <LocationTemplate
-  title="La Mesa Moving Services"
-  description="Professional moving services in La Mesa, San Diego."
-  noindex={true}
-  locationBadge="La Mesa"
-  heroTitle="Professional Movers in La Mesa"
-  heroDescription="Reliable moving services for La Mesa."
-  introHeading="Moving Services in La Mesa"
-  introText="Mighty Movers provides professional moving services throughout La Mesa."
-  mainContentHeading="Professional La Mesa Moving Services"
-  mainContent="Mighty Movers provides comprehensive moving services throughout La Mesa. Our experienced team understands the unique characteristics of this East County community and delivers reliable, professional moving services for residential customers."
-  servicesHeading="Our Moving Services"
-  services={[{title:"Local Moving",description:"Local services in La Mesa"},{title:"Residential Moving",description:"Home moves throughout La Mesa"},{title:"Commercial Moving",description:"Business moves in La Mesa"},{title:"Packing Services",description:"Professional packing assistance"}]}
-  whyHeading="Why Choose Mighty Movers"
-  benefits={[{title:"Licensed & Insured",description:"Fully licensed and insured"},{title:"Experienced Team",description:"Professional movers"},{title:"Competitive Rates",description:"Fair pricing"},{title:"Same-Day Service",description:"Fast service"}]}
-  neighborhoodsHeading="Other Areas We Serve"
-  neighborhoods={[{title:"La Jolla",description:"Coastal moves"},{title:"Downtown",description:"Urban solutions"},{title:"Pacific Beach",description:"Beach services"},{title:"Del Mar",description:"North County"}]}
-  faqHeading="Frequently Asked Questions"
-  faqs={[{question:"Do you serve La Mesa?",answer:"Yes! We serve all of San Diego County."},{question:"What services?",answer:"Local moving, packing, commercial, and more."},{question:"Same-day service?",answer:"Yes, based on availability."},{question:"Licensed?",answer:"Yes, fully licensed and insured."},{question:"How to get quote?",answer:"Contact us by phone or website."}]}
-  ctaCards={[{title:"Get Your Free Quote",description:"Request a free quote today.",buttonText:"Get Free Quote",buttonHref:"/contact",isDark:false},{title:"Call Us Today",description:"Speak with a specialist.",buttonText:"(619) 555-MOVE",buttonHref:"tel:6195556683",isDark:true}]}
-  infoCards={[{title:"Service Hours",items:["Mon-Fri: 7AM-7PM","Sat: 8AM-6PM","Sun: 9AM-5PM","Same-day available"]},{title:"Service Area",content:"Serving La Mesa and San Diego County."}]}
-  bottomCTAHeading="Ready to Move?"
-  bottomCTADescription="Get started with San Diego's trusted movers."
-  bottomCTAPrimaryText="Get Free Quote"
+  title="La Mesa Movers | Local & Residential Moving Services"
+  description="Reliable La Mesa movers specializing in residential and local relocations. Mighty Movers provides professional moving services in La Mesa with transparent pricing and East County expertise."
+  locationBadge="La Mesa Moving Company"
+  heroTitle="Trusted La Mesa Movers"
+  heroDescription="Mighty Movers is a professional La Mesa moving company providing efficient, well-organized moving services for homes, apartments, and local relocations. Our experienced local movers understand La Mesa's neighborhoods, terrain, and access considerations—and plan every move accordingly."
+  introHeading="La Mesa Movers With East County Experience"
+  introText="La Mesa offers a blend of quiet residential neighborhoods, hillside homes, and small apartment communities, creating unique moving requirements compared to coastal or downtown areas. From elevation changes to narrow residential streets, La Mesa moves benefit from experienced local planning. Mighty Movers specializes in La Mesa moving services designed to keep moves smooth, efficient, and stress-free."
+  mainContentHeading="Professional Moving Services in La Mesa, CA"
+  mainContent="Mighty Movers is a locally operated moving company serving La Mesa and surrounding East County communities. We focus on residential neighborhood moves and regularly assist families, renters, and homeowners relocating within La Mesa and nearby areas.
+
+La Mesa features a mix of single-family homes, duplexes, townhomes, and apartment complexes. Many neighborhoods include hillside streets, older construction, and limited driveway access. Our La Mesa movers are familiar with these conditions and plan each move carefully to protect property and prevent delays.
+
+Distance and route planning are important for La Mesa moves. Relocations often involve travel along Interstate 8, Interstate 125, or surface streets connecting to nearby communities such as El Cajon, Spring Valley, and Lemon Grove. Our crews plan routes strategically to keep moves on schedule and minimize downtime.
+
+Weather conditions in La Mesa tend to be warmer than coastal neighborhoods, particularly during summer months. Our movers account for temperature considerations by pacing moves properly and protecting heat-sensitive items.
+
+We regularly assist customers moving near major La Mesa landmarks such as the Village of La Mesa, Lake Murray, Grossmont Center, and surrounding residential areas. Many customers choose La Mesa for its central East County location and community feel.
+
+Our La Mesa moving services are commonly used for local relocations, family moves, apartment transitions, and moves between East County neighborhoods. These moves benefit from experienced crews who understand both residential layouts and regional logistics.
+
+Compared to many La Mesa moving companies, Mighty Movers emphasizes clarity and preparation. Our hourly pricing is explained clearly upfront and includes professional equipment such as moving pads, shrink wrap, dollies, lifting straps, and tools. We do not charge extra for basic protections that should already be included.
+
+If you're searching for dependable La Mesa movers or a professional La Mesa moving company that understands East County logistics, Mighty Movers offers a reliable, well-organized moving solution built for this region."
+  servicesHeading="La Mesa Moving Services"
+  services={[
+    {title:"Residential Moving",description:"Professional moving services for La Mesa homes, apartments, and townhomes."},
+    {title:"Local & East County Moves",description:"Ideal for relocations within La Mesa and nearby communities."},
+    {title:"Labor-Only Moving",description:"Experienced movers to assist with loading and unloading rental trucks or containers."},
+    {title:"Packing Assistance",description:"Optional packing services for customers who want help preparing before moving day."}
+  ]}
+  localKnowledgeText="Our La Mesa movers are experienced with hillside streets, residential neighborhoods, warmer temperatures, and East County travel routes."
+  whyHeading="Why La Mesa Residents Choose Mighty Movers"
+  benefits={[
+    {title:"La Mesa-Specific Experience",description:"Familiar with neighborhood layouts and hillside access."},
+    {title:"East County Expertise",description:"Experienced with regional routes and logistics."},
+    {title:"Transparent Pricing",description:"Clear hourly rates with equipment included—no hidden fees."},
+    {title:"Flexible Crew Sizes",description:"Options for apartments, townhomes, and full-house moves."},
+    {title:"Professional Equipment Included",description:"Pads, shrink wrap, dollies, straps, and tools come standard."}
+  ]}
+  neighborhoodsHeading="La Mesa Areas We Serve"
+  neighborhoods={[
+    {title:"Village of La Mesa",description:"Residential homes and apartments near shops and dining."},
+    {title:"Lake Murray Area",description:"Family neighborhoods with single-family homes and townhomes."},
+    {title:"Grossmont Area",description:"Apartments and residences near shopping and medical facilities."},
+    {title:"Mt. Helix Border",description:"Hillside homes with elevation changes and larger layouts."},
+    {title:"Rolando Border",description:"Residential areas near central San Diego connections."}
+  ]}
+  trustBadges={[
+    {stat:"3,000+",label:"San Diego County Moves"},
+    {stat:"East County",label:"Local Expertise"},
+    {stat:"100%",label:"Transparent Pricing"}
+  ]}
+  faqHeading="La Mesa Moving FAQs"
+  faqs={[
+    {question:"Do you regularly handle moves in La Mesa?",answer:"Yes. La Mesa is a core East County community that we serve frequently."},
+    {question:"Are La Mesa moves affected by hills or elevation changes?",answer:"Some neighborhoods include hillside streets, which we plan for in advance to ensure safe and efficient moves."},
+    {question:"Do you move between La Mesa and nearby cities?",answer:"Yes. We regularly handle moves to and from El Cajon, Lemon Grove, Spring Valley, and surrounding areas."},
+    {question:"Are La Mesa homes larger than coastal apartments?",answer:"Many La Mesa homes are larger, which is factored into crew size and scheduling."},
+    {question:"Is freeway travel included in estimates?",answer:"Yes. Distance and travel time are discussed upfront to avoid surprises."},
+    {question:"How far in advance should I book La Mesa movers?",answer:"One to two weeks is recommended, especially during peak moving seasons."}
+  ]}
+  bottomCTAHeading="Schedule Your La Mesa Move Today"
+  bottomCTADescription="If you're planning a move in La Mesa or East County San Diego, Mighty Movers is ready to help. Call today for a free quote and work with experienced local movers who understand La Mesa inside and out."
+  bottomCTAPrimaryText="Get a Free Quote"
   bottomCTAPrimaryHref="/contact"
-  bottomCTASecondaryText="Call (619) 555-MOVE"
-  bottomCTASecondaryHref="tel:6195556683"
+  bottomCTASecondaryText="Call (619) 906-9018"
+  bottomCTASecondaryHref="tel:16199069018"
 />
