@@ -37,22 +37,22 @@ import Layout from '../layouts/Layout.astro';
           <span>(619) 555-MOVE</span>
         </a>
       </div>
-      <div class="hero-trust">
+      <div class="hero-trust" id="hero-trust">
         <div class="trust-item">
           <div class="trust-icon">✓</div>
-          <div class="trust-number">500+</div>
+          <div class="trust-number" data-target="500" data-suffix="+">0+</div>
           <span class="trust-label">Successful Moves</span>
         </div>
         <div class="trust-divider"></div>
         <div class="trust-item">
           <div class="trust-icon">★</div>
-          <div class="trust-number">5.0</div>
+          <div class="trust-number" data-target="5.0" data-decimal="1">0.0</div>
           <span class="trust-label">Star Rating</span>
         </div>
         <div class="trust-divider"></div>
         <div class="trust-item">
           <div class="trust-icon">⏱</div>
-          <div class="trust-number">10+</div>
+          <div class="trust-number" data-target="10" data-suffix="+">0+</div>
           <span class="trust-label">Years Experience</span>
         </div>
       </div>
@@ -1654,5 +1654,64 @@ import Layout from '../layouts/Layout.astro';
     carousel?.addEventListener('mouseleave', () => {
       autoRotate = setInterval(nextCard, 5000);
     });
+
+    // Number animation for hero-trust banner
+    const heroTrust = document.getElementById('hero-trust');
+    const trustNumbers = document.querySelectorAll('.trust-number');
+    let hasAnimated = false;
+
+    function animateNumber(element: HTMLElement) {
+      const target = parseFloat(element.getAttribute('data-target') || '0');
+      const suffix = element.getAttribute('data-suffix') || '';
+      const hasDecimal = element.hasAttribute('data-decimal');
+      const duration = 2000; // 2 seconds
+      const startTime = Date.now();
+      const startValue = 0;
+
+      function updateNumber() {
+        const elapsed = Date.now() - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        // Easing function for smooth animation
+        const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+        const currentValue = startValue + (target - startValue) * easeOutQuart;
+
+        if (hasDecimal) {
+          element.textContent = currentValue.toFixed(1) + suffix;
+        } else {
+          element.textContent = Math.floor(currentValue) + suffix;
+        }
+
+        if (progress < 1) {
+          requestAnimationFrame(updateNumber);
+        } else {
+          // Ensure final value is exact
+          if (hasDecimal) {
+            element.textContent = target.toFixed(1) + suffix;
+          } else {
+            element.textContent = Math.floor(target) + suffix;
+          }
+        }
+      }
+
+      updateNumber();
+    }
+
+    if (heroTrust && trustNumbers.length > 0) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            hasAnimated = true;
+            trustNumbers.forEach((num) => {
+              animateNumber(num as HTMLElement);
+            });
+          }
+        });
+      }, {
+        threshold: 0.3 // Trigger when 30% of the element is visible
+      });
+
+      observer.observe(heroTrust);
+    }
   });
 </script>
