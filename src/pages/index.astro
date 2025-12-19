@@ -561,7 +561,7 @@ import Layout from '../layouts/Layout.astro';
     gap: 3rem;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 2rem 4rem;
+    padding: 1.5rem 4rem;
     background: var(--black);
     border: 3px solid var(--yellow);
     clip-path: polygon(25px 0, 100% 0, calc(100% - 25px) 100%, 0 100%);
@@ -578,9 +578,9 @@ import Layout from '../layouts/Layout.astro';
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.4rem;
     position: relative;
-    padding: 0.5rem;
+    padding: 0.25rem;
     transition: transform 0.3s ease;
   }
 
@@ -589,10 +589,10 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .trust-icon {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     color: var(--yellow);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -604,7 +604,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .trust-number {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 900;
     color: var(--yellow);
     line-height: 1;
@@ -613,7 +613,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .trust-label {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--gray-200);
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -623,7 +623,7 @@ import Layout from '../layouts/Layout.astro';
 
   .trust-divider {
     width: 2px;
-    height: 50px;
+    height: 40px;
     background: linear-gradient(to bottom, transparent, var(--yellow), transparent);
     opacity: 0.6;
   }
@@ -1503,19 +1503,20 @@ import Layout from '../layouts/Layout.astro';
 
     .hero-trust {
       gap: 2rem;
-      padding: 1.5rem 1.5rem;
+      padding: 1.25rem 1.5rem;
     }
 
     .trust-divider {
-      height: 50px;
+      height: 35px;
     }
 
     .trust-number {
-      font-size: 2.8rem;
+      font-size: 2.5rem;
     }
 
     .trust-icon {
-      font-size: 2rem;
+      width: 24px;
+      height: 24px;
     }
 
 
@@ -1672,22 +1673,24 @@ import Layout from '../layouts/Layout.astro';
       const target = parseFloat(element.getAttribute('data-target') || '0');
       const suffix = element.getAttribute('data-suffix') || '';
       const hasDecimal = element.hasAttribute('data-decimal');
-      const duration = 2000; // 2 seconds
-      const startTime = Date.now();
+      const duration = 1800; // 1.8 seconds
+      const startTime = performance.now();
       const startValue = 0;
 
-      function updateNumber() {
-        const elapsed = Date.now() - startTime;
+      function updateNumber(currentTime: number) {
+        const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
         
-        // Easing function for smooth animation
-        const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-        const currentValue = startValue + (target - startValue) * easeOutQuart;
+        // Smoother easing function (easeOutCubic)
+        const easeOutCubic = 1 - Math.pow(1 - progress, 3);
+        const currentValue = startValue + (target - startValue) * easeOutCubic;
 
         if (hasDecimal) {
           element.textContent = currentValue.toFixed(1) + suffix;
         } else {
-          element.textContent = Math.floor(currentValue) + suffix;
+          const rounded = Math.round(currentValue);
+          // Format large numbers with commas
+          element.textContent = rounded.toLocaleString('en-US') + suffix;
         }
 
         if (progress < 1) {
@@ -1697,12 +1700,13 @@ import Layout from '../layouts/Layout.astro';
           if (hasDecimal) {
             element.textContent = target.toFixed(1) + suffix;
           } else {
-            element.textContent = Math.floor(target) + suffix;
+            const finalValue = Math.round(target);
+            element.textContent = finalValue.toLocaleString('en-US') + suffix;
           }
         }
       }
 
-      updateNumber();
+      requestAnimationFrame(updateNumber);
     }
 
     if (heroTrust && trustNumbers.length > 0) {
