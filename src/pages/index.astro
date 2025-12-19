@@ -561,7 +561,7 @@ import Layout from '../layouts/Layout.astro';
     gap: 3rem;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 1.5rem 4rem;
+    padding: 1.25rem 4rem;
     background: var(--black);
     border: 3px solid var(--yellow);
     clip-path: polygon(25px 0, 100% 0, calc(100% - 25px) 100%, 0 100%);
@@ -578,10 +578,11 @@ import Layout from '../layouts/Layout.astro';
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.3rem;
     position: relative;
-    padding: 0.25rem;
+    padding: 0.15rem;
     transition: transform 0.3s ease;
+    min-width: 120px;
   }
 
   .trust-item:hover {
@@ -589,10 +590,10 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .trust-icon {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
     color: var(--yellow);
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.25rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -604,16 +605,19 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .trust-number {
-    font-size: 3rem;
+    font-size: 2.75rem;
     font-weight: 900;
     color: var(--yellow);
     line-height: 1;
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3), 0 0 20px rgba(246, 245, 16, 0.3);
     letter-spacing: -1px;
+    min-width: 140px;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
   }
 
   .trust-label {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--gray-200);
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -623,7 +627,7 @@ import Layout from '../layouts/Layout.astro';
 
   .trust-divider {
     width: 2px;
-    height: 40px;
+    height: 35px;
     background: linear-gradient(to bottom, transparent, var(--yellow), transparent);
     opacity: 0.6;
   }
@@ -1503,20 +1507,21 @@ import Layout from '../layouts/Layout.astro';
 
     .hero-trust {
       gap: 2rem;
-      padding: 1.25rem 1.5rem;
+      padding: 1rem 1.5rem;
     }
 
     .trust-divider {
-      height: 35px;
+      height: 30px;
     }
 
     .trust-number {
-      font-size: 2.5rem;
+      font-size: 2.25rem;
+      min-width: 120px;
     }
 
     .trust-icon {
-      width: 24px;
-      height: 24px;
+      width: 22px;
+      height: 22px;
     }
 
 
