@@ -87,43 +87,29 @@ import Layout from '../layouts/Layout.astro';
         <div class="feature-card feature-card-1">
           <div class="feature-corner-accent"></div>
           <div class="feature-number">01</div>
-          <h3>Licensed & Insured</h3>
-          <p>Full coverage for your peace of mind. Every move is protected by comprehensive insurance.</p>
+          <h3>Integrity</h3>
+          <p>We operate with honesty and transparency in every interaction. No hidden fees, no surprises.</p>
           <div class="feature-diagonal-line"></div>
         </div>
         <div class="feature-card feature-card-2">
           <div class="feature-corner-accent"></div>
           <div class="feature-number">02</div>
-          <h3>Professional Team</h3>
-          <p>Background-checked, trained movers who treat your belongings like their own.</p>
+          <h3>Excellence</h3>
+          <p>We strive for perfection in every move, ensuring your belongings arrive safely and on time.</p>
           <div class="feature-diagonal-line"></div>
         </div>
         <div class="feature-card feature-card-3">
           <div class="feature-corner-accent"></div>
           <div class="feature-number">03</div>
-          <h3>Transparent Pricing</h3>
-          <p>No hidden fees, no surprises. Get a detailed quote upfront and stick to it.</p>
+          <h3>Customer First</h3>
+          <p>Your satisfaction is our priority. We go above and beyond to exceed your expectations.</p>
           <div class="feature-diagonal-line"></div>
         </div>
         <div class="feature-card feature-card-4">
           <div class="feature-corner-accent"></div>
           <div class="feature-number">04</div>
-          <h3>On-Time Guarantee</h3>
-          <p>We show up when we say we will. Your time is valuable, and we respect that.</p>
-          <div class="feature-diagonal-line"></div>
-        </div>
-        <div class="feature-card feature-card-5">
-          <div class="feature-corner-accent"></div>
-          <div class="feature-number">05</div>
-          <h3>Locally Owned & Operated</h3>
-          <p>Proudly serving San Diego County as a local, family-owned business. We're your neighbors, committed to our community.</p>
-          <div class="feature-diagonal-line"></div>
-        </div>
-        <div class="feature-card feature-card-6">
-          <div class="feature-corner-accent"></div>
-          <div class="feature-number">06</div>
-          <h3>Community First</h3>
-          <p>Kind, honest service that puts people first. We believe in treating every customer with respect, integrity, and genuine care.</p>
+          <h3>Reliability</h3>
+          <p>You can count on us to show up on time, every time, and deliver on our promises.</p>
           <div class="feature-diagonal-line"></div>
         </div>
       </div>
@@ -739,11 +725,13 @@ import Layout from '../layouts/Layout.astro';
 
   .feature-card {
     background: var(--white);
-    padding: 3rem 2rem;
+    padding: 2.5rem 2rem 3rem;
+    padding-top: 3.5rem;
     border: 3px solid var(--black);
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
     clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+    overflow: visible;
   }
 
   .feature-corner-accent {
@@ -778,21 +766,31 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .feature-number {
-    font-size: 5rem;
-    font-weight: 900;
-    color: var(--yellow);
-    line-height: 1;
-    opacity: 0.35;
     position: absolute;
-    top: -10px;
-    right: 20px;
-    z-index: 0;
+    top: 1.5rem;
+    left: 2rem;
+    background: var(--black);
+    color: var(--yellow);
+    border: 3px solid var(--yellow);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1.4rem;
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);
+    z-index: 2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
   .feature-card h3 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 800;
+    margin-top: 0;
     margin-bottom: 1rem;
+    padding-top: 2rem;
     color: var(--black);
     position: relative;
     z-index: 1;
