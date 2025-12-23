@@ -51,7 +51,7 @@ When creating a new location page, copy from `alpine.astro` (or any working loca
   ]}
   ctaCards={[
     {title:"Get Your Free Quote", description:"Request a free quote today.", buttonText:"Get Free Quote", buttonHref:"/contact", isDark:false},
-    {title:"Call Us Today", description:"Speak with a specialist.", buttonText:"(619) 555-MOVE", buttonHref:"tel:6195556683", isDark:true}
+    {title:"Call Us Today", description:"Speak with a specialist.", buttonText:"(619) 906-9018", buttonHref:"tel:6199069018", isDark:true}
   ]}
   infoCards={[
     {title:"Service Hours", items:["Mon-Fri: 7AM-7PM", "Sat: 8AM-6PM", "Sun: 9AM-5PM", "Same-day available"]},
@@ -61,8 +61,8 @@ When creating a new location page, copy from `alpine.astro` (or any working loca
   bottomCTADescription="Get started with San Diego's trusted movers."
   bottomCTAPrimaryText="Get Free Quote"
   bottomCTAPrimaryHref="/contact"
-  bottomCTASecondaryText="Call (619) 555-MOVE"
-  bottomCTASecondaryHref="tel:6195556683"
+  bottomCTASecondaryText="Call (619) 906-9018"
+  bottomCTASecondaryHref="tel:6199069018"
 />
 ```
 

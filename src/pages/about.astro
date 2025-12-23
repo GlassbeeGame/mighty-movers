@@ -103,7 +103,7 @@ import Layout from '../layouts/Layout.astro';
       <p>Let us show you why San Diego trusts us with their most important moves</p>
       <div class="cta-buttons">
         <a href="/contact" class="btn btn-primary btn-large">Get Free Quote</a>
-        <a href="tel:6195556683" class="btn btn-secondary btn-large">Call (619) 555-MOVE</a>
+        <a href="tel:6199069018" class="btn btn-secondary btn-large">Call (619) 906-9018</a>
       </div>
     </div>
   </section>
@@ -248,12 +248,14 @@ import Layout from '../layouts/Layout.astro';
 
   .value-card {
     background: var(--white);
-    padding: 3rem 2rem;
+    padding: 2.5rem 2rem 3rem;
+    padding-top: 3.5rem;
     border-radius: 0;
     border: 3px solid var(--black);
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
     clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+    overflow: visible;
   }
 
   .value-card::before {
@@ -279,24 +281,31 @@ import Layout from '../layouts/Layout.astro';
     left: 2rem;
     background: var(--black);
     color: var(--yellow);
-    border: 2px solid var(--yellow);
-    width: 3rem;
-    height: 3rem;
+    border: 3px solid var(--yellow);
+    width: 4rem;
+    height: 4rem;
     border-radius: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 900;
-    font-size: 1.2rem;
-    clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%);
-    z-index: 1;
+    font-size: 1.4rem;
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);
+    z-index: 2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
   .value-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 800;
+    margin-top: 0;
     margin-bottom: 1rem;
+    margin-left: 0;
+    padding-left: 0;
+    padding-top: 2rem;
     color: var(--black);
+    position: relative;
+    z-index: 1;
   }
 
   .value-card p {
