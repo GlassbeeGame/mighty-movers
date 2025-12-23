@@ -158,6 +158,11 @@ const {
   </section>
 
   <section class="service-detail-section">
+    <div class="service-decorative-elements">
+      <div class="decorative-circle decorative-circle-1"></div>
+      <div class="decorative-circle decorative-circle-2"></div>
+      <div class="decorative-circle decorative-circle-3"></div>
+    </div>
     <div class="container">
       <div class="content-wrapper">
         <div class="main-content">
@@ -365,6 +370,25 @@ const {
         }
       });
     });
+
+    // Scroll-triggered animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, observerOptions);
+
+    // Observe content cards and feature cards
+    document.querySelectorAll('.content-card, .feature-card, .location-link-item').forEach(el => {
+      observer.observe(el);
+    });
   });
 </script>
 
@@ -451,6 +475,7 @@ const {
   .service-detail-section {
     padding: 6rem 0;
     position: relative;
+    overflow: hidden;
   }
 
   .service-detail-section::before {
@@ -466,6 +491,73 @@ const {
     background-size: 60px 60px;
     opacity: 0.5;
     pointer-events: none;
+    animation: patternMove 20s linear infinite;
+  }
+
+  @keyframes patternMove {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 60px 60px;
+    }
+  }
+
+  .service-decorative-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .decorative-circle {
+    position: absolute;
+    border: 2px solid var(--yellow);
+    border-radius: 50%;
+    opacity: 0.08;
+    animation: float 15s ease-in-out infinite;
+  }
+
+  .decorative-circle-1 {
+    width: 400px;
+    height: 400px;
+    top: -150px;
+    left: -100px;
+    animation-delay: 0s;
+  }
+
+  .decorative-circle-2 {
+    width: 300px;
+    height: 300px;
+    bottom: -100px;
+    right: -50px;
+    animation-delay: 5s;
+  }
+
+  .decorative-circle-3 {
+    width: 250px;
+    height: 250px;
+    top: 50%;
+    right: 10%;
+    animation-delay: 10s;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+      opacity: 0.08;
+    }
+    33% {
+      transform: translate(30px, -30px) scale(1.1);
+      opacity: 0.12;
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.95);
+      opacity: 0.1;
+    }
   }
 
   .content-wrapper {
@@ -473,6 +565,7 @@ const {
     grid-template-columns: 1fr 400px;
     gap: 4rem;
     position: relative;
+    z-index: 1;
   }
 
   .main-content {
@@ -508,6 +601,31 @@ const {
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
     clip-path: polygon(0 0, calc(100% - 25px) 0, 100% 25px, 100% 100%, 0 100%);
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .content-card.animate-in {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .content-card:nth-child(1).animate-in {
+    animation-delay: 0.1s;
+  }
+
+  .content-card:nth-child(2).animate-in {
+    animation-delay: 0.2s;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .content-card::before {
@@ -646,6 +764,50 @@ const {
     border: 3px solid var(--gray-800);
     position: relative;
     overflow: hidden;
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  .feature-card.animate-in {
+    animation: slideInLeft 0.6s ease-out forwards;
+  }
+
+  .feature-card:nth-child(1).animate-in {
+    animation-delay: 0.1s;
+  }
+
+  .feature-card:nth-child(2).animate-in {
+    animation-delay: 0.2s;
+  }
+
+  .feature-card:nth-child(3).animate-in {
+    animation-delay: 0.3s;
+  }
+
+  .feature-card:nth-child(4).animate-in {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .location-link-item {
+    opacity: 0;
+    transform: translateX(-15px);
+    transition: all 0.3s ease;
+  }
+
+  .location-link-item.animate-in {
+    opacity: 1;
+    transform: translateX(0);
   }
 
   .feature-card::before {
