@@ -133,7 +133,7 @@ const {
     <div class="hero-overlay"></div>
     <div class="hero-content-wrapper">
       <div class="location-badge">{locationBadge}</div>
-      <h1>{heroTitle}</h1>
+      <h1 set:html={heroTitle}></h1>
       <p>{heroDescription}</p>
       <div class="hero-cta-buttons">
         <a href={bottomCTAPrimaryHref} class="btn btn-primary btn-large">{bottomCTAPrimaryText}</a>
