@@ -53,9 +53,9 @@ const { title, description = "Professional moving services in San Diego", noinde
             <p class="footer-tagline">"Moving Made Simple"</p>
             <p class="footer-description">Full-service moving company in San Diego and surrounding areas. Professional, reliable, and stress-free moving solutions with exceptional quality.</p>
             <div class="footer-contact-primary">
-              <a href="tel:6195556683" class="phone-link">
+              <a href="tel:6199069018" class="phone-link">
                 <span class="phone-icon-footer">📞</span>
-                (619) 555-MOVE
+                (619)906-9018
               </a>
               <a href="mailto:info@mightymovers.com" class="email-link">
                 <span class="email-icon">✉</span>
@@ -108,10 +108,25 @@ const { title, description = "Professional moving services in San Diego", noinde
         </div>
         <div class="footer-bottom">
           <p>&copy; {new Date().getFullYear()} Mighty Movers. All rights reserved.</p>
-          <div class="footer-legal">
-            <a href="#">Privacy Policy</a>
-            <span class="separator">•</span>
-            <a href="#">Terms of Service</a>
+          <div class="footer-bottom-right">
+            <div class="footer-social">
+              <a href="https://www.instagram.com/mighty_movers" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                Instagram
+              </a>
+              <span class="separator">•</span>
+              <a href="https://www.facebook.com/MightyMoversSD" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+                Facebook
+              </a>
+              <span class="separator">•</span>
+              <a href="https://www.bbb.org/us/ca/san-diego/profile/moving-companies/mighty-movers-1126-1000111466" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Better Business Bureau">
+                BBB Rating
+              </a>
+            </div>
+            <div class="footer-legal">
+              <a href="#">Privacy Policy</a>
+              <span class="separator">•</span>
+              <a href="#">Terms of Service</a>
+            </div>
           </div>
         </div>
       </div>
@@ -480,6 +495,30 @@ const { title, description = "Professional moving services in San Diego", noinde
     font-size: 0.9rem;
   }
 
+  .footer-bottom-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.75rem;
+  }
+
+  .footer-social {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .footer-social .social-link {
+    color: var(--gray-500);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+
+  .footer-social .social-link:hover {
+    color: var(--yellow);
+  }
+
   .footer-legal {
     display: flex;
     align-items: center;
@@ -566,6 +605,15 @@ const { title, description = "Professional moving services in San Diego", noinde
 
     .footer-legal {
       gap: 0.5rem;
+    }
+
+    .footer-bottom-right {
+      align-items: center;
+    }
+
+    .footer-social {
+      flex-wrap: wrap;
+      justify-content: center;
     }
   }
 
