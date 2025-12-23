@@ -152,7 +152,7 @@ const {
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-badge">{heroBadge}</div>
-      <h1>{heroTitle}</h1>
+      <h1 set:html={heroTitle}></h1>
       <p>{heroDescription}</p>
     </div>
   </section>
@@ -368,7 +368,7 @@ const {
   });
 </script>
 
-<style>
+<style is:global>
   .page-hero {
     min-height: 50vh;
     display: flex;
@@ -428,6 +428,10 @@ const {
     margin-bottom: 1.5rem;
     letter-spacing: -2px;
     min-height: 5rem;
+  }
+
+  .page-hero h1 .highlight {
+    color: var(--yellow);
   }
 
   .page-hero p {
