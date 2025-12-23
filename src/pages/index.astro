@@ -184,19 +184,9 @@ import Layout from '../layouts/Layout.astro';
           </a>
           <div class="service-card-pattern"></div>
         </div>
-        <div class="service-card service-card-4">
-          <div class="service-icon-wrapper">
-            <div class="service-icon">🔒</div>
-            <div class="service-icon-bg"></div>
-          </div>
-          <h3>Storage Solutions</h3>
-          <p>Secure, climate-controlled storage when you need extra time or space.</p>
-          <a href="/services" class="service-link">
-            <span>Learn More</span>
-            <span class="service-arrow">→</span>
-          </a>
-          <div class="service-card-pattern"></div>
-        </div>
+      </div>
+      <div class="services-cta">
+        <a href="/services" class="btn-services-all">See All Our Services</a>
       </div>
     </div>
   </section>
@@ -976,6 +966,48 @@ import Layout from '../layouts/Layout.astro';
   .service-arrow {
     transition: transform 0.3s ease;
     font-size: 1.2rem;
+  }
+
+  .services-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .btn-services-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.25rem 3rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    background: var(--yellow);
+    color: var(--black);
+    border: 3px solid var(--yellow);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-services-all:hover {
+    background: var(--black);
+    color: var(--yellow);
+    border-color: var(--yellow);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 rgba(246, 245, 16, 0.7), 0 0 25px rgba(246, 245, 16, 0.5);
+  }
+
+  .btn-services-all::after {
+    content: '→';
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+  }
+
+  .btn-services-all:hover::after {
+    transform: translateX(4px);
   }
 
   /* === PROCESS SECTION === */
